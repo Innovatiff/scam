@@ -1,4 +1,4 @@
-# Netlify build & hosting config for IsThisAScam
+# Netlify build & hosting config for Scam or Safe
 [build]
   command = "npm run build"
   publish = "dist"

@@ -1,4 +1,4 @@
-# IsThisAScam
+# Scam or Safe
 
 A public-safety website where people can check suspicious messages and browse
 evergreen scam guides before they click, reply, or send money.

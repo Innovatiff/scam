@@ -1,4 +1,4 @@
-/* IsThisAScam — static site generator.
+/* Scam or Safe — static site generator.
    Reads JSON data + the templates in this file and emits a fully static
    HTML/CSS/JS site into /dist. Add a scam page by adding an entry to
    data/scams.json — no manual HTML required. */
@@ -104,7 +104,7 @@ function header() {
   <div class="container header-inner">
     <a class="logo" href="/" aria-label="${esc(config.siteName)} home">
       <span class="logo-mark">${icon("shield")}</span>
-      <span>IsThis<b>AScam</b></span>
+      <span>Scam or <b>Safe</b></span>
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false">${icon("menu")}</button>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
@@ -123,7 +123,7 @@ function footer() {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="logo"><span class="logo-mark">${icon("shield")}</span><span>IsThis<b style="color:#60A5FA">AScam</b></span></span>
+        <span class="logo"><span class="logo-mark">${icon("shield")}</span><span>Scam or <b style="color:#60A5FA">Safe</b></span></span>
         <p>A public safety resource to help you recognise scam patterns and red flags before you click, reply, or send money.</p>
       </div>
       ${cols}
@@ -674,8 +674,8 @@ function legalPages() {
   const pages = [];
 
   pages.push(simplePage({
-    slug: "about", name: "About IsThisAScam",
-    title: "About Us", description: "Learn about IsThisAScam, a public safety resource that helps people recognise scam patterns and red flags.",
+    slug: "about", name: "About Scam or Safe",
+    title: "About Us", description: "Learn about Scam or Safe, a public safety resource that helps people recognise scam patterns and red flags.",
     body: `
 <p class="lead muted">${esc(config.siteName)} is a public safety resource that helps everyday people recognise the patterns and red flags common to online and message-based scams.</p>
 <h2>Why we built this</h2>
@@ -695,7 +695,7 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "contact", name: "Contact",
-    title: "Contact Us", description: "Get in touch with IsThisAScam to suggest a scam guide, report a correction, or ask a question.",
+    title: "Contact Us", description: "Get in touch with Scam or Safe to suggest a scam guide, report a correction, or ask a question.",
     body: `
 <p class="lead muted">We welcome suggestions for new scam guides, corrections to existing pages, and general questions.</p>
 <h2>Email us</h2>
@@ -711,7 +711,7 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "privacy-policy", name: "Privacy Policy",
-    title: "Privacy Policy", description: "How IsThisAScam handles your privacy. We do not store the messages you check, and we follow a privacy-first approach.",
+    title: "Privacy Policy", description: "How Scam or Safe handles your privacy. We do not store the messages you check, and we follow a privacy-first approach.",
     body: `
 <p class="muted">Last updated: ${reviewedLabel("2026-06")}</p>
 <p>Your privacy matters to us. This policy explains what information is and is not collected when you use ${esc(config.siteName)}.</p>
@@ -739,7 +739,7 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "terms", name: "Terms of Use",
-    title: "Terms of Use", description: "The terms that govern your use of the IsThisAScam website and its educational content.",
+    title: "Terms of Use", description: "The terms that govern your use of the Scam or Safe website and its educational content.",
     body: `
 <p class="muted">Last updated: ${reviewedLabel("2026-06")}</p>
 <p>By using ${esc(config.siteName)}, you agree to these terms. Please read them carefully.</p>
@@ -763,7 +763,7 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "disclaimer", name: "Disclaimer",
-    title: "Disclaimer", description: "IsThisAScam provides educational information only and does not verify individual messages, companies, or people.",
+    title: "Disclaimer", description: "Scam or Safe provides educational information only and does not verify individual messages, companies, or people.",
     body: `
 <div class="box box-info"><p style="margin:0">${esc(DISCLAIMER_TEXT)}</p></div>
 <h2>We do not verify specific cases</h2>
@@ -806,7 +806,7 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "how-we-review-scams", name: "How We Review Scams",
-    title: "How We Review & Write Our Scam Guides", description: "Our editorial process for researching, writing, and reviewing scam guides at IsThisAScam.",
+    title: "How We Review & Write Our Scam Guides", description: "Our editorial process for researching, writing, and reviewing scam guides at Scam or Safe.",
     body: `
 <p class="lead muted">We aim to be a calm, accurate, and genuinely useful public-safety resource. Here is how our guides are made.</p>
 <h2>Research</h2>

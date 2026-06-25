@@ -1,7 +1,7 @@
-/* IsThisAScam — checker page UI. Renders red-flag results in the browser only. */
+/* Scam or Safe — checker page UI. Renders red-flag results in the browser only. */
 (function () {
   "use strict";
-  var C = window.IsThisAScamChecker;
+  var C = window.ScamOrSafeChecker;
   if (!C) return;
 
   var form = document.getElementById("checker-form");
