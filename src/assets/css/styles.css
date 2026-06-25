@@ -93,6 +93,8 @@ p { margin: 0 0 1rem; }
 .main-nav a:not(.btn) { color: var(--gray-text); font-weight: 500; font-size: .98rem; padding: 8px 12px; border-radius: 6px; }
 .main-nav a:not(.btn):hover { color: var(--navy); background: var(--light-blue); text-decoration: none; }
 .header-cta { margin-left: 6px; }
+.main-nav a.btn-primary, .header-cta { color: #fff; }
+.main-nav a.btn-primary:hover, .header-cta:hover { color: #fff; }
 
 .nav-toggle { display: none; background: none; border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; cursor: pointer; }
 .nav-toggle svg { width: 22px; height: 22px; display: block; color: var(--navy); }
