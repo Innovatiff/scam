@@ -210,9 +210,17 @@ function disclaimerBox() {
 }
 
 /* ---------------------------------------------------------------- layout --- */
+function hasRealAdsenseId() {
+  return !!(config.adsense && config.adsense.publisherId &&
+    /^ca-pub-\d{16}$/.test(config.adsense.publisherId) &&
+    !config.adsense.publisherId.includes("0000000000000000"));
+}
 function adsenseHead() {
-  if (!(config.adsense && config.adsense.enabled)) {
-    return `<!-- AdSense disabled. To enable: set adsense.enabled=true and the publisherId in site.config.json -->`;
+  // The loader snippet goes into <head> as soon as a REAL publisher ID is set.
+  // This is what AdSense needs to verify/review the site. It does NOT display
+  // ads by itself — ad units stay hidden until adsense.enabled = true (post-approval).
+  if (!hasRealAdsenseId()) {
+    return `<!-- AdSense head snippet appears here once a real ca-pub-… publisherId is set in site.config.json (needed for AdSense site verification). -->`;
   }
   return `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(config.adsense.publisherId)}" crossorigin="anonymous"></script>`;
 }
