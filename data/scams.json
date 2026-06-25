@@ -1,0 +1,1477 @@
+[
+  {
+    "title": "Canada Post Text Scam",
+    "slug": "canada-post-text-scam",
+    "category": "delivery-scams",
+    "metaTitle": "Canada Post Text Scam: Red Flags and What to Do",
+    "metaDescription": "Learn common red flags of Canada Post text scams, example message patterns, and what to do if you clicked a suspicious link or paid a fake fee.",
+    "riskLevel": "High",
+    "scamType": "Delivery impersonation scam",
+    "summary": "This scam sends a fake Canada Post delivery notice asking you to click a link or pay a small redelivery fee, then collects your card and personal details on a fake page.",
+    "quickVerdict": {
+      "mainRedFlag": "An unexpected delivery text asking you to pay a fee or confirm details through a link.",
+      "whatToDoFirst": "Do not click the link. Check any delivery using the official Canada Post website or app."
+    },
+    "exampleMessage": "Example pattern: 'CANADA POST: Your parcel could not be delivered due to an unpaid fee of $1.45. Update your details here: [suspicious link]'",
+    "redFlags": [
+      "An unexpected delivery message when you may not be expecting a parcel",
+      "A small redelivery or 'unpaid fee' request",
+      "A link that does not lead to the official canadapost.ca domain",
+      "Urgent wording warning the parcel will be returned",
+      "A request for personal or card information to reschedule delivery"
+    ],
+    "whatToDo": [
+      "Do not click the link or enter any details",
+      "Check your tracking number directly on the official Canada Post website or app",
+      "Forward the text to your mobile provider's spam reporting service if available",
+      "Delete the message and block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not enter any more information on the page",
+      "If you entered card details, contact your bank to flag or freeze the card",
+      "Change the password for any account where you reused that login",
+      "Watch your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not reply to the message",
+      "Do not share verification codes",
+      "Do not download any app the link suggests"
+    ],
+    "faqs": [
+      {
+        "question": "Does Canada Post charge fees by text message?",
+        "answer": "Genuine redelivery is normally arranged for free, and any real charge can be confirmed through the official Canada Post website. A small fee demanded through a text link is a common scam pattern."
+      },
+      {
+        "question": "I am expecting a parcel, so is the text real?",
+        "answer": "Scammers count on this. Even if you are expecting something, check the tracking number on the official site rather than using the link in the text."
+      },
+      {
+        "question": "What if I already paid the fee?",
+        "answer": "Contact your bank right away to report the transaction and protect your card. The sooner you act, the more likely the charge can be stopped or disputed."
+      },
+      {
+        "question": "How can I report a Canada Post text scam?",
+        "answer": "You can report it to your mobile provider, to Canada Post through its official fraud page, and to your national anti-fraud centre."
+      }
+    ],
+    "relatedScams": ["fake-delivery-text-scam", "fake-customs-fee-text", "fake-toll-road-text-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Delivery Text Scam",
+    "slug": "fake-delivery-text-scam",
+    "category": "delivery-scams",
+    "metaTitle": "Fake Delivery Text Scam: Red Flags and What to Do",
+    "metaDescription": "Spot fake delivery text scams that impersonate couriers like UPS, FedEx, and DHL. See example patterns, red flags, and safe steps to take.",
+    "riskLevel": "High",
+    "scamType": "Delivery impersonation scam",
+    "summary": "This scam impersonates a courier with a missed-delivery text and a link to a fake page that asks for a fee or your personal and card details.",
+    "quickVerdict": {
+      "mainRedFlag": "A missed-delivery text with a link from a number or address that is not the courier's official channel.",
+      "whatToDoFirst": "Do not click. Track the parcel through the courier's official website or app."
+    },
+    "exampleMessage": "Example pattern: 'Your package is held at our depot. Please confirm your delivery preferences: [suspicious link]'",
+    "redFlags": [
+      "A delivery alert from a courier you did not order from",
+      "A link that does not match the courier's official website",
+      "A request to pay a fee or confirm card details to release the parcel",
+      "Generic wording that never names the retailer or item",
+      "Pressure to act before the parcel is 'returned to sender'"
+    ],
+    "whatToDo": [
+      "Do not click the link or pay any fee",
+      "Find the retailer's order confirmation and use its official tracking",
+      "Verify with the courier through its official website or app",
+      "Report and delete the message"
+    ],
+    "ifYouClicked": [
+      "Stop and do not submit any details on the page",
+      "Contact your bank if you entered card information",
+      "Change any password you may have entered",
+      "Monitor your accounts for unusual activity"
+    ],
+    "whatNotToDo": [
+      "Do not reply to confirm your number is active",
+      "Do not share one-time codes",
+      "Do not install apps the message asks you to download"
+    ],
+    "faqs": [
+      {
+        "question": "How do scammers know I am expecting a delivery?",
+        "answer": "In most cases they do not. These texts are sent in bulk, and with so many people shopping online, some recipients happen to be waiting for a parcel."
+      },
+      {
+        "question": "Are all courier texts fake?",
+        "answer": "No. Couriers do send genuine updates. The warning signs are unexpected fees, mismatched links, and requests for personal or card details."
+      },
+      {
+        "question": "How can I tell the real courier site from a fake one?",
+        "answer": "Type the courier's address yourself or use its official app instead of tapping the link. Check the web address carefully for misspellings and extra words."
+      },
+      {
+        "question": "What should I do if I shared my address only?",
+        "answer": "An address alone is low risk, but stay alert for follow-up scam messages and never share codes, passwords, or card details in response."
+      }
+    ],
+    "relatedScams": ["canada-post-text-scam", "fake-customs-fee-text", "fake-amazon-order-email"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "PayPal Payment Pending Scam",
+    "slug": "paypal-payment-pending-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "PayPal Payment Pending Scam: Red Flags and What to Do",
+    "metaDescription": "Understand the PayPal payment pending scam, how fake 'release the funds' emails work, and what to do to protect your money and account.",
+    "riskLevel": "High",
+    "scamType": "Payment service impersonation scam",
+    "summary": "This scam shows a fake 'payment on hold' message claiming funds will be released once you ship an item or confirm details, but no real payment exists.",
+    "quickVerdict": {
+      "mainRedFlag": "A 'pending' PayPal payment that asks you to ship goods or confirm details before money actually arrives.",
+      "whatToDoFirst": "Log in to PayPal directly to check your real balance. Do not act on the email alone."
+    },
+    "exampleMessage": "Example pattern: 'The buyer's payment of $480.00 is pending and will be released to your account once you provide the shipment tracking number. Reply to confirm.'",
+    "redFlags": [
+      "A 'pending' or 'on hold' payment you cannot see in your real PayPal balance",
+      "A request to ship an item before the money has actually cleared",
+      "Emails from an address that is not an official PayPal domain",
+      "Pressure to act quickly to 'release' the funds",
+      "A request to send a shipping or release fee first"
+    ],
+    "whatToDo": [
+      "Open PayPal directly in your browser or app and check your real balance",
+      "Treat money as received only when it appears in your actual account",
+      "Do not ship anything based on an email alone",
+      "Report suspicious emails to PayPal and delete them"
+    ],
+    "ifYouClicked": [
+      "Do not enter your login on any linked page",
+      "If you logged in, change your PayPal password immediately",
+      "Turn on two-factor authentication for your account",
+      "Review recent activity and contact PayPal if anything looks wrong"
+    ],
+    "whatNotToDo": [
+      "Do not ship goods before funds clear in your real account",
+      "Do not send a 'release' or shipping fee",
+      "Do not share your password or verification codes"
+    ],
+    "faqs": [
+      {
+        "question": "Does PayPal hold funds until I add tracking?",
+        "answer": "PayPal may place genuine holds on some payments, but you will always see this inside your real account. A request that exists only in an email and asks you to ship first is a scam pattern."
+      },
+      {
+        "question": "Why does the email look so real?",
+        "answer": "Scammers copy logos, wording, and layout. The reliable check is to ignore the email and log in to PayPal directly to confirm your actual balance and any holds."
+      },
+      {
+        "question": "A buyer says they paid but I see nothing. What now?",
+        "answer": "Do not ship. If the money is not in your real PayPal balance, treat it as unpaid, and be cautious if the buyer pressures you to send the item."
+      },
+      {
+        "question": "How do I report a fake PayPal email?",
+        "answer": "Forward it to PayPal's official phishing reporting address and then delete it. Do not click any links inside it."
+      }
+    ],
+    "relatedScams": ["fake-e-transfer-scam", "fake-invoice-email-scam", "facebook-marketplace-buyer-email-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Facebook Marketplace Buyer Email Scam",
+    "slug": "facebook-marketplace-buyer-email-scam",
+    "category": "marketplace-scams",
+    "metaTitle": "Facebook Marketplace Buyer Email Scam: Red Flags",
+    "metaDescription": "Learn how the Facebook Marketplace buyer email scam works, with example fake-payment patterns and steps to sell safely without losing money.",
+    "riskLevel": "High",
+    "scamType": "Fake buyer overpayment scam",
+    "summary": "A fake buyer claims to have paid through an email service and asks you to confirm a fee or send the 'difference' before any real money arrives.",
+    "quickVerdict": {
+      "mainRedFlag": "An emailed 'payment confirmation' that asks you to send a fee or refund before money is in your account.",
+      "whatToDoFirst": "Ignore the email. Only treat a sale as paid when funds clear in your own bank or platform account."
+    },
+    "exampleMessage": "Example pattern: 'PayPal has received the buyer's payment of $650. To release it, the seller must first send a $50 shipping insurance fee and reply with the receipt.'",
+    "redFlags": [
+      "A buyer who insists on paying by email service instead of the platform",
+      "An emailed 'confirmation' you cannot see in your real account",
+      "A request to pay a shipping, insurance, or release fee first",
+      "Overpayment with a request to refund the difference",
+      "Pressure to ship quickly before the money clears"
+    ],
+    "whatToDo": [
+      "Keep the conversation and payment inside the platform where possible",
+      "Confirm money has actually cleared in your own account before shipping",
+      "Decline requests to pay any upfront fee to 'release' funds",
+      "Report the buyer and block them"
+    ],
+    "ifYouClicked": [
+      "Do not log in on any page linked from the email",
+      "Change your password if you entered login details",
+      "Contact your bank if you sent any money or shared card details",
+      "Report the scam to the platform"
+    ],
+    "whatNotToDo": [
+      "Do not send any fee to release a payment",
+      "Do not refund an 'overpayment' you never actually received",
+      "Do not move the deal to email or text to bypass platform protections"
+    ],
+    "faqs": [
+      {
+        "question": "Why does the buyer want to use email instead of the app?",
+        "answer": "Moving off-platform removes reporting tools and protections and lets the scammer send fake 'confirmation' emails that look official but are not tied to any real payment."
+      },
+      {
+        "question": "The email looks like it is from PayPal. Is it genuine?",
+        "answer": "Scammers forge these emails. Verify by logging in to your real account. If the money is not there, no payment has been made."
+      },
+      {
+        "question": "Is overpayment ever legitimate?",
+        "answer": "Genuine buyers rarely overpay and then ask for a refund of the difference. This is a classic scam designed to get you to send real money against a fake payment."
+      },
+      {
+        "question": "How can I sell more safely on Marketplace?",
+        "answer": "Prefer local pickup with cash in a safe public place, keep payments on-platform, and never send a fee to release funds."
+      }
+    ],
+    "relatedScams": ["paypal-payment-pending-scam", "fake-e-transfer-scam", "wrong-number-text-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Job Offer Scam",
+    "slug": "fake-job-offer-scam",
+    "category": "job-scams",
+    "metaTitle": "Fake Job Offer Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise fake job offer scams that hire with no real interview and ask for fees or bank details. See example patterns and safety steps.",
+    "riskLevel": "High",
+    "scamType": "Employment offer scam",
+    "summary": "This scam offers a job with little or no interview, then asks for upfront fees, personal documents, or bank details to 'set you up.'",
+    "quickVerdict": {
+      "mainRedFlag": "A job offer with no real interview that asks for money or bank details upfront.",
+      "whatToDoFirst": "Pause. Verify the company independently and never pay to get a job."
+    },
+    "exampleMessage": "Example pattern: 'Congratulations! You have been selected for a remote position paying $35/hour. To begin onboarding, please pay a $90 refundable equipment deposit and send a photo of your ID.'",
+    "redFlags": [
+      "A job offer arriving with no interview or only a brief chat-app exchange",
+      "Pay that is high for very simple work",
+      "A request for an upfront fee for equipment, training, or a background check",
+      "A request for bank details or ID before any real hiring process",
+      "A recruiter who only communicates through a messaging app"
+    ],
+    "whatToDo": [
+      "Search for the company and contact it through its official website",
+      "Refuse to pay any fee to be hired",
+      "Be cautious sharing ID or bank details until the employer is verified",
+      "Report suspicious recruiters to the platform where they contacted you"
+    ],
+    "ifYouClicked": [
+      "Stop sharing any further documents or details",
+      "Contact your bank if you sent money or shared account details",
+      "Change passwords if you entered them on a fake onboarding page",
+      "Watch your accounts and credit for unexpected activity"
+    ],
+    "whatNotToDo": [
+      "Do not pay for a job, training, or equipment",
+      "Do not send copies of your ID to unverified recruiters",
+      "Do not agree to receive and forward money for an 'employer'"
+    ],
+    "faqs": [
+      {
+        "question": "Should a real employer ever ask me to pay them?",
+        "answer": "No. Legitimate employers do not require upfront payment for equipment, training, or onboarding as a condition of being hired."
+      },
+      {
+        "question": "Is a refundable deposit safe?",
+        "answer": "Calling a fee 'refundable' is a common trick. Once you pay, the money and the recruiter usually disappear."
+      },
+      {
+        "question": "Why would a job want my bank details so early?",
+        "answer": "Genuine payroll details are collected after you are formally hired through proper channels. Early requests can be used for fraud or to set up money-mule activity."
+      },
+      {
+        "question": "How can I verify a job offer?",
+        "answer": "Look up the company independently, check that the recruiter's email uses the company domain, and be wary of roles handled entirely through chat apps."
+      }
+    ],
+    "relatedScams": ["whatsapp-job-scam", "fake-remote-data-entry-job-scam", "fake-invoice-email-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Instagram Verification Scam",
+    "slug": "instagram-verification-scam",
+    "category": "social-media-scams",
+    "metaTitle": "Instagram Verification Scam: Red Flags and What to Do",
+    "metaDescription": "Learn how the Instagram verification scam uses fake badge offers and warnings to steal logins. See example patterns and how to stay safe.",
+    "riskLevel": "High",
+    "scamType": "Account phishing scam",
+    "summary": "This scam offers a blue verification badge or warns your account is at risk, then links to a fake login page that steals your password.",
+    "quickVerdict": {
+      "mainRedFlag": "A DM or email offering verification or warning of account loss through an outside link.",
+      "whatToDoFirst": "Do not log in through the link. Manage verification only inside the official app."
+    },
+    "exampleMessage": "Example pattern: 'Your account is eligible for the verified badge. Complete verification within 24 hours or your eligibility expires: [suspicious link]'",
+    "redFlags": [
+      "A message promising a verification badge through an outside link",
+      "A warning that your account will be deleted unless you 'verify' now",
+      "A login page on a web address that is not the official platform",
+      "A request for your password, email, or two-factor code",
+      "Urgent deadlines designed to make you act fast"
+    ],
+    "whatToDo": [
+      "Ignore the link and open the app directly",
+      "Manage verification only through official in-app settings",
+      "Turn on two-factor authentication",
+      "Report the message as spam or phishing"
+    ],
+    "ifYouClicked": [
+      "Change your password immediately from the official app",
+      "Log out other sessions and review login activity",
+      "Turn on two-factor authentication if it is not already on",
+      "Warn contacts if your account may have sent messages"
+    ],
+    "whatNotToDo": [
+      "Do not enter your password on a linked page",
+      "Do not share two-factor codes with anyone",
+      "Do not authorise unknown apps to access your account"
+    ],
+    "faqs": [
+      {
+        "question": "Does Instagram offer verification by DM?",
+        "answer": "Verification is handled inside the official app, not through unsolicited DMs with outside links. Such messages are almost always phishing."
+      },
+      {
+        "question": "Why is there a countdown or deadline?",
+        "answer": "Urgency is a manipulation tactic. It pressures you to act before you have time to question whether the offer is real."
+      },
+      {
+        "question": "I entered my password. What now?",
+        "answer": "Change it immediately, turn on two-factor authentication, and review your active sessions and login activity from the official app."
+      },
+      {
+        "question": "How can I protect my account?",
+        "answer": "Use a strong unique password, enable two-factor authentication, and never log in through links sent in DMs or emails."
+      }
+    ],
+    "relatedScams": ["facebook-account-recovery-scam", "fake-giveaway-scam", "romance-scam-dm"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Bank Alert Text Scam",
+    "slug": "fake-bank-alert-text-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Fake Bank Alert Text Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise fake bank alert text scams that warn of suspicious activity to steal logins and codes. See example patterns and how to verify safely.",
+    "riskLevel": "High",
+    "scamType": "Bank impersonation scam",
+    "summary": "This scam sends a text claiming suspicious activity on your account, then steers you to a fake login page or a 'fraud agent' who pressures you to move money.",
+    "quickVerdict": {
+      "mainRedFlag": "A text about fraud on your account that links to a login page or asks for a code.",
+      "whatToDoFirst": "Do not use the link. Call your bank using the number on your card."
+    },
+    "exampleMessage": "Example pattern: 'ALERT: A payment of $720 to NEW PAYEE was authorised. If this was not you, verify now: [suspicious link]'",
+    "redFlags": [
+      "A text warning of fraud and urging you to act immediately",
+      "A link to a login page that is not your bank's official site or app",
+      "A follow-up call asking you to read out a one-time code",
+      "Pressure to move money to a 'safe' or 'new' account",
+      "A request for your full card number, PIN, or online banking password"
+    ],
+    "whatToDo": [
+      "Do not click the link or call numbers from the text",
+      "Call your bank using the number on the back of your card or in its official app",
+      "Check your account through the official app, not the message",
+      "Report the text to your bank and delete it"
+    ],
+    "ifYouClicked": [
+      "Contact your bank immediately using its official number",
+      "Change your online banking password",
+      "Ask the bank to review recent activity and secure your account",
+      "Watch for further suspicious calls pretending to 'help'"
+    ],
+    "whatNotToDo": [
+      "Do not share one-time passcodes or your PIN",
+      "Do not move money because someone told you to",
+      "Do not log in through links in the text"
+    ],
+    "faqs": [
+      {
+        "question": "Will my bank ask me to move money to keep it safe?",
+        "answer": "No. A genuine bank will never tell you to move your money to another account to protect it. This instruction is a clear sign of a scam."
+      },
+      {
+        "question": "Should I ever read out a one-time code?",
+        "answer": "Never share one-time codes with anyone, including someone claiming to be from your bank. These codes authorise access and payments."
+      },
+      {
+        "question": "The text shows my bank's name. Is it genuine?",
+        "answer": "Scammers can spoof sender names so a fake text appears in the same thread as real ones. Always verify through the official app or phone number instead."
+      },
+      {
+        "question": "How do I report a fake bank text?",
+        "answer": "Report it to your bank through its official fraud line and to your national anti-fraud or spam-text service, then delete it."
+      }
+    ],
+    "relatedScams": ["fake-e-transfer-scam", "paypal-payment-pending-scam", "fake-refund-email-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Online Store Scam",
+    "slug": "fake-online-store-scam",
+    "category": "online-shopping-scams",
+    "metaTitle": "Fake Online Store Scam: Red Flags and What to Do",
+    "metaDescription": "Spot fake online store scams that advertise cheap deals and take your money. See example patterns, red flags, and how to check a website.",
+    "riskLevel": "High",
+    "scamType": "Fake retailer scam",
+    "summary": "This scam sets up a convincing but fake store with very low prices, takes payment, and delivers nothing, a counterfeit, or a cheap substitute.",
+    "quickVerdict": {
+      "mainRedFlag": "Unrealistically low prices on a new store with only risky payment options.",
+      "whatToDoFirst": "Research the store before paying, and prefer payment methods with buyer protection."
+    },
+    "exampleMessage": "Example pattern: 'CLOSING DOWN SALE - 80% off everything today only! Limited stock, order now before it's gone: [unfamiliar store link]'",
+    "redFlags": [
+      "Prices far below normal for popular brands",
+      "A brand-new website with no genuine reviews or address",
+      "Only wire transfer, gift card, or cryptocurrency accepted",
+      "Countdown timers and 'almost sold out' pressure",
+      "Poor grammar, copied images, or missing contact details"
+    ],
+    "whatToDo": [
+      "Search the store name with words like 'scam' or 'review'",
+      "Check how long the website has existed and look for real contact details",
+      "Prefer payment methods that offer buyer protection",
+      "Walk away if anything feels rushed or unclear"
+    ],
+    "ifYouClicked": [
+      "Stop before entering card details if anything seems off",
+      "Contact your bank or card provider to dispute a payment if you already paid",
+      "Change your password if you created an account with a reused password",
+      "Keep records of the order and any messages"
+    ],
+    "whatNotToDo": [
+      "Do not pay by wire transfer, gift card, or crypto for online shopping",
+      "Do not ignore the lack of reviews or contact details",
+      "Do not enter card details on a site you cannot verify"
+    ],
+    "faqs": [
+      {
+        "question": "How can I check if an online store is legitimate?",
+        "answer": "Look for a real contact address, search the store name with 'review' or 'scam', and check how long the domain has existed. Be wary if only risky payment methods are offered."
+      },
+      {
+        "question": "Why are the prices so low?",
+        "answer": "Very low prices are bait. The goal is to make you act quickly before you research the store or notice missing details."
+      },
+      {
+        "question": "I paid and nothing arrived. What can I do?",
+        "answer": "Contact your bank or card provider to dispute the charge, keep all records, and report the store to consumer protection authorities."
+      },
+      {
+        "question": "Are social media ads for stores safe?",
+        "answer": "Ads are not vetted guarantees of legitimacy. Treat unfamiliar stores from ads with the same caution and research them before buying."
+      }
+    ],
+    "relatedScams": ["fake-subscription-renewal-email", "fake-amazon-order-email", "fake-giveaway-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Rental Deposit Scam",
+    "slug": "rental-deposit-scam",
+    "category": "rental-scams",
+    "metaTitle": "Rental Deposit Scam: Red Flags and What to Do",
+    "metaDescription": "Avoid rental deposit scams that demand money before a viewing. See example patterns, red flags, and how to verify a listing safely.",
+    "riskLevel": "High",
+    "scamType": "Rental listing scam",
+    "summary": "This scam advertises a desirable rental at a low price and demands a deposit before any viewing, then disappears once you pay.",
+    "quickVerdict": {
+      "mainRedFlag": "A request for a deposit or holding fee before you have viewed the property.",
+      "whatToDoFirst": "Do not pay anything before viewing and verifying the landlord."
+    },
+    "exampleMessage": "Example pattern: 'I'm currently abroad so I can't show the apartment, but I can mail the keys once you send the first month's rent and deposit by e-transfer to hold it.'",
+    "redFlags": [
+      "A landlord who cannot show the property in person or by live video",
+      "A deposit or holding fee demanded before any viewing",
+      "Rent that is unusually cheap for the area",
+      "Pressure to pay fast because of 'other interested tenants'",
+      "Payment requested by wire transfer, e-transfer, or gift card"
+    ],
+    "whatToDo": [
+      "Insist on viewing the property before paying anything",
+      "Verify the landlord owns or manages the property",
+      "Search the listing photos to check they are not copied",
+      "Use traceable payment and get a signed agreement after viewing"
+    ],
+    "ifYouClicked": [
+      "Stop any further payments immediately",
+      "Contact your bank or e-transfer provider to try to recall the funds",
+      "Keep all messages, listings, and receipts as evidence",
+      "Report the listing to the platform and local authorities"
+    ],
+    "whatNotToDo": [
+      "Do not pay a deposit before viewing",
+      "Do not send money by gift card or wire transfer to hold a rental",
+      "Do not share ID or bank details with an unverified landlord"
+    ],
+    "faqs": [
+      {
+        "question": "Should I ever pay before seeing a rental?",
+        "answer": "Avoid paying any deposit or fee before you have viewed the property and confirmed the landlord's right to rent it. Legitimate landlords expect you to view first."
+      },
+      {
+        "question": "The landlord says they are abroad. Is that a problem?",
+        "answer": "An absent landlord who cannot arrange any viewing but wants money upfront is a common scam setup. Be very cautious."
+      },
+      {
+        "question": "How can I tell if a listing is stolen?",
+        "answer": "Search the listing photos and description online. If they appear elsewhere under different names or prices, the listing may be fake."
+      },
+      {
+        "question": "What payment methods are safest for rentals?",
+        "answer": "Avoid wire transfers, e-transfers, and gift cards, which are hard to reverse. Use traceable methods and only after viewing and signing an agreement."
+      }
+    ],
+    "relatedScams": ["fake-online-store-scam", "facebook-marketplace-buyer-email-scam", "fake-e-transfer-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Wrong Number Text Scam",
+    "slug": "wrong-number-text-scam",
+    "category": "text-message-scams",
+    "metaTitle": "Wrong Number Text Scam: Red Flags and What to Do",
+    "metaDescription": "Understand the wrong number text scam, how friendly 'mistaken' texts lead to investment fraud, and what to do if you replied.",
+    "riskLevel": "Medium",
+    "scamType": "Confidence and investment scam",
+    "summary": "This scam starts with a friendly 'wrong number' text, builds a casual conversation over time, and eventually steers you toward a fake investment.",
+    "quickVerdict": {
+      "mainRedFlag": "A stranger's 'wrong number' text that keeps chatting and later mentions investments.",
+      "whatToDoFirst": "Do not reply. Block and delete the message."
+    },
+    "exampleMessage": "Example pattern: 'Hi Jessica, are we still on for lunch tomorrow?' Then, after you reply that they have the wrong number: 'Oh sorry! You seem nice though, where are you from?'",
+    "redFlags": [
+      "An unsolicited text from an unknown number that seems like a mistake",
+      "A friendly stranger who keeps the conversation going after the 'mistake'",
+      "Questions designed to build rapport over days or weeks",
+      "An eventual mention of crypto or an investment opportunity",
+      "Photos and stories that seem too polished or rehearsed"
+    ],
+    "whatToDo": [
+      "Do not reply, even to say they have the wrong number",
+      "Block the number and delete the conversation",
+      "Be especially wary if any investment is mentioned",
+      "Report the number to your provider's spam service"
+    ],
+    "ifYouClicked": [
+      "Stop communicating if you have started a conversation",
+      "Do not send any money or download any trading app they suggest",
+      "If you invested, contact your bank and stop further payments",
+      "Keep records and report to your anti-fraud centre"
+    ],
+    "whatNotToDo": [
+      "Do not continue chatting out of politeness",
+      "Do not click links or install apps they recommend",
+      "Do not send money or crypto to someone you met this way"
+    ],
+    "faqs": [
+      {
+        "question": "Is replying to a wrong number text dangerous?",
+        "answer": "Replying confirms your number is active and signals you may engage. With scam texts it is safer not to reply and to block the number."
+      },
+      {
+        "question": "What is the goal of a wrong number text?",
+        "answer": "Many lead to long-term confidence scams that gradually steer you toward fake crypto or investment platforms, sometimes called 'pig butchering' scams."
+      },
+      {
+        "question": "They seem genuine and friendly. Could it be real?",
+        "answer": "Scammers invest weeks building trust. A friendly tone is part of the method, so be cautious with any stranger who reached you by accident and keeps chatting."
+      },
+      {
+        "question": "What if I already sent money?",
+        "answer": "Stop all further payments, contact your bank immediately, and report it. Be wary of anyone who promises to recover your funds for a fee."
+      }
+    ],
+    "relatedScams": ["romance-scam-dm", "crypto-investment-scam", "fake-giveaway-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Toll Road Text Scam",
+    "slug": "fake-toll-road-text-scam",
+    "category": "text-message-scams",
+    "metaTitle": "Fake Toll Road Text Scam: Red Flags and What to Do",
+    "metaDescription": "Spot fake toll road text scams demanding payment for unpaid tolls. See example patterns, red flags, and how to check real toll charges.",
+    "riskLevel": "High",
+    "scamType": "Toll service impersonation scam",
+    "summary": "This scam texts you about a small unpaid toll and threatens late fees, linking to a fake page that collects your card and personal details.",
+    "quickVerdict": {
+      "mainRedFlag": "A text about an unpaid toll with a link and threat of late fees.",
+      "whatToDoFirst": "Do not click. Check any toll account through the official toll operator's website."
+    },
+    "exampleMessage": "Example pattern: 'You have an outstanding toll charge of $4.20. To avoid a late fee of $50, pay now: [suspicious link]'",
+    "redFlags": [
+      "A toll charge text for a road or account you do not recognise",
+      "A small amount due with a large 'late fee' threat",
+      "A link that is not the official toll operator's website",
+      "A request for card details and personal information",
+      "Urgent deadlines to pay within hours"
+    ],
+    "whatToDo": [
+      "Do not click the link or enter card details",
+      "Look up the official toll operator and check your account directly",
+      "Report the text to your mobile provider's spam service",
+      "Delete the message and block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not submit any details on the page",
+      "Contact your bank if you entered card information",
+      "Change passwords for any reused logins",
+      "Monitor your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not pay through the link in the text",
+      "Do not share card or personal details",
+      "Do not reply to the message"
+    ],
+    "faqs": [
+      {
+        "question": "How do I know if I really owe a toll?",
+        "answer": "Look up the official toll operator for your area and log in to your account there. Do not rely on a link in a text message."
+      },
+      {
+        "question": "Why is the toll amount so small?",
+        "answer": "A small, believable amount lowers your guard, while the threat of a large late fee pressures you to pay quickly through the fake page."
+      },
+      {
+        "question": "I do not even use toll roads. Why did I get this?",
+        "answer": "These texts are sent in bulk to many numbers at random, so receiving one does not mean you owe anything."
+      },
+      {
+        "question": "What if I entered my card details?",
+        "answer": "Contact your bank immediately to flag the card and watch for unauthorised charges."
+      }
+    ],
+    "relatedScams": ["fake-bank-alert-text-scam", "canada-post-text-scam", "fake-customs-fee-text"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake E-Transfer Scam",
+    "slug": "fake-e-transfer-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Fake E-Transfer Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise fake e-transfer scams with phishing 'deposit' emails that steal banking logins. See example patterns and how to deposit safely.",
+    "riskLevel": "High",
+    "scamType": "E-transfer phishing scam",
+    "summary": "This scam sends a fake e-transfer notification linking to a phishing page that imitates your bank's login to steal your online banking details.",
+    "quickVerdict": {
+      "mainRedFlag": "An e-transfer 'deposit' email that asks you to log in through its link.",
+      "whatToDoFirst": "Do not use the email link. Deposit through your bank's official app or website."
+    },
+    "exampleMessage": "Example pattern: 'INTERAC e-Transfer: You have received $250.00. Click here to deposit your funds: [suspicious link]'",
+    "redFlags": [
+      "An e-transfer from someone you do not know or were not expecting",
+      "A 'deposit' link that opens a bank login page rather than your app",
+      "A web address that is not your bank's official site",
+      "A request for your card number, password, or security questions",
+      "Pressure to deposit quickly before it 'expires'"
+    ],
+    "whatToDo": [
+      "Open your bank's official app or website to receive transfers",
+      "Use auto-deposit so you never click an email link",
+      "Verify any unexpected transfer with the supposed sender",
+      "Report the phishing email to your bank and delete it"
+    ],
+    "ifYouClicked": [
+      "Do not enter your banking details on the linked page",
+      "If you logged in, change your online banking password immediately",
+      "Call your bank to secure your account",
+      "Review recent activity for anything unexpected"
+    ],
+    "whatNotToDo": [
+      "Do not enter banking logins on emailed links",
+      "Do not share security question answers",
+      "Do not accept transfers from unknown senders"
+    ],
+    "faqs": [
+      {
+        "question": "How can I receive e-transfers safely?",
+        "answer": "Set up auto-deposit with your bank so funds arrive automatically without any link, and access transfers only through your official banking app or website."
+      },
+      {
+        "question": "The email looks like my bank. Is it real?",
+        "answer": "Scammers copy bank branding closely. The safe approach is to ignore the link and check directly in your official banking app."
+      },
+      {
+        "question": "Why would a stranger send me money?",
+        "answer": "They are not really sending money. The 'deposit' link leads to a fake login page designed to capture your banking credentials."
+      },
+      {
+        "question": "I entered my banking login. What now?",
+        "answer": "Change your password immediately, call your bank to secure the account, and watch for unauthorised transactions."
+      }
+    ],
+    "relatedScams": ["fake-bank-alert-text-scam", "paypal-payment-pending-scam", "facebook-marketplace-buyer-email-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "WhatsApp Job Scam",
+    "slug": "whatsapp-job-scam",
+    "category": "job-scams",
+    "metaTitle": "WhatsApp Job Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise WhatsApp job scams offering easy paid tasks that lead to deposits and lost money. See example patterns and safety steps.",
+    "riskLevel": "High",
+    "scamType": "Task-based job scam",
+    "summary": "This scam contacts you on WhatsApp with an easy paid-task job, shows small early 'earnings,' then asks you to deposit money to unlock bigger payouts.",
+    "quickVerdict": {
+      "mainRedFlag": "An unsolicited WhatsApp job offering easy money that later asks you to deposit funds.",
+      "whatToDoFirst": "Do not engage or deposit anything. Block and report the contact."
+    },
+    "exampleMessage": "Example pattern: 'Hi, I'm a recruiter from a marketing agency. Earn $200-$500 daily completing simple app tasks from home. Interested? No experience needed.'",
+    "redFlags": [
+      "An unsolicited job message on WhatsApp or Telegram",
+      "Very high pay for simple, repetitive tasks",
+      "Small early payouts to build trust",
+      "A request to deposit your own money to 'unlock' tasks or withdrawals",
+      "Pressure to recruit others or act quickly"
+    ],
+    "whatToDo": [
+      "Do not deposit any money or complete 'tasks'",
+      "Block and report the contact on the messaging app",
+      "Verify any company independently through its official website",
+      "Warn friends who may receive similar messages"
+    ],
+    "ifYouClicked": [
+      "Stop depositing immediately, even to recover earlier deposits",
+      "Contact your bank or payment provider to stop further payments",
+      "Keep screenshots of the chat and any platform used",
+      "Report the scam to your anti-fraud centre"
+    ],
+    "whatNotToDo": [
+      "Do not deposit money to 'unlock' withdrawals",
+      "Do not send more to recover what you already paid",
+      "Do not share bank or crypto wallet details"
+    ],
+    "faqs": [
+      {
+        "question": "Why did the first small payout work?",
+        "answer": "Early payouts are bait to build trust so you deposit larger amounts. Once you do, withdrawals stop and more 'fees' are demanded."
+      },
+      {
+        "question": "Is a real job ever found through a cold WhatsApp message?",
+        "answer": "Genuine recruiters rarely cold-message offers of huge daily pay for trivial tasks. Treat such messages as scams."
+      },
+      {
+        "question": "They asked me to recruit friends. Why?",
+        "answer": "Recruitment spreads the scam and can make you appear responsible for others' losses. Do not invite anyone."
+      },
+      {
+        "question": "Can I get my deposits back?",
+        "answer": "Recovery is difficult. Stop paying immediately, report it, and be wary of anyone promising to recover funds for a fee, which is often a second scam."
+      }
+    ],
+    "relatedScams": ["fake-job-offer-scam", "fake-remote-data-entry-job-scam", "crypto-investment-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Invoice Email Scam",
+    "slug": "fake-invoice-email-scam",
+    "category": "email-scams",
+    "metaTitle": "Fake Invoice Email Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise fake invoice email scams that bill you for purchases you never made. See example patterns, red flags, and safe steps to take.",
+    "riskLevel": "Medium",
+    "scamType": "Billing phishing scam",
+    "summary": "This scam emails an invoice or receipt for something you did not buy, hoping you call a fake 'support' number or click a link to dispute it.",
+    "quickVerdict": {
+      "mainRedFlag": "An invoice or receipt for a purchase you never made, with a number to call to cancel.",
+      "whatToDoFirst": "Do not call the number or click links. Check the real account directly."
+    },
+    "exampleMessage": "Example pattern: 'Your order #INV-90237 for $499.99 has been confirmed. If you did not authorise this, call our billing department immediately at 1-800-XXX-XXXX.'",
+    "redFlags": [
+      "An invoice for a product or subscription you never ordered",
+      "A phone number urging you to call to dispute or cancel",
+      "An attachment claiming to be the full invoice",
+      "Sender details that do not match the named company",
+      "Pressure to act quickly to avoid being charged"
+    ],
+    "whatToDo": [
+      "Do not call the number in the email",
+      "Check the real account or card statement directly",
+      "Report the email as phishing and delete it",
+      "Block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not give remote access if you called and were asked to install software",
+      "Hang up if a 'support agent' asks for payment or remote control",
+      "Contact your bank if you shared card details",
+      "Run a security scan if you downloaded an attachment"
+    ],
+    "whatNotToDo": [
+      "Do not call the phone number provided",
+      "Do not install remote-access software for 'support'",
+      "Do not open unexpected attachments"
+    ],
+    "faqs": [
+      {
+        "question": "Why send an invoice for something I did not buy?",
+        "answer": "The goal is to make you panic and call the number, where a fake agent tries to get remote access, payment, or personal details."
+      },
+      {
+        "question": "Is it safe to open the attachment to check?",
+        "answer": "No. Attachments in these emails can carry malware. Verify charges through your real account instead of opening files."
+      },
+      {
+        "question": "The agent asked to install software to 'refund' me. Is that normal?",
+        "answer": "No. Requests to install remote-access tools are a scam tactic to control your device and accounts. Refuse and hang up."
+      },
+      {
+        "question": "How do I confirm a charge is real?",
+        "answer": "Log in to the real retailer or check your bank statement directly. If there is no matching charge, the invoice is fake."
+      }
+    ],
+    "relatedScams": ["fake-subscription-renewal-email", "fake-refund-email-scam", "fake-amazon-order-email"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Giveaway Scam",
+    "slug": "fake-giveaway-scam",
+    "category": "social-media-scams",
+    "metaTitle": "Fake Giveaway Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise fake giveaway scams that ask for a fee or your details to claim a prize. See example patterns and how to stay safe.",
+    "riskLevel": "Medium",
+    "scamType": "Prize and giveaway scam",
+    "summary": "This scam tells you that you won a prize or giveaway, then asks for a fee, your login, or personal details to 'claim' it.",
+    "quickVerdict": {
+      "mainRedFlag": "A prize win you never entered that asks for a fee or your login to claim.",
+      "whatToDoFirst": "Do not pay or log in. Treat unexpected prize messages as scams."
+    },
+    "exampleMessage": "Example pattern: 'Congratulations! You've been selected to win a new iPhone in our giveaway. Claim now by paying a $9.99 shipping fee: [suspicious link]'",
+    "redFlags": [
+      "Winning a prize for a giveaway you never entered",
+      "A request to pay a fee, tax, or shipping to claim a 'free' prize",
+      "A demand for your login or personal details to verify the win",
+      "A copycat account imitating a real brand or influencer",
+      "Pressure to claim within a short deadline"
+    ],
+    "whatToDo": [
+      "Ignore unexpected prize messages and do not pay any fee",
+      "Check the official brand account for any real promotion",
+      "Report and block copycat or impostor accounts",
+      "Never log in through links in the message"
+    ],
+    "ifYouClicked": [
+      "Do not enter login or card details on the page",
+      "Change your password if you entered it",
+      "Contact your bank if you paid a fee",
+      "Report the impostor account to the platform"
+    ],
+    "whatNotToDo": [
+      "Do not pay to receive a 'free' prize",
+      "Do not share your password or codes",
+      "Do not forward the giveaway to friends to 'qualify'"
+    ],
+    "faqs": [
+      {
+        "question": "Should a real giveaway ask me to pay?",
+        "answer": "Legitimate giveaways do not require a fee, tax, or shipping payment to release a free prize. Any such request is a scam sign."
+      },
+      {
+        "question": "How did I win without entering?",
+        "answer": "You did not. Claiming you won something you never entered is a tactic to get your money or login details."
+      },
+      {
+        "question": "The account looks like a real brand. Is it?",
+        "answer": "Scammers create copycat accounts with similar names and logos. Check the official verified account directly before believing any prize."
+      },
+      {
+        "question": "What if I paid the fee?",
+        "answer": "Contact your bank or card provider to dispute the charge and watch for further messages asking for more money."
+      }
+    ],
+    "relatedScams": ["instagram-verification-scam", "fake-online-store-scam", "facebook-account-recovery-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Crypto Investment Scam",
+    "slug": "crypto-investment-scam",
+    "category": "crypto-investment-scams",
+    "metaTitle": "Crypto Investment Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise crypto investment scams promising guaranteed returns and blocking withdrawals. See example patterns and how to protect your money.",
+    "riskLevel": "High",
+    "scamType": "Investment fraud",
+    "summary": "This scam promises high or guaranteed crypto returns through a fake platform, shows paper profits to encourage bigger deposits, then blocks withdrawals.",
+    "quickVerdict": {
+      "mainRedFlag": "Guaranteed or unusually high returns with pressure to deposit more.",
+      "whatToDoFirst": "Stop depositing. No legitimate investment guarantees high returns with no risk."
+    },
+    "exampleMessage": "Example pattern: 'Our AI trading bot delivers 15% weekly returns, guaranteed. Start with as little as $250 and watch your balance grow. Limited spots available.'",
+    "redFlags": [
+      "Promises of guaranteed or very high returns with no risk",
+      "A new online contact who offers to manage your trades",
+      "A polished dashboard showing fast, steady profits",
+      "Requests for more fees or 'taxes' before you can withdraw",
+      "Pressure to invest quickly before an opportunity 'closes'"
+    ],
+    "whatToDo": [
+      "Stop sending money to the platform",
+      "Check whether the company is registered with your financial regulator",
+      "Be cautious of anyone who contacts you first about investing",
+      "Report the platform and keep all records"
+    ],
+    "ifYouClicked": [
+      "Do not deposit more to 'release' your profits",
+      "Contact your bank or card provider to stop further payments",
+      "Document the platform, wallet addresses, and communications",
+      "Report to your national fraud and securities authorities"
+    ],
+    "whatNotToDo": [
+      "Do not pay 'withdrawal fees' or 'taxes' to unlock funds",
+      "Do not invest more to recover earlier losses",
+      "Do not trust recovery services that ask for upfront payment"
+    ],
+    "faqs": [
+      {
+        "question": "Can any investment guarantee high returns?",
+        "answer": "No legitimate investment can guarantee high returns with no risk. Guaranteed-profit promises are one of the clearest signs of fraud."
+      },
+      {
+        "question": "Why can't I withdraw my profits?",
+        "answer": "Fake platforms display paper profits to keep you depositing, then demand endless fees to release funds that do not really exist."
+      },
+      {
+        "question": "A 'mentor' offered to help me trade. Is that safe?",
+        "answer": "Be very cautious of anyone who contacts you first offering to manage trades or guarantee gains. This is a common setup for investment scams."
+      },
+      {
+        "question": "Someone offered to recover my lost crypto. Should I trust them?",
+        "answer": "Recovery services that ask for upfront fees are usually a second scam targeting victims. Be very wary of them."
+      }
+    ],
+    "relatedScams": ["wrong-number-text-scam", "whatsapp-job-scam", "romance-scam-dm"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Amazon Order Email",
+    "slug": "fake-amazon-order-email",
+    "category": "email-scams",
+    "metaTitle": "Fake Amazon Order Email: Red Flags and What to Do",
+    "metaDescription": "Recognise fake Amazon order emails that report charges you did not make. See example patterns, red flags, and how to check your real orders.",
+    "riskLevel": "Medium",
+    "scamType": "Retailer impersonation scam",
+    "summary": "This scam emails a fake order confirmation for an expensive item, hoping you click a link or call a number to dispute a charge you never made.",
+    "quickVerdict": {
+      "mainRedFlag": "An order confirmation for something you did not buy, with a link or number to cancel.",
+      "whatToDoFirst": "Do not click or call. Check your orders by logging in to Amazon directly."
+    },
+    "exampleMessage": "Example pattern: 'Thank you for your order. We are processing your purchase of a laptop for $1,299.99. To cancel, click here or call our support line: [suspicious link / number]'",
+    "redFlags": [
+      "An order confirmation for an item you never purchased",
+      "A link or phone number urging you to cancel or dispute",
+      "A sender address that is not an official Amazon domain",
+      "Generic greetings and urgent wording",
+      "A request to confirm card or login details to 'cancel'"
+    ],
+    "whatToDo": [
+      "Do not click links or call numbers in the email",
+      "Log in to Amazon directly to check your real orders",
+      "Report the email as phishing through Amazon's official channels",
+      "Delete the email and block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not enter your login or card details on the page",
+      "Change your Amazon password if you entered it",
+      "Turn on two-factor authentication",
+      "Contact your bank if you shared card details"
+    ],
+    "whatNotToDo": [
+      "Do not call the support number in the email",
+      "Do not log in through email links",
+      "Do not install remote-access software for 'support'"
+    ],
+    "faqs": [
+      {
+        "question": "Why send a fake order email?",
+        "answer": "Seeing a large charge you did not authorise makes you anxious and likely to click or call, where the scammer harvests your details or money."
+      },
+      {
+        "question": "How do I check my real Amazon orders?",
+        "answer": "Open Amazon directly in your browser or app and view your order history there, rather than using any link in the email."
+      },
+      {
+        "question": "The email has Amazon's logo. Is it genuine?",
+        "answer": "Logos are easy to copy. Check the sender address and verify orders only by logging in to the official site."
+      },
+      {
+        "question": "What if I called and was asked to install an app?",
+        "answer": "Hang up. Genuine support does not ask you to install remote-access software. That request is a scam to control your device."
+      }
+    ],
+    "relatedScams": ["fake-netflix-payment-email", "fake-subscription-renewal-email", "fake-refund-email-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Netflix Payment Email",
+    "slug": "fake-netflix-payment-email",
+    "category": "email-scams",
+    "metaTitle": "Fake Netflix Payment Email: Red Flags and What to Do",
+    "metaDescription": "Spot fake Netflix payment emails warning your account is on hold. See example patterns, red flags, and how to update billing safely.",
+    "riskLevel": "Medium",
+    "scamType": "Subscription impersonation scam",
+    "summary": "This scam warns that your Netflix payment failed and your account is on hold, linking to a fake page that steals your login and card details.",
+    "quickVerdict": {
+      "mainRedFlag": "A 'payment failed, update billing' email linking to an outside login page.",
+      "whatToDoFirst": "Do not use the link. Sign in to Netflix directly to check your account."
+    },
+    "exampleMessage": "Example pattern: 'We were unable to process your payment. Your account is on hold. Update your billing details within 24 hours to avoid cancellation: [suspicious link]'",
+    "redFlags": [
+      "A warning that your payment failed and the account is on hold",
+      "A link to a login or billing page that is not the official Netflix site",
+      "A short deadline to 'avoid cancellation'",
+      "A sender address that does not match Netflix's domain",
+      "A request for full card details and login on the same page"
+    ],
+    "whatToDo": [
+      "Open Netflix directly in your browser or app to check your account",
+      "Update billing only through the official site or app",
+      "Report the email as phishing and delete it",
+      "Block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not enter login or card details on the linked page",
+      "Change your Netflix password if you entered it",
+      "Contact your bank if you shared card information",
+      "Watch your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not log in through the email link",
+      "Do not enter full card details on a page you reached by email",
+      "Do not rush because of the deadline"
+    ],
+    "faqs": [
+      {
+        "question": "How can I tell if my Netflix account really has a billing issue?",
+        "answer": "Sign in to Netflix directly. Any genuine billing problem will be shown in your account, not only in an email link."
+      },
+      {
+        "question": "Why is there a 24-hour deadline?",
+        "answer": "Tight deadlines pressure you to act before you stop to check whether the email is genuine."
+      },
+      {
+        "question": "The email looks exactly like Netflix. Is it safe?",
+        "answer": "Scammers copy Netflix branding closely. The reliable check is to ignore the link and log in to the official app or website."
+      },
+      {
+        "question": "I entered my card details. What should I do?",
+        "answer": "Contact your bank to protect the card, change your Netflix password, and monitor your account for unexpected charges."
+      }
+    ],
+    "relatedScams": ["fake-apple-id-locked-email", "fake-subscription-renewal-email", "fake-amazon-order-email"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Apple ID Locked Email",
+    "slug": "fake-apple-id-locked-email",
+    "category": "email-scams",
+    "metaTitle": "Fake Apple ID Locked Email: Red Flags and What to Do",
+    "metaDescription": "Recognise fake Apple ID locked emails that try to steal your login. See example patterns, red flags, and how to secure your account safely.",
+    "riskLevel": "High",
+    "scamType": "Account impersonation scam",
+    "summary": "This scam claims your Apple ID has been locked for security reasons and links to a fake sign-in page that captures your Apple ID and password.",
+    "quickVerdict": {
+      "mainRedFlag": "An 'account locked, verify now' email linking to an outside Apple sign-in page.",
+      "whatToDoFirst": "Do not click. Manage your Apple ID only through official Apple settings or the website."
+    },
+    "exampleMessage": "Example pattern: 'Your Apple ID has been locked due to unusual activity. To unlock your account, verify your identity here within 24 hours: [suspicious link]'",
+    "redFlags": [
+      "A claim that your Apple ID is locked and must be verified now",
+      "A sign-in link on a web address that is not an official Apple domain",
+      "A request for your Apple ID, password, and verification code",
+      "Urgent wording and a short deadline",
+      "Generic greetings instead of your name"
+    ],
+    "whatToDo": [
+      "Do not click the link in the email",
+      "Manage your Apple ID through official device settings or the Apple ID website",
+      "Turn on two-factor authentication",
+      "Report the email to Apple and delete it"
+    ],
+    "ifYouClicked": [
+      "Change your Apple ID password immediately from a trusted device",
+      "Turn on two-factor authentication if it is not already on",
+      "Review devices and sessions signed in to your account",
+      "Contact Apple support if you cannot regain access"
+    ],
+    "whatNotToDo": [
+      "Do not enter your Apple ID on an emailed link",
+      "Do not share verification codes",
+      "Do not authorise sign-in requests you did not start"
+    ],
+    "faqs": [
+      {
+        "question": "Does Apple lock accounts and ask me to verify by email link?",
+        "answer": "Genuine account security is managed through your device settings and official Apple pages, not urgent email links asking for your password."
+      },
+      {
+        "question": "Why do scammers want my Apple ID?",
+        "answer": "An Apple ID can unlock access to your devices, photos, payments, and backups, so it is a valuable target for fraud."
+      },
+      {
+        "question": "How do I check my account safely?",
+        "answer": "Go to your device's Apple ID settings or type the official Apple ID website address yourself rather than using any email link."
+      },
+      {
+        "question": "I entered my password. What now?",
+        "answer": "Change it immediately from a trusted device, turn on two-factor authentication, and review the devices signed in to your account."
+      }
+    ],
+    "relatedScams": ["fake-netflix-payment-email", "instagram-verification-scam", "facebook-account-recovery-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Facebook Account Recovery Scam",
+    "slug": "facebook-account-recovery-scam",
+    "category": "social-media-scams",
+    "metaTitle": "Facebook Account Recovery Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise the Facebook account recovery scam where hacked friends ask for help or codes. See example patterns and how to protect your account.",
+    "riskLevel": "High",
+    "scamType": "Account takeover scam",
+    "summary": "This scam uses a hacked friend's account to ask you to be a 'recovery contact' or share a code, which actually hands your own account to the scammer.",
+    "quickVerdict": {
+      "mainRedFlag": "A friend's message asking you to receive a code or help recover their account.",
+      "whatToDoFirst": "Do not share any code. Contact your friend another way to check."
+    },
+    "exampleMessage": "Example pattern: 'Hey, I'm locked out of my account and listed you as a trusted contact. I'm sending a code to your phone - can you send it back to help me get back in?'",
+    "redFlags": [
+      "A message from a friend's account asking for a verification code",
+      "A claim that you are their 'trusted' or 'recovery' contact",
+      "A code arriving on your phone that you did not request",
+      "Urgent pressure to reply quickly",
+      "Links to a login page that is not the official platform"
+    ],
+    "whatToDo": [
+      "Do not share any code that arrives on your phone",
+      "Contact the friend through another channel to confirm",
+      "Turn on two-factor authentication for your account",
+      "Report the suspicious message to the platform"
+    ],
+    "ifYouClicked": [
+      "Change your password immediately from the official app",
+      "Log out other sessions and review login activity",
+      "Turn on two-factor authentication",
+      "Warn your contacts if your account may have messaged them"
+    ],
+    "whatNotToDo": [
+      "Do not send verification codes to anyone",
+      "Do not act on urgency without verifying",
+      "Do not log in through links in the message"
+    ],
+    "faqs": [
+      {
+        "question": "Why would a code come to me for my friend's account?",
+        "answer": "It usually will not. A code arriving on your phone is for your own account, and sharing it lets the scammer take over your profile."
+      },
+      {
+        "question": "My friend really is locked out. Can't I help?",
+        "answer": "Help by confirming through another channel, but never share codes. Real recovery does not require you to read out codes sent to your phone."
+      },
+      {
+        "question": "How do scammers get into the friend's account first?",
+        "answer": "Often through earlier phishing. Once inside, they message the victim's friends to spread the scam using the trust between them."
+      },
+      {
+        "question": "What protects my account best?",
+        "answer": "Turn on two-factor authentication, use a strong unique password, and never share codes, even with people you know."
+      }
+    ],
+    "relatedScams": ["instagram-verification-scam", "fake-giveaway-scam", "fake-apple-id-locked-email"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Customs Fee Text",
+    "slug": "fake-customs-fee-text",
+    "category": "delivery-scams",
+    "metaTitle": "Fake Customs Fee Text: Red Flags and What to Do",
+    "metaDescription": "Spot fake customs fee text scams demanding a charge to release a parcel. See example patterns, red flags, and how to verify real fees.",
+    "riskLevel": "High",
+    "scamType": "Customs impersonation scam",
+    "summary": "This scam texts that a parcel is held in customs and a fee is due, linking to a fake page that collects your card and personal details.",
+    "quickVerdict": {
+      "mainRedFlag": "A text saying a parcel is stuck in customs and a fee must be paid through a link.",
+      "whatToDoFirst": "Do not pay through the link. Verify any charge with the courier or retailer directly."
+    },
+    "exampleMessage": "Example pattern: 'Your parcel is held at customs. A fee of $2.99 is required for release. Pay here to avoid return: [suspicious link]'",
+    "redFlags": [
+      "A customs fee text for a parcel you may not be expecting",
+      "A small fee with a threat the parcel will be returned",
+      "A link that is not the courier's or postal service's official site",
+      "A request for card and personal details to release the parcel",
+      "Urgent deadlines to pay quickly"
+    ],
+    "whatToDo": [
+      "Do not click the link or pay the fee",
+      "Check any genuine customs charge with the courier or retailer directly",
+      "Report the text to your mobile provider's spam service",
+      "Delete the message and block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not submit any details on the page",
+      "Contact your bank if you entered card information",
+      "Change passwords for any reused logins",
+      "Monitor your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not pay customs fees through a text link",
+      "Do not share card or personal details",
+      "Do not reply to the message"
+    ],
+    "faqs": [
+      {
+        "question": "Are customs fees ever real?",
+        "answer": "Genuine import charges can exist, but they are confirmed through the courier or postal service, not a random text link demanding a small fee."
+      },
+      {
+        "question": "How do I check a real customs charge?",
+        "answer": "Contact the courier or retailer using their official website, and use the real tracking number to confirm the parcel and any fees."
+      },
+      {
+        "question": "Why is the fee so small?",
+        "answer": "A small, believable amount lowers your guard, while the real aim is to capture your card and personal details on the fake page."
+      },
+      {
+        "question": "What if I already paid?",
+        "answer": "Contact your bank immediately to flag the card and watch for further unauthorised charges."
+      }
+    ],
+    "relatedScams": ["canada-post-text-scam", "fake-delivery-text-scam", "fake-toll-road-text-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Refund Email Scam",
+    "slug": "fake-refund-email-scam",
+    "category": "email-scams",
+    "metaTitle": "Fake Refund Email Scam: Red Flags and What to Do",
+    "metaDescription": "Recognise fake refund email scams that ask for bank details to 'process' a refund. See example patterns, red flags, and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Refund phishing scam",
+    "summary": "This scam emails that you are owed a refund and asks you to confirm bank or card details, or to accept a refund that is really designed to steal your money.",
+    "quickVerdict": {
+      "mainRedFlag": "An unexpected refund offer that asks for your bank or card details to process.",
+      "whatToDoFirst": "Do not share details. Verify any refund through the real company's account."
+    },
+    "exampleMessage": "Example pattern: 'You are eligible for a refund of $89.50. To receive it, confirm your card details so we can credit your account: [suspicious link]'",
+    "redFlags": [
+      "An unexpected refund for a purchase or service you do not recall",
+      "A request for your full card or bank details to 'process' the refund",
+      "A link to a page that is not the company's official site",
+      "A 'support agent' who asks for remote access to 'help refund' you",
+      "Pressure to confirm details quickly"
+    ],
+    "whatToDo": [
+      "Do not share bank or card details from an email prompt",
+      "Verify any refund by logging in to the real account directly",
+      "Report the email as phishing and delete it",
+      "Block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not grant remote access to your device",
+      "Contact your bank if you shared card or account details",
+      "Change passwords for any reused logins",
+      "Watch your statements for unexpected transactions"
+    ],
+    "whatNotToDo": [
+      "Do not give remote access to 'process' a refund",
+      "Do not share full card or banking details",
+      "Do not let an agent guide you through bank transfers"
+    ],
+    "faqs": [
+      {
+        "question": "Do companies need my card details to refund me?",
+        "answer": "Genuine refunds usually go back to the original payment method automatically. Being asked to confirm full card details to receive a refund is a scam sign."
+      },
+      {
+        "question": "An agent wants remote access to refund me. Is that normal?",
+        "answer": "No. Remote-access requests during a 'refund' are a common trick to move your money or steal details. Refuse and end contact."
+      },
+      {
+        "question": "How do I check if a refund is real?",
+        "answer": "Log in to the real retailer or service directly to see if any refund is genuinely owed, rather than trusting the email."
+      },
+      {
+        "question": "What if I shared my details?",
+        "answer": "Contact your bank immediately, change affected passwords, and monitor your accounts for unauthorised activity."
+      }
+    ],
+    "relatedScams": ["fake-invoice-email-scam", "fake-subscription-renewal-email", "fake-bank-alert-text-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Remote Data Entry Job Scam",
+    "slug": "fake-remote-data-entry-job-scam",
+    "category": "job-scams",
+    "metaTitle": "Fake Remote Data Entry Job Scam: Red Flags",
+    "metaDescription": "Recognise fake remote data entry job scams that collect your details or charge fees. See example patterns and how to verify an offer.",
+    "riskLevel": "Medium",
+    "scamType": "Work-from-home job scam",
+    "summary": "This scam advertises easy remote data entry work, then asks for upfront fees, personal documents, or bank details, or routes you into money handling.",
+    "quickVerdict": {
+      "mainRedFlag": "Easy remote data entry work with high pay that asks for a fee or bank details upfront.",
+      "whatToDoFirst": "Verify the employer independently and never pay to start a job."
+    },
+    "exampleMessage": "Example pattern: 'Earn $30/hour doing simple data entry from home, no experience required. Pay a one-time $49 software activation fee to get started and receive your first assignment.'",
+    "redFlags": [
+      "High pay for very simple remote work with no real interview",
+      "An upfront fee for software, training, or a starter kit",
+      "A request for bank details or ID before formal hiring",
+      "A recruiter who only uses a chat app or personal email",
+      "A role that involves receiving and forwarding payments"
+    ],
+    "whatToDo": [
+      "Search the company and contact it through its official website",
+      "Refuse to pay any fee to begin work",
+      "Be cautious sharing ID or bank details until the employer is verified",
+      "Report suspicious listings to the job platform"
+    ],
+    "ifYouClicked": [
+      "Stop sending documents or payments",
+      "Contact your bank if you paid a fee or shared account details",
+      "Change passwords if you entered them on a fake portal",
+      "Monitor your accounts and credit for unusual activity"
+    ],
+    "whatNotToDo": [
+      "Do not pay for software, training, or a starter kit",
+      "Do not share ID or bank details with unverified recruiters",
+      "Do not accept roles that move money on someone's behalf"
+    ],
+    "faqs": [
+      {
+        "question": "Do real data entry jobs charge a startup fee?",
+        "answer": "Legitimate employers do not charge you to begin work or buy mandatory 'activation' software. Upfront fees are a strong warning sign."
+      },
+      {
+        "question": "Why is the pay so high for simple work?",
+        "answer": "Inflated pay for trivial tasks is bait designed to attract applicants who will then pay fees or hand over personal details."
+      },
+      {
+        "question": "Is sharing my ID early a problem?",
+        "answer": "Yes. Genuine identity checks happen after a real hiring process. Early ID requests can be used for identity theft."
+      },
+      {
+        "question": "How can I find legitimate remote work?",
+        "answer": "Apply through reputable job sites and company career pages, verify the employer independently, and avoid roles that require payment to start."
+      }
+    ],
+    "relatedScams": ["fake-job-offer-scam", "whatsapp-job-scam", "fake-invoice-email-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Romance Scam DM",
+    "slug": "romance-scam-dm",
+    "category": "social-media-scams",
+    "metaTitle": "Romance Scam DM: Red Flags and What to Do",
+    "metaDescription": "Recognise romance scam DMs that build trust before asking for money. See example patterns, red flags, and how to protect yourself.",
+    "riskLevel": "High",
+    "scamType": "Romance and confidence scam",
+    "summary": "This scam builds an online romantic relationship through messages, then invents an emergency or investment to ask for money, while always avoiding meeting in person.",
+    "quickVerdict": {
+      "mainRedFlag": "A new online romance that quickly grows serious and then asks for money.",
+      "whatToDoFirst": "Do not send money. Be cautious with anyone who avoids meeting or video calls."
+    },
+    "exampleMessage": "Example pattern: 'You mean everything to me. I hate to ask, but I'm stuck overseas and my card is frozen. Could you help me with a small transfer until I sort it out? I'll pay you back as soon as I'm home.'",
+    "redFlags": [
+      "A stranger who quickly becomes very affectionate online",
+      "Someone who always has reasons not to meet or video call",
+      "A sudden emergency, medical bill, or travel problem requiring money",
+      "Requests for gift cards, wire transfers, or crypto",
+      "An eventual pitch to invest together in a platform they recommend"
+    ],
+    "whatToDo": [
+      "Do not send money, gift cards, or crypto",
+      "Slow down and talk to someone you trust about the relationship",
+      "Try a video call and be cautious if it never happens",
+      "Report and block the account, and keep records"
+    ],
+    "ifYouClicked": [
+      "Stop sending any further money immediately",
+      "Contact your bank or payment provider to try to stop transfers",
+      "Keep all messages, profiles, and payment records",
+      "Report to your anti-fraud centre and seek support"
+    ],
+    "whatNotToDo": [
+      "Do not send money to someone you have not met in person",
+      "Do not invest based on a romantic contact's advice",
+      "Do not keep the situation secret out of embarrassment"
+    ],
+    "faqs": [
+      {
+        "question": "How quickly do romance scammers ask for money?",
+        "answer": "It varies. Some build trust for weeks or months before the first request, which can make the eventual ask feel reasonable."
+      },
+      {
+        "question": "They refuse to video call. Is that suspicious?",
+        "answer": "Consistently avoiding video calls or in-person meetings while professing strong feelings is a common red flag of a romance scam."
+      },
+      {
+        "question": "They now want me to invest. Is that related?",
+        "answer": "Yes. Many romance scams evolve into investment fraud, steering you toward a fake platform after trust is built."
+      },
+      {
+        "question": "I sent money. What should I do?",
+        "answer": "Stop all payments, contact your bank, report it, and reach out for support. Be wary of recovery services that ask for upfront fees."
+      }
+    ],
+    "relatedScams": ["wrong-number-text-scam", "crypto-investment-scam", "instagram-verification-scam"],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Subscription Renewal Email",
+    "slug": "fake-subscription-renewal-email",
+    "category": "email-scams",
+    "metaTitle": "Fake Subscription Renewal Email: Red Flags",
+    "metaDescription": "Recognise fake subscription renewal emails that report charges to make you call or click. See example patterns, red flags, and safe steps.",
+    "riskLevel": "Medium",
+    "scamType": "Subscription billing scam",
+    "summary": "This scam emails that a subscription is renewing for a large amount, hoping you call a fake support number or click a link to cancel and hand over details.",
+    "quickVerdict": {
+      "mainRedFlag": "A renewal notice for a costly subscription with a number to call to cancel.",
+      "whatToDoFirst": "Do not call or click. Check the real account or your card statement directly."
+    },
+    "exampleMessage": "Example pattern: 'Your annual antivirus subscription will auto-renew today for $399.99. To cancel or dispute this charge, call our support team at 1-800-XXX-XXXX.'",
+    "redFlags": [
+      "A renewal notice for a service you do not use or recognise",
+      "A large charge designed to make you act quickly",
+      "A phone number urging you to call to cancel or dispute",
+      "A sender address that does not match the named company",
+      "A request to confirm card details or install software"
+    ],
+    "whatToDo": [
+      "Do not call the number or click links in the email",
+      "Check the real subscription account or your card statement directly",
+      "Report the email as phishing and delete it",
+      "Block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not install remote-access software for 'support'",
+      "Hang up if asked for payment or remote control of your device",
+      "Contact your bank if you shared card details",
+      "Run a security scan if you downloaded anything"
+    ],
+    "whatNotToDo": [
+      "Do not call the support number provided",
+      "Do not give remote access to your device",
+      "Do not share card details to 'cancel' a charge"
+    ],
+    "faqs": [
+      {
+        "question": "Why does the email list such a high price?",
+        "answer": "A large charge creates urgency and pushes you to call the number, where a fake agent tries to get remote access, payment, or your details."
+      },
+      {
+        "question": "Is it safe to call the number to cancel?",
+        "answer": "No. The number connects to the scammer, not real support. Check the charge through your real account or bank instead."
+      },
+      {
+        "question": "The agent wants to install software to refund me. Is that normal?",
+        "answer": "No. Remote-access requests are a scam tactic to control your device and accounts. Refuse and end the call."
+      },
+      {
+        "question": "How do I confirm a real subscription charge?",
+        "answer": "Log in to the actual service or check your bank statement directly. If there is no matching charge, the email is fake."
+      }
+    ],
+    "relatedScams": ["fake-invoice-email-scam", "fake-netflix-payment-email", "fake-refund-email-scam"],
+    "lastReviewed": "2026-06"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "siteName": "IsThisAScam",
+  "tagline": "Check if a message, link, email, or offer looks like a scam.",
+  "shortDescription": "Paste suspicious text or browse common scam guides before you click, reply, or send money.",
+  "url": "https://isthisascam.org",
+  "locale": "en_US",
+  "lang": "en",
+  "contactEmail": "hello@isthisascam.org",
+  "twitter": "",
+  "adsense": {
+    "enabled": false,
+    "publisherId": "ca-pub-0000000000000000"
+  },
+  "analytics": {
+    "firebaseEnabled": true,
+    "firebaseConfig": {
+      "apiKey": "AIzaSyCN5BPgAtYydeqCXagAuQGeFbP3iqXb620",
+      "authDomain": "scam-93014.firebaseapp.com",
+      "projectId": "scam-93014",
+      "storageBucket": "scam-93014.firebasestorage.app",
+      "messagingSenderId": "513552384603",
+      "appId": "1:513552384603:web:2203687327f707e647757e",
+      "measurementId": "G-7D510B3PGV"
+    }
+  }
+}
