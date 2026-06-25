@@ -880,12 +880,10 @@ Sitemap: ${base}/sitemap.xml
 }
 
 function adsTxt() {
-  // ads.txt for AdSense. Replace the publisher ID after approval (kept in site.config.json).
+  // ads.txt — authorised digital sellers. Publisher ID comes from site.config.json.
   const pub = (config.adsense && config.adsense.publisherId) || "ca-pub-0000000000000000";
   const id = pub.replace(/^ca-/, "");
-  return `# ads.txt — authorised digital sellers
-# After AdSense approval, ensure the publisher ID below matches your account.
-google.com, ${id}, DIRECT, f08c47fec0942fa0
+  return `google.com, ${id}, DIRECT, f08c47fec0942fa0
 `;
 }
 
