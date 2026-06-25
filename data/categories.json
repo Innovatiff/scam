@@ -1,0 +1,365 @@
+[
+  {
+    "slug": "text-message-scams",
+    "name": "Text Message Scams",
+    "shortName": "Text Message",
+    "icon": "message",
+    "plannedPages": 70,
+    "metaTitle": "Text Message Scams (Smishing): Red Flags and Examples",
+    "metaDescription": "Learn how to spot text message scams (smishing), see common example patterns, and find out what to do if you clicked a suspicious link in a text.",
+    "summary": "Scam texts (also called smishing) try to push you into clicking a link, calling a number, or sending money using urgency and fake alerts.",
+    "intro": "Text message scams arrive as SMS or app messages that pretend to be from a delivery company, bank, government agency, or even a stranger who 'texted the wrong number.' They usually contain a short, urgent message and a link. The goal is to get you to click before you think, so you hand over login details, card numbers, or a verification code.",
+    "redFlags": [
+      "An unexpected text with a link from a number you do not recognise",
+      "Urgent wording such as 'act now' or 'your account will be closed'",
+      "A request to pay a small fee to release a package or avoid a fine",
+      "Shortened or odd-looking links that do not match the real company",
+      "A request for a verification code, password, or card number"
+    ],
+    "faqs": [
+      {
+        "question": "How do scammers get my phone number?",
+        "answer": "Numbers are often guessed at random, bought from data leaks, or collected from old sign-up forms. Receiving a scam text does not mean you were specifically targeted or that your accounts are compromised."
+      },
+      {
+        "question": "Is it safe to reply STOP to a scam text?",
+        "answer": "Replying anything, including STOP, can confirm to a scammer that your number is active. For unknown suspicious texts it is usually safer to not reply, block the number, and delete the message."
+      },
+      {
+        "question": "Should I click the link just to see what it is?",
+        "answer": "No. Even opening a scam link can expose information about your device or lead to a convincing fake login page. If you want to check something, visit the company's official website or app directly."
+      }
+    ],
+    "related": ["delivery-scams", "bank-payment-scams", "government-tax-scams"]
+  },
+  {
+    "slug": "email-scams",
+    "name": "Email Scams",
+    "shortName": "Email",
+    "icon": "mail",
+    "plannedPages": 60,
+    "metaTitle": "Email Scams (Phishing): Red Flags and Example Messages",
+    "metaDescription": "Recognise phishing email scams with common red flags, example message patterns, and clear steps for what to do if you clicked a link or entered your details.",
+    "summary": "Email scams (phishing) imitate companies you trust to trick you into logging in on a fake page, paying a fake invoice, or downloading an attachment.",
+    "intro": "Email scams, often called phishing, are messages designed to look like they come from a company or service you use, such as a bank, retailer, or streaming service. They typically warn about a problem with your account or payment and link to a fake login page. Some carry harmful attachments or fake invoices. The sender address and links rarely match the real organisation.",
+    "redFlags": [
+      "A sender address that does not match the real company domain",
+      "Generic greetings like 'Dear customer' instead of your name",
+      "Urgent claims that your account is locked, expired, or will be charged",
+      "Links that point to a different website than the one displayed",
+      "Unexpected attachments or requests to 'verify' your login or payment"
+    ],
+    "faqs": [
+      {
+        "question": "How can I check who really sent an email?",
+        "answer": "Look at the full sender address, not just the display name. Hover over links to see the real destination before clicking. When in doubt, open the company's official website or app directly instead of using links in the email."
+      },
+      {
+        "question": "Is it dangerous to open a phishing email?",
+        "answer": "Simply opening most emails is low risk. The risk comes from clicking links, downloading attachments, or entering information. Avoid those actions and the email itself is usually harmless to delete."
+      },
+      {
+        "question": "What should I do with a phishing email?",
+        "answer": "Do not click anything. You can report it to your email provider as phishing and to the company being impersonated, then delete it."
+      }
+    ],
+    "related": ["bank-payment-scams", "online-shopping-scams", "social-media-scams"]
+  },
+  {
+    "slug": "marketplace-scams",
+    "name": "Marketplace Scams",
+    "shortName": "Marketplace",
+    "icon": "tag",
+    "plannedPages": 60,
+    "metaTitle": "Marketplace Scams: Buyer and Seller Red Flags to Watch",
+    "metaDescription": "Spot common Facebook Marketplace and classified scams. See example patterns from fake buyers and sellers and learn how to trade safely.",
+    "summary": "Marketplace scams target buyers and sellers on platforms like Facebook Marketplace, using fake payments, overpayment tricks, and pressure to move off-platform.",
+    "intro": "Marketplace scams happen on buy-and-sell platforms and classified sites. A fake buyer may send a screenshot of a 'payment' that never arrives, ask for a shipping or verification fee, or try to move the conversation to email or text. A fake seller may take a deposit for an item that does not exist. The common thread is pressure to act quickly and to step outside the platform's protections.",
+    "redFlags": [
+      "A buyer or seller who wants to move the chat off the platform immediately",
+      "Payment 'screenshots' instead of money actually arriving in your account",
+      "Requests to pay or refund a fee before you receive funds",
+      "Overpayment followed by a request to send the difference back",
+      "Pressure to ship or pay before you have confirmed details"
+    ],
+    "faqs": [
+      {
+        "question": "Why do scammers want to move off the platform?",
+        "answer": "Platforms have reporting tools and some buyer or seller protections. Moving to email, text, or a messaging app removes those safeguards and makes it harder to trace the scammer."
+      },
+      {
+        "question": "Is a payment screenshot proof that I was paid?",
+        "answer": "No. Screenshots can be faked or show pending transfers that never complete. Only treat a payment as real once the money has actually cleared in your own bank or platform account."
+      },
+      {
+        "question": "How can I trade more safely on marketplaces?",
+        "answer": "Keep conversations and payments inside the platform, meet in safe public places for local pickup, and never send a 'fee' to release a payment."
+      }
+    ],
+    "related": ["online-shopping-scams", "bank-payment-scams", "social-media-scams"]
+  },
+  {
+    "slug": "job-scams",
+    "name": "Job Scams",
+    "shortName": "Job",
+    "icon": "briefcase",
+    "plannedPages": 50,
+    "metaTitle": "Job Scams: Fake Offers and Work-From-Home Red Flags",
+    "metaDescription": "Identify fake job offers and work-from-home scams. See example messages, common red flags, and what to do if you shared personal details.",
+    "summary": "Job scams offer easy, high-paying or remote work to collect your personal details, charge fake fees, or recruit you into moving money.",
+    "intro": "Job scams use the promise of flexible, well-paid, or remote work to draw people in. A 'recruiter' may message you out of the blue, offer a role with no real interview, and ask for personal documents, an upfront fee for equipment or training, or your bank details. Some schemes turn victims into unwitting money mules by asking them to receive and forward payments.",
+    "redFlags": [
+      "A job offer with no real interview or with an interview only by text or chat app",
+      "Pay that seems far too high for very simple tasks",
+      "Requests for upfront payment for training, equipment, or a background check",
+      "A recruiter who contacts you first on WhatsApp, Telegram, or text",
+      "Requests for your bank details or to receive and forward money"
+    ],
+    "faqs": [
+      {
+        "question": "Should a real employer ever ask me to pay them?",
+        "answer": "Legitimate employers do not ask you to pay for a job, training, or equipment as a condition of being hired. A request for upfront payment is a strong warning sign."
+      },
+      {
+        "question": "Why would a job ask me to receive and send money?",
+        "answer": "This is a common money-mule tactic. Moving money for an 'employer' can involve handling the proceeds of fraud, which can have serious legal consequences even if you did not realise."
+      },
+      {
+        "question": "How can I check if a job offer is real?",
+        "answer": "Search for the company independently, contact it through its official website, and be cautious of roles that only communicate through chat apps and pressure you to act fast."
+      }
+    ],
+    "related": ["social-media-scams", "bank-payment-scams", "email-scams"]
+  },
+  {
+    "slug": "bank-payment-scams",
+    "name": "Bank & Payment Scams",
+    "shortName": "Bank & Payment",
+    "icon": "bank",
+    "plannedPages": 50,
+    "metaTitle": "Bank & Payment Scams: Fake Alerts and Transfer Red Flags",
+    "metaDescription": "Recognise fake bank alerts, payment-pending tricks, and e-transfer scams. See example patterns and steps to protect your money and accounts.",
+    "summary": "Bank and payment scams impersonate your bank or a payment service to trigger panic, then push you to share codes, move money, or log in on a fake page.",
+    "intro": "Bank and payment scams pretend to come from your bank, a card provider, or a payment app like PayPal. They often warn of suspicious activity, a locked account, or a pending payment, then steer you toward a fake login page or a phone call where a 'fraud agent' pressures you to move your money 'to keep it safe.' Real banks do not ask you to transfer funds to a new account or to read out one-time codes.",
+    "redFlags": [
+      "A message or call claiming urgent fraud on your account",
+      "Pressure to move your money to a 'safe' or 'new' account",
+      "A request to read out a one-time passcode or verification code",
+      "A 'payment pending' notice that asks you to confirm details to release funds",
+      "Links to a login page that is not the bank's official website or app"
+    ],
+    "faqs": [
+      {
+        "question": "Will my bank ever ask me to move money to keep it safe?",
+        "answer": "No. A genuine bank will never ask you to transfer your money to another account to protect it. Anyone who tells you to do this is almost certainly a scammer."
+      },
+      {
+        "question": "Should I ever share a one-time passcode?",
+        "answer": "Never share one-time passcodes or verification codes with anyone, even someone claiming to be from your bank. These codes are the key to your account and payments."
+      },
+      {
+        "question": "How do I check a suspicious bank message?",
+        "answer": "Do not use the links or numbers in the message. Call your bank using the number on the back of your card or in its official app, and ask them to confirm."
+      }
+    ],
+    "related": ["email-scams", "text-message-scams", "crypto-investment-scams"]
+  },
+  {
+    "slug": "delivery-scams",
+    "name": "Delivery & Postal Scams",
+    "shortName": "Delivery",
+    "icon": "package",
+    "plannedPages": 40,
+    "metaTitle": "Delivery & Postal Scams: Fake Parcel Texts and Fees",
+    "metaDescription": "Spot fake delivery and postal scam texts that ask for a redelivery fee or personal details. See example patterns and what to do next.",
+    "summary": "Delivery scams impersonate couriers and postal services with fake 'missed delivery' or 'customs fee' messages that lead to phishing pages.",
+    "intro": "Delivery and postal scams play on the fact that many people are expecting a parcel. A text or email claims a delivery failed, a small redelivery or customs fee is due, or an address needs confirming, and links to a fake page that collects card and personal details. Real couriers usually do not ask for payment by text link, and any genuine charge can be checked through the official tracking page.",
+    "redFlags": [
+      "An unexpected 'missed delivery' message with a link",
+      "A request to pay a small redelivery, customs, or handling fee",
+      "Links that do not match the courier's official website",
+      "Requests for personal or card details to 'reschedule' delivery",
+      "Urgent wording warning the parcel will be returned or destroyed"
+    ],
+    "faqs": [
+      {
+        "question": "Do couriers charge fees by text message?",
+        "answer": "Genuine redelivery is normally free, and any real customs charge can be confirmed through the courier's official website. A small fee demanded through a text link is a common scam pattern."
+      },
+      {
+        "question": "I am expecting a parcel, so is the text probably real?",
+        "answer": "Scammers rely on this. Even if you are expecting something, check the tracking number on the courier's official site or app rather than using the link in the message."
+      },
+      {
+        "question": "What should I do with a suspicious delivery text?",
+        "answer": "Do not click the link. Verify any delivery directly with the retailer or courier, then report and delete the message."
+      }
+    ],
+    "related": ["text-message-scams", "online-shopping-scams", "email-scams"]
+  },
+  {
+    "slug": "rental-scams",
+    "name": "Rental & Housing Scams",
+    "shortName": "Rental",
+    "icon": "home",
+    "plannedPages": 30,
+    "metaTitle": "Rental & Housing Scams: Deposit and Listing Red Flags",
+    "metaDescription": "Avoid rental scams that ask for a deposit before viewing. See example patterns, common red flags, and how to verify a listing safely.",
+    "summary": "Rental scams advertise homes that are not available, then pressure you to pay a deposit or holding fee before you can view the property.",
+    "intro": "Rental and housing scams post attractive listings, often with photos copied from real ads, at below-market prices. The 'landlord' is usually away or abroad and asks for a deposit or first month's rent before any viewing, often by wire transfer, e-transfer, or gift card. Once the money is sent, the listing and contact disappear.",
+    "redFlags": [
+      "A landlord who cannot show the property in person or by live video",
+      "A request for a deposit or holding fee before any viewing",
+      "Rent that is unusually cheap for the area",
+      "Pressure to pay quickly because of 'other interested tenants'",
+      "Payment requested by wire transfer, e-transfer, or gift card"
+    ],
+    "faqs": [
+      {
+        "question": "Should I ever pay a deposit before seeing a rental?",
+        "answer": "Avoid paying any deposit or fee before you have viewed the property and confirmed the landlord has the right to rent it. Legitimate landlords expect you to view first."
+      },
+      {
+        "question": "How can I tell if a listing is stolen?",
+        "answer": "Search the listing photos and text online. If the same images appear on other sites under different names or prices, it may be a copied or fake listing."
+      },
+      {
+        "question": "What payment methods are safest for rentals?",
+        "answer": "Be cautious with wire transfers, e-transfers, and gift cards, which are hard to reverse. Use traceable methods and get a signed agreement after viewing."
+      }
+    ],
+    "related": ["marketplace-scams", "bank-payment-scams", "online-shopping-scams"]
+  },
+  {
+    "slug": "social-media-scams",
+    "name": "Social Media Scams",
+    "shortName": "Social Media",
+    "icon": "users",
+    "plannedPages": 60,
+    "metaTitle": "Social Media Scams: DMs, Giveaways and Account Tricks",
+    "metaDescription": "Recognise social media scams including fake verification, giveaways, account recovery, and romance DMs. See example patterns and safety steps.",
+    "summary": "Social media scams use DMs, fake giveaways, verification offers, and romance messages to steal logins, money, or personal information.",
+    "intro": "Social media scams reach you through direct messages, comments, and fake pages on platforms like Instagram, Facebook, and TikTok. Common forms include fake 'verification' or copyright warnings that lead to phishing pages, prize giveaways that ask for a fee, account-recovery tricks that hijack your profile, and romance scams that build trust before asking for money.",
+    "redFlags": [
+      "A DM warning your account will be deleted unless you 'verify' now",
+      "A message from a friend's hacked account asking for a code or help",
+      "Prize or giveaway wins that require a fee or your login to claim",
+      "A new online romance that quickly asks for money or gift cards",
+      "Links to login pages that are not the platform's official website"
+    ],
+    "faqs": [
+      {
+        "question": "Does a platform send verification warnings by DM?",
+        "answer": "Official verification and policy notices come through in-app settings or official channels, not urgent DMs with outside links. Treat such DMs as likely phishing."
+      },
+      {
+        "question": "A friend messaged asking for a code. Is that safe?",
+        "answer": "If a friend asks you to share a verification code or 'help recover' their account, their account may be hacked. Never share codes, and contact your friend another way to check."
+      },
+      {
+        "question": "How do I protect my social media accounts?",
+        "answer": "Turn on two-factor authentication, use a strong unique password, and be cautious with links in DMs, even from accounts you know."
+      }
+    ],
+    "related": ["job-scams", "email-scams", "marketplace-scams"]
+  },
+  {
+    "slug": "online-shopping-scams",
+    "name": "Online Shopping Scams",
+    "shortName": "Online Shopping",
+    "icon": "cart",
+    "plannedPages": 50,
+    "metaTitle": "Online Shopping Scams: Fake Stores and Order Red Flags",
+    "metaDescription": "Spot fake online stores and shopping scams. See common red flags, example patterns, and how to check a website before you buy.",
+    "summary": "Online shopping scams use fake stores, too-good-to-be-true deals, and fake order emails to take your money or card details.",
+    "intro": "Online shopping scams involve fake or dishonest stores that advertise popular products at very low prices, then take payment and deliver nothing, a counterfeit, or a cheap substitute. Related scams send fake order-confirmation or 'problem with your order' emails to harvest your login and card details. These sites often appear briefly through social media ads before disappearing.",
+    "redFlags": [
+      "Prices that are far below the normal price for popular items",
+      "A brand-new store with no real reviews or contact details",
+      "Only unusual payment methods such as wire transfer or gift cards",
+      "Fake order or shipping emails for purchases you did not make",
+      "Pressure from countdown timers and 'almost sold out' messages"
+    ],
+    "faqs": [
+      {
+        "question": "How can I check if an online store is legitimate?",
+        "answer": "Look for a real contact address, search the store name with the word 'scam' or 'review', and check how long the site has existed. Be wary if only risky payment methods are offered."
+      },
+      {
+        "question": "Is it safer to pay by card than by bank transfer?",
+        "answer": "Card payments often carry more consumer protection and can be disputed, while wire transfers and gift cards are very hard to reverse. Avoid stores that only accept hard-to-trace methods."
+      },
+      {
+        "question": "I got an order email for something I did not buy. What now?",
+        "answer": "Do not click the links. Log in to the real retailer's website directly to check your orders, and treat the email as possible phishing."
+      }
+    ],
+    "related": ["email-scams", "marketplace-scams", "delivery-scams"]
+  },
+  {
+    "slug": "crypto-investment-scams",
+    "name": "Crypto & Investment Scams",
+    "shortName": "Crypto & Investment",
+    "icon": "chart",
+    "plannedPages": 30,
+    "metaTitle": "Crypto & Investment Scams: Fake Returns and Red Flags",
+    "metaDescription": "Recognise crypto and investment scams promising guaranteed or high returns. See example patterns, red flags, and how to protect your money.",
+    "summary": "Crypto and investment scams promise high or guaranteed returns to lure you into fake platforms, then block withdrawals once you deposit.",
+    "intro": "Crypto and investment scams advertise unusually high or 'guaranteed' returns through fake trading platforms, social media tips, or a new online contact who offers to help you invest. Early on, a fake dashboard may show profits to encourage bigger deposits. When you try to withdraw, you are asked for more fees and taxes, and eventually the platform and contact disappear with your money.",
+    "redFlags": [
+      "Promises of guaranteed or unusually high returns with no risk",
+      "Pressure to invest quickly before a 'limited' opportunity ends",
+      "A new online contact who offers to manage your trades",
+      "Requests for more fees or taxes before you can withdraw",
+      "Unregistered platforms that are hard to verify or research"
+    ],
+    "faqs": [
+      {
+        "question": "Can any investment guarantee high returns?",
+        "answer": "No legitimate investment can guarantee high returns with no risk. Promises of guaranteed profits are one of the clearest signs of an investment scam."
+      },
+      {
+        "question": "Why can't I withdraw my profits?",
+        "answer": "Fake platforms show paper 'profits' to keep you depositing, then demand endless fees or taxes to release funds. The money is usually already gone, and paying more will not recover it."
+      },
+      {
+        "question": "How can I check an investment platform?",
+        "answer": "Verify whether the company is registered with your local financial regulator, and be cautious of anyone who contacts you first with an investment opportunity."
+      }
+    ],
+    "related": ["bank-payment-scams", "social-media-scams", "job-scams"]
+  },
+  {
+    "slug": "government-tax-scams",
+    "name": "Government, Tax & Legal Scams",
+    "shortName": "Government & Tax",
+    "icon": "shield",
+    "plannedPages": 30,
+    "metaTitle": "Government, Tax & Legal Scams: Fake Agency Red Flags",
+    "metaDescription": "Recognise scams that impersonate tax, immigration, and law-enforcement agencies. See example patterns and how to verify official contact.",
+    "summary": "Government and tax scams impersonate agencies to threaten fines, arrest, or deportation, then demand urgent payment by unusual methods.",
+    "intro": "Government, tax, and legal scams pretend to come from a tax authority, immigration office, court, or police force. They claim you owe money, missed a payment, or face arrest or deportation, and demand immediate payment, often by gift card, wire transfer, or cryptocurrency. Real agencies communicate through official letters and channels and do not demand payment in gift cards or threaten instant arrest by phone or text.",
+    "redFlags": [
+      "Threats of arrest, deportation, or legal action unless you pay now",
+      "Demands for payment by gift card, wire transfer, or cryptocurrency",
+      "Caller ID or sender details that 'spoof' a real agency",
+      "Pressure to keep the matter secret and act immediately",
+      "Requests for personal identifiers like your tax or ID number"
+    ],
+    "faqs": [
+      {
+        "question": "Do government agencies demand payment by gift card?",
+        "answer": "No legitimate agency asks for payment in gift cards, cryptocurrency, or wire transfers. This demand is a clear sign of a scam."
+      },
+      {
+        "question": "Can a tax office threaten to arrest me by phone?",
+        "answer": "Genuine agencies do not threaten immediate arrest or deportation over the phone or by text. These threats are designed to scare you into paying quickly."
+      },
+      {
+        "question": "How do I verify a message from a government agency?",
+        "answer": "Do not use the contact details in the message. Look up the agency's official website or phone number independently and confirm any claim directly."
+      }
+    ],
+    "related": ["bank-payment-scams", "text-message-scams", "email-scams"]
+  }
+]
