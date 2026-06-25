@@ -1,15 +1,16 @@
 {
-  "siteName": "IsThisAScam",
+  "siteName": "Scam or Safe",
   "tagline": "Check if a message, link, email, or offer looks like a scam.",
   "shortDescription": "Paste suspicious text or browse common scam guides before you click, reply, or send money.",
-  "url": "https://isthisascam.org",
+  "url": "https://scamorsafe.org",
   "locale": "en_US",
   "lang": "en",
-  "contactEmail": "hello@isthisascam.org",
+  "contactEmail": "hello@scamorsafe.org",
+  "googleSiteVerification": "",
   "twitter": "",
   "adsense": {
     "enabled": false,
-    "publisherId": "ca-pub-0000000000000000"
+    "publisherId": "ca-pub-7759354256906782"
   },
   "analytics": {
     "firebaseEnabled": true,

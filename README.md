@@ -1,4 +1,4 @@
-# IsThisAScam
+# Scam or Safe
 
 A public-safety website where people can check suspicious messages and browse
 evergreen scam guides before they click, reply, or send money.
@@ -109,14 +109,22 @@ related guides. It deliberately never says "definitely a scam."
 
 ## AdSense
 
-The site is **AdSense-ready but ads are off by default**.
+The site is **AdSense-ready but ads are off by default**, in two stages:
 
-1. After approval, set in `site.config.json`:
-   ```json
-   "adsense": { "enabled": true, "publisherId": "ca-pub-XXXXXXXXXXXXXXXX" }
-   ```
-2. `ads.txt` updates automatically — it derives from the same publisher ID.
-3. Run `npm run build`.
+**Stage 1 — apply / get verified.** Set your real publisher ID (keep `enabled`
+false):
+```json
+"adsense": { "enabled": false, "publisherId": "ca-pub-XXXXXXXXXXXXXXXX" }
+```
+On the next build, the AdSense loader snippet appears in every page's `<head>`
+(so Google can verify and review the site) and `ads.txt` updates automatically —
+but **no ads render** yet.
+
+**Stage 2 — after approval.** Flip the flag:
+```json
+"adsense": { "enabled": true, "publisherId": "ca-pub-XXXXXXXXXXXXXXXX" }
+```
+Now the reserved ad slots fill in across the policy-safe zones. Run `npm run build`.
 
 While disabled, ad slots render only as reserved HTML comments (no layout shift,
 no empty boxes). Ad slots are placed in policy-safe zones only — below the hero,

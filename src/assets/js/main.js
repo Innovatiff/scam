@@ -1,4 +1,4 @@
-/* IsThisAScam — shared UI behaviour (mobile nav). No tracking, no storage. */
+/* Scam or Safe — shared UI behaviour (mobile nav). No tracking, no storage. */
 (function () {
   "use strict";
   var toggle = document.querySelector(".nav-toggle");
