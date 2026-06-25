@@ -247,7 +247,8 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${esc(url)}">
 <meta name="theme-color" content="#0F172A">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="index, follow, max-image-preview:large">${config.googleSiteVerification ? `
+<meta name="google-site-verification" content="${esc(config.googleSiteVerification)}">` : ""}
 <meta property="og:type" content="${esc(ogType)}">
 <meta property="og:site_name" content="${esc(config.siteName)}">
 <meta property="og:title" content="${esc(title)}">
