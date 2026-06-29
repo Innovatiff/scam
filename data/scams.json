@@ -28348,5 +28348,3155 @@
       "vital-records-scam"
     ],
     "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Vehicle Recall Text Scam",
+    "slug": "vehicle-recall-text-scam",
+    "category": "text-message-scams",
+    "metaTitle": "Vehicle Recall Text Scam: Fake Safety Notice Flags",
+    "metaDescription": "Recognise fake vehicle safety recall texts that link to phishing or charge bogus fees. See an example pattern and how to check a real recall.",
+    "riskLevel": "Medium",
+    "scamType": "Manufacturer impersonation (smishing)",
+    "summary": "This scam texts that your vehicle has an urgent safety recall and links you to 'book a repair' or confirm details, leading to a fake page that collects your personal and payment information.",
+    "quickVerdict": {
+      "mainRedFlag": "An urgent vehicle recall text linking you to book or confirm details.",
+      "whatToDoFirst": "Do not click. Check recalls through the manufacturer or official recall service."
+    },
+    "exampleMessage": "Example pattern: 'URGENT safety recall on your vehicle. Book your free repair now to avoid risk: [suspicious link]'",
+    "redFlags": [
+      "An urgent recall text with a link",
+      "A request for personal, vehicle, or payment details",
+      "A link that is not the manufacturer or official service",
+      "Pressure citing safety risk",
+      "A fee for a 'free' recall repair"
+    ],
+    "whatToDo": [
+      "Check recalls through the manufacturer or official recall service",
+      "Contact your dealer using official details",
+      "Never pay or enter details via a text link",
+      "Report and delete the message"
+    ],
+    "ifYouClicked": [
+      "Do not enter personal or card details on the page",
+      "If you paid, contact your bank to flag your card",
+      "Watch for misuse of any details you shared",
+      "Report it to the manufacturer"
+    ],
+    "whatNotToDo": [
+      "Do not book a recall through a text link",
+      "Do not pay for a recall repair",
+      "Do not share card or personal details via the link"
+    ],
+    "faqs": [
+      {
+        "question": "Are vehicle recalls handled by text?",
+        "answer": "Genuine recalls are confirmed through the manufacturer or official recall service and carried out free by a dealer, not via a text link asking for details or fees."
+      },
+      {
+        "question": "How do I check a real recall?",
+        "answer": "Use the manufacturer's official recall lookup or the official vehicle recall service for your country, and contact your dealer directly."
+      },
+      {
+        "question": "I entered my details. What now?",
+        "answer": "Contact your bank if you shared card details, watch for misuse of your information, and report the message to the manufacturer."
+      },
+      {
+        "question": "Why is a fee a warning sign?",
+        "answer": "Genuine safety recalls are repaired free. A request to pay for a recall is a clear scam sign."
+      }
+    ],
+    "relatedScams": [
+      "product-recall-scam",
+      "mot-reminder-text-scam",
+      "dvla-text-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Funeral Notice Text Scam",
+    "slug": "funeral-notice-text-scam",
+    "category": "text-message-scams",
+    "metaTitle": "Funeral Notice Text Scam: Fake Memorial Link Flags",
+    "metaDescription": "Recognise fake funeral or memorial notice texts that link to phishing or scam donation pages. See an example pattern and how to verify.",
+    "riskLevel": "Medium",
+    "scamType": "Emotional lure phishing (smishing)",
+    "summary": "This scam texts a fake funeral or memorial notice for a friend or relative, urging you to click a link to view details, a live-stream, or donate, leading to a phishing page or a fake donation collector.",
+    "quickVerdict": {
+      "mainRedFlag": "An unexpected funeral or memorial notice with a link to view details or donate.",
+      "whatToDoFirst": "Do not click. Verify with the family or funeral home directly."
+    },
+    "exampleMessage": "Example pattern: 'Sad news about your friend. View funeral details and live-stream here: [suspicious link]'",
+    "redFlags": [
+      "An unexpected funeral or memorial notice by text",
+      "A link to view details, a live-stream, or donate",
+      "Vague details with no names you can confirm",
+      "Pressure to click out of concern",
+      "A donation request on a linked page"
+    ],
+    "whatToDo": [
+      "Verify with the family or funeral home directly",
+      "Do not click links in unexpected notices",
+      "Donate only through verified, official channels",
+      "Report and delete the message"
+    ],
+    "ifYouClicked": [
+      "Do not enter login or card details on the page",
+      "If you donated, contact your bank and watch your statement",
+      "Change any password you entered",
+      "Report the message"
+    ],
+    "whatNotToDo": [
+      "Do not click links in unexpected funeral notices",
+      "Do not donate through a linked page",
+      "Do not let grief or concern override verification"
+    ],
+    "faqs": [
+      {
+        "question": "Why do scammers use funeral notices?",
+        "answer": "Grief and concern make people click quickly. The links lead to phishing pages or fake donation collectors that exploit your emotions."
+      },
+      {
+        "question": "How do I verify a funeral notice?",
+        "answer": "Contact the family or funeral home directly through known channels, and donate only through verified, official pages."
+      },
+      {
+        "question": "I clicked and entered details. What now?",
+        "answer": "Change any password you entered, contact your bank if you shared card details, and report the message."
+      },
+      {
+        "question": "Is a live-stream link safe?",
+        "answer": "Only if it comes from the family or funeral home through verified channels. Treat unexpected live-stream links in texts as suspicious."
+      }
+    ],
+    "relatedScams": [
+      "live-stream-donation-scam",
+      "wrong-number-text-scam",
+      "fake-toll-road-text-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Water Bill Text Scam",
+    "slug": "water-bill-text-scam",
+    "category": "text-message-scams",
+    "metaTitle": "Water Bill Text Scam: Fake Refund & Overdue Flags",
+    "metaDescription": "Recognise fake water company texts about overdue bills or refunds that link to phishing. See an example pattern and how to check with your supplier.",
+    "riskLevel": "Medium",
+    "scamType": "Utility impersonation (smishing)",
+    "summary": "This scam texts that your water bill is overdue, a refund is due, or supply will be cut, impersonating your water company and linking to a fake page that collects your card and account details.",
+    "quickVerdict": {
+      "mainRedFlag": "A water bill, refund, or supply-cut text linking you to pay or confirm details.",
+      "whatToDoFirst": "Do not use the link. Check your account in your water supplier's official app."
+    },
+    "exampleMessage": "Example pattern: 'Your water account is overdue. Pay now to avoid supply interruption: [suspicious link]'",
+    "redFlags": [
+      "A bill, refund, or supply-cut alert by text with a link",
+      "A request for card or account details",
+      "A web address that is not your water supplier",
+      "Urgency about supply being cut",
+      "A generic message naming no account"
+    ],
+    "whatToDo": [
+      "Check your account in your water supplier's official app or website",
+      "Call your supplier using the number on a real bill",
+      "Pay or claim refunds only through official channels",
+      "Report and delete the text"
+    ],
+    "ifYouClicked": [
+      "Do not enter card or account details on the page",
+      "If you paid, contact your bank to flag your card",
+      "Change your supplier account password if you logged in",
+      "Watch your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not pay or claim a water refund via a text link",
+      "Do not share card details to avoid supply cuts",
+      "Do not let urgency rush you"
+    ],
+    "faqs": [
+      {
+        "question": "Does my water company text payment links?",
+        "answer": "Billing is managed in your supplier's official app or account. A text demanding payment or details via a link is a phishing sign."
+      },
+      {
+        "question": "A refund sounds genuine. Is it?",
+        "answer": "Refund lures are common. Verify any refund in your official account, and never enter card details via a text link."
+      },
+      {
+        "question": "I entered my details. What now?",
+        "answer": "Contact your bank to flag or freeze your card, change your supplier password if you logged in, and watch for unexpected charges."
+      },
+      {
+        "question": "Can my water really be cut off by text demand?",
+        "answer": "Genuine suppliers handle arrears through proper notices and your account, not urgent texts demanding instant payment via a link."
+      }
+    ],
+    "relatedScams": [
+      "utility-disconnection-scam",
+      "energy-rebate-scam",
+      "wrong-number-text-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Gas Safety Inspection Text Scam",
+    "slug": "gas-safety-text-scam",
+    "category": "text-message-scams",
+    "metaTitle": "Gas Safety Text Scam: Fake Boiler Inspection Flags",
+    "metaDescription": "Recognise fake gas safety or boiler service texts that demand booking or payment via a link. See an example pattern and how to check with your provider.",
+    "riskLevel": "Medium",
+    "scamType": "Service impersonation (smishing)",
+    "summary": "This scam texts that your annual gas safety check or boiler service is overdue or legally required, urging you to book or pay through a link that collects your card and personal details, or sends an unqualified caller.",
+    "quickVerdict": {
+      "mainRedFlag": "A gas safety or boiler service text demanding urgent booking or payment via a link.",
+      "whatToDoFirst": "Do not use the link. Arrange checks through your landlord or a registered engineer."
+    },
+    "exampleMessage": "Example pattern: 'Your gas safety inspection is overdue and legally required. Book and pay now to avoid penalties: [suspicious link]'",
+    "redFlags": [
+      "A gas safety or boiler service text with a link",
+      "Claims it is urgently or legally required",
+      "A request for card and personal details",
+      "A web address you cannot verify",
+      "Pressure citing penalties or danger"
+    ],
+    "whatToDo": [
+      "Arrange checks through your landlord, letting agent, or a registered engineer",
+      "Verify any requirement through official channels",
+      "Never pay or book via a text link",
+      "Report and delete the message"
+    ],
+    "ifYouClicked": [
+      "Do not enter card or personal details on the page",
+      "If you paid, contact your bank to flag your card",
+      "Verify any genuine inspection need independently",
+      "Report the message"
+    ],
+    "whatNotToDo": [
+      "Do not book or pay for a gas check via a text link",
+      "Do not let unverified callers into your home",
+      "Do not let 'legally required' pressure rush you"
+    ],
+    "faqs": [
+      {
+        "question": "How are gas safety checks arranged?",
+        "answer": "Through your landlord or letting agent, or a registered gas engineer you find independently, not via an unexpected text demanding booking and payment through a link."
+      },
+      {
+        "question": "It says it is legally required. Is that pressure genuine?",
+        "answer": "Legal duties for gas safety usually fall on landlords. Urgent 'legally required, pay now' texts with links are a scam tactic; verify independently."
+      },
+      {
+        "question": "I paid through the link. What now?",
+        "answer": "Contact your bank to flag or freeze your card, verify any genuine inspection need, and report the message."
+      },
+      {
+        "question": "Someone wants to visit for the check. Safe?",
+        "answer": "Only use registered engineers arranged through your landlord or found independently. Do not admit unverified callers prompted by a text."
+      }
+    ],
+    "relatedScams": [
+      "utility-disconnection-scam",
+      "mot-reminder-text-scam",
+      "rogue-trader-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Card Verification Email Scam",
+    "slug": "card-verification-email-scam",
+    "category": "email-scams",
+    "metaTitle": "Card Verification Email Scam: Fake 3-D Secure Flags",
+    "metaDescription": "Recognise fake card verification (3-D Secure / Verified by Visa) emails that phish your card and bank details. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Card-security impersonation phishing",
+    "summary": "This scam emails that your card needs 'verification' for online payments, impersonating 3-D Secure schemes like Verified by Visa or Mastercard SecureCode, linking to a fake page that captures your card and banking details.",
+    "quickVerdict": {
+      "mainRedFlag": "An email asking you to 'verify' your card for online payments via a link.",
+      "whatToDoFirst": "Do not use the link. Card verification is set up through your bank, not email links."
+    },
+    "exampleMessage": "Example pattern: 'Verify your card for secure online payments to avoid declined transactions: [suspicious link]'",
+    "redFlags": [
+      "A request to 'verify' or 'activate' your card via a link",
+      "A login page that is not your bank",
+      "References to 3-D Secure to seem official",
+      "A request for full card number, PIN, or OTP",
+      "Pressure that payments will be declined"
+    ],
+    "whatToDo": [
+      "Set up card security only through your bank's official app or website",
+      "Never enter full card details or OTPs on a linked page",
+      "Call your bank using the number on your card if unsure",
+      "Report the email as phishing and delete it"
+    ],
+    "ifYouClicked": [
+      "Do not enter card, PIN, or OTP details",
+      "If you shared details, contact your bank immediately to block the card",
+      "Change your online banking password from a trusted device",
+      "Watch for unauthorised transactions"
+    ],
+    "whatNotToDo": [
+      "Do not verify your card through an email link",
+      "Do not share your full card number, PIN, or OTP",
+      "Do not let 'declined payment' warnings rush you"
+    ],
+    "faqs": [
+      {
+        "question": "Does card verification happen by email link?",
+        "answer": "Genuine 3-D Secure is set up through your bank during checkout or in its app, not via an email link asking for your full card details and OTP."
+      },
+      {
+        "question": "The email mentioned Verified by Visa. Is it real?",
+        "answer": "Scammers reference real schemes to seem official. Verify through your bank's official app or website, not the email link."
+      },
+      {
+        "question": "I entered my card and OTP. What now?",
+        "answer": "Contact your bank immediately to block the card, change your banking password from a trusted device, and watch for unauthorised transactions."
+      },
+      {
+        "question": "How is card security set up safely?",
+        "answer": "Through your bank's official app or during checkout on legitimate sites, where you confirm via your bank, not an emailed link."
+      }
+    ],
+    "relatedScams": [
+      "fake-paypal-email-scam",
+      "bank-statement-email-scam",
+      "fake-invoice-email-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Class Action Settlement Email Scam",
+    "slug": "settlement-email-scam",
+    "category": "email-scams",
+    "metaTitle": "Settlement Email Scam: Fake Payout Claim Flags",
+    "metaDescription": "Recognise fake class action settlement emails that phish for bank details or fees to 'release' a payout. See an example pattern and how to verify.",
+    "riskLevel": "Medium",
+    "scamType": "Legal payout impersonation (phishing)",
+    "summary": "This scam emails that you are owed money from a class action settlement and must verify details or pay a fee to claim it, harvesting your bank and personal details or taking a bogus processing fee.",
+    "quickVerdict": {
+      "mainRedFlag": "A settlement payout email asking for bank details or a fee to claim.",
+      "whatToDoFirst": "Verify any settlement through the official administrator; genuine claims do not need a fee."
+    },
+    "exampleMessage": "Example pattern: 'You are entitled to $740 from a class action settlement. Confirm your bank details and pay a small processing fee to claim: [suspicious link]'",
+    "redFlags": [
+      "A settlement payout you did not file for",
+      "A fee to 'release' or 'process' the payout",
+      "Requests for bank or personal details",
+      "A link to an unofficial claims site",
+      "Pressure to claim before a deadline"
+    ],
+    "whatToDo": [
+      "Verify any settlement through the official settlement administrator",
+      "Never pay a fee to receive a settlement payout",
+      "Check claim details on official court or administrator sites",
+      "Report the email and delete it"
+    ],
+    "ifYouClicked": [
+      "Do not enter bank or personal details on the page",
+      "If you paid or shared details, contact your bank and monitor for misuse",
+      "Keep the email as evidence",
+      "Report it to your fraud authority"
+    ],
+    "whatNotToDo": [
+      "Do not pay a fee to claim a settlement",
+      "Do not share bank details via the link",
+      "Do not trust deadline pressure"
+    ],
+    "faqs": [
+      {
+        "question": "Could the settlement be real?",
+        "answer": "Genuine settlements are administered through official channels and do not require a fee to claim. Verify through the official administrator rather than an email link."
+      },
+      {
+        "question": "How do I check a real settlement?",
+        "answer": "Look up the official settlement administrator or court site and verify the claim there, not through links in an unsolicited email."
+      },
+      {
+        "question": "I paid the processing fee. What now?",
+        "answer": "Contact your bank, monitor for identity misuse, keep the email as evidence, and report it to your fraud authority."
+      },
+      {
+        "question": "Why ask for my bank details?",
+        "answer": "Legitimate payouts use verified claim processes. A request for bank details and a fee via email is a phishing sign."
+      }
+    ],
+    "relatedScams": [
+      "compensation-claim-text-scam",
+      "fund-recovery-scam",
+      "inheritance-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "App Store Receipt Email Scam",
+    "slug": "app-store-receipt-scam",
+    "category": "email-scams",
+    "metaTitle": "App Store Receipt Scam: Fake Purchase Email Flags",
+    "metaDescription": "Recognise fake App Store or Google Play receipt emails for purchases you didn't make. See an example pattern and what to do if you clicked to dispute.",
+    "riskLevel": "High",
+    "scamType": "Fake-receipt / call-back phishing",
+    "summary": "This scam emails a fake App Store or Google Play receipt for an app or subscription you did not buy, urging you to click or call to 'cancel' or 'refund', leading to a phishing page or a scammer posing as support.",
+    "quickVerdict": {
+      "mainRedFlag": "A receipt for an app or subscription you never bought, with a link or number to dispute it.",
+      "whatToDoFirst": "Do not click or call. Check purchases in your real App Store or Play account."
+    },
+    "exampleMessage": "Example pattern: 'Your receipt: you paid $69.99 for a subscription. If you did not authorise this, cancel here or call support: [link / number]'",
+    "redFlags": [
+      "A receipt for a purchase you did not make",
+      "A link or number to cancel or refund",
+      "An alarming amount to make you act fast",
+      "A sender that is not the official store",
+      "Pressure to dispute within hours"
+    ],
+    "whatToDo": [
+      "Check purchases in your real App Store or Play account",
+      "Manage subscriptions in your device's official account settings",
+      "Report the email as phishing and delete it",
+      "Ignore the dispute link or number"
+    ],
+    "ifYouClicked": [
+      "Do not enter your account login or card details",
+      "If you called and shared details, contact your bank",
+      "Change your store account password from a trusted device",
+      "Watch for follow-up 'refund' calls"
+    ],
+    "whatNotToDo": [
+      "Do not click the dispute link or call the number",
+      "Do not share your account login or card details",
+      "Do not let the amount panic you"
+    ],
+    "faqs": [
+      {
+        "question": "I never bought this app. Is the receipt real?",
+        "answer": "That is the trick. Check your real purchase history in the official store account; do not use the link or number in the email."
+      },
+      {
+        "question": "Why include a phone number?",
+        "answer": "A call lets a scammer pose as support and talk you into sharing logins or card details, or installing software. Banks and stores do not work this way."
+      },
+      {
+        "question": "I called and gave details. What now?",
+        "answer": "Contact your bank, change your store account password from a trusted device, and watch for follow-up refund calls."
+      },
+      {
+        "question": "How do I check real purchases?",
+        "answer": "Open your device's official App Store or Play account and review your purchase and subscription history there."
+      }
+    ],
+    "relatedScams": [
+      "payment-confirmation-email-scam",
+      "geek-squad-renewal-email-scam",
+      "callback-phishing-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Student Portal Email Scam",
+    "slug": "student-portal-email-scam",
+    "category": "email-scams",
+    "metaTitle": "Student Portal Email Scam: Fake University Login Flags",
+    "metaDescription": "Recognise fake university or college emails about tuition, refunds, or portal logins that phish students. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Education impersonation phishing",
+    "summary": "This scam emails students claiming a tuition issue, refund, grant, or portal verification, linking to a fake university login page that captures credentials and, in turn, financial aid or personal data.",
+    "quickVerdict": {
+      "mainRedFlag": "An email pushing you to log in to your student portal or claim a refund via a link.",
+      "whatToDoFirst": "Log in through the university's official portal you normally use."
+    },
+    "exampleMessage": "Example pattern: 'Action required: a tuition refund is pending. Log in to your student portal to confirm your details: [suspicious link]'",
+    "redFlags": [
+      "A tuition, refund, or grant alert with a login link",
+      "A login page that is not the university's official site",
+      "Pressure tied to a deadline or enrolment",
+      "A sender address that is external or slightly off",
+      "Requests for financial or personal details"
+    ],
+    "whatToDo": [
+      "Log in through the university's official portal you normally use",
+      "Verify any notice with the university's IT or finance office",
+      "Report the email to your university's IT team",
+      "Enable multi-factor authentication on your student account"
+    ],
+    "ifYouClicked": [
+      "If you entered your login, change it immediately and tell IT",
+      "Enable multi-factor authentication and review activity",
+      "Watch for misuse of financial aid or personal data",
+      "Update the password anywhere you reused it"
+    ],
+    "whatNotToDo": [
+      "Do not log in through portal links in emails",
+      "Do not share financial or personal details via the link",
+      "Do not let deadline pressure rush you"
+    ],
+    "faqs": [
+      {
+        "question": "Does my university email login links about refunds?",
+        "answer": "Tuition and refunds are handled in the official portal when you log in directly. An email pushing you to log in via a link is a phishing sign."
+      },
+      {
+        "question": "Why are students targeted?",
+        "answer": "Student accounts hold financial aid, tuition, and personal data, and busy students may act quickly on deadline-driven emails."
+      },
+      {
+        "question": "I entered my login. What now?",
+        "answer": "Change your password, tell your university's IT team, enable multi-factor authentication, and watch for misuse of your aid or data."
+      },
+      {
+        "question": "How do I access the portal safely?",
+        "answer": "Use your usual bookmark or the university's official website, and verify notices with the IT or finance office."
+      }
+    ],
+    "relatedScams": [
+      "student-loan-forgiveness-scam",
+      "microsoft-account-email-scam",
+      "hr-portal-email-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Patient Portal Email Scam",
+    "slug": "patient-portal-email-scam",
+    "category": "email-scams",
+    "metaTitle": "Patient Portal Email Scam: Fake Health Login Flags",
+    "metaDescription": "Recognise fake patient or health portal emails about results, bills, or logins that phish your data. See an example pattern and how to check safely.",
+    "riskLevel": "High",
+    "scamType": "Healthcare impersonation phishing",
+    "summary": "This scam emails that you have new test results, a medical bill, or a required portal verification, linking to a fake patient-portal login that captures your health, identity, and payment details.",
+    "quickVerdict": {
+      "mainRedFlag": "An email pushing you to log in to a health or patient portal via a link.",
+      "whatToDoFirst": "Log in through your provider's official patient portal you normally use."
+    },
+    "exampleMessage": "Example pattern: 'You have new test results available. Log in to your patient portal to view them: [suspicious link]'",
+    "redFlags": [
+      "A results, bill, or verification alert with a login link",
+      "A login page that is not your provider's official portal",
+      "Pressure to view results urgently",
+      "A sender that is external or slightly off",
+      "Requests for health, identity, or payment details"
+    ],
+    "whatToDo": [
+      "Log in through your provider's official patient portal directly",
+      "Verify any notice with your provider's office",
+      "Report the email as phishing and delete it",
+      "Enable two-factor authentication where available"
+    ],
+    "ifYouClicked": [
+      "If you entered your login, change it immediately from a trusted device",
+      "Contact your provider and monitor for misuse of your health data",
+      "If you entered card details, contact your bank",
+      "Update the password anywhere you reused it"
+    ],
+    "whatNotToDo": [
+      "Do not log in through portal links in emails",
+      "Do not share health, identity, or card details via the link",
+      "Do not let urgency rush you"
+    ],
+    "faqs": [
+      {
+        "question": "Does my provider email login links to results?",
+        "answer": "Results and bills are accessed by logging in to the official patient portal directly. An email pushing you to log in via a link is a phishing sign."
+      },
+      {
+        "question": "Why is health data targeted?",
+        "answer": "Health and identity data are highly valuable for fraud and identity theft, and worry about results makes people click quickly."
+      },
+      {
+        "question": "I entered my login. What now?",
+        "answer": "Change your password from a trusted device, contact your provider, monitor for misuse of your data, and contact your bank if you shared card details."
+      },
+      {
+        "question": "How do I check results safely?",
+        "answer": "Open your provider's official patient portal directly, and verify any notice with the provider's office."
+      }
+    ],
+    "relatedScams": [
+      "medicare-scam",
+      "fake-invoice-email-scam",
+      "fake-amazon-order-email"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Mortgage Statement Email Scam",
+    "slug": "mortgage-statement-email-scam",
+    "category": "email-scams",
+    "metaTitle": "Mortgage Email Scam: Fake Statement & Login Flags",
+    "metaDescription": "Recognise fake mortgage statement or lender emails that link to phishing logins. See an example pattern and what to do if you entered details.",
+    "riskLevel": "High",
+    "scamType": "Lender impersonation phishing",
+    "summary": "This scam emails a fake mortgage statement, payment issue, or rate-change notice from your lender, linking to a fake login page that captures your mortgage account and banking credentials.",
+    "quickVerdict": {
+      "mainRedFlag": "A mortgage statement or payment email linking you to log in to your lender account.",
+      "whatToDoFirst": "Do not use the link. Log in through your lender's official app or website."
+    },
+    "exampleMessage": "Example pattern: 'Your mortgage statement is ready, and a payment issue needs attention. Log in to review: [suspicious link]'",
+    "redFlags": [
+      "A statement or payment-issue email with a login link",
+      "A login page that is not your lender's official site",
+      "Pressure about missed payments or rate changes",
+      "A sender address that is slightly off",
+      "Requests for banking or account details"
+    ],
+    "whatToDo": [
+      "Log in through your lender's official app or website you open yourself",
+      "Verify any notice within your genuine account",
+      "Report the email as phishing and delete it",
+      "Call your lender using official contact details if unsure"
+    ],
+    "ifYouClicked": [
+      "If you entered your login, contact your lender and change the password",
+      "Change your online banking password from a trusted device",
+      "Review your mortgage account for changes",
+      "Watch for follow-up impersonation contact"
+    ],
+    "whatNotToDo": [
+      "Do not log in through mortgage email links",
+      "Do not share banking or account details via the link",
+      "Do not let payment-issue warnings rush you"
+    ],
+    "faqs": [
+      {
+        "question": "Does my lender email me a login link?",
+        "answer": "Lenders may say a statement is ready, but you should log in through the official app or website directly, not via an email link."
+      },
+      {
+        "question": "The email looked official. How can I tell?",
+        "answer": "Check the sender and avoid the link. Genuine statements are accessible by logging in to your real account, where you can confirm any notice."
+      },
+      {
+        "question": "I entered my login. What now?",
+        "answer": "Contact your lender, change your password from a trusted device, review your account, and watch for follow-up impersonation contact."
+      },
+      {
+        "question": "How do I read my mortgage statement safely?",
+        "answer": "Open your lender's official app or type its web address yourself, and view statements within your account."
+      }
+    ],
+    "relatedScams": [
+      "bank-statement-email-scam",
+      "mortgage-broker-scam",
+      "real-estate-wire-fraud-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Device Buyback Scam",
+    "slug": "device-buyback-scam",
+    "category": "marketplace-scams",
+    "metaTitle": "Device Buyback Scam: Trade-In Mail-In Red Flags",
+    "metaDescription": "Recognise device buyback and trade-in services that underpay or keep your phone or laptop. See an example pattern and how to sell devices safely.",
+    "riskLevel": "Medium",
+    "scamType": "Underpayment / non-return (seller-targeted)",
+    "summary": "In this scam, a device buyback or trade-in service offers a great price for your phone or laptop, but after you post it they slash the offer citing 'faults', underpay drastically, or keep the device entirely.",
+    "quickVerdict": {
+      "mainRedFlag": "A mail-in buyback that values your device only after you send it, then slashes the offer.",
+      "whatToDoFirst": "Use reputable buyers with clear terms; back up and wipe the device first."
+    },
+    "exampleMessage": "Example pattern: 'Top price for your phone! Post it free and we'll pay on arrival.' The offer then drops sharply or the device is not returned.",
+    "redFlags": [
+      "A service that revalues only after you post the device",
+      "Offers far above other buyers to lure you",
+      "Vague terms on returns if you decline",
+      "Pressure to accept a lowered offer",
+      "A buyer you cannot verify"
+    ],
+    "whatToDo": [
+      "Use reputable buyers with clear, fixed terms",
+      "Back up and factory-reset the device, and remove accounts",
+      "Keep proof of postage and the device's serial number",
+      "Compare offers and be wary of outliers"
+    ],
+    "ifYouClicked": [
+      "If underpaid or the device is withheld, dispute it and request its return in writing",
+      "Remotely wipe and unlink the device if not returned",
+      "Keep all correspondence and tracking as evidence",
+      "Report the company to consumer authorities"
+    ],
+    "whatNotToDo": [
+      "Do not post devices before agreeing firm terms",
+      "Do not skip wiping and unlinking your accounts",
+      "Do not accept lowball offers under pressure"
+    ],
+    "faqs": [
+      {
+        "question": "How do I sell a device safely?",
+        "answer": "Use reputable buyers with clear fixed terms, back up and factory-reset the device, remove your accounts, keep proof of postage, and compare offers."
+      },
+      {
+        "question": "They slashed the offer after I posted it. What now?",
+        "answer": "Dispute it in writing, request the device back, remotely wipe and unlink it if not returned, keep evidence, and report the company."
+      },
+      {
+        "question": "Why are mail-in buybacks risky?",
+        "answer": "Once you post the device, the buyer controls the valuation and may underpay or withhold it, leaving you little recourse."
+      },
+      {
+        "question": "Should I wipe my device first?",
+        "answer": "Yes. Back up, factory-reset, and remove all accounts and locks before sending, so your data is protected if the device is not returned."
+      }
+    ],
+    "relatedScams": [
+      "cash-for-gold-scam",
+      "trade-in-swap-scam",
+      "refurbished-electronics-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "We Buy Any Car Scam",
+    "slug": "car-buyer-scam",
+    "category": "marketplace-scams",
+    "metaTitle": "Car Buyer Scam: Instant Valuation Red Flags",
+    "metaDescription": "Recognise 'we buy any car' instant-offer scams that slash the price on inspection or harvest your details. See an example pattern and how to sell safely.",
+    "riskLevel": "Medium",
+    "scamType": "Bait-and-switch valuation (seller-targeted)",
+    "summary": "In this scam, an online 'instant car valuation' or buyer lures you with a high quote, then drastically cuts the price at inspection over minor 'faults', or harvests your vehicle and personal details for fraud.",
+    "quickVerdict": {
+      "mainRedFlag": "A high instant car quote that is slashed at inspection over minor points.",
+      "whatToDoFirst": "Get multiple independent valuations and be wary of inflated online quotes."
+    },
+    "exampleMessage": "Example pattern: 'We'll buy your car for top price!' At inspection the offer is cut sharply, pressuring you to accept on the spot.",
+    "redFlags": [
+      "An online quote far above other buyers",
+      "A price slashed at inspection over minor faults",
+      "Pressure to accept on the spot",
+      "Extra 'admin' or 'transfer' fees deducted",
+      "Requests for excessive personal or vehicle details"
+    ],
+    "whatToDo": [
+      "Get multiple independent valuations before selling",
+      "Be wary of inflated online instant quotes",
+      "Read terms for deductions and fees",
+      "Do not feel pressured to accept a slashed offer"
+    ],
+    "ifYouClicked": [
+      "If pressured or misled, walk away and sell elsewhere",
+      "If you shared excessive details, monitor for misuse",
+      "Keep the quote and correspondence as evidence",
+      "Report misleading practices to consumer authorities"
+    ],
+    "whatNotToDo": [
+      "Do not trust inflated instant quotes",
+      "Do not accept a slashed offer under pressure",
+      "Do not pay 'admin' or 'transfer' fees that gut the price"
+    ],
+    "faqs": [
+      {
+        "question": "How do I sell a car safely?",
+        "answer": "Get multiple independent valuations, be wary of inflated online quotes, read the terms for deductions, and never accept a slashed offer under pressure."
+      },
+      {
+        "question": "Why do they cut the price at inspection?",
+        "answer": "The high online quote is bait. Cutting it on the day, with pressure to accept, is a bait-and-switch tactic to buy your car cheaply."
+      },
+      {
+        "question": "They wanted lots of personal details. Why?",
+        "answer": "Excessive details can be used for fraud. Share only what is needed and monitor for misuse if you provided more."
+      },
+      {
+        "question": "Is walking away okay?",
+        "answer": "Yes. You are not obliged to accept a slashed offer. Get other valuations and sell where the terms are fair."
+      }
+    ],
+    "relatedScams": [
+      "car-deposit-scam",
+      "vehicle-history-report-scam",
+      "device-buyback-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Counterfeit Toy Scam",
+    "slug": "counterfeit-toy-scam",
+    "category": "marketplace-scams",
+    "metaTitle": "Counterfeit Toy Scam: Fake & Unsafe Toy Flags",
+    "metaDescription": "Recognise scams selling counterfeit or unsafe toys as genuine, especially around the holidays. See an example pattern and how to buy safely.",
+    "riskLevel": "Medium",
+    "scamType": "Counterfeit goods (toys)",
+    "summary": "In this scam, counterfeit or unsafe toys, often popular branded or in-demand items, are sold as genuine at low prices, risking safety and disappointment as well as wasted money.",
+    "quickVerdict": {
+      "mainRedFlag": "Popular branded toys sold well below normal by an unverified seller.",
+      "whatToDoFirst": "Buy from authorised retailers and check safety marks and packaging."
+    },
+    "exampleMessage": "Example pattern: 'Hot holiday toy in stock, half price! Limited quantities, pay by transfer for fast shipping.'",
+    "redFlags": [
+      "In-demand toys priced well below normal",
+      "No safety marks or genuine packaging",
+      "Payment by transfer with no protection",
+      "A seller with no verifiable history",
+      "Pressure citing limited stock"
+    ],
+    "whatToDo": [
+      "Buy from authorised retailers",
+      "Check safety marks, packaging, and labelling",
+      "Be wary of in-demand toys sold cheaply",
+      "Pay with a method you can dispute"
+    ],
+    "ifYouClicked": [
+      "If a toy is counterfeit or unsafe, stop using it and keep it as evidence",
+      "Open a dispute with your payment provider or platform",
+      "Report the seller and unsafe product to authorities",
+      "Warn others where possible"
+    ],
+    "whatNotToDo": [
+      "Do not give children counterfeit or unsafe toys",
+      "Do not buy in-demand toys far below market",
+      "Do not pay by irreversible methods"
+    ],
+    "faqs": [
+      {
+        "question": "Why are counterfeit toys dangerous?",
+        "answer": "Fake toys can lack safety testing and contain hazards like choking parts or harmful materials, risking children's safety beyond the wasted money."
+      },
+      {
+        "question": "How do I check a toy is genuine?",
+        "answer": "Buy from authorised retailers, check safety marks and packaging, and be wary of in-demand toys sold far below normal price."
+      },
+      {
+        "question": "I received a counterfeit toy. What now?",
+        "answer": "Stop using it, keep it as evidence, open a dispute with your payment provider or platform, and report the unsafe product and seller."
+      },
+      {
+        "question": "Are holiday 'must-have' toys a target?",
+        "answer": "Yes. High demand and limited stock drive people to risky deals, which scammers exploit with counterfeits."
+      }
+    ],
+    "relatedScams": [
+      "counterfeit-designer-goods-scam",
+      "counterfeit-parts-scam",
+      "fake-online-store-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Shipping Container Sale Scam",
+    "slug": "shipping-container-scam",
+    "category": "marketplace-scams",
+    "metaTitle": "Shipping Container Scam: Fake Container Sale Flags",
+    "metaDescription": "Recognise scams selling shipping or storage containers that take deposits for units that do not exist. See an example pattern and how to buy safely.",
+    "riskLevel": "Medium",
+    "scamType": "Advance-deposit / non-delivery",
+    "summary": "In this scam, shipping or storage containers are advertised at attractive prices, but the seller demands a deposit or full payment before viewing or delivery for containers that do not exist or are not theirs.",
+    "quickVerdict": {
+      "mainRedFlag": "A cheap shipping container that needs a deposit before viewing or delivery.",
+      "whatToDoFirst": "Verify the seller and container, and pay only after viewing or via protected methods."
+    },
+    "exampleMessage": "Example pattern: 'Shipping containers for sale, great prices! Pay a deposit to reserve and we'll arrange delivery.'",
+    "redFlags": [
+      "A deposit demanded before viewing or delivery",
+      "Prices below market for containers",
+      "A seller who cannot show the containers",
+      "Payment by wire transfer or gift card",
+      "Pressure to pay quickly to reserve"
+    ],
+    "whatToDo": [
+      "Verify the seller and view the container before paying",
+      "Use reputable, established suppliers",
+      "Pay by traceable methods with documented terms",
+      "Be wary of below-market prices and pressure"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank or payment provider to try to recover it",
+      "Report the listing and seller to the platform",
+      "Keep all messages and payment records",
+      "Report the scam to your local fraud authority"
+    ],
+    "whatNotToDo": [
+      "Do not pay deposits before viewing or verifying",
+      "Do not pay by irreversible methods",
+      "Do not let pressure rush you"
+    ],
+    "faqs": [
+      {
+        "question": "How do I buy a shipping container safely?",
+        "answer": "Verify the seller, view the container before paying, use reputable suppliers, and pay by traceable methods with documented terms."
+      },
+      {
+        "question": "Is a below-market price a warning sign?",
+        "answer": "Unusually low prices plus a deposit demanded before viewing are classic scam signs. Verify the seller and unit first."
+      },
+      {
+        "question": "I paid a deposit. What now?",
+        "answer": "Contact your bank or payment provider to try to recover it, report the seller, and keep your evidence."
+      },
+      {
+        "question": "Should I pay before delivery?",
+        "answer": "Avoid paying in full before viewing or delivery to an unverified seller. Use reputable suppliers with clear terms."
+      }
+    ],
+    "relatedScams": [
+      "fake-supplier-scam",
+      "equipment-hire-scam",
+      "storage-unit-auction-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Mobility Equipment Scam",
+    "slug": "mobility-equipment-scam",
+    "category": "marketplace-scams",
+    "metaTitle": "Mobility Equipment Scam: Scooter & Aid Sale Flags",
+    "metaDescription": "Recognise scams selling mobility scooters, wheelchairs, and disability aids that take deposits and deliver nothing. See an example pattern and safe steps.",
+    "riskLevel": "Medium",
+    "scamType": "Advance-deposit / non-delivery",
+    "summary": "In this scam, mobility scooters, wheelchairs, or disability aids are advertised cheaply to target older or disabled buyers, taking a deposit or full payment for equipment that never arrives or is faulty.",
+    "quickVerdict": {
+      "mainRedFlag": "Cheap mobility equipment requiring a deposit before viewing, targeting vulnerable buyers.",
+      "whatToDoFirst": "Buy from reputable suppliers; view or verify before paying."
+    },
+    "exampleMessage": "Example pattern: 'Mobility scooter, like new, must sell cheap. Pay a deposit to hold it and I'll arrange delivery.'",
+    "redFlags": [
+      "Cheap mobility equipment with a deposit before viewing",
+      "A seller who cannot show the equipment",
+      "Payment by transfer or gift card",
+      "Pressure on vulnerable buyers",
+      "No warranty or verifiable seller"
+    ],
+    "whatToDo": [
+      "Buy from reputable mobility suppliers",
+      "View or verify equipment before paying",
+      "Pay by a method you can dispute",
+      "Involve a trusted friend or family member if helpful"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank or payment provider to try to recover it",
+      "Report the listing and seller to the platform",
+      "Keep all messages and payment records",
+      "Report the scam to your local fraud authority"
+    ],
+    "whatNotToDo": [
+      "Do not pay deposits before viewing or verifying",
+      "Do not pay by irreversible methods",
+      "Do not let pressure rush a vulnerable buyer"
+    ],
+    "faqs": [
+      {
+        "question": "How do I buy mobility equipment safely?",
+        "answer": "Use reputable mobility suppliers, view or verify the equipment before paying, pay by a method you can dispute, and involve a trusted person if helpful."
+      },
+      {
+        "question": "Why are these buyers targeted?",
+        "answer": "Scammers target older and disabled buyers who need equipment and may be pressured into quick payment for items that never arrive."
+      },
+      {
+        "question": "I paid a deposit. What now?",
+        "answer": "Contact your bank or payment provider to try to recover it, report the seller, and keep your evidence."
+      },
+      {
+        "question": "Is a very cheap scooter a red flag?",
+        "answer": "Unusually low prices plus a deposit before viewing are warning signs. Verify the seller and equipment first."
+      }
+    ],
+    "relatedScams": [
+      "electronics-deposit-scam",
+      "car-deposit-scam",
+      "equipment-hire-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Caravan Sale Scam",
+    "slug": "caravan-sale-scam",
+    "category": "marketplace-scams",
+    "metaTitle": "Caravan Sale Scam: Motorhome Deposit Red Flags",
+    "metaDescription": "Recognise caravan and motorhome sale scams that demand deposits before viewing for vehicles that do not exist. See an example pattern and safe steps.",
+    "riskLevel": "Medium",
+    "scamType": "Advance-deposit / non-delivery (vehicles)",
+    "summary": "In this scam, a caravan or motorhome is advertised at a good price, but the seller demands a deposit before viewing, often claiming to be away, for a vehicle that does not exist or is not theirs.",
+    "quickVerdict": {
+      "mainRedFlag": "A caravan or motorhome needing a deposit before viewing, from an absent seller.",
+      "whatToDoFirst": "View the vehicle and verify the seller before paying anything."
+    },
+    "exampleMessage": "Example pattern: 'Lovely caravan, must sell, I've moved away. Pay a deposit to hold it and I'll arrange delivery to you.'",
+    "redFlags": [
+      "A deposit demanded before viewing",
+      "A seller who has 'moved away' and cannot show it",
+      "Prices below market for the vehicle",
+      "Payment by wire transfer or gift card",
+      "Pressure to pay quickly to reserve"
+    ],
+    "whatToDo": [
+      "View the caravan in person and verify the seller",
+      "Check vehicle history and documents",
+      "Pay by traceable methods after viewing",
+      "Be wary of below-market prices and absent sellers"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank or payment provider to try to recover it",
+      "Report the listing and seller to the platform",
+      "Keep all messages and payment records",
+      "Report the scam to your local fraud authority"
+    ],
+    "whatNotToDo": [
+      "Do not pay deposits before viewing",
+      "Do not pay by irreversible methods",
+      "Do not trust an absent seller who cannot show the vehicle"
+    ],
+    "faqs": [
+      {
+        "question": "How do I buy a caravan safely?",
+        "answer": "View it in person, verify the seller and documents, check vehicle history, and pay by traceable methods only after viewing."
+      },
+      {
+        "question": "The seller has moved away. Suspicious?",
+        "answer": "An absent seller who cannot show the caravan yet demands a deposit is a classic warning sign."
+      },
+      {
+        "question": "I paid a deposit. What now?",
+        "answer": "Contact your bank or payment provider to try to recover it, report the listing, and keep your evidence."
+      },
+      {
+        "question": "Is a below-market price a red flag?",
+        "answer": "Unusually low prices plus pressure to pay before viewing are warning signs. Verify the vehicle and seller first."
+      }
+    ],
+    "relatedScams": [
+      "car-deposit-scam",
+      "online-car-shipping-scam",
+      "facebook-marketplace-buyer-email-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Lost Pet Reunion Scam",
+    "slug": "lost-pet-scam",
+    "category": "social-media-scams",
+    "metaTitle": "Lost Pet Scam: Fake Found-Pet Reward Flags",
+    "metaDescription": "Recognise scams responding to lost-pet posts with fake 'I found your pet' demands for fees. See an example pattern and how to respond safely.",
+    "riskLevel": "Medium",
+    "scamType": "Emotional manipulation (advance-fee)",
+    "summary": "In this scam, someone responds to your lost-pet post claiming to have found your pet, then demands a transport fee, vet bill, or deposit before 'returning' the animal, which they do not have.",
+    "quickVerdict": {
+      "mainRedFlag": "A 'finder' of your lost pet who demands a fee before returning it.",
+      "whatToDoFirst": "Do not pay; ask for live proof and verify before arranging anything."
+    },
+    "exampleMessage": "Example pattern: 'I found your dog but I'm out of town. Send a transport fee and I'll have it delivered to you.'",
+    "redFlags": [
+      "A finder who demands a fee before returning your pet",
+      "Claims to be away and unable to meet",
+      "Pressure and emotional manipulation",
+      "Requests for payment by transfer or gift card",
+      "Refusal to provide live proof"
+    ],
+    "whatToDo": [
+      "Ask for live proof (a current photo or video with a detail you specify)",
+      "Arrange to meet in a safe public place or via a shelter",
+      "Never pay fees before your pet is genuinely returned",
+      "Report and block anyone demanding upfront fees"
+    ],
+    "ifYouClicked": [
+      "Stop sending money, especially escalating fees",
+      "If you paid, contact your bank or payment provider to dispute it",
+      "Keep messages as evidence and report the account",
+      "Continue searching through trusted shelters and channels"
+    ],
+    "whatNotToDo": [
+      "Do not pay transport or vet fees before reunion",
+      "Do not pay by gift card or transfer",
+      "Do not let emotion override verification"
+    ],
+    "faqs": [
+      {
+        "question": "How do I verify someone really found my pet?",
+        "answer": "Ask for a live photo or video with a specific detail you request, and arrange to meet safely or through a shelter. Never pay fees before reunion."
+      },
+      {
+        "question": "They say they're away and need a transport fee. Real?",
+        "answer": "An 'away finder' demanding upfront fees is a classic scam. Genuine finders can usually meet or use a shelter without advance payment."
+      },
+      {
+        "question": "I paid a fee. What now?",
+        "answer": "Stop sending money, contact your bank or payment provider to dispute it, report the account, and keep searching through trusted channels."
+      },
+      {
+        "question": "How do I post about a lost pet safely?",
+        "answer": "Avoid sharing every identifying detail publicly, so you can verify finders by asking for specifics only the real finder would know."
+      }
+    ],
+    "relatedScams": [
+      "free-pet-rehoming-scam",
+      "fake-fundraiser-scam",
+      "instagram-verification-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fan Subscription Scam",
+    "slug": "fan-subscription-scam",
+    "category": "social-media-scams",
+    "metaTitle": "Fan Subscription Scam: Fake Creator Page Flags",
+    "metaDescription": "Recognise fake creator subscription and fan-content pages that take payment for content that never comes. See an example pattern and safe steps.",
+    "riskLevel": "Medium",
+    "scamType": "Impersonation / non-delivery (creator content)",
+    "summary": "In this scam, an account impersonates a creator or sets up a fake fan-subscription page, taking recurring payments or a sign-up fee for exclusive content that is recycled, stolen, or never delivered.",
+    "quickVerdict": {
+      "mainRedFlag": "A creator subscription or fan page taking payment off official platforms.",
+      "whatToDoFirst": "Subscribe only through the creator's verified, official links."
+    },
+    "exampleMessage": "Example pattern: 'Subscribe to my exclusive content! Pay directly here to unlock, link not on my main page: [suspicious link]'",
+    "redFlags": [
+      "A subscription link not from the creator's verified account",
+      "Payment off official platforms by transfer or gift card",
+      "Recycled or stolen content as 'exclusive'",
+      "Pressure to subscribe quickly",
+      "An impersonator account"
+    ],
+    "whatToDo": [
+      "Subscribe only through the creator's verified, official links",
+      "Use platforms with payment protection",
+      "Verify the account is genuinely the creator",
+      "Report and block impersonators"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank or payment provider to dispute it",
+      "Cancel any recurring payment you set up",
+      "Keep messages and links as evidence",
+      "Report the impersonator to the platform"
+    ],
+    "whatNotToDo": [
+      "Do not pay for subscriptions off official platforms",
+      "Do not trust unverified creator accounts",
+      "Do not pay by transfer or gift card"
+    ],
+    "faqs": [
+      {
+        "question": "How do I subscribe to a creator safely?",
+        "answer": "Use the creator's verified, official links and platforms with payment protection, and confirm the account is genuinely theirs."
+      },
+      {
+        "question": "The link wasn't on their main page. Is that a sign?",
+        "answer": "Yes. Impersonators push off-platform links not shown on the verified account. Subscribe only through official, verified links."
+      },
+      {
+        "question": "I paid and got nothing. What now?",
+        "answer": "Contact your bank or payment provider to dispute it, cancel any recurring payment, and report the impersonator."
+      },
+      {
+        "question": "Why pay off official platforms?",
+        "answer": "It removes payment protections and lets impersonators take your money for content they do not have. Stay on official platforms."
+      }
+    ],
+    "relatedScams": [
+      "cameo-video-scam",
+      "celebrity-impersonation-dm-scam",
+      "instagram-verification-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Pump and Dump Group Scam",
+    "slug": "pump-dump-scam",
+    "category": "social-media-scams",
+    "metaTitle": "Pump and Dump Scam: Stock & Crypto Group Flags",
+    "metaDescription": "Recognise social media pump-and-dump groups that hype a stock or coin then dump it on followers. See an example pattern and how to avoid losses.",
+    "riskLevel": "High",
+    "scamType": "Market manipulation (social groups)",
+    "summary": "In this scam, a social media or chat group coordinates to hype a low-value stock or crypto coin, driving up the price, then organisers sell at the top and the price collapses, leaving followers with losses.",
+    "quickVerdict": {
+      "mainRedFlag": "A group urging everyone to buy a specific coin or stock now for a guaranteed surge.",
+      "whatToDoFirst": "Do not buy on group hype; treat coordinated 'buy now' calls as manipulation."
+    },
+    "exampleMessage": "Example pattern: 'Everyone buy this coin at 3pm! Guaranteed to moon, don't miss out, tell your friends!'",
+    "redFlags": [
+      "Coordinated 'buy now' calls for a specific asset",
+      "Promises of a guaranteed surge",
+      "Pressure to act at a set time and recruit others",
+      "Hype around an obscure stock or coin",
+      "Organisers who profit as you buy"
+    ],
+    "whatToDo": [
+      "Avoid buying on group hype or coordinated calls",
+      "Be sceptical of guaranteed surges",
+      "Research investments independently and get regulated advice",
+      "Report manipulative groups to your regulator"
+    ],
+    "ifYouClicked": [
+      "If you bought in, avoid throwing in more to 'average down'",
+      "Be aware the price may collapse after the pump",
+      "Keep records and report the group to your regulator",
+      "Be wary of recovery scams that follow"
+    ],
+    "whatNotToDo": [
+      "Do not buy on coordinated hype",
+      "Do not trust guaranteed-surge promises",
+      "Do not recruit others into the pump"
+    ],
+    "faqs": [
+      {
+        "question": "What is a pump and dump?",
+        "answer": "A group hypes an asset to inflate its price, then organisers sell at the top. The price collapses, leaving later buyers with losses. It is market manipulation."
+      },
+      {
+        "question": "Aren't these groups just sharing tips?",
+        "answer": "Coordinated 'buy now' calls promising guaranteed surges are manipulation, not genuine tips. Organisers profit while followers lose."
+      },
+      {
+        "question": "I bought in. What now?",
+        "answer": "Avoid adding more, expect a possible collapse, keep records, report the group to your regulator, and beware of recovery scams."
+      },
+      {
+        "question": "How do I invest more safely?",
+        "answer": "Research independently, get regulated advice, and avoid acting on hype or coordinated group calls."
+      }
+    ],
+    "relatedScams": [
+      "boiler-room-stock-scam",
+      "telegram-investment-group-scam",
+      "crypto-investment-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake CAPTCHA Scam",
+    "slug": "fake-captcha-scam",
+    "category": "social-media-scams",
+    "metaTitle": "Fake CAPTCHA Scam: Verify-You're-Human Malware Flags",
+    "metaDescription": "Recognise fake CAPTCHA and 'verify you're human' pages that trick you into running malicious commands. See an example pattern and how to stay safe.",
+    "riskLevel": "High",
+    "scamType": "Malware delivery (fake verification)",
+    "summary": "In this scam, a fake CAPTCHA or 'verify you're human' page, often reached via social links or videos, instructs you to press keys or paste a command that secretly installs malware on your device.",
+    "quickVerdict": {
+      "mainRedFlag": "A 'verification' page that asks you to press key combinations or paste a command.",
+      "whatToDoFirst": "Do not follow the steps; real CAPTCHAs never ask you to run commands."
+    },
+    "exampleMessage": "Example pattern: 'To verify you are human, press Windows+R, paste this, and hit Enter.' The command installs malware.",
+    "redFlags": [
+      "A CAPTCHA that asks you to press keys or paste a command",
+      "Instructions to open Run, Terminal, or paste text",
+      "A page reached via a social link, ad, or video",
+      "Pressure to complete verification to continue",
+      "Anything beyond clicking a normal checkbox or image"
+    ],
+    "whatToDo": [
+      "Never paste commands or press key combinations to 'verify'",
+      "Close the page; real CAPTCHAs only need a click or image selection",
+      "Run a security scan if you followed any steps",
+      "Report the page and avoid the source link"
+    ],
+    "ifYouClicked": [
+      "If you ran a command, disconnect from the internet and run a security scan",
+      "Change important passwords from a different, trusted device",
+      "Watch for unusual account or device activity",
+      "Seek help from a trusted technician if needed"
+    ],
+    "whatNotToDo": [
+      "Do not paste commands or run scripts to 'verify'",
+      "Do not press key combinations a page tells you to",
+      "Do not ignore it if you followed the steps"
+    ],
+    "faqs": [
+      {
+        "question": "How is this CAPTCHA different from a real one?",
+        "answer": "Real CAPTCHAs only ask you to click a box or select images. A 'CAPTCHA' that tells you to press keys or paste a command is delivering malware."
+      },
+      {
+        "question": "Why does pasting a command matter?",
+        "answer": "The command runs on your device and can install malware that steals passwords and data. Never paste commands to 'verify you are human'."
+      },
+      {
+        "question": "I followed the steps. What now?",
+        "answer": "Disconnect from the internet, run a security scan, change important passwords from a trusted device, and watch for unusual activity."
+      },
+      {
+        "question": "Where do these pages come from?",
+        "answer": "Often via social links, ads, or video descriptions. Be cautious with verification pages reached from untrusted sources."
+      }
+    ],
+    "relatedScams": [
+      "malware-attachment-scam",
+      "fake-tech-support-scam",
+      "tech-support-text-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "MFA Fatigue Scam",
+    "slug": "mfa-fatigue-scam",
+    "category": "social-media-scams",
+    "metaTitle": "MFA Fatigue Scam: Approval Request Bombing Flags",
+    "metaDescription": "Recognise MFA fatigue attacks that spam login approval prompts hoping you approve. See an example pattern and how to protect your accounts.",
+    "riskLevel": "High",
+    "scamType": "Account takeover (push bombing)",
+    "summary": "In this scam, an attacker who has your password repeatedly triggers multi-factor approval prompts or codes, hoping you approve one out of annoyance or confusion, granting them access to your account.",
+    "quickVerdict": {
+      "mainRedFlag": "Repeated, unexpected login approval prompts or verification codes you did not request.",
+      "whatToDoFirst": "Deny all prompts, do not approve, and change your password immediately."
+    },
+    "exampleMessage": "Example pattern: Your phone gets a stream of 'Approve sign-in?' prompts or codes you did not request, sometimes with a message urging you to 'just approve it'.",
+    "redFlags": [
+      "Repeated approval prompts or codes you did not trigger",
+      "A message urging you to approve to 'stop the prompts'",
+      "A call or text claiming to be support asking you to approve",
+      "Prompts at odd hours",
+      "Pressure and confusion"
+    ],
+    "whatToDo": [
+      "Deny all approval prompts you did not initiate",
+      "Change your password immediately from a trusted device",
+      "Switch to phishing-resistant MFA or number matching where available",
+      "Report the attempts to the service and your IT team"
+    ],
+    "ifYouClicked": [
+      "If you approved a prompt, change your password and sign out all sessions immediately",
+      "Re-enable and review MFA settings and devices",
+      "Check the account for unauthorised changes",
+      "Report the takeover to the service"
+    ],
+    "whatNotToDo": [
+      "Do not approve prompts to make them stop",
+      "Do not approve at a caller's request",
+      "Do not ignore repeated unexpected prompts"
+    ],
+    "faqs": [
+      {
+        "question": "Why am I getting these prompts?",
+        "answer": "An attacker likely has your password and is spamming approval requests, hoping you approve one. Deny them all and change your password immediately."
+      },
+      {
+        "question": "Support told me to approve to stop them. Should I?",
+        "answer": "No. Genuine support never asks you to approve a sign-in prompt. Approving grants the attacker access. Deny and report it."
+      },
+      {
+        "question": "I approved one. What now?",
+        "answer": "Change your password and sign out all sessions immediately, review MFA settings and devices, check for changes, and report the takeover."
+      },
+      {
+        "question": "How do I prevent this?",
+        "answer": "Use phishing-resistant MFA or number-matching, keep passwords unique and strong, and never approve prompts you did not start."
+      }
+    ],
+    "relatedScams": [
+      "two-factor-code-text-scam",
+      "account-ransom-scam",
+      "instagram-verification-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Caravan Pitch Fee Scam",
+    "slug": "caravan-pitch-scam",
+    "category": "rental-scams",
+    "metaTitle": "Caravan Pitch Scam: Holiday Park Siting Fee Flags",
+    "metaDescription": "Recognise holiday park pitch and static caravan siting scams that take upfront fees. See an example pattern and how to verify before paying.",
+    "riskLevel": "Medium",
+    "scamType": "Advance-fee (holiday park pitch)",
+    "summary": "In this scam, a holiday park pitch, static caravan plot, or siting agreement is offered cheaply, but the 'operator' demands upfront pitch fees or deposits for a plot that does not exist or is not theirs to let.",
+    "quickVerdict": {
+      "mainRedFlag": "A holiday park pitch or siting deal needing upfront fees before visiting or verifying.",
+      "whatToDoFirst": "Visit the park and verify with park management before paying anything."
+    },
+    "exampleMessage": "Example pattern: 'Great pitch at our holiday park, low annual fee. Pay the siting deposit now to reserve before it's taken.'",
+    "redFlags": [
+      "Upfront pitch or siting fees before visiting",
+      "An operator not affiliated with the real park",
+      "Fees well below normal park rates",
+      "Payment by transfer or gift card",
+      "Pressure to reserve quickly"
+    ],
+    "whatToDo": [
+      "Visit the park and verify with official park management",
+      "Confirm the operator's right to let the pitch",
+      "Pay by traceable methods with documented terms",
+      "Be wary of below-market fees and pressure"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank or payment provider to try to recover it",
+      "Report the listing and operator to the platform and park",
+      "Keep all messages and payment records",
+      "Report the scam to your local fraud authority"
+    ],
+    "whatNotToDo": [
+      "Do not pay pitch fees before visiting or verifying",
+      "Do not pay by irreversible methods",
+      "Do not trust an operator you cannot confirm with the park"
+    ],
+    "faqs": [
+      {
+        "question": "How do I arrange a caravan pitch safely?",
+        "answer": "Visit the park, verify with official park management, confirm the operator's right to let it, and pay by traceable methods with documented terms."
+      },
+      {
+        "question": "Is a cheap pitch fee a warning sign?",
+        "answer": "Fees well below normal, plus upfront payment before visiting, are warning signs. Verify with the park first."
+      },
+      {
+        "question": "I paid a siting deposit. What now?",
+        "answer": "Contact your bank or payment provider to try to recover it, report the operator to the park and platform, and keep your evidence."
+      },
+      {
+        "question": "Should I confirm with the park directly?",
+        "answer": "Yes. Always confirm any pitch or siting arrangement with official park management before paying."
+      }
+    ],
+    "relatedScams": [
+      "timeshare-resale-scam",
+      "vacation-rental-scam",
+      "caravan-sale-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Property Viewing Fee Scam",
+    "slug": "property-viewing-fee-scam",
+    "category": "rental-scams",
+    "metaTitle": "Viewing Fee Scam: Pay-to-View Rental Red Flags",
+    "metaDescription": "Recognise rental scams that charge a fee just to view a property. See an example pattern and why genuine viewings are free.",
+    "riskLevel": "Medium",
+    "scamType": "Advance-fee (rental)",
+    "summary": "In this scam, a 'landlord' or 'agent' demands a fee simply to arrange a viewing of a rental property, taking the money for a viewing that never happens or a property that is not available.",
+    "quickVerdict": {
+      "mainRedFlag": "A fee demanded just to view a rental property.",
+      "whatToDoFirst": "Do not pay to view; genuine viewings are free."
+    },
+    "exampleMessage": "Example pattern: 'High demand for this flat. Pay a £40 viewing fee to secure your slot before others.'",
+    "redFlags": [
+      "A fee just to view a property",
+      "Pressure citing high demand",
+      "A landlord or agent who cannot show the property without payment",
+      "Payment by transfer or gift card",
+      "A property that seems too cheap"
+    ],
+    "whatToDo": [
+      "Refuse to pay a fee to view a property",
+      "View through reputable agents who do not charge for viewings",
+      "Verify the landlord's right to let the property",
+      "Report agents or landlords demanding viewing fees"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank or payment provider to try to recover it",
+      "Report the listing and person to the platform",
+      "Keep all messages and payment records",
+      "Report the scam to your local authority"
+    ],
+    "whatNotToDo": [
+      "Do not pay to view a property",
+      "Do not pay by irreversible methods",
+      "Do not let high-demand pressure rush you"
+    ],
+    "faqs": [
+      {
+        "question": "Should I ever pay to view a rental?",
+        "answer": "No. Genuine viewings are free. A fee just to view is a scam sign, taking money for a viewing that may never happen."
+      },
+      {
+        "question": "They say it's to manage high demand. Real?",
+        "answer": "Charging to view is not a legitimate way to manage demand. Reputable agents and landlords do not charge viewing fees."
+      },
+      {
+        "question": "I paid a viewing fee. What now?",
+        "answer": "Contact your bank or payment provider to try to recover it, report the listing and person, and keep your evidence."
+      },
+      {
+        "question": "What about application or holding fees?",
+        "answer": "Some legitimate fees exist later in the process and vary by region, but paying merely to view a property is a scam sign."
+      }
+    ],
+    "relatedScams": [
+      "rental-application-fee-scam",
+      "fake-letting-agent-scam",
+      "rental-deposit-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Shared Ownership Scam",
+    "slug": "shared-ownership-scam",
+    "category": "rental-scams",
+    "metaTitle": "Shared Ownership Scam: Part-Buy Scheme Red Flags",
+    "metaDescription": "Recognise fake shared ownership and part-buy part-rent housing schemes that take deposits and fees. See an example pattern and how to verify.",
+    "riskLevel": "High",
+    "scamType": "Advance-fee (housing scheme)",
+    "summary": "In this scam, a fake shared ownership or part-buy part-rent housing scheme offers an affordable route onto the property ladder, then takes deposits, reservation, or 'eligibility' fees for homes and schemes that do not exist.",
+    "quickVerdict": {
+      "mainRedFlag": "A shared ownership scheme demanding deposits or eligibility fees before proper checks.",
+      "whatToDoFirst": "Verify the scheme and provider through official housing channels before paying."
+    },
+    "exampleMessage": "Example pattern: 'You qualify for shared ownership! Pay a reservation and eligibility fee to secure your home before allocations close.'",
+    "redFlags": [
+      "Reservation or eligibility fees demanded upfront",
+      "A provider you cannot verify as official or approved",
+      "Pressure citing closing allocations",
+      "Payment by transfer to an individual",
+      "Vague scheme details and no proper process"
+    ],
+    "whatToDo": [
+      "Verify the scheme and provider through official housing channels",
+      "Use approved providers and proper legal processes",
+      "Never pay fees to an unverified provider",
+      "Get independent legal advice before committing"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank or payment provider to try to recover it",
+      "If you shared documents, monitor for identity misuse",
+      "Keep all messages and records as evidence",
+      "Report the scheme to housing and fraud authorities"
+    ],
+    "whatNotToDo": [
+      "Do not pay reservation or eligibility fees to unverified providers",
+      "Do not share documents with unofficial schemes",
+      "Do not let allocation pressure rush you"
+    ],
+    "faqs": [
+      {
+        "question": "How do I check a shared ownership scheme?",
+        "answer": "Verify the scheme and provider through official housing channels, use approved providers and proper legal processes, and get independent legal advice."
+      },
+      {
+        "question": "Are upfront eligibility fees normal?",
+        "answer": "Genuine schemes have transparent, official processes. Demands for eligibility or reservation fees from unverified providers are warning signs."
+      },
+      {
+        "question": "I paid a fee. What now?",
+        "answer": "Contact your bank or payment provider to try to recover it, monitor for identity misuse if you shared documents, and report the scheme."
+      },
+      {
+        "question": "Where do I find genuine schemes?",
+        "answer": "Through official government housing programs and approved providers, verified directly, not unsolicited offers with upfront fees."
+      }
+    ],
+    "relatedScams": [
+      "housing-voucher-scam",
+      "rent-to-own-scam",
+      "rental-deposit-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Open Banking Consent Scam",
+    "slug": "open-banking-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Open Banking Scam: Account Access Consent Flags",
+    "metaDescription": "Recognise scams that trick you into granting open banking access to a malicious app. See an example pattern and how to protect your accounts.",
+    "riskLevel": "High",
+    "scamType": "Account access consent fraud",
+    "summary": "In this scam, a fake app or service asks you to connect your bank via open banking for a 'budget', 'refund', or 'loan check', then uses the granted access to view your data or initiate payments.",
+    "quickVerdict": {
+      "mainRedFlag": "An app or service asking you to connect your bank to access a refund, loan, or tool.",
+      "whatToDoFirst": "Only grant open banking access to apps you fully trust and have verified."
+    },
+    "exampleMessage": "Example pattern: 'Connect your bank to claim your refund / check your loan eligibility instantly.' The consent grants access a scammer misuses.",
+    "redFlags": [
+      "A request to connect your bank to an unfamiliar app",
+      "Access sought to claim a refund or 'check' something",
+      "An app you cannot verify as regulated",
+      "Pressure to connect quickly",
+      "Broad permissions including initiating payments"
+    ],
+    "whatToDo": [
+      "Only grant open banking access to verified, regulated apps you trust",
+      "Review and revoke account access you do not recognise in your banking app",
+      "Be cautious of refund or loan lures asking for bank access",
+      "Report suspicious apps to your bank and regulator"
+    ],
+    "ifYouClicked": [
+      "Revoke the app's access in your banking app immediately",
+      "Change your online banking password from a trusted device",
+      "Review transactions and report anything unfamiliar",
+      "Contact your bank if payments were initiated"
+    ],
+    "whatNotToDo": [
+      "Do not connect your bank to unverified apps",
+      "Do not grant access to claim a refund or prize",
+      "Do not ignore unfamiliar connected apps"
+    ],
+    "faqs": [
+      {
+        "question": "What is open banking consent fraud?",
+        "answer": "Scammers trick you into granting an app access to your bank via open banking, then misuse that access to view data or initiate payments. Only connect trusted, regulated apps."
+      },
+      {
+        "question": "How do I check what has access?",
+        "answer": "Review connected apps and open banking permissions in your banking app, and revoke anything you do not recognise."
+      },
+      {
+        "question": "I connected a suspicious app. What now?",
+        "answer": "Revoke its access immediately, change your banking password from a trusted device, review transactions, and contact your bank."
+      },
+      {
+        "question": "Is open banking itself safe?",
+        "answer": "Used with regulated, trusted apps, yes. The risk is granting access to a malicious or unverified app, so verify before connecting."
+      }
+    ],
+    "relatedScams": [
+      "fake-banking-app-scam",
+      "loan-app-scam",
+      "paypal-payment-pending-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Credit Repair Scam",
+    "slug": "credit-repair-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Credit Repair Scam: Fix Your Score Red Flags",
+    "metaDescription": "Recognise credit repair scams that charge upfront to 'fix' your score and deliver nothing or harm you. See an example pattern and safe steps.",
+    "riskLevel": "Medium",
+    "scamType": "Advance-fee (credit repair)",
+    "summary": "In this scam, a service guarantees to fix or boost your credit score for an upfront fee, using illegal tactics, false disputes, or doing nothing, leaving you worse off and out of pocket.",
+    "quickVerdict": {
+      "mainRedFlag": "A service guaranteeing a fixed or boosted credit score for an upfront fee.",
+      "whatToDoFirst": "Be wary; you can correct genuine credit errors yourself for free."
+    },
+    "exampleMessage": "Example pattern: 'Guaranteed to boost your credit score by 100 points! Pay our upfront fee and we'll clean your report.'",
+    "redFlags": [
+      "Guarantees to fix or boost your score",
+      "An upfront fee before any work",
+      "Promises to remove accurate negative information",
+      "Pressure to act quickly",
+      "A provider you cannot verify"
+    ],
+    "whatToDo": [
+      "Correct genuine errors yourself for free with the credit bureaus",
+      "Be sceptical of guarantees and upfront fees",
+      "Use reputable, regulated advice services",
+      "Report misleading credit repair services"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your payment provider to dispute it",
+      "Check your credit report for false disputes filed in your name",
+      "Keep all records as evidence",
+      "Report the service to consumer authorities"
+    ],
+    "whatNotToDo": [
+      "Do not pay upfront for guaranteed score boosts",
+      "Do not let anyone file false disputes for you",
+      "Do not trust promises to remove accurate information"
+    ],
+    "faqs": [
+      {
+        "question": "Can a service guarantee a credit score boost?",
+        "answer": "No. No one can guarantee a specific score increase, and accurate negative information cannot legitimately be removed. Such guarantees signal a scam."
+      },
+      {
+        "question": "Can I fix my credit myself?",
+        "answer": "Yes. You can dispute genuine errors directly with the credit bureaus for free, without paying an upfront-fee service."
+      },
+      {
+        "question": "I paid a credit repair service. What now?",
+        "answer": "Dispute the payment, check your report for false disputes filed in your name, keep records, and report the service."
+      },
+      {
+        "question": "Are any credit services legitimate?",
+        "answer": "Reputable, regulated advice exists, but be wary of guarantees, upfront fees, and promises to remove accurate information."
+      }
+    ],
+    "relatedScams": [
+      "debt-consolidation-scam",
+      "advance-fee-loan-scam",
+      "loan-app-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Debt Consolidation Scam",
+    "slug": "debt-consolidation-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Debt Consolidation Scam: Fake Debt Help Flags",
+    "metaDescription": "Recognise debt consolidation and management scams that charge fees and worsen your debt. See an example pattern and how to get genuine help.",
+    "riskLevel": "Medium",
+    "scamType": "Advance-fee (debt help)",
+    "summary": "In this scam, a debt consolidation or management service promises to slash your debts for an upfront or monthly fee, then takes your payments without paying creditors, worsening your situation.",
+    "quickVerdict": {
+      "mainRedFlag": "A debt service promising to wipe or slash debts for upfront or high monthly fees.",
+      "whatToDoFirst": "Use free, regulated debt advice services and verify any provider."
+    },
+    "exampleMessage": "Example pattern: 'We'll cut your debts in half! Pay our fee and we'll handle your creditors for you.' Payments are taken but creditors are not paid.",
+    "redFlags": [
+      "Promises to wipe or slash debts",
+      "Upfront or high monthly fees",
+      "A provider that intercepts payments to creditors",
+      "Pressure to sign up quickly",
+      "A service you cannot verify as regulated"
+    ],
+    "whatToDo": [
+      "Use free, regulated debt advice services",
+      "Verify any provider is authorised before paying",
+      "Be sceptical of promises to wipe debts",
+      "Keep paying creditors until a genuine plan is confirmed"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your payment provider to dispute it",
+      "Contact your creditors to check payments were made",
+      "Seek free, regulated debt advice",
+      "Report the service to authorities"
+    ],
+    "whatNotToDo": [
+      "Do not pay upfront for promises to wipe debts",
+      "Do not stop paying creditors on an unverified provider's say-so",
+      "Do not trust guarantees"
+    ],
+    "faqs": [
+      {
+        "question": "Where can I get genuine debt help?",
+        "answer": "Use free, regulated debt advice services in your country. Be wary of providers charging upfront or high fees and promising to wipe debts."
+      },
+      {
+        "question": "Why is intercepting creditor payments risky?",
+        "answer": "If a service takes your money but does not pay creditors, your debts grow and your credit suffers. Verify any plan with your creditors."
+      },
+      {
+        "question": "I paid a debt service. What now?",
+        "answer": "Dispute the payment, check with creditors that payments were made, seek free regulated advice, and report the service."
+      },
+      {
+        "question": "Can debts really be slashed for a fee?",
+        "answer": "Guarantees to wipe or halve debts for a fee are a warning sign. Genuine help is transparent and often free."
+      }
+    ],
+    "relatedScams": [
+      "credit-repair-scam",
+      "advance-fee-loan-scam",
+      "fund-recovery-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Bank Reimbursement Scam",
+    "slug": "bank-reimbursement-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Bank Reimbursement Scam: Fake Refund of Losses Flags",
+    "metaDescription": "Recognise scammers posing as your bank's fraud team offering to reimburse a previous scam for a fee or details. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Bank impersonation (re-victimisation)",
+    "summary": "In this scam, fraudsters pose as your bank's fraud or reimbursement team, claiming they can refund money you lost to a previous scam, then ask for verification details, a fee, or remote access to steal more.",
+    "quickVerdict": {
+      "mainRedFlag": "A 'bank' contact offering to reimburse a previous scam if you verify details or pay a fee.",
+      "whatToDoFirst": "Hang up and contact your bank using the number on your card to verify."
+    },
+    "exampleMessage": "Example pattern: 'This is your bank's reimbursement team. To refund the money you lost, confirm your details and pay a small release fee.'",
+    "redFlags": [
+      "An offer to reimburse a previous scam loss",
+      "Requests for verification details, a fee, or remote access",
+      "Contact that targets known scam victims",
+      "Pressure and reassurance to act now",
+      "A caller or link not verified as your bank"
+    ],
+    "whatToDo": [
+      "Hang up and call your bank using the number on your card",
+      "Never pay a fee or share details to receive a reimbursement",
+      "Be aware scammers target previous victims",
+      "Report the contact to your bank and fraud authority"
+    ],
+    "ifYouClicked": [
+      "If you shared details or paid, contact your bank immediately",
+      "Change your online banking password from a trusted device",
+      "Remove any remote-access software and run a scan",
+      "Report it and keep evidence"
+    ],
+    "whatNotToDo": [
+      "Do not pay a fee to receive a reimbursement",
+      "Do not share verification details or grant remote access",
+      "Do not trust unsolicited reimbursement offers"
+    ],
+    "faqs": [
+      {
+        "question": "Does my bank charge a fee to reimburse fraud?",
+        "answer": "No. Genuine reimbursements go through official processes without fees or requests for remote access. Verify any offer by calling your bank directly."
+      },
+      {
+        "question": "Why am I being targeted after a scam?",
+        "answer": "Scammers share lists of previous victims and pose as your bank's reimbursement team, knowing you want your money back."
+      },
+      {
+        "question": "I shared details or paid. What now?",
+        "answer": "Contact your bank immediately, change your banking password from a trusted device, remove any remote-access software, and report it."
+      },
+      {
+        "question": "How do I get a genuine reimbursement?",
+        "answer": "Through your bank's official fraud process, which you start by contacting the bank directly, not via an unsolicited offer."
+      }
+    ],
+    "relatedScams": [
+      "fund-recovery-scam",
+      "bank-impersonation-phone-scam",
+      "refund-recovery-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Wallet Provisioning Scam",
+    "slug": "wallet-provisioning-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Wallet Provisioning Scam: Add-My-Card OTP Flags",
+    "metaDescription": "Recognise scams that trick you into approving your card being added to a scammer's mobile wallet via an OTP. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Card provisioning fraud",
+    "summary": "In this scam, a fraudster who has your card details triggers a request to add your card to their mobile wallet, then calls or messages posing as your bank to get you to share the one-time code that authorises it.",
+    "quickVerdict": {
+      "mainRedFlag": "Someone asks for the OTP needed to 'verify' your card, which actually adds it to their wallet.",
+      "whatToDoFirst": "Never share an OTP; a code to 'verify your card' can authorise wallet provisioning."
+    },
+    "exampleMessage": "Example pattern: 'This is your bank. To verify your card, read us the code we just sent.' The code adds your card to the scammer's phone wallet.",
+    "redFlags": [
+      "A request to read out an OTP to 'verify your card'",
+      "An unexpected wallet or card-verification code",
+      "A caller posing as your bank",
+      "Pressure to share the code quickly",
+      "Spending alerts from a wallet you did not set up"
+    ],
+    "whatToDo": [
+      "Never share OTPs or verification codes with anyone",
+      "Hang up and call your bank using the number on your card",
+      "Report any wallet added without your knowledge",
+      "Set up transaction alerts to catch misuse"
+    ],
+    "ifYouClicked": [
+      "If you shared a code, contact your bank immediately to block the card",
+      "Ask the bank to remove the card from any unknown wallet",
+      "Change your online banking password from a trusted device",
+      "Review and report unauthorised transactions"
+    ],
+    "whatNotToDo": [
+      "Do not share OTPs or card codes, even with 'the bank'",
+      "Do not act on pressure to verify quickly",
+      "Do not call back on a number the caller gives"
+    ],
+    "faqs": [
+      {
+        "question": "How does wallet provisioning fraud work?",
+        "answer": "A fraudster with your card details starts adding your card to their wallet, then gets you to share the OTP that authorises it, letting them pay with your card."
+      },
+      {
+        "question": "Why should I never share an OTP?",
+        "answer": "OTPs authorise actions like adding your card to a wallet or approving payments. Sharing one can hand control of your card to a scammer."
+      },
+      {
+        "question": "I shared a code. What now?",
+        "answer": "Contact your bank immediately to block the card and remove it from any unknown wallet, change your banking password, and review transactions."
+      },
+      {
+        "question": "How do I spot this?",
+        "answer": "Be wary of any request to read out a code to 'verify your card', and watch for wallet or spending alerts you did not set up."
+      }
+    ],
+    "relatedScams": [
+      "cardless-atm-scam",
+      "paypal-payment-pending-scam",
+      "fake-bank-alert-text-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Wage Advance App Scam",
+    "slug": "wage-advance-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Wage Advance Scam: Earned-Wage App Red Flags",
+    "metaDescription": "Recognise predatory wage advance and earned-wage-access apps with hidden fees and data harvesting. See an example pattern and how to borrow safely.",
+    "riskLevel": "Medium",
+    "scamType": "Predatory lending / data harvesting",
+    "summary": "In this scam, a wage advance or earned-wage-access app offers instant cash before payday, then charges hidden fees or 'tips', demands intrusive access to your accounts and contacts, or harvests your data.",
+    "quickVerdict": {
+      "mainRedFlag": "An instant wage advance app demanding account access and charging hidden fees or 'tips'.",
+      "whatToDoFirst": "Use reputable, regulated providers and check the full cost before borrowing."
+    },
+    "exampleMessage": "Example pattern: 'Get your pay early, no interest! Connect your bank and contacts to unlock instant cash.' Hidden fees and data harvesting follow.",
+    "redFlags": [
+      "Demands for access to your bank, contacts, or messages",
+      "Hidden fees, 'tips', or rollover charges",
+      "No proper affordability checks",
+      "An app from an unverified source",
+      "Pressure to borrow repeatedly"
+    ],
+    "whatToDo": [
+      "Use reputable, regulated wage advance providers",
+      "Check the full cost, including fees and tips, before borrowing",
+      "Avoid apps demanding access to contacts or messages",
+      "Report predatory apps to the app store and regulator"
+    ],
+    "ifYouClicked": [
+      "Remove the app and revoke its permissions",
+      "Review your accounts for unexpected fees or debits",
+      "Secure any account you linked",
+      "Report the app and keep evidence"
+    ],
+    "whatNotToDo": [
+      "Do not grant access to your contacts or messages",
+      "Do not ignore hidden fees and tips",
+      "Do not borrow repeatedly from predatory apps"
+    ],
+    "faqs": [
+      {
+        "question": "Are wage advance apps safe?",
+        "answer": "Reputable, regulated ones can be, but be wary of apps demanding access to contacts and messages, charging hidden fees, or skipping affordability checks."
+      },
+      {
+        "question": "Why do they want my contacts?",
+        "answer": "Access to contacts and messages can be used to pressure you or harvest data. Reputable providers do not need such access."
+      },
+      {
+        "question": "I used one and was charged hidden fees. What now?",
+        "answer": "Remove the app, revoke permissions, review your accounts, dispute unexpected charges, secure linked accounts, and report the app."
+      },
+      {
+        "question": "How do I borrow safely before payday?",
+        "answer": "Use regulated providers, check the full cost upfront, and avoid apps with intrusive permissions or hidden fees."
+      }
+    ],
+    "relatedScams": [
+      "loan-app-scam",
+      "advance-fee-loan-scam",
+      "payroll-direct-deposit-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Micro-Deposit Verification Scam",
+    "slug": "micro-deposit-scam",
+    "category": "bank-payment-scams",
+    "metaTitle": "Micro-Deposit Scam: Account Linking Verification Flags",
+    "metaDescription": "Recognise scams that misuse small 'verification' deposits to link your account or trick you. See an example pattern and how to protect your account.",
+    "riskLevel": "Medium",
+    "scamType": "Account linking / verification fraud",
+    "summary": "In this scam, a fraudster sends or references small 'verification' deposits, then uses them to link your bank account to a service, or tricks you into confirming details that grant access for theft.",
+    "quickVerdict": {
+      "mainRedFlag": "A request to confirm small 'verification' deposits to an unverified app or caller.",
+      "whatToDoFirst": "Only confirm micro-deposits within services you set up and trust."
+    },
+    "exampleMessage": "Example pattern: 'We sent two small deposits to verify your account, please confirm the amounts here to link it.' The link grants a scammer access.",
+    "redFlags": [
+      "A request to confirm micro-deposit amounts to an unfamiliar service",
+      "Small deposits you did not expect",
+      "A link or caller asking you to verify them",
+      "Pressure to confirm quickly",
+      "An app or service you cannot verify"
+    ],
+    "whatToDo": [
+      "Only confirm micro-deposits within services you set up and trust",
+      "Be wary of unexpected small deposits and verification requests",
+      "Review linked accounts and revoke unknown ones",
+      "Report suspicious requests to your bank"
+    ],
+    "ifYouClicked": [
+      "If you confirmed deposits to an unknown service, contact your bank",
+      "Revoke any account links you do not recognise",
+      "Change your online banking password from a trusted device",
+      "Review transactions for unauthorised activity"
+    ],
+    "whatNotToDo": [
+      "Do not confirm verification deposits to unverified services",
+      "Do not act on unexpected deposit-verification requests",
+      "Do not share account details to 'verify'"
+    ],
+    "faqs": [
+      {
+        "question": "What are micro-deposits used for?",
+        "answer": "Legitimate services use small deposits to verify account ownership when you link an account you control. Scammers misuse this to link your account to their service."
+      },
+      {
+        "question": "I got unexpected small deposits. Is that a sign?",
+        "answer": "It can be. If you did not set up a link, be cautious and do not confirm the amounts to any unfamiliar service or caller."
+      },
+      {
+        "question": "I confirmed deposits to an unknown app. What now?",
+        "answer": "Contact your bank, revoke unknown account links, change your banking password from a trusted device, and review transactions."
+      },
+      {
+        "question": "How do I link accounts safely?",
+        "answer": "Only within services you set up and trust, and review and remove any account links you do not recognise."
+      }
+    ],
+    "relatedScams": [
+      "open-banking-scam",
+      "accidental-transfer-scam",
+      "paypal-payment-pending-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Mock Juror Job Scam",
+    "slug": "mock-juror-job-scam",
+    "category": "job-scams",
+    "metaTitle": "Mock Juror Scam: Paid Jury Job Cheque Flags",
+    "metaDescription": "Recognise paid mock juror and online jury job scams that send overpayment cheques. See an example pattern and how to spot the trap.",
+    "riskLevel": "High",
+    "scamType": "Fake cheque / overpayment (job)",
+    "summary": "In this scam, you are 'hired' as a paid mock juror or online jury participant, sent a cheque for more than agreed to cover 'equipment' or fees, and asked to send the difference back before the cheque bounces.",
+    "quickVerdict": {
+      "mainRedFlag": "A mock juror job that sends an overpayment cheque and asks you to return the difference.",
+      "whatToDoFirst": "Do not move any money; a cheque can bounce days after appearing to clear."
+    },
+    "exampleMessage": "Example pattern: 'Welcome, mock juror! We've sent a $1,800 cheque for equipment. Keep your fee and send $1,400 to our coordinator.'",
+    "redFlags": [
+      "Being hired with no real process",
+      "An overpayment cheque with money to send back",
+      "A request to forward funds to a 'coordinator'",
+      "Payment of the balance by gift card or transfer",
+      "Pressure to act before the cheque 'expires'"
+    ],
+    "whatToDo": [
+      "Do not move money until a cheque has fully cleared",
+      "Confirm with your bank that funds are truly settled",
+      "Verify any research or court program independently",
+      "Report the scheme to your bank and authorities"
+    ],
+    "ifYouClicked": [
+      "If you sent money, contact your bank immediately to try to stop it",
+      "Expect the cheque to be reversed, leaving you liable",
+      "Keep the cheque and messages as evidence",
+      "Report the scheme"
+    ],
+    "whatNotToDo": [
+      "Do not send money from funds only showing as 'available'",
+      "Do not forward funds for a 'coordinator'",
+      "Do not trust a job with no real process"
+    ],
+    "faqs": [
+      {
+        "question": "Are paid mock juror jobs real?",
+        "answer": "Some legitimate research exists, but it does not send overpayment cheques to forward. An overpayment with a request to return funds is a fake-cheque scam."
+      },
+      {
+        "question": "How do I know a cheque cleared?",
+        "answer": "Ask your bank specifically whether funds have fully settled, and wait until you are certain before moving any money."
+      },
+      {
+        "question": "I sent the coordinator money. What now?",
+        "answer": "Contact your bank immediately, keep your evidence, and report it; the cheque will likely be reversed."
+      },
+      {
+        "question": "How do I find genuine research work?",
+        "answer": "Use reputable, verifiable research companies, and never accept overpayment cheques or forward funds."
+      }
+    ],
+    "relatedScams": [
+      "focus-group-job-scam",
+      "mystery-shopper-scam",
+      "overpayment-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Personal Driver Job Scam",
+    "slug": "personal-driver-job-scam",
+    "category": "job-scams",
+    "metaTitle": "Personal Driver Job Scam: Fake Chauffeur Cheque Flags",
+    "metaDescription": "Recognise personal driver and chauffeur job scams that send cheques for a car or expenses and ask for money back. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Fake cheque / overpayment (job)",
+    "summary": "In this scam, you are hired as a personal driver or chauffeur for a wealthy 'employer', sent a cheque to buy a vehicle, insurance, or supplies, and asked to forward most of it before the cheque bounces.",
+    "quickVerdict": {
+      "mainRedFlag": "A driver job that sends a cheque for a car or expenses and asks you to forward funds.",
+      "whatToDoFirst": "Do not forward any funds; a cheque can be reversed after it appears to clear."
+    },
+    "exampleMessage": "Example pattern: 'You're hired as my driver. I've sent a cheque for the car and insurance, keep your pay and send the rest to my dealer.'",
+    "redFlags": [
+      "Being hired with no real interview",
+      "A cheque to buy a car, insurance, or supplies",
+      "A request to forward funds to a 'dealer' or 'agent'",
+      "Payment of the balance by transfer or gift card",
+      "An employer who is always travelling or abroad"
+    ],
+    "whatToDo": [
+      "Do not forward money until a cheque has fully cleared",
+      "Verify the employer independently",
+      "Confirm with your bank that funds are truly settled",
+      "Report the scheme to your bank and authorities"
+    ],
+    "ifYouClicked": [
+      "If you forwarded money, contact your bank immediately",
+      "Expect the cheque to be reversed, leaving you liable",
+      "Keep the cheque and messages as evidence",
+      "Report the 'employer'"
+    ],
+    "whatNotToDo": [
+      "Do not forward funds from an uncleared cheque",
+      "Do not pay a 'dealer' or 'agent' for an employer",
+      "Do not trust a job with no real interview"
+    ],
+    "faqs": [
+      {
+        "question": "Why would a driver employer send me a cheque?",
+        "answer": "Legitimate employers do not send cheques for you to buy a car and forward the balance. It is a fake-cheque overpayment scam."
+      },
+      {
+        "question": "How do I know the cheque cleared?",
+        "answer": "Ask your bank whether the funds have fully settled, not just shown as available, and wait until you are certain before moving money."
+      },
+      {
+        "question": "I forwarded the money. What now?",
+        "answer": "Contact your bank immediately, keep your evidence, and report it; the cheque will likely be reversed."
+      },
+      {
+        "question": "How do I find a genuine driving job?",
+        "answer": "Apply through reputable employers or agencies, expect a real interview, and never forward funds from a cheque."
+      }
+    ],
+    "relatedScams": [
+      "car-wrap-scam",
+      "nanny-job-scam",
+      "overpayment-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Photography Gig Scam",
+    "slug": "photography-gig-scam",
+    "category": "job-scams",
+    "metaTitle": "Photography Gig Scam: Fake Shoot Cheque Flags",
+    "metaDescription": "Recognise photography and videography gig scams that send overpayment cheques for equipment or venues. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Fake cheque / overpayment (creative gigs)",
+    "summary": "In this scam, a fake client books you for a photography or videography gig, sends a cheque for more than agreed to cover a venue, equipment, or a second vendor, and asks you to forward the difference before it bounces.",
+    "quickVerdict": {
+      "mainRedFlag": "A photo gig that sends an overpayment cheque and asks you to pay a venue or vendor.",
+      "whatToDoFirst": "Do not forward funds; a cheque can be reversed after it appears to clear."
+    },
+    "exampleMessage": "Example pattern: 'Booking you for our event! I've sent a cheque covering your fee plus the venue. Please forward the venue's share to this account.'",
+    "redFlags": [
+      "A booking with little detail or no contract",
+      "An overpayment cheque with money to forward",
+      "A request to pay a venue, planner, or vendor",
+      "Payment of the balance by transfer or gift card",
+      "Pressure to act before the cheque 'expires'"
+    ],
+    "whatToDo": [
+      "Do not forward money until a cheque has fully cleared",
+      "Use clear contracts and your own payment terms",
+      "Confirm with your bank that funds are truly settled",
+      "Report the scheme to your bank and authorities"
+    ],
+    "ifYouClicked": [
+      "If you forwarded money, contact your bank immediately",
+      "Expect the cheque to be reversed, leaving you liable",
+      "Keep the cheque and messages as evidence",
+      "Report the client"
+    ],
+    "whatNotToDo": [
+      "Do not forward funds from an uncleared cheque",
+      "Do not pay a venue or vendor on a client's behalf this way",
+      "Do not work without clear terms"
+    ],
+    "faqs": [
+      {
+        "question": "Why would a client overpay and ask me to forward funds?",
+        "answer": "It is a fake-cheque scam. The cheque bounces after you forward the money, leaving you liable for the difference."
+      },
+      {
+        "question": "How do I avoid this as a photographer?",
+        "answer": "Use clear contracts and your own payment terms, never forward funds from a cheque, and confirm with your bank that funds have fully cleared."
+      },
+      {
+        "question": "I forwarded the venue's 'share'. What now?",
+        "answer": "Contact your bank immediately, keep your evidence, and report it; the cheque will likely be reversed."
+      },
+      {
+        "question": "How should client payments work?",
+        "answer": "Through your own invoicing and payment terms, with clients paying venues and vendors directly, not via you cashing a cheque."
+      }
+    ],
+    "relatedScams": [
+      "social-media-manager-job-scam",
+      "overpayment-scam",
+      "fake-job-offer-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Personal Chef Job Scam",
+    "slug": "personal-chef-job-scam",
+    "category": "job-scams",
+    "metaTitle": "Personal Chef Job Scam: Fake Hire Cheque Flags",
+    "metaDescription": "Recognise personal chef and private catering job scams that send overpayment cheques for ingredients or equipment. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Fake cheque / overpayment (job)",
+    "summary": "In this scam, a wealthy 'employer' hires you as a personal chef, sends a cheque for ingredients, equipment, or a deposit larger than agreed, and asks you to send the difference to a supplier before the cheque bounces.",
+    "quickVerdict": {
+      "mainRedFlag": "A personal chef job that sends an overpayment cheque and asks you to pay a supplier.",
+      "whatToDoFirst": "Do not forward funds; a cheque can be reversed after it appears to clear."
+    },
+    "exampleMessage": "Example pattern: 'Excited to have you as our chef! I've sent a cheque for ingredients and equipment, please forward the supplier's share.'",
+    "redFlags": [
+      "Being hired with no real interview",
+      "An overpayment cheque with money to forward",
+      "A request to pay a 'supplier' for the employer",
+      "Payment of the balance by transfer or gift card",
+      "An employer who is travelling or abroad"
+    ],
+    "whatToDo": [
+      "Do not forward money until a cheque has fully cleared",
+      "Verify the employer independently",
+      "Confirm with your bank that funds are truly settled",
+      "Report the scheme to your bank and authorities"
+    ],
+    "ifYouClicked": [
+      "If you forwarded money, contact your bank immediately",
+      "Expect the cheque to be reversed, leaving you liable",
+      "Keep the cheque and messages as evidence",
+      "Report the 'employer'"
+    ],
+    "whatNotToDo": [
+      "Do not forward funds from an uncleared cheque",
+      "Do not pay a 'supplier' for an employer",
+      "Do not trust a job with no real interview"
+    ],
+    "faqs": [
+      {
+        "question": "Why send a cheque for ingredients?",
+        "answer": "It is a fake-cheque overpayment scam. The cheque bounces after you forward the 'supplier's share', leaving you liable."
+      },
+      {
+        "question": "How do I know a cheque cleared?",
+        "answer": "Ask your bank whether the funds have fully settled, and wait until you are certain before moving any money."
+      },
+      {
+        "question": "I forwarded money to the supplier. What now?",
+        "answer": "Contact your bank immediately, keep your evidence, and report it; the cheque will likely be reversed."
+      },
+      {
+        "question": "How do I find genuine private chef work?",
+        "answer": "Use reputable agencies or clients, expect a real interview, set your own payment terms, and never forward funds from a cheque."
+      }
+    ],
+    "relatedScams": [
+      "nanny-job-scam",
+      "cleaning-job-scam",
+      "overpayment-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Seasonal Retail Job Scam",
+    "slug": "seasonal-retail-job-scam",
+    "category": "job-scams",
+    "metaTitle": "Seasonal Job Scam: Holiday Temp Cheque Flags",
+    "metaDescription": "Recognise seasonal and holiday temp job scams that charge fees or send overpayment cheques for equipment. See an example pattern and safe steps.",
+    "riskLevel": "Medium",
+    "scamType": "Advance-fee / fake cheque (job)",
+    "summary": "In this scam, a fake seasonal or holiday temp job offers quick hiring, then charges for training, a uniform, or a background check, or sends an overpayment cheque for 'equipment' that you must partly send back.",
+    "quickVerdict": {
+      "mainRedFlag": "A seasonal job charging upfront fees or sending an overpayment cheque for equipment.",
+      "whatToDoFirst": "Verify the employer; never pay fees or move cheque funds to start."
+    },
+    "exampleMessage": "Example pattern: 'Hired for the holidays! Pay for your uniform and training, or deposit this equipment cheque and send the balance back.'",
+    "redFlags": [
+      "Upfront fees for uniform, training, or checks",
+      "An overpayment cheque with money to send back",
+      "Hiring with no real interview",
+      "Contact through chat apps",
+      "Pressure to start quickly for the season"
+    ],
+    "whatToDo": [
+      "Verify the employer through official channels",
+      "Never pay upfront fees to start a job",
+      "Do not move funds from a cheque until it fully clears",
+      "Report suspicious offers"
+    ],
+    "ifYouClicked": [
+      "If you paid a fee, dispute it with your payment provider",
+      "If you sent cheque funds, contact your bank immediately",
+      "Keep all messages and receipts as evidence",
+      "Report the employer"
+    ],
+    "whatNotToDo": [
+      "Do not pay for uniform or training to start",
+      "Do not move money from an uncleared cheque",
+      "Do not trust hiring with no interview"
+    ],
+    "faqs": [
+      {
+        "question": "Do seasonal employers charge me to start?",
+        "answer": "Reputable employers do not require upfront fees for uniforms, training, or checks. Such fees, or an equipment cheque, are scam signs."
+      },
+      {
+        "question": "They sent a cheque for equipment. Safe?",
+        "answer": "An overpayment cheque with a request to send the balance is a fake-cheque scam. Do not move the funds."
+      },
+      {
+        "question": "I paid a fee. Can I recover it?",
+        "answer": "Dispute the charge with your payment provider, keep your evidence, and report the employer."
+      },
+      {
+        "question": "How do I find genuine seasonal work?",
+        "answer": "Apply directly to reputable retailers and agencies, expect a real interview, and never pay fees or move cheque funds to start."
+      }
+    ],
+    "relatedScams": [
+      "fake-job-offer-scam",
+      "background-check-fee-scam",
+      "remote-customer-service-job-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Energy-Saving Device Scam",
+    "slug": "energy-saving-device-scam",
+    "category": "online-shopping-scams",
+    "metaTitle": "Energy Saving Device Scam: Fake Power Saver Flags",
+    "metaDescription": "Recognise scams selling 'energy saving' plug-in devices that claim to slash bills but do nothing. See an example pattern and how to buy safely.",
+    "riskLevel": "Medium",
+    "scamType": "Fake product (bogus claims)",
+    "summary": "In this scam, a cheap plug-in 'energy saving' or 'power saver' device is advertised with claims it slashes electricity bills, but it does nothing useful and may be unsafe, taking your money and card details.",
+    "quickVerdict": {
+      "mainRedFlag": "A cheap plug-in device claiming to dramatically cut your energy bills.",
+      "whatToDoFirst": "Be sceptical of bold savings claims; such devices do not work as advertised."
+    },
+    "exampleMessage": "Example pattern: 'Cut your electricity bill by 50% with this plug-in power saver! Limited stock, order now.'",
+    "redFlags": [
+      "Claims of dramatic energy bill cuts from a plug-in device",
+      "Pressure citing limited stock",
+      "An unverifiable seller and no real evidence",
+      "Social media ads driving urgency",
+      "Card details requested on an unverified site"
+    ],
+    "whatToDo": [
+      "Be sceptical of bold energy-saving claims",
+      "Research independent reviews and evidence",
+      "Buy from reputable retailers and pay by a disputable method",
+      "Report misleading products and ads"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank to watch for or block charges",
+      "Do not use a device that seems unsafe",
+      "Keep the ad and order as evidence",
+      "Report the seller and ad to the platform"
+    ],
+    "whatNotToDo": [
+      "Do not trust dramatic energy-saving claims",
+      "Do not buy from unverifiable sellers",
+      "Do not use potentially unsafe devices"
+    ],
+    "faqs": [
+      {
+        "question": "Do plug-in energy savers work?",
+        "answer": "Devices claiming to slash your bills by simply plugging in do not work as advertised, and some are unsafe. Treat such claims as a scam."
+      },
+      {
+        "question": "How can I genuinely save energy?",
+        "answer": "Through reputable efficiency measures and verified products, not cheap plug-in 'savers' sold with bold claims and urgency."
+      },
+      {
+        "question": "I bought one. What now?",
+        "answer": "Contact your bank if you want to dispute the charge, avoid using an unsafe device, keep your evidence, and report the seller and ad."
+      },
+      {
+        "question": "Why are these heavily advertised?",
+        "answer": "Rising energy costs make savings claims appealing, which scammers exploit with cheap, useless devices and urgent ads."
+      }
+    ],
+    "relatedScams": [
+      "solar-panel-scam",
+      "fake-online-store-scam",
+      "social-media-shopping-ad-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Miracle Supplement Scam",
+    "slug": "miracle-supplement-scam",
+    "category": "online-shopping-scams",
+    "metaTitle": "Miracle Supplement Scam: Free Trial & Cure Flags",
+    "metaDescription": "Recognise miracle supplement and weight-loss scams with bold health claims and free-trial billing traps. See an example pattern and safe steps.",
+    "riskLevel": "Medium",
+    "scamType": "Bogus health product / subscription trap",
+    "summary": "In this scam, a supplement is marketed with miracle weight-loss or health-cure claims and a 'free trial', then traps you in costly recurring charges and ships products that do not work and may be unsafe.",
+    "quickVerdict": {
+      "mainRedFlag": "A supplement promising miracle results with a 'free trial' needing your card.",
+      "whatToDoFirst": "Be sceptical of cure claims and check the free-trial terms for recurring charges."
+    },
+    "exampleMessage": "Example pattern: 'Melt fat fast with this miracle supplement! Claim your free trial, just pay shipping with your card.'",
+    "redFlags": [
+      "Miracle weight-loss or cure claims",
+      "A 'free trial' that needs your card",
+      "Hidden recurring charges in the terms",
+      "Fake celebrity endorsements or reviews",
+      "Pressure to order now"
+    ],
+    "whatToDo": [
+      "Be sceptical of miracle health claims",
+      "Read free-trial terms for recurring charges",
+      "Consult a healthcare professional before taking supplements",
+      "Pay by a method you can dispute"
+    ],
+    "ifYouClicked": [
+      "Cancel any subscription and contact your bank to stop charges",
+      "Stop taking a product you are unsure is safe",
+      "Keep the ad and order as evidence",
+      "Report misleading health products"
+    ],
+    "whatNotToDo": [
+      "Do not trust miracle cure or weight-loss claims",
+      "Do not give card details for a 'free trial' without checking terms",
+      "Do not take unverified supplements"
+    ],
+    "faqs": [
+      {
+        "question": "Are miracle supplements genuine?",
+        "answer": "Products promising dramatic weight loss or cures are a warning sign, often paired with free-trial billing traps and fake endorsements. Be sceptical."
+      },
+      {
+        "question": "Why does a free trial need my card?",
+        "answer": "The 'free trial' captures your card and enrols you in costly recurring charges. Read the terms before entering any card details."
+      },
+      {
+        "question": "I'm being charged after a trial. What now?",
+        "answer": "Cancel the subscription, contact your bank to stop and dispute the charges, and report the product. Stop taking it if unsure of safety."
+      },
+      {
+        "question": "How do I choose supplements safely?",
+        "answer": "Consult a healthcare professional, buy from reputable retailers, avoid miracle claims, and check terms for recurring charges."
+      }
+    ],
+    "relatedScams": [
+      "free-trial-subscription-trap-scam",
+      "fake-review-scam",
+      "cosmetic-surgery-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Cosmetic Surgery Deposit Scam",
+    "slug": "cosmetic-surgery-scam",
+    "category": "online-shopping-scams",
+    "metaTitle": "Cosmetic Surgery Scam: Cheap Procedure Deposit Flags",
+    "metaDescription": "Recognise cheap cosmetic surgery and medical tourism deals that take deposits for procedures that don't happen safely. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Advance-deposit / unsafe service",
+    "summary": "In this scam, a clinic or 'coordinator' advertises cheap cosmetic surgery or medical tourism packages, taking deposits or full payment upfront for procedures that are unsafe, misrepresented, or never happen.",
+    "quickVerdict": {
+      "mainRedFlag": "A cheap cosmetic procedure or package needing a large deposit to an unverifiable clinic.",
+      "whatToDoFirst": "Verify the clinic, surgeon, and accreditation before paying anything."
+    },
+    "exampleMessage": "Example pattern: 'Cosmetic surgery abroad at a fraction of the price! Pay a deposit now to secure your discounted package.'",
+    "redFlags": [
+      "Prices far below normal for procedures",
+      "Large deposits demanded upfront",
+      "A clinic or surgeon you cannot verify",
+      "Pressure to book a discounted slot",
+      "Vague details on accreditation and aftercare"
+    ],
+    "whatToDo": [
+      "Verify the clinic, surgeon, and accreditation independently",
+      "Be wary of prices far below normal and pressure to deposit",
+      "Get medical advice and check aftercare arrangements",
+      "Pay by a method you can dispute"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank or payment provider to try to recover it",
+      "Do not proceed with an unverified or unsafe provider",
+      "Keep all messages and records as evidence",
+      "Report the provider to relevant authorities"
+    ],
+    "whatNotToDo": [
+      "Do not pay large deposits to unverified clinics",
+      "Do not choose a provider on price alone",
+      "Do not skip accreditation and safety checks"
+    ],
+    "faqs": [
+      {
+        "question": "How do I choose cosmetic surgery safely?",
+        "answer": "Verify the clinic, surgeon, and accreditation independently, get medical advice, check aftercare, and be wary of prices far below normal with upfront deposits."
+      },
+      {
+        "question": "Is cheap surgery abroad a warning sign?",
+        "answer": "Unusually cheap procedures with pressure to deposit and unverifiable providers carry safety and financial risks. Verify thoroughly first."
+      },
+      {
+        "question": "I paid a deposit. What now?",
+        "answer": "Contact your bank or payment provider to try to recover it, do not proceed with an unverified provider, keep evidence, and report it."
+      },
+      {
+        "question": "What should I check beyond price?",
+        "answer": "Surgeon qualifications, clinic accreditation, aftercare, and independent reviews. Safety and verification matter far more than a discount."
+      }
+    ],
+    "relatedScams": [
+      "miracle-supplement-scam",
+      "holiday-package-scam",
+      "fake-online-store-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "VPN Subscription Scam",
+    "slug": "vpn-subscription-scam",
+    "category": "online-shopping-scams",
+    "metaTitle": "VPN Scam: Cheap Lifetime VPN & Data Flags",
+    "metaDescription": "Recognise fake or shady VPN deals offering cheap 'lifetime' access that take payment or harvest data. See an example pattern and how to choose safely.",
+    "riskLevel": "Medium",
+    "scamType": "Fake service / data harvesting",
+    "summary": "In this scam, a 'lifetime' or ultra-cheap VPN deal takes your payment and details for a service that stops working, never existed, or actually logs and sells your data, undermining the privacy you paid for.",
+    "quickVerdict": {
+      "mainRedFlag": "A cheap 'lifetime' VPN from an unverifiable provider, paid upfront.",
+      "whatToDoFirst": "Use reputable, independently reviewed VPN providers and check their privacy policy."
+    },
+    "exampleMessage": "Example pattern: 'Lifetime VPN access for $19! Total privacy, unlimited devices, one-time payment.'",
+    "redFlags": [
+      "A 'lifetime' VPN at an implausibly low price",
+      "An unverifiable provider with no track record",
+      "Vague or contradictory privacy claims",
+      "Pressure to buy a one-time lifetime deal",
+      "Requests for card details on an unverified site"
+    ],
+    "whatToDo": [
+      "Use reputable, independently reviewed VPN providers",
+      "Read the privacy and logging policy carefully",
+      "Be sceptical of 'lifetime' deals from unknown providers",
+      "Pay by a method you can dispute"
+    ],
+    "ifYouClicked": [
+      "If you paid, contact your bank to watch for or block charges",
+      "Stop using a VPN you suspect logs your data",
+      "Change passwords if you used it for sensitive logins",
+      "Report the provider and keep evidence"
+    ],
+    "whatNotToDo": [
+      "Do not buy 'lifetime' VPNs from unknown providers",
+      "Do not assume a VPN protects you without checking its policy",
+      "Do not enter card details on unverified sites"
+    ],
+    "faqs": [
+      {
+        "question": "Are cheap lifetime VPNs safe?",
+        "answer": "Implausibly cheap 'lifetime' VPNs from unknown providers may stop working or log and sell your data, undermining the privacy you paid for. Use reputable providers."
+      },
+      {
+        "question": "How do I choose a trustworthy VPN?",
+        "answer": "Use reputable, independently reviewed providers, read the privacy and logging policy, and be wary of lifetime deals from unknown sellers."
+      },
+      {
+        "question": "I bought one. What now?",
+        "answer": "Contact your bank if you want to dispute it, stop using a VPN you suspect logs data, change sensitive passwords, and report the provider."
+      },
+      {
+        "question": "Does a VPN guarantee privacy?",
+        "answer": "Only a trustworthy, no-logs provider helps. A shady VPN can be worse than none, so verify the provider and its policy."
+      }
+    ],
+    "relatedScams": [
+      "fleeceware-app-scam",
+      "cheap-software-key-scam",
+      "free-trial-subscription-trap-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Fake Tracking App Scam",
+    "slug": "tracking-app-scam",
+    "category": "delivery-scams",
+    "metaTitle": "Tracking App Scam: Fake Courier App Malware Flags",
+    "metaDescription": "Recognise messages urging you to install a 'parcel tracking app' that is actually malware. See an example pattern and how to track deliveries safely.",
+    "riskLevel": "High",
+    "scamType": "Malware delivery (fake app)",
+    "summary": "This scam texts or emails you to install a 'parcel tracking app' to follow a delivery, but the app is malware that steals your data, intercepts codes, or takes over your device.",
+    "quickVerdict": {
+      "mainRedFlag": "A delivery message urging you to install a tracking app from a link.",
+      "whatToDoFirst": "Do not install it. Track parcels through the courier's official app from the app store."
+    },
+    "exampleMessage": "Example pattern: 'Install our tracking app to follow your parcel in real time: [suspicious link / APK download]'",
+    "redFlags": [
+      "A prompt to install a tracking app from a link",
+      "An app not from the official app store",
+      "Requests for broad permissions on install",
+      "A delivery you cannot match to an order",
+      "Pressure to install to see your parcel"
+    ],
+    "whatToDo": [
+      "Track parcels through the courier's official app from the app store",
+      "Never install apps from links or direct downloads",
+      "Verify deliveries through official tracking",
+      "Report and delete the message"
+    ],
+    "ifYouClicked": [
+      "If you installed the app, remove it and run a security scan",
+      "Change important passwords from a different, trusted device",
+      "Watch for intercepted codes and unusual activity",
+      "Contact your bank if financial apps were exposed"
+    ],
+    "whatNotToDo": [
+      "Do not install tracking apps from links",
+      "Do not grant broad permissions to unknown apps",
+      "Do not sideload apps to 'track' a parcel"
+    ],
+    "faqs": [
+      {
+        "question": "Do couriers need a special app from a link?",
+        "answer": "Genuine tracking is available on the courier's official website or app from the app store. A prompt to install an app from a link or direct download is a malware sign."
+      },
+      {
+        "question": "Why is installing risky?",
+        "answer": "The fake app can be malware that steals data, intercepts verification codes, or takes over your device. Only install official apps from the app store."
+      },
+      {
+        "question": "I installed it. What now?",
+        "answer": "Remove the app, run a security scan, change important passwords from a trusted device, and watch for unusual activity."
+      },
+      {
+        "question": "How do I track parcels safely?",
+        "answer": "Use the courier's official app or website with the reference from your retailer, and never install apps from message links."
+      }
+    ],
+    "relatedScams": [
+      "fake-tracking-update-scam",
+      "fake-delivery-text-scam",
+      "canada-post-text-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "China Post Text Scam",
+    "slug": "china-post-text-scam",
+    "category": "delivery-scams",
+    "metaTitle": "China Post Text Scam: Fake Parcel & Fee Flags",
+    "metaDescription": "Spot fake China Post delivery texts about parcels or fees that link to phishing pages. See an example pattern and how to check delivery safely.",
+    "riskLevel": "High",
+    "scamType": "Delivery impersonation (smishing)",
+    "summary": "This scam sends a fake China Post text about a missed delivery, customs charge, or small fee, linking to a page that collects your card and personal details.",
+    "quickVerdict": {
+      "mainRedFlag": "An unexpected China Post text asking you to pay a fee or confirm details via a link.",
+      "whatToDoFirst": "Do not click. Check any delivery through the official China Post website or app."
+    },
+    "exampleMessage": "Example pattern: 'China Post: your parcel is held pending a customs fee. Pay here to arrange delivery: [suspicious link]'",
+    "redFlags": [
+      "A delivery text when you may not be expecting a parcel",
+      "A small customs or redelivery fee request",
+      "A link that is not the official China Post domain",
+      "Urgent wording about the parcel being returned",
+      "A request for card or personal details"
+    ],
+    "whatToDo": [
+      "Check tracking on the official China Post website or app",
+      "Report the scam text through official channels",
+      "Verify any genuine charge through official channels",
+      "Delete the message and block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not enter card or personal details on the page",
+      "If you paid, contact your bank to flag or freeze the card",
+      "Change passwords for any reused login",
+      "Watch your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not click the link or enter details",
+      "Do not reply to the message",
+      "Do not download any app the link suggests"
+    ],
+    "faqs": [
+      {
+        "question": "Does China Post charge fees by text link?",
+        "answer": "Genuine charges are confirmed through the official China Post website, and redelivery is normally free. A fee demanded via a text link is a common scam pattern."
+      },
+      {
+        "question": "I am expecting a parcel, so is it real?",
+        "answer": "Scammers count on this. Check the tracking on the official site or app rather than using the link in the text."
+      },
+      {
+        "question": "How do I report a China Post scam text?",
+        "answer": "Report it through China Post's official channels, forward it to your mobile provider's spam service if available, and delete it."
+      },
+      {
+        "question": "What if I already paid the fee?",
+        "answer": "Contact your bank right away to flag the payment and protect your card, and watch for further charges."
+      }
+    ],
+    "relatedScams": [
+      "sf-express-text-scam",
+      "fake-customs-fee-text",
+      "india-post-text-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Aramex Text Scam",
+    "slug": "aramex-text-scam",
+    "category": "delivery-scams",
+    "metaTitle": "Aramex Text Scam: Fake Delivery Fee Red Flags",
+    "metaDescription": "Recognise fake Aramex courier texts about parcels, fees, or address issues that lead to phishing. See an example pattern and how to check delivery safely.",
+    "riskLevel": "High",
+    "scamType": "Delivery impersonation (smishing)",
+    "summary": "This scam sends a fake Aramex text about a held parcel, address problem, or small fee, linking to a page that harvests your card and personal information.",
+    "quickVerdict": {
+      "mainRedFlag": "An unexpected Aramex text with a link to pay a fee or confirm delivery details.",
+      "whatToDoFirst": "Do not click. Track parcels only through the official Aramex website or app."
+    },
+    "exampleMessage": "Example pattern: 'Aramex: We could not deliver your parcel due to incomplete details. Confirm and pay here: [suspicious link]'",
+    "redFlags": [
+      "A delivery text when you may not be expecting a parcel",
+      "A request to confirm details or pay a small fee via a link",
+      "A web address that is not the official aramex.com domain",
+      "Urgent wording about the parcel being returned or held",
+      "A request for card or personal details"
+    ],
+    "whatToDo": [
+      "Track parcels through the official Aramex website or app",
+      "Report the scam text through official channels",
+      "Verify any genuine charge directly with the sender",
+      "Delete the message and block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not enter card or personal details on the page",
+      "If you paid, contact your bank to flag or freeze the card",
+      "Change passwords for any reused login",
+      "Monitor your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not click the link or enter details",
+      "Do not reply to the message",
+      "Do not install any app the link suggests"
+    ],
+    "faqs": [
+      {
+        "question": "Does Aramex ask for fees by text link?",
+        "answer": "Genuine redelivery is normally arranged free, and any real charge can be confirmed through the official Aramex website. A fee demanded via a text link is a common scam pattern."
+      },
+      {
+        "question": "The text mentions my parcel. Is it genuine?",
+        "answer": "Scam texts use generic wording to seem real. Check tracking on the official app or site rather than the link."
+      },
+      {
+        "question": "How do I report it?",
+        "answer": "Report the message through Aramex's official channels, forward it to your mobile provider's spam service if available, and delete it."
+      },
+      {
+        "question": "I entered my card details. What now?",
+        "answer": "Contact your bank right away to flag or freeze the card and watch for unexpected charges."
+      }
+    ],
+    "relatedScams": [
+      "dhl-text-scam",
+      "fake-delivery-text-scam",
+      "fake-customs-fee-text"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Colissimo Text Scam",
+    "slug": "colissimo-text-scam",
+    "category": "delivery-scams",
+    "metaTitle": "Colissimo Text Scam: Fake Parcel Fee Red Flags",
+    "metaDescription": "Spot fake Colissimo delivery texts about parcels or fees that link to phishing pages. See an example pattern and how to check delivery safely.",
+    "riskLevel": "High",
+    "scamType": "Delivery impersonation (smishing)",
+    "summary": "This scam sends a fake Colissimo text about a missed delivery, address issue, or small fee, linking to a page that collects your card and personal details.",
+    "quickVerdict": {
+      "mainRedFlag": "An unexpected Colissimo text asking you to pay a fee or confirm details via a link.",
+      "whatToDoFirst": "Do not click. Check any delivery through the official Colissimo or La Poste website or app."
+    },
+    "exampleMessage": "Example pattern: 'Colissimo: your parcel could not be delivered. A small fee is required to reschedule: [suspicious link]'",
+    "redFlags": [
+      "A delivery text when you may not be expecting a parcel",
+      "A small redelivery or customs fee request",
+      "A link that is not the official Colissimo or La Poste domain",
+      "Urgent wording about the parcel being returned",
+      "A request for card or personal details"
+    ],
+    "whatToDo": [
+      "Check tracking on the official Colissimo or La Poste website or app",
+      "Report the scam text through official channels",
+      "Verify any genuine charge through official channels",
+      "Delete the message and block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not enter card or personal details on the page",
+      "If you paid, contact your bank to flag or freeze the card",
+      "Change passwords for any reused login",
+      "Watch your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not click the link or enter details",
+      "Do not reply to the message",
+      "Do not download any app the link suggests"
+    ],
+    "faqs": [
+      {
+        "question": "Does Colissimo charge fees by text link?",
+        "answer": "Genuine charges are confirmed through the official Colissimo or La Poste website, and redelivery is normally free. A fee demanded via a text link is a common scam pattern."
+      },
+      {
+        "question": "I am expecting a parcel, so is it real?",
+        "answer": "Scammers count on this. Check tracking on the official site or app rather than using the link in the text."
+      },
+      {
+        "question": "How do I report a Colissimo scam text?",
+        "answer": "Report it through Colissimo or La Poste official channels, forward it to your mobile provider's spam service if available, and delete it."
+      },
+      {
+        "question": "What if I already paid the fee?",
+        "answer": "Contact your bank right away to flag the payment and protect your card, and watch for further charges."
+      }
+    ],
+    "relatedScams": [
+      "chronopost-text-scam",
+      "fake-customs-fee-text",
+      "correos-text-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "SF Express Text Scam",
+    "slug": "sf-express-text-scam",
+    "category": "delivery-scams",
+    "metaTitle": "SF Express Text Scam: Fake Parcel Fee Red Flags",
+    "metaDescription": "Recognise fake SF Express courier texts about parcels, fees, or address issues that lead to phishing. See an example pattern and how to check safely.",
+    "riskLevel": "High",
+    "scamType": "Delivery impersonation (smishing)",
+    "summary": "This scam sends a fake SF Express text about a missed delivery, address problem, or small fee, linking to a page that harvests your card and personal information.",
+    "quickVerdict": {
+      "mainRedFlag": "An unexpected SF Express text with a link to pay a fee or confirm delivery details.",
+      "whatToDoFirst": "Do not click. Track parcels only through the official SF Express website or app."
+    },
+    "exampleMessage": "Example pattern: 'SF Express: your parcel is on hold due to an unpaid fee. Confirm your details to arrange delivery: [suspicious link]'",
+    "redFlags": [
+      "A delivery text when you may not be expecting a parcel",
+      "A request to confirm details or pay a small fee via a link",
+      "A web address that is not the official SF Express domain",
+      "Urgent wording about the parcel being returned or held",
+      "A request for card or personal details"
+    ],
+    "whatToDo": [
+      "Track parcels through the official SF Express website or app",
+      "Report the scam text through official channels",
+      "Verify any genuine charge directly with the sender",
+      "Delete the message and block the sender"
+    ],
+    "ifYouClicked": [
+      "Do not enter card or personal details on the page",
+      "If you paid, contact your bank to flag or freeze the card",
+      "Change passwords for any reused login",
+      "Monitor your statements for unexpected charges"
+    ],
+    "whatNotToDo": [
+      "Do not click the link or enter details",
+      "Do not reply to the message",
+      "Do not install any app the link suggests"
+    ],
+    "faqs": [
+      {
+        "question": "Does SF Express ask for fees by text link?",
+        "answer": "Genuine redelivery is normally arranged free, and any real charge can be confirmed through the official SF Express website. A fee demanded via a text link is a common scam pattern."
+      },
+      {
+        "question": "The text mentions my parcel. Is it genuine?",
+        "answer": "Scam texts use generic wording to seem real. Check tracking on the official app or site rather than the link."
+      },
+      {
+        "question": "How do I report it?",
+        "answer": "Report the message through SF Express official channels, forward it to your mobile provider's spam service if available, and delete it."
+      },
+      {
+        "question": "I entered my card details. What now?",
+        "answer": "Contact your bank right away to flag or freeze the card and watch for unexpected charges."
+      }
+    ],
+    "relatedScams": [
+      "china-post-text-scam",
+      "fake-delivery-text-scam",
+      "fake-customs-fee-text"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Funded Trader Challenge Scam",
+    "slug": "funded-trader-scam",
+    "category": "crypto-investment-scams",
+    "metaTitle": "Funded Trader Scam: Prop Firm Challenge Fee Flags",
+    "metaDescription": "Recognise fake 'funded trader' and prop firm challenges that take fees and never fund you. See an example pattern and how to protect your money.",
+    "riskLevel": "High",
+    "scamType": "Advance-fee (prop trading)",
+    "summary": "In this scam, a fake proprietary trading firm offers a 'funded account' if you pass a paid challenge, but the rules are designed so you fail, the firm withholds payouts, or it disappears with your fees.",
+    "quickVerdict": {
+      "mainRedFlag": "A 'funded trader' challenge charging fees with rules designed so you fail or aren't paid.",
+      "whatToDoFirst": "Verify the firm and payout record independently before paying any challenge fee."
+    },
+    "exampleMessage": "Example pattern: 'Pass our trading challenge and get a $100k funded account! Just pay the challenge fee to start.'",
+    "redFlags": [
+      "Challenge fees with rules designed to make you fail",
+      "Withheld or denied payouts",
+      "A firm you cannot verify or that has no real track record",
+      "Pressure to buy challenge resets",
+      "Vague terms on funding and payouts"
+    ],
+    "whatToDo": [
+      "Verify the firm and its payout record independently",
+      "Read the rules and payout terms carefully",
+      "Be wary of repeated paid 'resets'",
+      "Report firms that withhold payouts to your regulator"
+    ],
+    "ifYouClicked": [
+      "If payouts are withheld, gather evidence and dispute the fee",
+      "Contact your payment provider about disputing charges",
+      "Report the firm to your regulator and fraud authority",
+      "Be wary of recovery scams that follow"
+    ],
+    "whatNotToDo": [
+      "Do not pay repeated challenge or reset fees",
+      "Do not trust guaranteed funding claims",
+      "Do not ignore poor payout records"
+    ],
+    "faqs": [
+      {
+        "question": "Are funded trader programs legitimate?",
+        "answer": "Some are, but scammers run challenges with rules designed so you fail, withhold payouts, or vanish with fees. Verify the firm and payout record before paying."
+      },
+      {
+        "question": "Why do I keep failing the challenge?",
+        "answer": "Scam firms set unrealistic rules and push paid 'resets' to keep collecting fees. A poor or hidden payout record is a warning sign."
+      },
+      {
+        "question": "My payout was withheld. What now?",
+        "answer": "Gather evidence, dispute the fee with your payment provider, report the firm to your regulator and fraud authority, and avoid recovery scams."
+      },
+      {
+        "question": "How do I evaluate a prop firm?",
+        "answer": "Verify it independently, read the rules and payout terms, check for a genuine payout record, and be wary of repeated paid resets."
+      }
+    ],
+    "relatedScams": [
+      "forex-trading-scam",
+      "copy-trading-scam",
+      "binary-options-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Copy Trading Scam",
+    "slug": "copy-trading-scam",
+    "category": "crypto-investment-scams",
+    "metaTitle": "Copy Trading Scam: Fake Master Trader Flags",
+    "metaDescription": "Recognise copy trading and social trading scams that promise to mirror a 'master trader' but lose your money. See an example pattern and safe steps.",
+    "riskLevel": "High",
+    "scamType": "Managed-trading fraud",
+    "summary": "In this scam, you are urged to copy a 'master trader' or join a social/copy trading platform promising easy profits, but the results are faked, the platform is rigged, and your deposits are lost or blocked.",
+    "quickVerdict": {
+      "mainRedFlag": "An offer to mirror a 'master trader' for guaranteed profits on an unverified platform.",
+      "whatToDoFirst": "Verify the platform and trader with your regulator before depositing."
+    },
+    "exampleMessage": "Example pattern: 'Copy my trades and earn while you sleep! Join my platform, deposit, and mirror my winning strategy.'",
+    "redFlags": [
+      "Promises of easy or guaranteed profits from copying",
+      "A 'master trader' with unverifiable results",
+      "An unregulated platform you cannot verify",
+      "Pressure to deposit and copy quickly",
+      "Withdrawals blocked or fees demanded"
+    ],
+    "whatToDo": [
+      "Verify the platform and trader with your financial regulator",
+      "Be sceptical of guaranteed copy-trading profits",
+      "Withdraw nothing further and do not pay fees to release funds",
+      "Report it to your regulator and fraud authority"
+    ],
+    "ifYouClicked": [
+      "Stop depositing and do not pay 'withdrawal' fees",
+      "Gather records of the platform and transactions",
+      "Contact your bank about disputing payments",
+      "Be wary of recovery firms that follow"
+    ],
+    "whatNotToDo": [
+      "Do not deposit on guaranteed-profit promises",
+      "Do not copy traders on unregulated platforms",
+      "Do not pay fees to 'unlock' withdrawals"
+    ],
+    "faqs": [
+      {
+        "question": "Is copy trading a guaranteed way to profit?",
+        "answer": "No. Scammers fake results and run rigged platforms, so copying a 'master trader' can lose your money. Verify the platform and trader with your regulator."
+      },
+      {
+        "question": "The trader's results looked amazing. Real?",
+        "answer": "Results and profit screenshots are easily faked. Look for verifiable, regulated performance before depositing anything."
+      },
+      {
+        "question": "I deposited and can't withdraw. What now?",
+        "answer": "Stop depositing, do not pay fees to 'unlock' funds, gather records, contact your bank about disputes, and report it."
+      },
+      {
+        "question": "How do I trade more safely?",
+        "answer": "Use regulated platforms, verify any trader or service with your regulator, and be wary of guaranteed-profit copy-trading offers."
+      }
+    ],
+    "relatedScams": [
+      "forex-trading-scam",
+      "funded-trader-scam",
+      "crypto-investment-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "ICO Presale Scam",
+    "slug": "ico-presale-scam",
+    "category": "crypto-investment-scams",
+    "metaTitle": "ICO Presale Scam: Token Launch Red Flags",
+    "metaDescription": "Recognise fake token presale and ICO scams that take funds for coins that are worthless or never launch. See an example pattern and how to stay safe.",
+    "riskLevel": "High",
+    "scamType": "Token presale / ICO fraud",
+    "summary": "In this scam, a new token presale or ICO promises huge gains at launch, taking your crypto for tokens that are worthless, never delivered, or part of a project that vanishes after raising funds.",
+    "quickVerdict": {
+      "mainRedFlag": "A token presale promising guaranteed launch gains, pushed via hype and urgency.",
+      "whatToDoFirst": "Research the team, contract, and audits independently before sending any crypto."
+    },
+    "exampleMessage": "Example pattern: 'Get in early on our presale before the price 100x at launch! Limited allocation, send crypto now to secure tokens.'",
+    "redFlags": [
+      "Promises of guaranteed gains at launch",
+      "Pressure to buy a 'limited' presale allocation",
+      "An anonymous team and unaudited contract",
+      "Hype-driven marketing and countdowns",
+      "No verifiable roadmap or product"
+    ],
+    "whatToDo": [
+      "Research the team, contract, and independent audits",
+      "Be sceptical of guaranteed launch gains and hype",
+      "Use a separate wallet with limited funds for anything experimental",
+      "Report suspected fraud to your regulator"
+    ],
+    "ifYouClicked": [
+      "If you sent crypto, recovery is unlikely, but report it",
+      "Revoke any token approvals you granted",
+      "Keep records of wallets and transactions",
+      "Be wary of recovery scams that follow"
+    ],
+    "whatNotToDo": [
+      "Do not buy presales on hype and guarantees",
+      "Do not trust anonymous teams or unaudited contracts",
+      "Do not send crypto under time pressure"
+    ],
+    "faqs": [
+      {
+        "question": "Are token presales and ICOs safe?",
+        "answer": "Many are high-risk or outright scams, taking funds for tokens that are worthless or never launch. Research the team, contract, and audits before sending crypto."
+      },
+      {
+        "question": "What are the warning signs?",
+        "answer": "Guaranteed launch gains, anonymous teams, unaudited contracts, hype and countdowns, and no verifiable product or roadmap."
+      },
+      {
+        "question": "I sent crypto to a presale. What now?",
+        "answer": "Recovery is difficult. Revoke token approvals, keep records, report it to your regulator, and avoid recovery scams that target victims."
+      },
+      {
+        "question": "How can I reduce risk?",
+        "answer": "Research thoroughly, verify audits and the team, use a separate low-value wallet, and avoid hype-driven, time-pressured presales."
+      }
+    ],
+    "relatedScams": [
+      "rug-pull-scam",
+      "nft-mint-scam",
+      "crypto-airdrop-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Speed Awareness Course Scam",
+    "slug": "speed-awareness-course-scam",
+    "category": "government-tax-scams",
+    "metaTitle": "Speed Awareness Scam: Fake Course Booking Flags",
+    "metaDescription": "Recognise fake speed awareness course offers that demand payment or details to avoid points. See an example pattern and how to verify officially.",
+    "riskLevel": "Medium",
+    "scamType": "Authority impersonation (phishing)",
+    "summary": "This scam offers a fake speed awareness course as an alternative to penalty points, demanding payment and personal details through a link, or claims you must book one for an offence that may not exist.",
+    "quickVerdict": {
+      "mainRedFlag": "A speed awareness course offer demanding payment or details via a link.",
+      "whatToDoFirst": "Verify any offence and course through the official police or course provider."
+    },
+    "exampleMessage": "Example pattern: 'You are eligible for a speed awareness course instead of points. Pay and book now to avoid a fine: [suspicious link]'",
+    "redFlags": [
+      "A course offer demanding payment via a link",
+      "Claims about an offence you cannot verify",
+      "A link that is not the official course provider",
+      "Pressure to book quickly to avoid points",
+      "Requests for licence and payment details"
+    ],
+    "whatToDo": [
+      "Verify any offence and course through the official police or provider",
+      "Book only through the official course booking service",
+      "Never pay or enter details via a link in a message",
+      "Report and delete the message"
+    ],
+    "ifYouClicked": [
+      "Do not enter licence or payment details on the page",
+      "If you paid, contact your bank to flag your card",
+      "If you shared licence details, monitor for misuse",
+      "Report it to the official authority"
+    ],
+    "whatNotToDo": [
+      "Do not book or pay for a course via a message link",
+      "Do not share licence or card details via the link",
+      "Do not let points threats rush you"
+    ],
+    "faqs": [
+      {
+        "question": "How are speed awareness courses offered?",
+        "answer": "Genuine offers come through official notices and are booked via the official course provider, not a message demanding payment and details through a link."
+      },
+      {
+        "question": "How do I verify an offence?",
+        "answer": "Check with the official police or course provider using details you find independently, not the contact in the message."
+      },
+      {
+        "question": "I paid through the link. What now?",
+        "answer": "Contact your bank to flag your card, monitor for misuse if you shared licence details, and report it to the official authority."
+      },
+      {
+        "question": "Why threaten points?",
+        "answer": "Fear of penalty points pressures people to pay quickly without verifying, which is exactly what the scammer wants."
+      }
+    ],
+    "relatedScams": [
+      "speeding-fine-text-scam",
+      "dmv-license-renewal-scam",
+      "fake-court-fine-scam"
+    ],
+    "lastReviewed": "2026-06"
+  },
+  {
+    "title": "Tax Credits Renewal Scam",
+    "slug": "tax-credits-scam",
+    "category": "government-tax-scams",
+    "metaTitle": "Tax Credits Scam: Fake Renewal & Payment Flags",
+    "metaDescription": "Recognise fake tax credits renewal or payment messages that phish for bank and personal details. See an example pattern and how to check officially.",
+    "riskLevel": "High",
+    "scamType": "Tax authority impersonation (phishing)",
+    "summary": "This scam impersonates a tax authority about tax credits, claiming you must renew, verify, or that a payment is pending, to collect your bank and personal details or a bogus fee.",
+    "quickVerdict": {
+      "mainRedFlag": "A tax credits renewal or payment message asking for bank details or a fee via a link.",
+      "whatToDoFirst": "Check tax credits only through your official tax authority account or helpline."
+    },
+    "exampleMessage": "Example pattern: 'Your tax credits payment is on hold. Renew and confirm your bank details to continue receiving it: [suspicious link]'",
+    "redFlags": [
+      "A renewal or payment-on-hold message with a link",
+      "Requests for bank or personal details",
+      "A fee to 'continue' or 'release' credits",
+      "A sender not from the official tax authority",
+      "Pressure to act before a deadline"
+    ],
+    "whatToDo": [
+      "Check tax credits through your official tax authority account or helpline",
+      "Never confirm bank details or pay fees via a link",
+      "Verify any message with the authority directly",
+      "Report and delete the message"
+    ],
+    "ifYouClicked": [
+      "Do not enter bank or personal details on the page",
+      "If you shared details, contact your bank and the authority",
+      "Monitor for identity misuse",
+      "Report it and keep evidence"
+    ],
+    "whatNotToDo": [
+      "Do not renew tax credits through a message link",
+      "Do not pay a fee to 'continue' credits",
+      "Do not share bank details to 'verify'"
+    ],
+    "faqs": [
+      {
+        "question": "Does the tax authority text or email renewal links?",
+        "answer": "Tax credits are managed through the official account or helpline, not a message demanding bank details or a fee via a link. Treat such messages as phishing."
+      },
+      {
+        "question": "Is there a fee to keep tax credits?",
+        "answer": "No. Genuine tax credits do not require a fee to 'continue' or 'release'. A fee request is a clear scam sign."
+      },
+      {
+        "question": "I shared my bank details. What now?",
+        "answer": "Contact your bank and the tax authority, monitor for identity misuse, and report the scam, keeping your evidence."
+      },
+      {
+        "question": "How do I check my tax credits safely?",
+        "answer": "Use your official tax authority account or helpline found independently, not a link in an unexpected message."
+      }
+    ],
+    "relatedScams": [
+      "benefits-payment-scam",
+      "child-benefit-scam",
+      "fake-hmrc-tax-scam"
+    ],
+    "lastReviewed": "2026-06"
   }
 ]
