@@ -18,6 +18,7 @@ const categories = readJSON("data/categories.json");
 const scams = readJSON("data/scams.json");
 const deepDives = readJSONSafe("data/deepdives.json", {});
 const reporting = readJSONSafe("data/reporting.json", null);
+const statsData = readJSONSafe("data/stats.json", null);
 
 const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 const scamBySlug = Object.fromEntries(scams.map((s) => [s.slug, s]));
@@ -600,26 +601,112 @@ function guidePage(scam) {
 
   const related = (scam.relatedScams || []).map((s) => scamBySlug[s]).filter(Boolean);
 
-  const sections = [
-    ["what-it-looks-like", dd ? "How this scam works" : "What this scam usually looks like"],
-    ...(dd && dd.stats ? [["by-the-numbers", "By the numbers"]] : []),
-    ...(dd && dd.howItWorks ? [["step-by-step", "Step by step"]] : []),
-    ["example", "Example message pattern"],
-    ...(dd && dd.caseStudy ? [["case-study", "A real-world scenario"]] : []),
-    ["red-flags", "Red flags to watch for"],
-    ...(dd && dd.variations ? [["variations", "Variations to watch for"]] : []),
-    ["what-to-do", "What to do"],
-    ...(dd && dd.verify ? [["verify", "How to verify safely"]] : []),
-    ["if-you-clicked", "If you already clicked or replied"],
-    ["what-not-to-do", "What not to do"],
-    ["similar", "Similar scams"],
-    ["faq", "Frequently asked questions"],
-    ...(dd && dd.sources ? [["sources", "Sources & further reading"]] : [])
+  // Deterministic layout variant (0-3) from the slug, so pages differ in
+  // section order and heading wording with no randomness (stable per build).
+  let vh = 0;
+  for (let i = 0; i < scam.slug.length; i++) vh = (vh * 31 + scam.slug.charCodeAt(i)) >>> 0;
+  const variant = vh % 4;
+  const pick = (arr) => arr[variant % arr.length];
+
+  // Statistics + category context. Flagship pages use their own hand-written
+  // figures; every other page gets accurate, sourced category-level stats so
+  // all guides carry real numbers.
+  const catStats = statsData && cat && statsData.categories[cat.slug];
+  const pageStats = (dd && dd.stats) ? dd.stats
+    : (catStats && catStats.stats) || (statsData && statsData.global && statsData.global.stats) || null;
+  const pageContext = catStats ? catStats.context : null;
+
+  // Intro paragraphs. Flagship: hand-written. Others: composed from the page's
+  // own unique data plus accurate category context, with a varied lead-in.
+  const leadIns = [
+    "The single clearest warning sign to remember is this:",
+    "In short, the giveaway is usually simple:",
+    "If you take one thing from this guide, make it this:",
+    "The core pattern to watch for is clear:"
+  ];
+  const introParas = (dd && dd.intro) ? dd.intro : [
+    scam.summary,
+    ...(pageContext ? [pageContext] : []),
+    `${pick(leadIns)} ${scam.quickVerdict.mainRedFlag} ${scam.quickVerdict.whatToDoFirst}`
   ];
 
+  // Section blocks — rendered only when they have content. Labels vary per
+  // variant so the same section reads differently across pages.
+  const blocks = {};
+  blocks.intro = { id: "what-it-looks-like",
+    label: dd ? "How this scam works" : pick(["What this scam usually looks like", "How this scam works", "Understanding this scam", "What to know first"]),
+    html: introParas.map((p) => `<p>${esc(p)}</p>`).join("\n      ") };
+
+  if (pageStats) blocks.stats = { id: "by-the-numbers",
+    label: dd ? "By the numbers" : pick(["By the numbers", "The scale of it", "What the data shows", "Scam statistics"]),
+    html: statGrid(pageStats) };
+
+  if (dd && dd.howItWorks) blocks.steps = { id: "step-by-step",
+    label: "Step by step: how the scam unfolds", html: stepsList(dd.howItWorks) };
+
+  blocks.example = { id: "example",
+    label: pick(["Example message pattern", "What the message looks like", "A typical example", "How it usually reads"]),
+    html: `<div class="example-msg"><span class="example-tag">Example pattern — not a real report</span><div>${esc(scam.exampleMessage)}</div></div>
+      <p class="muted" style="font-size:.9rem">This is a fictional, anonymised example used to illustrate the pattern. It is not a verified real message, and any names are used only to show how the scam typically reads.</p>
+      <p><strong>${pick(["Why this is a red flag:", "What gives it away:", "The tell here:", "What to notice:"])}</strong> ${esc(scam.quickVerdict.mainRedFlag)}</p>` };
+
+  if (dd && dd.caseStudy) blocks.casestudy = { id: "case-study",
+    label: "A real-world scenario", html: caseStudyBox(dd.caseStudy) };
+
+  blocks.redflags = { id: "red-flags",
+    label: pick(["Red flags to watch for", "How to spot this scam", "Warning signs", "Tell-tale red flags"]),
+    html: flagList(scam.redFlags) };
+
+  if (dd && dd.variations) blocks.variations = { id: "variations",
+    label: "Variations to watch for", html: variationList(dd.variations) };
+
+  blocks.whattodo = { id: "what-to-do",
+    label: pick(["What to do", "How to protect yourself", "Your safest response", "Staying safe"]),
+    html: `<div class="box box-do"><ul>${scam.whatToDo.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` };
+
+  if (dd && dd.verify) blocks.verify = { id: "verify",
+    label: "How to verify safely",
+    html: `<div class="box box-info"><ul>${dd.verify.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` };
+
+  blocks.ifclicked = { id: "if-you-clicked",
+    label: pick(["If you already clicked or replied", "Already responded? Do this now", "If you have already engaged", "Steps if you already acted"]),
+    html: `<div class="box box-clicked"><ul>${scam.ifYouClicked.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` };
+
+  blocks.whatnottodo = { id: "what-not-to-do",
+    label: pick(["What not to do", "Mistakes to avoid", "What to avoid", "Common mistakes"]),
+    html: `<div class="box box-warning"><ul>${scam.whatNotToDo.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` };
+
+  if (related.length) blocks.similar = { id: "similar",
+    label: pick(["Similar scams", "Related scams to know", "You might also see", "Scams like this one"]),
+    html: `<div class="card-grid">${related.map(scamCard).join("")}</div>` };
+
+  blocks.faq = { id: "faq",
+    label: pick(["Frequently asked questions", "Common questions", "Questions people ask", "Your questions answered"]),
+    html: `${faqAccordion(scam.faqs)}\n\n      ${adSlot(`guide-${scam.slug}-faq`)}` };
+
+  if (dd && dd.sources) blocks.sources = { id: "sources",
+    label: "Sources & further reading",
+    html: `<p class="muted">The figures and guidance above draw on publicly available data and advice from fraud-prevention authorities. Always confirm current reporting details through official government sites.</p>
+      ${sourcesList(dd.sources)}` };
+
+  // Four readable orderings. Missing (non-flagship) blocks are simply skipped.
+  const ORDERINGS = [
+    ["intro","stats","steps","example","casestudy","redflags","variations","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","redflags","example","stats","steps","casestudy","variations","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","example","casestudy","stats","steps","redflags","variations","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","stats","redflags","whattodo","verify","example","steps","casestudy","variations","ifclicked","whatnottodo","similar","faq","sources"]
+  ];
+  const order = ORDERINGS[variant].filter((k) => blocks[k]);
+
   const toc = `<div class="box"><h3>On this page</h3><nav class="toc">${
-    sections.map(([id, label]) => `<a href="#${id}">${esc(label)}</a>`).join("")
+    order.map((k) => `<a href="#${blocks[k].id}">${esc(blocks[k].label)}</a>`).join("")
   }</nav></div>`;
+
+  // Render ordered blocks; inject the mid ad slot after the third section.
+  const bodyHtml = order.map((k, i) => {
+    const sec = `<h2 id="${blocks[k].id}">${esc(blocks[k].label)}</h2>\n      ${blocks[k].html}`;
+    return (i === 2) ? `${sec}\n\n      ${adSlot(`guide-${scam.slug}-mid`)}` : sec;
+  }).join("\n\n      ");
 
   const main = `
 ${breadcrumbs(trail)}
@@ -644,53 +731,7 @@ ${breadcrumbs(trail)}
 
       ${adSlot(`guide-${scam.slug}-top`)}
 
-      <h2 id="what-it-looks-like">${dd ? "How this scam works" : "What this scam usually looks like"}</h2>
-      ${dd && dd.intro ? dd.intro.map((p) => `<p>${esc(p)}</p>`).join("\n      ") : `<p>${esc(scam.summary)}</p>`}
-
-      ${dd && dd.stats ? `<h2 id="by-the-numbers">By the numbers</h2>
-      ${statGrid(dd.stats)}` : ""}
-
-      ${dd && dd.howItWorks ? `<h2 id="step-by-step">Step by step: how the scam unfolds</h2>
-      ${stepsList(dd.howItWorks)}` : ""}
-
-      <h2 id="example">Example message pattern</h2>
-      <div class="example-msg"><span class="example-tag">Example pattern — not a real report</span><div>${esc(scam.exampleMessage)}</div></div>
-      <p class="muted" style="font-size:.9rem">This is a fictional, anonymised example used to illustrate the pattern. It is not a verified real message, and any names are used only to show how the scam typically reads.</p>
-
-      ${dd && dd.caseStudy ? `<h2 id="case-study">A real-world scenario</h2>
-      ${caseStudyBox(dd.caseStudy)}` : ""}
-
-      <h2 id="red-flags">Red flags to watch for</h2>
-      ${flagList(scam.redFlags)}
-
-      ${dd && dd.variations ? `<h2 id="variations">Variations to watch for</h2>
-      ${variationList(dd.variations)}` : ""}
-
-      ${adSlot(`guide-${scam.slug}-mid`)}
-
-      <h2 id="what-to-do">What to do</h2>
-      <div class="box box-do"><ul>${scam.whatToDo.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
-
-      ${dd && dd.verify ? `<h2 id="verify">How to verify safely</h2>
-      <div class="box box-info"><ul>${dd.verify.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
-
-      <h2 id="if-you-clicked">If you already clicked or replied</h2>
-      <div class="box box-clicked"><ul>${scam.ifYouClicked.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
-
-      <h2 id="what-not-to-do">What not to do</h2>
-      <div class="box box-warning"><ul>${scam.whatNotToDo.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
-
-      ${related.length ? `<h2 id="similar">Similar scams</h2>
-      <div class="card-grid">${related.map(scamCard).join("")}</div>` : ""}
-
-      <h2 id="faq">Frequently asked questions</h2>
-      ${faqAccordion(scam.faqs)}
-
-      ${adSlot(`guide-${scam.slug}-faq`)}
-
-      ${dd && dd.sources ? `<h2 id="sources">Sources &amp; further reading</h2>
-      <p class="muted">The figures and guidance above draw on publicly available data and advice from fraud-prevention authorities. Always confirm current reporting details through official government sites.</p>
-      ${sourcesList(dd.sources)}` : ""}
+      ${bodyHtml}
 
       <p class="last-reviewed">${icon("calendar")} Last reviewed: ${esc(reviewedLabel(dd && dd.updated ? dd.updated : scam.lastReviewed))}${dd && dd.author ? ` &middot; Written and reviewed by the ${esc(dd.author)}` : ""}</p>
       ${disclaimerBox()}
