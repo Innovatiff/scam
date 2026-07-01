@@ -442,9 +442,35 @@ ${breadcrumbs(trail)}
     </form>
     <div id="checker-result" class="checker-result hidden" aria-live="polite"></div>
 
+    <h2>How the scam checker works</h2>
+    <p>The checker runs entirely in your web browser. When you paste a message, it scans the text for wording and patterns that appear frequently in scams, then shows you which ones it found, why each is a concern, and a suggested risk level. Nothing you paste is sent to a server, logged, or stored — the analysis happens on your own device and disappears the moment you leave the page. That is why you can use it without an account and without giving up any personal data.</p>
+    <p>It is important to understand what the result means. A <strong>High</strong> or <strong>Medium</strong> level tells you that the message contains language commonly used to pressure or deceive people — it is a reason to slow down and verify, not a definitive judgement that the message is fraudulent. A <strong>Low</strong> level means few of those patterns were detected, but that is never a guarantee of safety: a well-written scam can avoid obvious triggers, and a legitimate message can occasionally use urgent language.</p>
+
+    <h2>What the checker looks for</h2>
+    <p>The tool weighs a range of signals that fraud-prevention agencies repeatedly associate with scams. The most important include:</p>
+    <ul>
+      <li><strong>Urgency and pressure</strong> — words like "immediately", "act now", or countdowns designed to stop you thinking.</li>
+      <li><strong>Threats and consequences</strong> — claims of arrest, fines, account closure, or legal action to create fear.</li>
+      <li><strong>Account or security alerts</strong> — "your account is locked", "unusual activity", or requests to "verify your identity" via a link.</li>
+      <li><strong>Requests for payment or unusual methods</strong> — fees, fines, gift cards, cryptocurrency, or bank transfers.</li>
+      <li><strong>Requests for passwords or one-time codes</strong> — details that no legitimate organisation should ever ask you to share.</li>
+      <li><strong>Suspicious or shortened links</strong> — addresses that hide their true destination.</li>
+      <li><strong>Prizes, refunds, and money promises</strong> — "you've won", guaranteed returns, or unexpected refunds.</li>
+      <li><strong>Moving off-platform or keeping secrets</strong> — pushing you to another app, or asking you to tell no one.</li>
+    </ul>
+
+    <h2>How to read your result</h2>
+    <p>Treat the checker as a second opinion, not the final word. Whatever level it returns, the safest response to any unexpected message is the same: do not click links or open attachments, do not share codes, passwords, or card details, and contact the company or person directly using official details you find yourself — never the contact information in the message. If a message claims to be from your bank, call the number printed on the back of your card.</p>
+
+    <h2>Limitations you should know</h2>
+    <p>This is an automated, pattern-based tool. It can produce <strong>false alarms</strong> (flagging a genuine message that happens to sound urgent) and <strong>missed signals</strong> (a sophisticated scam that reads calmly). It cannot open links, inspect websites, verify senders, or confirm identities, and it does not know your personal circumstances. For anything involving money, accounts, or identity, always verify through official channels and, when in doubt, treat the message as suspicious.</p>
+
+    <h2>Frequently asked questions</h2>
+    ${faqAccordion(checkerFaqs)}
+
     <div class="box box-info mt-2">
-      <h3>How this checker works</h3>
-      <p style="margin:0">The checker looks for wording and patterns that often appear in scams — such as urgency, threats, requests for payment, gift cards, codes, or suspicious links. A higher risk level means more of these patterns were found. It is a starting point for caution, not a verdict. Always verify unexpected requests through official channels. <a href="/how-we-review-scams/">Read how we review scams</a>.</p>
+      <h3>${icon("lock")} Your privacy</h3>
+      <p style="margin:0">Your message is analysed in your browser and is never sent to us or stored. Please still avoid pasting passwords, banking details, ID numbers, or full card numbers. Learn more in our <a href="/privacy-policy/">privacy policy</a> and read <a href="/how-we-review-scams/">how we review scams</a>.</p>
     </div>
     ${disclaimerBox()}
   </div>
@@ -454,10 +480,17 @@ ${breadcrumbs(trail)}
     description: "Paste a suspicious message into our free scam checker to see common red flags and what to do next. Educational guidance only — nothing is stored.",
     canonical: "/scam-checker/",
     main,
-    jsonld: [breadcrumbLD(trail)],
+    jsonld: [breadcrumbLD(trail), faqLD(checkerFaqs)],
     extraScripts: `<script src="/assets/js/checker.js" defer></script><script src="/assets/js/checker-page.js" defer></script>`
   });
 }
+const checkerFaqs = [
+  { question: "Is the scam checker free to use?", answer: "Yes. The checker is completely free, needs no account, and works in your browser. You can check as many messages as you like." },
+  { question: "Do you store the messages I check?", answer: "No. The analysis runs entirely on your device. The text you paste is not sent to our servers and is not stored. It is cleared as soon as you leave the page." },
+  { question: "Does a 'Low risk' result mean the message is safe?", answer: "Not necessarily. A low result means few common scam patterns were detected, but a carefully written scam can avoid obvious triggers. Always verify unexpected requests through official channels." },
+  { question: "Can the checker tell me for certain if something is a scam?", answer: "No. It identifies language patterns commonly used in scams to help you decide whether to be cautious. It cannot open links, verify senders, or confirm identities, so it never gives a definitive verdict." },
+  { question: "What should I do if a message is flagged as high risk?", answer: "Do not click links, reply, or share any codes, passwords, or payment details. Contact the organisation directly using official contact details you find yourself, and consider reporting it. See our report a scam page." }
+];
 
 function scamTypesIndexPage() {
   const trail = [{ name: "Home", url: "/" }, { name: "Scam Types", url: "/scam-types/" }];
@@ -870,21 +903,31 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "about", name: "About Scam or Safe",
-    title: "About Us", description: "Learn about Scam or Safe, a public safety resource that helps people recognise scam patterns and red flags.",
+    title: "About Us", description: "Learn about Scam or Safe, a public safety resource that helps people recognise scam patterns and red flags before they click, reply, or send money.",
     body: `
-<p class="lead muted">${esc(config.siteName)} is a public safety resource that helps everyday people recognise the patterns and red flags common to online and message-based scams.</p>
+<p class="lead">${esc(config.siteName)} is a free public-safety resource that helps everyday people recognise the patterns and red flags common to online and message-based scams — before they click a link, reply to a stranger, or send money.</p>
 <h2>Why we built this</h2>
-<p>Scams are getting more convincing, and they reach us through texts, emails, marketplaces, job offers, and social media. Most people do not need a security expert — they need a calm, clear explanation of what a suspicious message looks like and what to do next. That is what we try to provide.</p>
+<p>Scams have become more convincing and more constant. They reach us through text messages, emails, marketplaces, job offers, dating apps, phone calls, and social media, and they are designed to trigger a fast, emotional reaction rather than careful thought. Most people do not need a cybersecurity degree to stay safe — they need a calm, clear explanation of what a suspicious message looks like, why it works, and exactly what to do next. That gap is what we set out to fill.</p>
+<p>Our belief is simple: the single most powerful defence against a scam is a moment of informed hesitation. When you can recognise the tell-tale signs — the artificial urgency, the request for a gift-card payment, the link that does not quite match the real website — you are far less likely to become a victim. Every guide on this site is written to give you that moment.</p>
+<h2>Who this is for</h2>
+<p>This site is for anyone who has ever received a message and thought, "Is this real?" That includes people trying to protect themselves, and also those looking out for parents, grandparents, or friends who may be targeted. Our language is deliberately plain and jargon-free so that it is useful whether or not you consider yourself tech-savvy.</p>
 <h2>What we do</h2>
 <ul>
-  <li>Maintain plain-language guides to common scams, including red flags and safe next steps.</li>
-  <li>Offer a free <a href="/scam-checker/">scam checker</a> that highlights patterns commonly seen in scams.</li>
-  <li>Point you toward official reporting resources so you can take action.</li>
+  <li>Maintain a large, growing library of plain-language guides — currently more than ${scams.length} — covering common scams across ${categories.length} categories, each with red flags and safe next steps.</li>
+  <li>Offer a free, private <a href="/scam-checker/">scam checker</a> that highlights patterns commonly seen in scams, running entirely in your browser.</li>
+  <li>Publish in-depth explainers on the highest-impact scams, with cited statistics from fraud-prevention authorities.</li>
+  <li>Point you toward the right official <a href="/report-a-scam/">reporting resources</a> for your country so you can take action.</li>
 </ul>
-<h2>What we do not do</h2>
-<p>We do not verify individual messages, companies, or people. We never claim that something is "definitely a scam" or "guaranteed safe," and we are not affiliated with any government agency, bank, or police force. Our guidance is educational and should be combined with checks through official channels.</p>
+<h2>What makes us different</h2>
+<p>We work hard to be measured rather than alarmist. Many scam-awareness pages rely on fear; we focus on clarity. We describe likelihoods and red flags, not certainties, and we structure every guide the same trustworthy way: what the scam looks like, how to spot it, what to do, and what not to do. Where we cite numbers, we attribute them to their source so you can check them yourself.</p>
 <h2>How we keep content accurate</h2>
-<p>Each guide is written for clarity and reviewed and dated. Read more about our process on the <a href="/how-we-review-scams/">how we review scams</a> page.</p>
+<p>Each guide is researched from widely documented scam patterns, written for clarity, and shown with a "last reviewed" date. We revisit and update guides as scams evolve. You can read our full process on the <a href="/how-we-review-scams/">how we review scams</a> page.</p>
+<h2>What we do not do</h2>
+<p>We do not verify individual messages, companies, or people, and we cannot tell you whether one specific message is genuine. We never claim that something is "definitely a scam" or "guaranteed safe," and we are not affiliated with any government agency, bank, retailer, or police force. Our guidance is educational and is meant to be combined with checks through official channels.</p>
+<h2>How the site is funded</h2>
+<p>To keep this resource free, we may display advertising. Advertising never influences our guidance, is kept clearly separate from our content, and is never placed inside the scam-checker result area. You can read more in our <a href="/privacy-policy/">privacy policy</a>.</p>
+<h2>Get in touch</h2>
+<p>We welcome suggestions for new guides and corrections to existing ones. Visit our <a href="/contact/">contact page</a> to reach us.</p>
 <div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)}</div>`
   }));
 
@@ -892,14 +935,30 @@ function legalPages() {
     slug: "contact", name: "Contact",
     title: "Contact Us", description: "Get in touch with Scam or Safe to suggest a scam guide, report a correction, or ask a question.",
     body: `
-<p class="lead muted">We welcome suggestions for new scam guides, corrections to existing pages, and general questions.</p>
+<p class="lead">We welcome suggestions for new scam guides, corrections to existing pages, and general questions about the site. Your input genuinely helps us keep this resource accurate and useful.</p>
 <h2>Email us</h2>
-<p>You can reach us at <a href="mailto:${esc(config.contactEmail)}">${esc(config.contactEmail)}</a>. We read every message, though we may not be able to reply to all of them individually.</p>
-<h2>Please note</h2>
+<p>The best way to reach us is by email at <a href="mailto:${esc(config.contactEmail)}">${esc(config.contactEmail)}</a>. We read every message. Because this is a small public-safety project, we may not be able to reply to everyone individually, but we do review and act on the feedback we receive.</p>
+<h2>What to include</h2>
+<p>To help us respond well, it is useful if you tell us:</p>
 <ul>
-  <li>We cannot provide legal, financial, or cybersecurity advice, or confirm whether a specific message is genuine.</li>
-  <li>Do not send us passwords, banking details, ID numbers, or full card numbers.</li>
-  <li>If you have lost money or your accounts are at risk, contact your bank and report to your local authorities right away. See our <a href="/report-a-scam/">report a scam</a> page.</li>
+  <li><strong>Suggesting a new guide?</strong> Describe the scam and how it reached you (for example, "a text about a missed parcel delivery"). Please do not include real personal details.</li>
+  <li><strong>Reporting a correction?</strong> Tell us the page and what looks inaccurate or out of date, so we can review and fix it quickly.</li>
+  <li><strong>General question?</strong> A clear, specific question helps us point you to the right guide or resource.</li>
+</ul>
+<h2>How quickly we respond</h2>
+<p>We aim to review messages regularly, but response times vary and some messages will not receive an individual reply. If your matter is urgent — for example, you may have lost money or shared sensitive details — please do not wait for us. Act immediately using the guidance below.</p>
+<h2>If you need urgent help</h2>
+<p>We are an educational resource, not an emergency service, a bank, or law enforcement. If you have lost money or your accounts may be at risk:</p>
+<ul>
+  <li>Contact your bank or card provider right away using the number on the back of your card.</li>
+  <li>Change passwords on any affected accounts and turn on two-factor authentication.</li>
+  <li>Report the scam to the official body for your country — see our <a href="/report-a-scam/">report a scam</a> page for the right contacts.</li>
+</ul>
+<h2>What we cannot do</h2>
+<ul>
+  <li>We cannot provide legal, financial, or cybersecurity advice, or confirm whether a specific message, company, or person is genuine.</li>
+  <li>We cannot recover money, investigate individual cases, or contact scammers on your behalf.</li>
+  <li>For your safety, please <strong>do not send us passwords, banking details, ID numbers, or full card numbers</strong> — we never need them.</li>
 </ul>
 <div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)}</div>`
   }));
@@ -948,12 +1007,20 @@ function legalPages() {
   <li>Do not paste passwords, banking details, ID numbers, or full card numbers into the site.</li>
   <li>Use the site lawfully and do not attempt to disrupt or misuse it.</li>
 </ul>
+<h2>Acceptable use</h2>
+<p>You agree to use this site lawfully and for its intended purpose — learning about scams and checking suspicious messages for educational insight. You must not attempt to disrupt, overload, scrape at scale, reverse-engineer, or misuse the site or its scam checker, and you must not use it to facilitate any unlawful activity.</p>
+<h2>Intellectual property</h2>
+<p>The written guides, design, and original content on this site are the property of ${esc(config.siteName)} unless otherwise stated. You are welcome to read and share links to our pages, but you may not republish substantial portions of our content as your own without permission. Statistics and quotations attributed to third parties remain the property of their respective owners.</p>
 <h2>Limitation of liability</h2>
-<p>To the maximum extent permitted by law, ${esc(config.siteName)} and its contributors are not liable for any loss or damage arising from your use of, or reliance on, the information provided here.</p>
-<h2>Third-party links</h2>
-<p>We may link to external resources for your convenience. We are not responsible for the content or practices of third-party websites.</p>
+<p>To the maximum extent permitted by law, ${esc(config.siteName)} and its contributors are not liable for any loss or damage — direct, indirect, or consequential — arising from your use of, or reliance on, the information provided here. You use the site and act on its guidance at your own discretion.</p>
+<h2>Third-party links and advertising</h2>
+<p>We may link to external resources, and we may display advertising to support the site. We are not responsible for the content, accuracy, or practices of third-party websites or advertisers. Following an external link or interacting with an advertisement is at your own risk, and those sites have their own terms and privacy policies.</p>
+<h2>Severability</h2>
+<p>If any provision of these terms is found to be unenforceable, the remaining provisions continue in full effect.</p>
 <h2>Changes</h2>
-<p>We may revise these terms at any time. Continued use of the site means you accept the current version.</p>`
+<p>We may revise these terms at any time. The "last updated" date above reflects the current version, and your continued use of the site means you accept it.</p>
+<h2>Contact</h2>
+<p>Questions about these terms? Email <a href="mailto:${esc(config.contactEmail)}">${esc(config.contactEmail)}</a>.</p>`
   }));
 
   pages.push(simplePage({
@@ -968,7 +1035,13 @@ function legalPages() {
 <h2>Not professional advice</h2>
 <p>Nothing on this site is legal, financial, cybersecurity, or law enforcement advice. For specific concerns, consult an appropriate professional or your local authorities.</p>
 <h2>Examples are illustrative</h2>
-<p>Example messages on this site are fictional and anonymised. They are written to illustrate typical patterns and are not verified reports of real messages.</p>
+<p>Example messages on this site are fictional and anonymised. They are written to illustrate typical patterns and are not verified reports of real messages. Any names, amounts, or companies in an example are used only to show how a scam typically reads.</p>
+<h2>The scam checker is a guide, not a verdict</h2>
+<p>Our <a href="/scam-checker/">scam checker</a> looks for language patterns commonly seen in scams. It runs in your browser and can produce both false alarms and missed signals. A "Low risk" result is never a guarantee of safety, and a "High risk" result is not proof of fraud — both are prompts to verify carefully.</p>
+<h2>Statistics and third-party information</h2>
+<p>Figures we cite come from third-party sources such as fraud-prevention agencies and are believed accurate at the time of writing, but we cannot guarantee that external data or linked resources are current or error-free. Always confirm important details with the original source.</p>
+<h2>Not professional advice, and no relationship created</h2>
+<p>Using this site does not create any professional, advisory, or fiduciary relationship between you and ${esc(config.siteName)}. For specific concerns, consult an appropriate qualified professional or your local authorities.</p>
 <h2>Act through official channels</h2>
 <p>If you are worried about an account or a payment, contact the company directly using details you find independently, and report scams to your local authorities. See our <a href="/report-a-scam/">report a scam</a> page.</p>`
   }));
@@ -979,19 +1052,25 @@ function legalPages() {
     slug: "how-we-review-scams", name: "How We Review Scams",
     title: "How We Review & Write Our Scam Guides", description: "Our editorial process for researching, writing, and reviewing scam guides at Scam or Safe.",
     body: `
-<p class="lead muted">We aim to be a calm, accurate, and genuinely useful public-safety resource. Here is how our guides are made.</p>
-<h2>Research</h2>
-<p>Each guide is based on widely documented scam patterns reported by consumers, banks, couriers, platforms, and fraud-prevention agencies. We focus on how a scam typically works and the signals that give it away.</p>
+<p class="lead">We aim to be a calm, accurate, and genuinely useful public-safety resource. Trust matters when the subject is fraud, so this page explains exactly how our guides are researched, written, reviewed, and kept current.</p>
+<h2>Our sources and research</h2>
+<p>Every guide is grounded in scam patterns that are widely documented by reputable, publicly accountable organisations — including consumer-protection and fraud-reporting agencies such as the US Federal Trade Commission, the FBI's Internet Crime Complaint Center, the UK's Action Fraud and National Cyber Security Centre, UK Finance, and Australia's Scamwatch, as well as advisories from banks, couriers, and major platforms. We focus on how each scam typically works and the specific signals that give it away. We do not invent scams or exaggerate rare ones.</p>
+<h2>How our statistics are used</h2>
+<p>Where we cite numbers — such as reported losses or the most common scam types — we attribute them to their source and, on our in-depth guides, link to it directly so you can verify the figure yourself. We prefer official, published data over second-hand claims. When a precise figure is uncertain, we describe it in careful, honest terms rather than inventing specifics.</p>
 <h2>Careful, non-sensational language</h2>
-<p>We describe red flags and likelihoods, not certainties. We avoid exaggerated claims and never tell you something is "definitely a scam" or "guaranteed safe." Our goal is to help you pause and verify, not to frighten you.</p>
-<h2>Anonymised examples</h2>
-<p>Example messages are fictional and clearly labelled as illustrative patterns. We do not publish real personal data or claim that an example is a verified report.</p>
+<p>We describe red flags and likelihoods, not certainties. We deliberately avoid claims like "definitely a scam", "guaranteed safe", "officially verified", or "police approved". Our goal is to help you pause and verify — not to frighten you into a decision. Fear is exactly the tool scammers use, and we refuse to copy it.</p>
+<h2>A consistent, structured format</h2>
+<p>Each guide is organised so you can find what you need fast: what the scam looks like, the red flags to watch for, what to do, what to avoid, and answers to common questions. Our most-searched topics receive expanded, in-depth treatment with step-by-step breakdowns, realistic (anonymised) scenarios, and cited statistics.</p>
+<h2>Anonymised, illustrative examples</h2>
+<p>Example messages and scenarios are fictional and clearly labelled as illustrations of a pattern. We never publish real personal data, and we never present an example as a verified report of a specific real message or victim.</p>
 <h2>Safe, responsible guidance</h2>
-<p>Our "what to do" steps emphasise contacting official organisations directly, protecting your accounts, and reporting through proper channels. We do not provide instructions that could cause harm.</p>
-<h2>Review and dating</h2>
-<p>Each guide shows a "last reviewed" date. We revisit guides as scams evolve and update them when patterns change.</p>
+<p>Our "what to do" steps consistently emphasise contacting official organisations directly, protecting your accounts, and reporting through proper channels. We do not publish instructions that could enable fraud or cause harm, and we point victims toward legitimate help rather than "recovery" services that often prey on them a second time.</p>
+<h2>Review, dating, and updates</h2>
+<p>Every guide displays a "last reviewed" date so you can see how current it is. Scams evolve, so we revisit and update guides as tactics change, and we expand coverage as new scam types emerge.</p>
+<h2>Independence and funding</h2>
+<p>We are not affiliated with any government agency, bank, retailer, or police force. To keep the site free we may show advertising, but advertising never influences our guidance and is kept clearly separate from our content. See our <a href="/privacy-policy/">privacy policy</a> for details.</p>
 <h2>Corrections</h2>
-<p>If you spot something inaccurate or out of date, please <a href="/contact/">contact us</a>. We value corrections and act on them.</p>
+<p>Accuracy is a process, not a one-time event. If you spot something inaccurate or out of date, please <a href="/contact/">contact us</a> — we genuinely value corrections and act on them.</p>
 <div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)}</div>`
   }));
 
