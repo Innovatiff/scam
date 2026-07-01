@@ -310,3 +310,79 @@ p { margin: 0 0 1rem; }
 .divider { height: 1px; background: var(--border); border: 0; margin: 28px 0; }
 .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .notice { background: var(--light-blue); border: 1px solid #BFDBFE; border-radius: var(--radius-sm); padding: 14px 16px; color: #1E40AF; font-size: .95rem; }
+
+/* ---------- Flagship / in-depth guide ---------- */
+.flagship-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--light-blue); color: var(--blue-dark);
+  border: 1px solid #BFDBFE; border-radius: 999px;
+  padding: 3px 10px; font-size: .78rem; font-weight: 700;
+}
+.flagship-badge svg { width: 14px; height: 14px; }
+.read-time { display: inline-flex; align-items: center; gap: 5px; font-size: .82rem; color: var(--gray-text); font-weight: 600; }
+.read-time svg { width: 14px; height: 14px; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 18px 0; }
+.stat-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-left: 4px solid var(--blue); border-radius: var(--radius);
+  padding: 16px 18px; box-shadow: var(--shadow-sm);
+}
+.stat-figure { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.1; }
+.stat-label { color: var(--gray-text); font-size: .95rem; margin-top: 6px; }
+.stat-source { font-size: .8rem; color: var(--gray-text); margin-top: 10px; }
+
+.steps-list { list-style: none; counter-reset: step; padding: 0; margin: 16px 0; }
+.steps-list li {
+  counter-increment: step; position: relative;
+  padding: 4px 0 16px 48px; border-left: 2px solid var(--border); margin-left: 16px;
+}
+.steps-list li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.steps-list li::before {
+  content: counter(step); position: absolute; left: -17px; top: 0;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--blue); color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; font-size: .95rem;
+}
+.step-title { display: block; font-weight: 700; color: var(--navy); }
+.step-detail { display: block; color: var(--gray-text); margin-top: 2px; }
+
+.case-study {
+  background: #FFFBEB; border: 1px solid #FDE68A; border-radius: var(--radius);
+  padding: 18px 20px; margin: 18px 0;
+}
+.case-study .case-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  color: #B45309; margin-bottom: 6px;
+}
+.case-study .case-tag svg { width: 15px; height: 15px; }
+.case-study h3 { margin: 4px 0 8px; }
+.case-study p { margin: 0 0 10px; }
+.case-study p:last-child { margin-bottom: 0; }
+
+.variation-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+.variation-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+.variation-item h4 { margin: 0 0 4px; color: var(--navy); }
+.variation-item p { margin: 0; color: var(--gray-text); font-size: .95rem; }
+
+.sources-list { padding-left: 1.1rem; margin: 12px 0; }
+.sources-list li { margin-bottom: 8px; }
+
+/* ---------- Report-a-scam hub ---------- */
+.checklist-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px 20px; margin: 18px 0; box-shadow: var(--shadow-sm);
+}
+.region-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin: 16px 0 8px; }
+.region-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow-sm); }
+.region-card h3 { margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+.region-flag { font-size: 1.4rem; }
+.region-bodies { list-style: none; padding: 0; margin: 10px 0 0; }
+.region-bodies li { padding: 10px 0; border-top: 1px solid var(--border); }
+.region-handles { display: block; color: var(--gray-text); font-size: .9rem; margin-top: 2px; }
+.region-how { display: block; font-size: .88rem; margin-top: 4px; color: var(--blue-dark); font-weight: 600; word-break: break-word; }
+.platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 16px 0; }
+.platform-item { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+.platform-item h4 { margin: 0 0 4px; }
+.platform-item p { margin: 0; color: var(--gray-text); font-size: .95rem; }

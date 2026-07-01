@@ -16,6 +16,8 @@ const SRC = path.join(ROOT, "src");
 const config = readJSON("site.config.json");
 const categories = readJSON("data/categories.json");
 const scams = readJSON("data/scams.json");
+const deepDives = readJSONSafe("data/deepdives.json", {});
+const reporting = readJSONSafe("data/reporting.json", null);
 
 const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 const scamBySlug = Object.fromEntries(scams.map((s) => [s.slug, s]));
@@ -24,6 +26,9 @@ for (const s of scams) (scamsByCategory[s.category] ||= []).push(s);
 
 function readJSON(rel) {
   return JSON.parse(fs.readFileSync(path.join(ROOT, rel), "utf8"));
+}
+function readJSONSafe(rel, fallback) {
+  try { return readJSON(rel); } catch (e) { return fallback; }
 }
 
 /* --------------------------------------------------------------- helpers --- */
@@ -554,8 +559,38 @@ ${breadcrumbs(trail)}
   });
 }
 
+/* Flagship deep-dive rendering. When data/deepdives.json has an entry for a
+   guide slug, the page gains richly-structured, original sections (analysis,
+   cited statistics, step-by-step, a case study, variations, verification, and
+   sources) and a distinct visual treatment, so it does not read as templated. */
+function statGrid(stats) {
+  return `<div class="stat-grid">${stats.map((s) => `
+    <div class="stat-card">
+      <div class="stat-figure">${esc(s.figure)}</div>
+      <div class="stat-label">${esc(s.label)}</div>
+      <div class="stat-source">Source: ${s.url ? `<a href="${esc(s.url)}" rel="nofollow noopener" target="_blank">${esc(s.source)}</a>` : esc(s.source)}</div>
+    </div>`).join("")}</div>`;
+}
+function stepsList(steps) {
+  return `<ol class="steps-list">${steps.map((s) => `
+    <li><span class="step-title">${esc(s.title)}</span><span class="step-detail">${esc(s.detail)}</span></li>`).join("")}</ol>`;
+}
+function variationList(items) {
+  return `<div class="variation-list">${items.map((v) => `
+    <div class="variation-item"><h4>${esc(v.name)}</h4><p>${esc(v.detail)}</p></div>`).join("")}</div>`;
+}
+function sourcesList(sources) {
+  return `<ul class="sources-list">${sources.map((s) => `
+    <li>${s.url ? `<a href="${esc(s.url)}" rel="nofollow noopener" target="_blank">${esc(s.title)}</a>` : esc(s.title)} — <span class="muted">${esc(s.publisher)}</span></li>`).join("")}</ul>`;
+}
+function caseStudyBox(cs) {
+  return `<div class="case-study"><div class="case-tag">${icon("eye")} Anonymised, illustrative scenario</div>
+    <h3>${esc(cs.title)}</h3>${cs.body.map((p) => `<p>${esc(p)}</p>`).join("")}</div>`;
+}
+
 function guidePage(scam) {
   const cat = categoryBySlug[scam.category];
+  const dd = deepDives[scam.slug] || null;
   const trail = [
     { name: "Home", url: "/" },
     { name: "Scam Types", url: "/scam-types/" },
@@ -566,14 +601,20 @@ function guidePage(scam) {
   const related = (scam.relatedScams || []).map((s) => scamBySlug[s]).filter(Boolean);
 
   const sections = [
-    ["what-it-looks-like", "What this scam usually looks like"],
+    ["what-it-looks-like", dd ? "How this scam works" : "What this scam usually looks like"],
+    ...(dd && dd.stats ? [["by-the-numbers", "By the numbers"]] : []),
+    ...(dd && dd.howItWorks ? [["step-by-step", "Step by step"]] : []),
     ["example", "Example message pattern"],
+    ...(dd && dd.caseStudy ? [["case-study", "A real-world scenario"]] : []),
     ["red-flags", "Red flags to watch for"],
+    ...(dd && dd.variations ? [["variations", "Variations to watch for"]] : []),
     ["what-to-do", "What to do"],
+    ...(dd && dd.verify ? [["verify", "How to verify safely"]] : []),
     ["if-you-clicked", "If you already clicked or replied"],
     ["what-not-to-do", "What not to do"],
     ["similar", "Similar scams"],
-    ["faq", "Frequently asked questions"]
+    ["faq", "Frequently asked questions"],
+    ...(dd && dd.sources ? [["sources", "Sources & further reading"]] : [])
   ];
 
   const toc = `<div class="box"><h3>On this page</h3><nav class="toc">${
@@ -586,7 +627,7 @@ ${breadcrumbs(trail)}
   <div class="container with-sidebar">
     <div class="guide-content">
       <header class="guide-header">
-        <div class="meta">${riskBadge(scam.riskLevel)}<span class="card-cat">${esc(cat ? cat.name : "")}</span></div>
+        <div class="meta">${riskBadge(scam.riskLevel)}<span class="card-cat">${esc(cat ? cat.name : "")}</span>${dd ? `<span class="flagship-badge">${icon("check")} In-depth guide</span>${dd.readTime ? `<span class="read-time">${icon("calendar")} ${esc(dd.readTime)}</span>` : ""}` : ""}</div>
         <h1>${esc(scam.title)}</h1>
         <p class="lead muted">${esc(scam.summary)}</p>
       </header>
@@ -603,20 +644,35 @@ ${breadcrumbs(trail)}
 
       ${adSlot(`guide-${scam.slug}-top`)}
 
-      <h2 id="what-it-looks-like">What this scam usually looks like</h2>
-      <p>${esc(scam.summary)}</p>
+      <h2 id="what-it-looks-like">${dd ? "How this scam works" : "What this scam usually looks like"}</h2>
+      ${dd && dd.intro ? dd.intro.map((p) => `<p>${esc(p)}</p>`).join("\n      ") : `<p>${esc(scam.summary)}</p>`}
+
+      ${dd && dd.stats ? `<h2 id="by-the-numbers">By the numbers</h2>
+      ${statGrid(dd.stats)}` : ""}
+
+      ${dd && dd.howItWorks ? `<h2 id="step-by-step">Step by step: how the scam unfolds</h2>
+      ${stepsList(dd.howItWorks)}` : ""}
 
       <h2 id="example">Example message pattern</h2>
       <div class="example-msg"><span class="example-tag">Example pattern — not a real report</span><div>${esc(scam.exampleMessage)}</div></div>
       <p class="muted" style="font-size:.9rem">This is a fictional, anonymised example used to illustrate the pattern. It is not a verified real message, and any names are used only to show how the scam typically reads.</p>
 
+      ${dd && dd.caseStudy ? `<h2 id="case-study">A real-world scenario</h2>
+      ${caseStudyBox(dd.caseStudy)}` : ""}
+
       <h2 id="red-flags">Red flags to watch for</h2>
       ${flagList(scam.redFlags)}
+
+      ${dd && dd.variations ? `<h2 id="variations">Variations to watch for</h2>
+      ${variationList(dd.variations)}` : ""}
 
       ${adSlot(`guide-${scam.slug}-mid`)}
 
       <h2 id="what-to-do">What to do</h2>
       <div class="box box-do"><ul>${scam.whatToDo.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+
+      ${dd && dd.verify ? `<h2 id="verify">How to verify safely</h2>
+      <div class="box box-info"><ul>${dd.verify.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
 
       <h2 id="if-you-clicked">If you already clicked or replied</h2>
       <div class="box box-clicked"><ul>${scam.ifYouClicked.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
@@ -632,7 +688,11 @@ ${breadcrumbs(trail)}
 
       ${adSlot(`guide-${scam.slug}-faq`)}
 
-      <p class="last-reviewed">${icon("calendar")} Last reviewed: ${esc(reviewedLabel(scam.lastReviewed))}</p>
+      ${dd && dd.sources ? `<h2 id="sources">Sources &amp; further reading</h2>
+      <p class="muted">The figures and guidance above draw on publicly available data and advice from fraud-prevention authorities. Always confirm current reporting details through official government sites.</p>
+      ${sourcesList(dd.sources)}` : ""}
+
+      <p class="last-reviewed">${icon("calendar")} Last reviewed: ${esc(reviewedLabel(dd && dd.updated ? dd.updated : scam.lastReviewed))}${dd && dd.author ? ` &middot; Written and reviewed by the ${esc(dd.author)}` : ""}</p>
       ${disclaimerBox()}
     </div>
 
@@ -651,6 +711,7 @@ ${breadcrumbs(trail)}
   </div>
 </article>`;
 
+  const ymToISO = (ym) => (ym && /^\d{4}-\d{2}$/.test(ym)) ? `${ym}-01` : undefined;
   const articleLD = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -659,9 +720,24 @@ ${breadcrumbs(trail)}
     about: scam.scamType,
     inLanguage: config.lang,
     isAccessibleForFree: true,
+    author: { "@type": "Organization", name: (dd && dd.author) ? dd.author : config.siteName, url: config.url },
     publisher: { "@type": "Organization", name: config.siteName, url: config.url },
+    dateModified: ymToISO((dd && dd.updated) || scam.lastReviewed),
     mainEntityOfPage: config.url.replace(/\/$/, "") + `/scams/${scam.slug}/`
   };
+  if (dd) {
+    const words = [
+      ...(dd.intro || []),
+      ...(dd.howItWorks || []).map((s) => `${s.title} ${s.detail}`),
+      ...(dd.caseStudy ? dd.caseStudy.body : []),
+      ...(dd.variations || []).map((v) => `${v.name} ${v.detail}`),
+      ...(dd.verify || [])
+    ].join(" ").split(/\s+/).filter(Boolean).length;
+    articleLD.wordCount = words;
+    if (dd.sources) {
+      articleLD.citation = dd.sources.map((s) => `${s.title} — ${s.publisher}`);
+    }
+  }
 
   return layout({
     title: (scam.metaTitle || scam.title) + ` | ${config.siteName}`,
@@ -674,12 +750,13 @@ ${breadcrumbs(trail)}
 }
 
 /* ------------------------------------------------------------- legal pages --- */
-function simplePage({ slug, name, title, description, body }) {
+function simplePage({ slug, name, title, description, body, wide = false }) {
   const trail = [{ name: "Home", url: "/" }, { name, url: `/${slug}/` }];
+  const cc = wide ? "container" : "container narrow";
   const main = `
 ${breadcrumbs(trail)}
-<section class="page-intro"><div class="container narrow"><h1>${esc(name)}</h1></div></section>
-<section class="prose"><div class="container narrow">${body}</div></section>`;
+<section class="page-intro"><div class="${cc}"><h1>${esc(name)}</h1></div></section>
+<section class="prose"><div class="${cc}">${body}</div></section>`;
   return layout({
     title: `${title} | ${config.siteName}`,
     description, canonical: `/${slug}/`, main,
@@ -688,6 +765,64 @@ ${breadcrumbs(trail)}
 }
 
 const DISCLAIMER_TEXT = `This website provides educational information to help people recognise scam patterns and red flags. It is not legal, financial, cybersecurity, or law enforcement advice.`;
+
+/* Region-specific "how to report" hub, built from data/reporting.json. Falls
+   back to a concise static version if the data file is unavailable. */
+function reportBody() {
+  const meta = {
+    slug: "report-a-scam", name: "Report a Scam",
+    title: "Report a Scam — Official Resources by Country",
+    description: "Where and how to report scams and get help. Official fraud, phishing, and cybercrime reporting bodies for the US, UK, Canada, Australia, NZ, Ireland and the EU."
+  };
+
+  if (!reporting) {
+    return simplePage({ ...meta, body: `
+<p class="lead muted">If you have encountered a scam, reporting it helps protect others and may help you recover. Use official channels for your country.</p>
+<h2>Where to report</h2>
+<ul>
+  <li><strong>United States:</strong> Federal Trade Commission — reportfraud.ftc.gov</li>
+  <li><strong>United Kingdom:</strong> Action Fraud — actionfraud.police.uk (forward scam texts to 7726)</li>
+  <li><strong>Canada:</strong> Canadian Anti-Fraud Centre — antifraudcentre-centreantifraude.ca</li>
+  <li><strong>Australia:</strong> Scamwatch — scamwatch.gov.au</li>
+</ul>
+<div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)} Reporting destinations may change; verify current contact details through official government websites.</div>` });
+  }
+
+  const immediate = `<div class="checklist-card"><h2 style="margin-top:0">First, take these steps</h2>
+    <ol class="steps-list">${reporting.immediate.map((s) => `
+      <li><span class="step-title">${esc(s.title)}</span><span class="step-detail">${esc(s.detail)}</span></li>`).join("")}</ol></div>`;
+
+  const regions = `<h2 id="by-country">Where to report, by country</h2>
+    <p class="muted">Reporting details can change. Where possible, open these organisations directly from your government's official portal rather than following links from a suspicious message.</p>
+    <div class="region-grid">${reporting.regions.map((r) => `
+      <div class="region-card">
+        <h3><span class="region-flag" aria-hidden="true">${esc(r.flag)}</span> ${esc(r.country)}</h3>
+        <p class="muted">${esc(r.intro)}</p>
+        <ul class="region-bodies">${r.bodies.map((b) => `
+          <li><strong>${b.url ? `<a href="${esc(b.url)}" rel="nofollow noopener" target="_blank">${esc(b.name)}</a>` : esc(b.name)}</strong>
+          <span class="region-handles">${esc(b.handles)}</span>
+          <span class="region-how">${esc(b.how)}</span></li>`).join("")}</ul>
+      </div>`).join("")}</div>`;
+
+  const platforms = `<h2 id="platforms">Report to the platform or company</h2>
+    <p>Alongside the authorities above, report the scam where it happened. This helps platforms remove scam accounts, listings, and messages quickly.</p>
+    <div class="platform-grid">${reporting.platforms.map((p) => `
+      <div class="platform-item"><h4>${esc(p.name)}</h4><p>${esc(p.detail)}</p></div>`).join("")}</div>`;
+
+  const after = `<h2 id="after">What happens after you report</h2>
+    <div class="variation-list">${reporting.afterReport.map((a) => `
+      <div class="variation-item"><h4>${esc(a.title)}</h4><p>${esc(a.detail)}</p></div>`).join("")}</div>`;
+
+  const body = `
+<p class="lead">If you have encountered a scam — whether or not you lost money — reporting it helps investigators disrupt fraud and warns others. This guide covers what to do first, the official body to contact in your country, and how to report to the platform involved.</p>
+${immediate}
+${regions}
+${platforms}
+${after}
+<div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)} We are not affiliated with any organisation listed here. Reporting destinations and contact details may change; always verify them through official government websites.</div>`;
+
+  return simplePage({ ...meta, wide: true, body });
+}
 
 function legalPages() {
   const pages = [];
@@ -797,31 +932,7 @@ function legalPages() {
 <p>If you are worried about an account or a payment, contact the company directly using details you find independently, and report scams to your local authorities. See our <a href="/report-a-scam/">report a scam</a> page.</p>`
   }));
 
-  pages.push(simplePage({
-    slug: "report-a-scam", name: "Report a Scam",
-    title: "Report a Scam — Official Resources", description: "Where to report scams and get help. Official reporting resources for fraud, phishing, and online scams.",
-    body: `
-<p class="lead muted">If you have encountered a scam, reporting it helps protect others and may help you recover. Use official channels for your country.</p>
-<div class="box box-warning"><h3>If you may have lost money or shared details</h3><ul>
-  <li>Contact your bank or card provider immediately to stop or dispute payments.</li>
-  <li>Change passwords for any affected accounts and turn on two-factor authentication.</li>
-  <li>Report to your national fraud or consumer protection authority (see below).</li>
-</ul></div>
-<h2>Where to report</h2>
-<ul>
-  <li><strong>United States:</strong> Report fraud to the Federal Trade Commission at reportfraud.ftc.gov, and phishing emails to reportphishing@apwg.org.</li>
-  <li><strong>Canada:</strong> Report to the Canadian Anti-Fraud Centre at antifraudcentre-centreantifraude.ca.</li>
-  <li><strong>United Kingdom:</strong> Report to Action Fraud at actionfraud.police.uk, and suspicious texts by forwarding to 7726.</li>
-  <li><strong>Australia:</strong> Report to Scamwatch at scamwatch.gov.au.</li>
-  <li><strong>European Union:</strong> Contact your national consumer protection or police cybercrime unit.</li>
-</ul>
-<p class="muted">Always look up these organisations directly through a search engine or official government portal rather than following links from a suspicious message.</p>
-<h2>Report to the platform or company</h2>
-<p>Most banks, email providers, marketplaces, and social platforms have their own fraud or phishing reporting tools. Reporting through the official app or website helps them take down scam accounts and pages.</p>
-<h2>Forward suspicious texts</h2>
-<p>In many countries you can forward scam SMS messages to a short spam-reporting number provided by your mobile carrier. Check your carrier's official guidance.</p>
-<div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)} Reporting destinations may change; verify current contact details through official government websites.</div>`
-  }));
+  pages.push(reportBody());
 
   pages.push(simplePage({
     slug: "how-we-review-scams", name: "How We Review Scams",
