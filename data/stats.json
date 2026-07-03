@@ -1,0 +1,162 @@
+{
+  "spotlight": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight",
+  "ftcScams": "https://consumer.ftc.gov/scams",
+  "ic3": "https://www.ic3.gov",
+  "ukFinance": "https://www.ukfinance.org.uk",
+  "identityTheft": "https://www.identitytheft.gov",
+  "global": {
+    "stats": [
+      { "figure": "$10.3B", "label": "reported lost to fraud in the US in 2023 across all scam types", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+      { "figure": "$12.5B", "label": "total reported losses to internet crime in the US in 2023", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" }
+    ]
+  },
+  "categories": {
+    "text-message-scams": {
+      "context": "Text-message scams, known as \"smishing\", reach you directly on your phone where a link is only a tap away and messages feel personal and urgent. They impersonate trusted senders — banks, couriers, government, or even people you know — and depend on you acting before you pause to verify.",
+      "stats": [
+        { "figure": "$330M", "label": "reported lost to text-message scams in the US in 2022, more than double the year before", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "#1", "label": "fake bank fraud alerts were the most-reported text scam type in 2022", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "email-scams": {
+      "context": "Email scams, or phishing, remain one of the most common ways criminals steal logins, payment details, and money. A convincing message imitates a brand or contact and steers you toward a fake login page, a malicious attachment, or a fraudulent payment.",
+      "stats": [
+        { "figure": "Most reported", "label": "phishing was the most common type of cybercrime complaint reported to the FBI in 2023", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" },
+        { "figure": "$12.5B", "label": "total reported internet-crime losses in the US in 2023", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" }
+      ]
+    },
+    "marketplace-scams": {
+      "context": "Marketplace scams target both buyers and sellers on platforms like Facebook Marketplace and classified listings. Fraudsters fake payments, send bogus \"buyer protection\" emails, push deals off-platform, or use overpayment tricks to make you ship goods or send money for nothing.",
+      "stats": [
+        { "figure": "$1.4B", "label": "reported lost to fraud that started on social media in the US in 2023", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "Top category", "label": "online shopping is consistently among the most-reported fraud types to the FTC", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "job-scams": {
+      "context": "Job and employment scams exploit hope and momentum with an easy \"hire\", work-from-home promises, and tasks that supposedly pay commission. The tell is the direction money flows: real employers pay you, while scams get you to pay in for training, equipment, or to \"unlock\" earnings, or to hand over bank and ID details.",
+      "stats": [
+        { "figure": "Fast-growing", "label": "business and job-opportunity scams are among the fastest-growing fraud types reported to the FTC", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "$10.3B", "label": "total reported US fraud losses in 2023 across all categories", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "bank-payment-scams": {
+      "context": "Bank and payment scams weaponise your trust in your bank and your fear of losing money. They fake fraud alerts, blocked payments, or refunds, then steer you into moving money to a \"safe account\", sharing a one-time code, or approving a transfer — actions a genuine bank will never ask of you.",
+      "stats": [
+        { "figure": "#1", "label": "copycat bank fraud alerts were the most-reported text scam in the US in 2022", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "£459.7M", "label": "lost to authorised push payment (APP) fraud in the UK in 2023", "source": "UK Finance", "url": "https://www.ukfinance.org.uk" }
+      ]
+    },
+    "delivery-scams": {
+      "context": "Delivery scams (a form of smishing) impersonate couriers with a believable small problem — an unpaid fee, a wrong address, a held parcel — timed to arrive when you might be expecting something. The link leads to a cloned courier site that harvests your card details and a bank one-time code.",
+      "stats": [
+        { "figure": "#2", "label": "fake package-delivery texts were the second most-reported text scam in 2022", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "$330M", "label": "reported lost to text-message scams in the US in 2022", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "social-media-scams": {
+      "context": "Social media scams spread through direct messages, ads, hacked friends' accounts, and fake profiles. They range from account-takeover phishing and fake giveaways to investment and romance fraud, exploiting the trust and reach of your own network.",
+      "stats": [
+        { "figure": "$1.4B", "label": "reported lost to fraud that began on social media in the US in 2023", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "Top channel", "label": "social media was among the most common ways scams reached people in 2023", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "online-shopping-scams": {
+      "context": "Online shopping scams use fake stores, unbelievable deals, and counterfeit or never-delivered goods to take your money and card details. Fake sites often surface through ads and social media and pressure you with limited-time offers.",
+      "stats": [
+        { "figure": "Top category", "label": "online shopping is one of the most-reported fraud categories to the FTC", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "$1.4B", "label": "reported lost to fraud that started on social media in 2023, where many fake shops advertise", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "rental-scams": {
+      "context": "Rental scams advertise properties that are not available, not owned by the \"landlord\", or do not exist, to collect deposits and first-month rent from hopeful tenants. They pressure you to pay before viewing and to move money by transfer.",
+      "stats": [
+        { "figure": "Hundreds of millions", "label": "real-estate and rental fraud reported to the FBI runs into the hundreds of millions of dollars a year", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" },
+        { "figure": "$12.5B", "label": "total reported internet-crime losses in the US in 2023", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" }
+      ]
+    },
+    "crypto-investment-scams": {
+      "context": "Crypto and investment scams promise high or guaranteed returns with little risk, usually through fake platforms that display staged gains. Small test withdrawals build trust before you are pushed to invest more, then blocked from withdrawing behind endless \"fees\" and \"taxes\".",
+      "stats": [
+        { "figure": "$4.6B", "label": "reported lost to investment scams in the US in 2023 — the top fraud category by losses", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "$1B+", "label": "in cryptocurrency reported lost to scams between 2021 and mid-2022", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "government-tax-scams": {
+      "context": "Government and tax scams impersonate tax authorities, police, or agencies, using threats of arrest, fines, or deportation to force fast payment — often via gift cards, transfers, or crypto. Real agencies do not demand instant payment this way or threaten arrest by phone.",
+      "stats": [
+        { "figure": "$2.7B", "label": "reported lost to imposter scams in the US in 2023", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "Gift cards", "label": "a top payment method scammers demand, which real agencies never use", "source": "FTC Consumer Advice", "url": "https://consumer.ftc.gov/scams" }
+      ]
+    },
+    "phone-call-scams": {
+      "context": "Phone and voice scams, known as vishing, use live callers and robocalls to impersonate banks, retailers, agencies, and tech support. The call is a doorway to remote access, one-time codes, or moving money — and phone contact carries some of the highest reported losses.",
+      "stats": [
+        { "figure": "Highest median loss", "label": "phone calls are the contact method with the highest reported median loss to fraud", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "$2.7B", "label": "reported lost to imposter scams in the US in 2023", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "romance-scams": {
+      "context": "Romance scams build a genuine-feeling bond over days or weeks, then introduce a crisis or investment that needs your money. They rely on fast intimacy, an inability to meet in person, and requests that shift to gift cards or cryptocurrency.",
+      "stats": [
+        { "figure": "$1B+", "label": "romance scams are among the costliest frauds by total reported losses in the US", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "$1.4B", "label": "reported lost to fraud that began on social media in 2023, where many romance scams start", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "tech-support-scams": {
+      "context": "Tech-support scams use pop-ups, emails, and cold calls claiming your device is infected or your account is at risk. The \"fix\" is always remote access, which hands criminals control of your machine, your logins, and often a fake \"refund\" that reverses in their favour.",
+      "stats": [
+        { "figure": "Older adults", "label": "are the group most affected by tech-support scams, with the highest reported losses", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" },
+        { "figure": "$2.7B", "label": "reported lost to imposter scams in the US in 2023, which include tech support fraud", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "travel-scams": {
+      "context": "Travel and holiday scams sell fake bookings, too-good-to-be-true deals, and bogus \"official\" services for visas, trusted-traveller programs, or compensation. They collect deposits and passport details, often through lookalike sites and sponsored ads.",
+      "stats": [
+        { "figure": "$10.3B", "label": "total reported US fraud losses in 2023 across all categories", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "Lookalike sites", "label": "a common travel-scam tactic — third-party sites posing as official services", "source": "FTC Consumer Advice", "url": "https://consumer.ftc.gov/scams" }
+      ]
+    },
+    "healthcare-scams": {
+      "context": "Healthcare and medical scams push fake pharmacies, miracle cures, bogus insurance or genetic tests, and \"free\" offers that harvest insurance and identity details for fraudulent billing. Many target older adults and people managing health worries.",
+      "stats": [
+        { "figure": "$2.7B", "label": "reported lost to imposter scams in the US in 2023, including health and insurance impersonation", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "Medical ID theft", "label": "a persistent risk from \"free\" test and insurance offers that harvest your details", "source": "FTC Consumer Advice", "url": "https://consumer.ftc.gov/scams" }
+      ]
+    },
+    "identity-theft-scams": {
+      "context": "Identity theft uses stolen personal data — from phishing, data breaches, or mail theft — to open accounts, claim benefits, or take over existing accounts in your name. It can go undetected for months, which is why early monitoring and credit freezes matter.",
+      "stats": [
+        { "figure": "1M+", "label": "identity-theft reports are made to the FTC each year", "source": "US Federal Trade Commission", "url": "https://www.identitytheft.gov" },
+        { "figure": "$10.3B", "label": "total reported US fraud losses in 2023", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "business-scams": {
+      "context": "Small-business and workplace scams target companies with fake invoices, supplier and CEO impersonation, payroll diversion, bogus directory or registration fees, and purchase-order fraud. Business email compromise is among the costliest of all frauds.",
+      "stats": [
+        { "figure": "$2.9B", "label": "reported lost to business email compromise (BEC) in the US in 2023", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" },
+        { "figure": "$12.5B", "label": "total reported internet-crime losses in the US in 2023", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" }
+      ]
+    },
+    "gaming-scams": {
+      "context": "Gaming and in-app scams target players with fake currency generators, account trading and phishing, rigged item trades, and malicious mods. They aim at accounts, in-game items, and payment details, and often hit younger users hardest.",
+      "stats": [
+        { "figure": "Accounts & items", "label": "the core targets of gaming scams — logins, inventories, and linked payment methods", "source": "FTC Consumer Advice", "url": "https://consumer.ftc.gov/scams" },
+        { "figure": "$1.4B", "label": "reported lost to fraud that started on social media in 2023, where many gaming scams spread", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "ai-scams": {
+      "context": "AI and deepfake scams use cloned voices, fabricated videos, and imitation AI apps to impersonate people and brands convincingly. They power investment fraud, \"family emergency\" calls, and fake endorsements, making long-running scams far more believable.",
+      "stats": [
+        { "figure": "Rising threat", "label": "voice cloning and deepfakes are increasingly used to make impersonation scams more convincing", "source": "FBI Internet Crime Complaint Center", "url": "https://www.ic3.gov" },
+        { "figure": "$2.7B", "label": "reported lost to imposter scams in the US in 2023, a category AI is making more effective", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
+      ]
+    },
+    "utility-scams": {
+      "context": "Utility and energy scams impersonate your provider with disconnection threats, fake refunds, bogus grants, and doorstep \"inspectors\". They pressure fast payment — often by gift card or transfer — that a real utility would never demand.",
+      "stats": [
+        { "figure": "$2.7B", "label": "reported lost to imposter scams in the US in 2023, including utility impersonation", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+        { "figure": "Gift cards", "label": "a demand real utilities never make, but scammers frequently do", "source": "FTC Consumer Advice", "url": "https://consumer.ftc.gov/scams" }
+      ]
+    }
+  }
+}

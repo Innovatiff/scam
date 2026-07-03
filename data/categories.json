@@ -30,7 +30,11 @@
         "answer": "No. Even opening a scam link can expose information about your device or lead to a convincing fake login page. If you want to check something, visit the company's official website or app directly."
       }
     ],
-    "related": ["delivery-scams", "bank-payment-scams", "government-tax-scams"]
+    "related": [
+      "delivery-scams",
+      "bank-payment-scams",
+      "government-tax-scams"
+    ]
   },
   {
     "slug": "email-scams",
@@ -63,7 +67,11 @@
         "answer": "Do not click anything. You can report it to your email provider as phishing and to the company being impersonated, then delete it."
       }
     ],
-    "related": ["bank-payment-scams", "online-shopping-scams", "social-media-scams"]
+    "related": [
+      "bank-payment-scams",
+      "online-shopping-scams",
+      "social-media-scams"
+    ]
   },
   {
     "slug": "marketplace-scams",
@@ -96,7 +104,11 @@
         "answer": "Keep conversations and payments inside the platform, meet in safe public places for local pickup, and never send a 'fee' to release a payment."
       }
     ],
-    "related": ["online-shopping-scams", "bank-payment-scams", "social-media-scams"]
+    "related": [
+      "online-shopping-scams",
+      "bank-payment-scams",
+      "social-media-scams"
+    ]
   },
   {
     "slug": "job-scams",
@@ -129,7 +141,11 @@
         "answer": "Search for the company independently, contact it through its official website, and be cautious of roles that only communicate through chat apps and pressure you to act fast."
       }
     ],
-    "related": ["social-media-scams", "bank-payment-scams", "email-scams"]
+    "related": [
+      "social-media-scams",
+      "bank-payment-scams",
+      "email-scams"
+    ]
   },
   {
     "slug": "bank-payment-scams",
@@ -162,7 +178,11 @@
         "answer": "Do not use the links or numbers in the message. Call your bank using the number on the back of your card or in its official app, and ask them to confirm."
       }
     ],
-    "related": ["email-scams", "text-message-scams", "crypto-investment-scams"]
+    "related": [
+      "email-scams",
+      "text-message-scams",
+      "crypto-investment-scams"
+    ]
   },
   {
     "slug": "delivery-scams",
@@ -195,7 +215,11 @@
         "answer": "Do not click the link. Verify any delivery directly with the retailer or courier, then report and delete the message."
       }
     ],
-    "related": ["text-message-scams", "online-shopping-scams", "email-scams"]
+    "related": [
+      "text-message-scams",
+      "online-shopping-scams",
+      "email-scams"
+    ]
   },
   {
     "slug": "rental-scams",
@@ -228,7 +252,11 @@
         "answer": "Be cautious with wire transfers, e-transfers, and gift cards, which are hard to reverse. Use traceable methods and get a signed agreement after viewing."
       }
     ],
-    "related": ["marketplace-scams", "bank-payment-scams", "online-shopping-scams"]
+    "related": [
+      "marketplace-scams",
+      "bank-payment-scams",
+      "online-shopping-scams"
+    ]
   },
   {
     "slug": "social-media-scams",
@@ -261,7 +289,11 @@
         "answer": "Turn on two-factor authentication, use a strong unique password, and be cautious with links in DMs, even from accounts you know."
       }
     ],
-    "related": ["job-scams", "email-scams", "marketplace-scams"]
+    "related": [
+      "job-scams",
+      "email-scams",
+      "marketplace-scams"
+    ]
   },
   {
     "slug": "online-shopping-scams",
@@ -294,7 +326,11 @@
         "answer": "Do not click the links. Log in to the real retailer's website directly to check your orders, and treat the email as possible phishing."
       }
     ],
-    "related": ["email-scams", "marketplace-scams", "delivery-scams"]
+    "related": [
+      "email-scams",
+      "marketplace-scams",
+      "delivery-scams"
+    ]
   },
   {
     "slug": "crypto-investment-scams",
@@ -327,7 +363,11 @@
         "answer": "Verify whether the company is registered with your local financial regulator, and be cautious of anyone who contacts you first with an investment opportunity."
       }
     ],
-    "related": ["bank-payment-scams", "social-media-scams", "job-scams"]
+    "related": [
+      "bank-payment-scams",
+      "social-media-scams",
+      "job-scams"
+    ]
   },
   {
     "slug": "government-tax-scams",
@@ -360,6 +400,380 @@
         "answer": "Do not use the contact details in the message. Look up the agency's official website or phone number independently and confirm any claim directly."
       }
     ],
-    "related": ["bank-payment-scams", "text-message-scams", "email-scams"]
+    "related": [
+      "bank-payment-scams",
+      "text-message-scams",
+      "email-scams"
+    ]
+  },
+  {
+    "slug": "phone-call-scams",
+    "name": "Phone & Voice Scams",
+    "shortName": "Phone & Voice",
+    "icon": "phone",
+    "plannedPages": 60,
+    "metaTitle": "Phone & Voice Scams (Vishing): Red Flags and Examples",
+    "metaDescription": "Recognise phone call and voicemail scams (vishing): robocalls, spoofed numbers, fake bank and agency calls, and voice cloning. See red flags and what to do.",
+    "summary": "Phone scams (vishing) use live calls, robocalls, and voicemails to impersonate banks, agencies, and companies and pressure you into payments, codes, or remote access.",
+    "intro": "Phone and voice scams reach you through live calls, automated robocalls, and voicemails. Scammers spoof real numbers to appear as your bank, a government agency, tech support, or a delivery company, then use urgency, threats, or reassurance to get you to share codes, move money, grant remote access, or call a premium number. Increasingly, they also use AI voice cloning to imitate people you know.",
+    "redFlags": [
+      "An unexpected call pressuring you to act immediately",
+      "Caller ID that appears to show a bank, agency, or company",
+      "A request for one-time codes, PINs, or passwords",
+      "Instructions to move money, buy gift cards, or grant remote access",
+      "A recorded message telling you to press a key or call a number back"
+    ],
+    "faqs": [
+      {
+        "question": "Can caller ID be faked?",
+        "answer": "Yes. Scammers spoof numbers so the call appears to come from your bank or a real agency. Do not trust caller ID alone; hang up and call back on an official number."
+      },
+      {
+        "question": "Will my bank ever ask for a code over the phone?",
+        "answer": "No. Banks never ask you to read out one-time codes, PINs, or full passwords. Anyone who does is a scammer, even if the call seems official."
+      },
+      {
+        "question": "How do I check a suspicious call?",
+        "answer": "Hang up, wait a moment or use another phone, and call the organisation back using the number on your card, a bill, or its official website."
+      }
+    ],
+    "related": [
+      "bank-payment-scams",
+      "government-tax-scams",
+      "tech-support-scams"
+    ]
+  },
+  {
+    "slug": "romance-scams",
+    "name": "Romance & Dating Scams",
+    "shortName": "Romance",
+    "icon": "heart",
+    "plannedPages": 40,
+    "metaTitle": "Romance & Dating Scams: Red Flags and Examples",
+    "metaDescription": "Spot romance and dating scams: fake profiles, love bombing, requests for money, crypto investment lures, and sextortion. See red flags and safe steps.",
+    "summary": "Romance scams build a fake relationship online to gain trust, then ask for money, gifts, or investment, or use intimate images for blackmail.",
+    "intro": "Romance and dating scams begin with a fake or stolen identity on a dating app or social platform. The scammer builds trust quickly with constant attention, then invents a crisis, a travel cost, or a can't-lose investment to extract money, gifts, or cryptocurrency. Some pivot to blackmail using intimate images. They almost always avoid meeting in person or on live video.",
+    "redFlags": [
+      "A new online partner who quickly professes strong feelings",
+      "Excuses that prevent meeting in person or on live video",
+      "Requests for money, gift cards, or crypto for emergencies or travel",
+      "Being introduced to a 'great' investment or trading platform",
+      "Pressure to move to a private messaging app"
+    ],
+    "faqs": [
+      {
+        "question": "Why won't they meet in person or on video?",
+        "answer": "Scammers using a fake or stolen identity avoid live video and in-person meetings, offering constant excuses. A refusal to verify who they are is a major warning sign."
+      },
+      {
+        "question": "Is it safe to send money to an online partner?",
+        "answer": "Be very cautious. Requests for money, gift cards, or crypto from someone you have only met online are a hallmark of romance scams, however genuine the relationship feels."
+      },
+      {
+        "question": "They introduced me to an investment. Is that normal?",
+        "answer": "No. A new online partner steering you to a crypto or trading platform is a common romance-investment scam. Never invest on a partner's say-so."
+      }
+    ],
+    "related": [
+      "social-media-scams",
+      "crypto-investment-scams",
+      "bank-payment-scams"
+    ]
+  },
+  {
+    "slug": "tech-support-scams",
+    "name": "Tech Support & Computer Scams",
+    "shortName": "Tech Support",
+    "icon": "monitor",
+    "plannedPages": 40,
+    "metaTitle": "Tech Support & Computer Scams: Red Flags to Spot",
+    "metaDescription": "Recognise tech support and computer scams: fake virus pop-ups, cold calls, remote access, refund tricks, and fake antivirus. See red flags and what to do.",
+    "summary": "Tech support scams use fake virus warnings, pop-ups, and cold calls to gain remote access to your device, steal data, or trick you into bogus payments and refunds.",
+    "intro": "Tech support and computer scams convince you that your device is infected, hacked, or compromised. They appear as alarming pop-ups, cold calls claiming to be from a well-known software company, or fake security alerts, and push you to call a number, install remote-access software, or pay for fake fixes and subscriptions. Once given access, scammers can view your screen, steal data, and manipulate your accounts.",
+    "redFlags": [
+      "A pop-up or call claiming your device is infected or hacked",
+      "A request to install remote-access software",
+      "Pressure to pay for fixes, subscriptions, or refunds",
+      "A 'support' number from a pop-up, ad, or search result",
+      "Requests for passwords, card details, or remote control"
+    ],
+    "faqs": [
+      {
+        "question": "Can a website or pop-up detect a virus on my device?",
+        "answer": "No. A web page cannot scan your device. Pop-ups claiming you are infected and urging you to call a number are scams designed to scare you."
+      },
+      {
+        "question": "Should I let 'support' connect to my device?",
+        "answer": "Only if you contacted a provider you trust through official channels. Granting remote access to an unsolicited caller lets scammers control your device and accounts."
+      },
+      {
+        "question": "How do I find genuine tech support?",
+        "answer": "Use the official website or documentation for your device or software, not a number from a pop-up, ad, or search result."
+      }
+    ],
+    "related": [
+      "email-scams",
+      "phone-call-scams",
+      "bank-payment-scams"
+    ]
+  },
+  {
+    "slug": "travel-scams",
+    "name": "Travel & Holiday Scams",
+    "shortName": "Travel",
+    "icon": "plane",
+    "plannedPages": 35,
+    "metaTitle": "Travel & Holiday Scams: Booking and Trip Red Flags",
+    "metaDescription": "Spot travel and holiday scams: fake flights, hotels, holiday lets, visas, and package deals. See common red flags and how to book safely.",
+    "summary": "Travel scams use fake flights, accommodation, packages, and visa services to take deposits and payments for trips that do not exist.",
+    "intro": "Travel and holiday scams target people booking trips, using fake or copied listings, too-good-to-be-true package deals, and bogus visa or travel-authorisation services. Scammers take deposits or full payment by transfer for flights, hotels, or holiday lets that do not exist, or impersonate official visa sites to overcharge and harvest passport details. Many appear briefly through social media ads or unofficial websites.",
+    "redFlags": [
+      "Prices far below normal for flights, hotels, or packages",
+      "Payment requested by bank transfer or gift card",
+      "Pressure to pay a deposit quickly to 'secure' a deal",
+      "Unofficial visa or travel-authorisation sites with high fees",
+      "Listings or agencies you cannot independently verify"
+    ],
+    "faqs": [
+      {
+        "question": "How can I book travel safely?",
+        "answer": "Use reputable, verifiable airlines, hotels, and platforms, pay by a method with protection, and confirm flights and hotels directly with the providers."
+      },
+      {
+        "question": "Why is a very cheap deal a warning sign?",
+        "answer": "Prices far below normal, plus pressure to pay a deposit by transfer, are classic signs of a fake travel deal. Verify the seller before paying."
+      },
+      {
+        "question": "Where should I apply for a visa or travel authorisation?",
+        "answer": "Only through the official government immigration website for your destination, found directly rather than via search ads charging inflated fees."
+      }
+    ],
+    "related": [
+      "online-shopping-scams",
+      "rental-scams",
+      "government-tax-scams"
+    ]
+  },
+  {
+    "slug": "healthcare-scams",
+    "name": "Healthcare & Medical Scams",
+    "shortName": "Healthcare",
+    "icon": "medical",
+    "plannedPages": 30,
+    "metaTitle": "Healthcare & Medical Scams: Red Flags to Watch",
+    "metaDescription": "Recognise healthcare and medical scams: fake insurance, pharmacies, miracle cures, medical devices, and patient-portal phishing. See red flags and safe steps.",
+    "summary": "Healthcare scams exploit health worries with fake insurance, pharmacies, miracle cures, and medical-device offers, or phish your health and identity data.",
+    "intro": "Healthcare and medical scams prey on health concerns and the cost of care. They include fake health insurance and discount plans, rogue online pharmacies, miracle cures and supplements, overpriced or fake medical devices, and phishing that impersonates patient portals, Medicare, or health agencies. Beyond financial loss, they risk your health and expose sensitive medical and identity data.",
+    "redFlags": [
+      "Unsolicited offers of cheap insurance, medication, or cures",
+      "Miracle or guaranteed health claims",
+      "Requests for health, identity, or payment details",
+      "Pressure to enrol, buy, or verify immediately",
+      "Providers and pharmacies you cannot verify"
+    ],
+    "faqs": [
+      {
+        "question": "How do I check a health provider or pharmacy is genuine?",
+        "answer": "Verify it with your official health regulator or pharmacy register, and be wary of unsolicited offers, miracle claims, and prices that seem too good to be true."
+      },
+      {
+        "question": "Why are miracle cures a warning sign?",
+        "answer": "Guaranteed cures and dramatic results are not how genuine medicine works. Such claims, often with free-trial billing traps, are a hallmark of health scams."
+      },
+      {
+        "question": "Is my health data valuable to scammers?",
+        "answer": "Yes. Health and identity data can be used for fraud and identity theft, which is why many healthcare scams aim to collect it. Share it only through verified channels."
+      }
+    ],
+    "related": [
+      "government-tax-scams",
+      "online-shopping-scams",
+      "identity-theft-scams"
+    ]
+  },
+  {
+    "slug": "identity-theft-scams",
+    "name": "Identity Theft & Data Scams",
+    "shortName": "Identity Theft",
+    "icon": "id",
+    "plannedPages": 30,
+    "metaTitle": "Identity Theft & Data Scams: Red Flags and Steps",
+    "metaDescription": "Recognise identity theft and data scams: account takeover, SIM swap, data breaches, synthetic identity, and document fraud. See red flags and how to respond.",
+    "summary": "Identity theft scams steal your personal data and credentials to take over accounts, open credit, or impersonate you, often after phishing or data breaches.",
+    "intro": "Identity theft and data scams aim to capture the personal information and credentials needed to impersonate you. They follow on from phishing, data breaches, SIM swaps, and account takeovers, and can be used to open accounts or credit in your name, drain existing accounts, or commit fraud that lands at your door. Spotting the early signs and locking down your accounts quickly limits the damage.",
+    "redFlags": [
+      "Unexpected verification codes, password resets, or account changes",
+      "Bills, accounts, or credit applications you did not make",
+      "Losing mobile signal suddenly, a possible SIM swap",
+      "Mail or statements stopping or going missing",
+      "Notices that your data appeared in a breach"
+    ],
+    "faqs": [
+      {
+        "question": "What should I do first if I suspect identity theft?",
+        "answer": "Secure your email and key accounts with new passwords and two-factor authentication, contact your bank, check your credit report, and report it to your fraud authority."
+      },
+      {
+        "question": "How do scammers get my details?",
+        "answer": "Through phishing, data breaches, SIM swaps, mail theft, and account takeovers. Strong, unique passwords and two-factor authentication make misuse much harder."
+      },
+      {
+        "question": "What is a SIM swap?",
+        "answer": "It is when a scammer takes control of your phone number to intercept codes and calls. A sudden loss of mobile signal can be a sign; contact your carrier immediately."
+      }
+    ],
+    "related": [
+      "bank-payment-scams",
+      "social-media-scams",
+      "email-scams"
+    ]
+  },
+  {
+    "slug": "business-scams",
+    "name": "Small Business & Workplace Scams",
+    "shortName": "Business",
+    "icon": "building",
+    "plannedPages": 35,
+    "metaTitle": "Small Business & Workplace Scams: Red Flags",
+    "metaDescription": "Recognise scams targeting businesses: fake invoices, CEO fraud, supplier and mandate fraud, directory listings, and domain or SEO cons. See red flags and steps.",
+    "summary": "Business scams target companies and employees with fake invoices, CEO and supplier fraud, bogus directory and domain bills, and payroll diversion.",
+    "intro": "Small business and workplace scams target organisations and their staff. They include fake invoices and supplier mandate changes, CEO and business email compromise, bogus directory or trademark listings, domain and SEO cons, payroll diversion, and fake utility or equipment bills. They rely on busy teams, authority, and routine payment processes to slip through, often costing far more than consumer scams.",
+    "redFlags": [
+      "An unexpected change to a supplier's bank details",
+      "Urgent payment or gift card requests from a 'boss'",
+      "Invoices or bills for services you did not order",
+      "Pressure that bypasses normal approval processes",
+      "Look-alike sender addresses and domains"
+    ],
+    "faqs": [
+      {
+        "question": "How do we prevent invoice and mandate fraud?",
+        "answer": "Verify any change to a supplier's bank details by phone using a known number, require dual approval for payments, and be alert to look-alike email addresses."
+      },
+      {
+        "question": "Why are gift card requests from a 'boss' a red flag?",
+        "answer": "Gift card codes are fast and hard to trace, so scammers favour them in CEO fraud. Verify any unusual request in person or on a known number before acting."
+      },
+      {
+        "question": "Are directory and domain bills genuine?",
+        "answer": "Many unsolicited directory, domain, or trademark 'renewal' notices are bogus. Check against your real records and verify the provider before paying."
+      }
+    ],
+    "related": [
+      "email-scams",
+      "bank-payment-scams",
+      "government-tax-scams"
+    ]
+  },
+  {
+    "slug": "gaming-scams",
+    "name": "Gaming & In-App Scams",
+    "shortName": "Gaming",
+    "icon": "gamepad",
+    "plannedPages": 25,
+    "metaTitle": "Gaming & In-App Scams: Red Flags for Players",
+    "metaDescription": "Recognise gaming and in-app scams: free currency generators, account trades, phishing, fake skins, and in-game purchase fraud. See red flags and safe steps.",
+    "summary": "Gaming scams target players with fake free-currency offers, account trades, phishing links, and in-game item fraud that steal logins, money, or accounts.",
+    "intro": "Gaming and in-app scams target players, often younger ones, through free-currency or skin 'generators', account buying and trading, phishing links in chats and Discord servers, fake giveaways, and in-app purchase fraud. They aim to steal account logins, payment details, or valuable in-game items, and frequently use the promise of free rewards and urgency to lower players' guard.",
+    "redFlags": [
+      "Offers of free in-game currency, skins, or items",
+      "A request to log in via a link or share your account",
+      "Account buying, selling, or 'boosting' from strangers",
+      "Fake giveaways requiring a fee or your login",
+      "Pressure to act fast before an offer expires"
+    ],
+    "faqs": [
+      {
+        "question": "Are free currency or skin generators real?",
+        "answer": "No. 'Generators' for free in-game currency or items are scams that steal logins or push surveys and malware. Genuine currency is bought through official stores."
+      },
+      {
+        "question": "Is it safe to buy or sell game accounts?",
+        "answer": "It is risky and often against the rules. Buyers can be scammed and accounts reclaimed, and sharing logins can lead to takeover. Avoid account trading with strangers."
+      },
+      {
+        "question": "How do I protect my gaming account?",
+        "answer": "Use a strong unique password, enable two-factor authentication, and never log in through links in chats, DMs, or 'giveaway' pages."
+      }
+    ],
+    "related": [
+      "social-media-scams",
+      "online-shopping-scams",
+      "identity-theft-scams"
+    ]
+  },
+  {
+    "slug": "ai-scams",
+    "name": "AI & Deepfake Scams",
+    "shortName": "AI & Deepfake",
+    "icon": "cpu",
+    "plannedPages": 20,
+    "metaTitle": "AI & Deepfake Scams: Voice and Video Red Flags",
+    "metaDescription": "Recognise AI and deepfake scams: cloned voices, fake celebrity videos, AI investment bots, and synthetic identities. See red flags and how to verify.",
+    "summary": "AI scams use cloned voices, deepfake videos, and synthetic identities to impersonate people you trust and lend false credibility to fraud.",
+    "intro": "AI and deepfake scams use generated voices, faces, and text to make fraud more convincing. They include cloned voices imitating a relative in distress, deepfake videos of celebrities or officials endorsing schemes, AI 'trading bots' promising guaranteed returns, and synthetic identities built to pass checks. The defence is the same as ever: slow down, verify through trusted channels, and treat urgency and too-good-to-be-true offers with caution.",
+    "redFlags": [
+      "A 'relative' in urgent trouble whose voice sounds slightly off",
+      "A celebrity or official video endorsing a money-making scheme",
+      "Pressure to act before you can verify",
+      "An AI bot or platform promising guaranteed returns",
+      "Requests for money, codes, or details based on a call or video alone"
+    ],
+    "faqs": [
+      {
+        "question": "Can scammers really clone a voice?",
+        "answer": "Yes. With a short audio sample, AI can imitate someone's voice. If a 'relative' calls in urgent trouble, verify by calling them back on their known number and ask a question only they would know."
+      },
+      {
+        "question": "How do I spot a deepfake video?",
+        "answer": "Look for odd lighting, glitches, or lip-sync issues, and be sceptical of celebrities or officials endorsing money-making schemes. Always verify through official, verified channels."
+      },
+      {
+        "question": "Are AI trading bots legitimate?",
+        "answer": "Promises of guaranteed returns from an 'AI bot' are a hallmark of investment fraud. No bot can guarantee profits, and many are simply a front for a scam platform."
+      }
+    ],
+    "related": [
+      "phone-call-scams",
+      "social-media-scams",
+      "crypto-investment-scams"
+    ]
+  },
+  {
+    "slug": "utility-scams",
+    "name": "Utility & Energy Scams",
+    "shortName": "Utility & Energy",
+    "icon": "bolt",
+    "plannedPages": 25,
+    "metaTitle": "Utility & Energy Scams: Bill and Refund Red Flags",
+    "metaDescription": "Recognise utility and energy scams: fake disconnection threats, refunds, meter and grant cons, and supplier impersonation. See red flags and how to check.",
+    "summary": "Utility scams impersonate energy, water, and broadband providers with fake bills, refunds, disconnection threats, and grant or meter cons.",
+    "intro": "Utility and energy scams impersonate your electricity, gas, water, or broadband provider. They use fake overdue bills, refund or rebate lures, disconnection threats, and bogus grant, meter, or efficiency schemes to collect payments and card or account details, or to gain access to your home. They often spike when energy costs rise and people are anxious about bills.",
+    "redFlags": [
+      "A bill, refund, or disconnection threat demanding urgent payment",
+      "A link to pay or confirm details outside your provider's app",
+      "Unsolicited 'grant', meter, or efficiency offers",
+      "Callers or visitors pressuring you about your supply",
+      "Requests for card or account details to avoid a cut-off"
+    ],
+    "faqs": [
+      {
+        "question": "Can my utility supply be cut off without warning?",
+        "answer": "Genuine suppliers handle arrears through proper notices and your account, not urgent calls or texts demanding instant payment to avoid disconnection. Verify any threat with your provider directly."
+      },
+      {
+        "question": "How do I check a utility refund or grant is real?",
+        "answer": "Log in to your provider's official app or website, or call the number on a genuine bill. Never confirm card details or pay via a link in an unexpected message."
+      },
+      {
+        "question": "Someone came to my door about my meter or energy. Is it safe?",
+        "answer": "Ask for identification, do not feel pressured, and verify with your supplier using official contacts before allowing access or agreeing to anything."
+      }
+    ],
+    "related": [
+      "bank-payment-scams",
+      "government-tax-scams",
+      "online-shopping-scams"
+    ]
   }
 ]
