@@ -251,7 +251,7 @@ function analyticsScript() {
 </script>`;
 }
 
-function layout({ title, description, canonical, bodyClass = "", main, jsonld = [], extraScripts = "", ogType = "website" }) {
+function layout({ title, description, canonical, bodyClass = "", main, jsonld = [], extraScripts = "", ogType = "website", robots = "index, follow, max-image-preview:large" }) {
   const url = config.url.replace(/\/$/, "") + canonical;
   const ld = jsonld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n");
   return `<!DOCTYPE html>
@@ -263,7 +263,7 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${esc(url)}">
 <meta name="theme-color" content="#0F172A">
-<meta name="robots" content="index, follow, max-image-preview:large">${config.googleSiteVerification ? `
+<meta name="robots" content="${esc(robots)}">${config.googleSiteVerification ? `
 <meta name="google-site-verification" content="${esc(config.googleSiteVerification)}">` : ""}
 <meta property="og:type" content="${esc(ogType)}">
 <meta property="og:site_name" content="${esc(config.siteName)}">
@@ -1087,7 +1087,7 @@ function notFoundPage() {
   return layout({
     title: `Page Not Found | ${config.siteName}`,
     description: "The page you were looking for could not be found.",
-    canonical: "/404.html", main
+    canonical: "/404.html", main, robots: "noindex, follow"
   });
 }
 
