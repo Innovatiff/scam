@@ -14,7 +14,15 @@
     });
   }
 
-  // Dark / light theme toggle (attribute is pre-set by the inline head script)
+  // Dark / light theme toggle (attribute is pre-set by the inline head script).
+  // Also keeps the mobile browser chrome (theme-color) in sync with the theme.
+  function syncThemeColor() {
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) return;
+    var dark = document.documentElement.getAttribute("data-theme") === "dark";
+    meta.setAttribute("content", dark ? "#0B1220" : "#F8FAFC");
+  }
+  syncThemeColor();
   var themeBtn = document.getElementById("theme-toggle");
   if (themeBtn) {
     themeBtn.addEventListener("click", function () {
@@ -22,6 +30,7 @@
       var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("sos-theme", next); } catch (e) { /* ignore */ }
+      syncThemeColor();
     });
   }
 

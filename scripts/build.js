@@ -5,6 +5,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -33,6 +34,23 @@ function readJSON(rel) {
 function readJSONSafe(rel, fallback) {
   try { return readJSON(rel); } catch (e) { return fallback; }
 }
+
+/* Asset cache-busting: /assets/* is served with a 1-year immutable cache, so
+   every reference carries a content hash — when CSS/JS change, the URL changes
+   and browsers fetch the new file instead of a year-old cached one. */
+const ASSET_VER = (() => {
+  const files = [];
+  (function walk(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) walk(p); else files.push(p);
+    }
+  })(path.join(SRC, "assets"));
+  const h = crypto.createHash("md5");
+  for (const f of files.sort()) h.update(fs.readFileSync(f));
+  return h.digest("hex").slice(0, 10);
+})();
+function asset(p) { return `${p}?v=${ASSET_VER}`; }
 
 /* --------------------------------------------------------------- helpers --- */
 function esc(s) {
@@ -306,7 +324,7 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${esc(url)}">
-<meta name="theme-color" content="#0F172A">
+<meta name="theme-color" content="#F8FAFC">
 <meta name="robots" content="${esc(robots)}">${config.googleSiteVerification ? `
 <meta name="google-site-verification" content="${esc(config.googleSiteVerification)}">` : ""}
 <meta property="og:type" content="${esc(ogType)}">
@@ -320,8 +338,8 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <meta name="twitter:description" content="${esc(description)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/rss+xml" title="${esc(config.siteName)} — Updates" href="/feed.xml">
-<link rel="preload" href="/assets/css/styles.css" as="style">
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="preload" href="${asset("/assets/css/styles.css")}" as="style">
+<link rel="stylesheet" href="${asset("/assets/css/styles.css")}">
 ${ld}
 ${adsenseHead()}
 </head>
@@ -332,7 +350,7 @@ ${header()}
 ${main}
 </main>
 ${footer()}
-<script src="/assets/js/main.js" defer></script>
+<script src="${asset("/assets/js/main.js")}" defer></script>
 ${extraScripts}
 ${analyticsScript()}
 </body>
@@ -512,7 +530,7 @@ ${adSlot("home-mid")}
     description: config.shortDescription,
     canonical: "/",
     main, jsonld,
-    extraScripts: `<script src="/assets/js/checker.js" defer></script><script src="/assets/js/home.js" defer></script>`
+    extraScripts: `<script src="${asset("/assets/js/checker.js")}" defer></script><script src="${asset("/assets/js/home.js")}" defer></script>`
   });
 }
 
@@ -591,7 +609,7 @@ ${breadcrumbs(trail)}
     canonical: "/scam-checker/",
     main,
     jsonld: [breadcrumbLD(trail), faqLD(checkerFaqs)],
-    extraScripts: `<script src="/assets/js/checker.js" defer></script><script src="/assets/js/checker-page.js" defer></script>`
+    extraScripts: `<script src="${asset("/assets/js/checker.js")}" defer></script><script src="${asset("/assets/js/checker-page.js")}" defer></script>`
   });
 }
 const checkerFaqs = [
@@ -1235,8 +1253,24 @@ ${breadcrumbs(trail)}
 </section>
 <section class="prose">
   <div class="container narrow quiz-shell">
-    <div id="quiz-app">
-      <noscript><div class="notice">The interactive quiz needs JavaScript. You can still learn every pattern it covers in our <a href="/scam-types/">scam guides</a>.</div></noscript>
+    <div class="quiz-launcher" id="quiz-app">
+      <div class="quiz-launcher-inner">
+        <div class="quiz-launcher-icon" aria-hidden="true">${icon("eye")}</div>
+        <h2 style="margin:0 0 6px">Ready to test yourself?</h2>
+        <p class="muted" style="margin:0 0 18px">10 questions · about 2 minutes · nothing is recorded</p>
+        <button class="btn btn-primary btn-lg" data-quiz-open id="quiz-start">Start the quiz</button>
+      </div>
+      <noscript><div class="notice" style="margin-top:14px">The interactive quiz needs JavaScript. You can still learn every pattern it covers in our <a href="/scam-types/">scam guides</a>.</div></noscript>
+    </div>
+
+    <div class="quiz-overlay" id="quiz-modal" hidden>
+      <div class="quiz-modal" role="dialog" aria-modal="true" aria-label="Can you spot the scam? quiz">
+        <div class="quiz-modal-head">
+          <div class="quiz-bar-track" aria-hidden="true"><span id="quiz-bar"></span></div>
+          <button class="quiz-close" id="quiz-close" aria-label="Close quiz">&times;</button>
+        </div>
+        <div class="quiz-stage" id="quiz-stage"></div>
+      </div>
     </div>
     <script type="application/json" id="quiz-data">${dataJson}</script>
 
@@ -1258,7 +1292,7 @@ ${breadcrumbs(trail)}
     canonical: "/quiz/",
     main,
     jsonld: [breadcrumbLD(trail)],
-    extraScripts: `<script src="/assets/js/quiz.js" defer></script>`
+    extraScripts: `<script src="${asset("/assets/js/quiz.js")}" defer></script>`
   });
 }
 
@@ -1314,7 +1348,7 @@ ${breadcrumbs(trail)}
     canonical: "/scam-of-the-week/",
     main,
     jsonld: [breadcrumbLD(trail)],
-    extraScripts: `<script src="/assets/js/sotw.js" defer></script>`
+    extraScripts: `<script src="${asset("/assets/js/sotw.js")}" defer></script>`
   });
 }
 
