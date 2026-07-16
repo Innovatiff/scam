@@ -106,6 +106,56 @@
     render(text);
   });
 
+  /* ---- Recent checks (opt-out-able, stored ONLY in this browser's
+     localStorage; a dated risk-level summary, never the full message). ---- */
+  var checksBox = document.getElementById("recent-checks");
+  var checksList = document.getElementById("recent-checks-list");
+  var clearBtn = document.getElementById("clear-checks");
+  var CHECKS_KEY = "sos-checks";
+
+  function loadChecks() {
+    try { return JSON.parse(localStorage.getItem(CHECKS_KEY)) || []; }
+    catch (e) { return []; }
+  }
+  function renderChecks() {
+    if (!checksBox || !checksList) return;
+    var items = loadChecks();
+    if (!items.length) { checksBox.classList.add("hidden"); return; }
+    checksList.innerHTML = items.map(function (c) {
+      var color = c.level === "High" ? "var(--red)" : c.level === "Medium" ? "#B45309" : "var(--green)";
+      return '<li><span class="lvl" style="color:' + color + '">' + esc(c.level) + " risk</span>" +
+        ' — “' + esc(c.snippet) + '…” <span class="muted">(' + esc(c.date) + ")</span></li>";
+    }).join("");
+    checksBox.classList.remove("hidden");
+  }
+  function saveCheck(level, text) {
+    try {
+      var items = loadChecks();
+      items.unshift({
+        level: level,
+        snippet: text.replace(/\s+/g, " ").slice(0, 60),
+        date: new Date().toLocaleDateString()
+      });
+      localStorage.setItem(CHECKS_KEY, JSON.stringify(items.slice(0, 5)));
+      renderChecks();
+    } catch (e) { /* storage unavailable; ignore */ }
+  }
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      try { localStorage.removeItem(CHECKS_KEY); } catch (err) { /* ignore */ }
+      renderChecks();
+    });
+  }
+  // Wrap render() so each completed check is summarised into local history.
+  var origRender = render;
+  render = function (text) {
+    origRender(text);
+    var r = C.analyze(text);
+    saveCheck(r.level, text);
+  };
+  renderChecks();
+
   // Hand-off from the homepage hero box (ephemeral; cleared immediately).
   try {
     var handoff = sessionStorage.getItem("itas_check");

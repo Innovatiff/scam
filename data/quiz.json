@@ -1,0 +1,82 @@
+[
+  {
+    "from": "Text message from \"ParcelExpress\"",
+    "text": "Your package could not be delivered due to an incomplete address. Pay a $1.10 redelivery fee to release it: bit.ly/pkg-fix2",
+    "answer": "scam",
+    "explain": "Couriers do not collect small fees through shortened links. The tiny amount exists to harvest your card details on a cloned payment page.",
+    "tells": ["A fee demanded via a link", "A shortened URL hiding the destination", "Urgency around a held parcel"],
+    "guide": { "title": "Fake Delivery Text Scam", "url": "/scams/fake-delivery-text-scam/" }
+  },
+  {
+    "from": "Email that looks like PayPal",
+    "text": "You've received $850.00 from a buyer. The funds are PENDING and will be released once you ship the item and reply with a tracking number.",
+    "answer": "scam",
+    "explain": "Real payment platforms never hold money until you email a tracking number. This forged email is designed to make you ship goods that were never paid for.",
+    "tells": ["\"Pending\" payment conditional on shipping", "Instructions arriving by email, not in your account", "Pressure to ship quickly"],
+    "guide": { "title": "PayPal Payment Pending Scam", "url": "/scams/paypal-payment-pending-scam/" }
+  },
+  {
+    "from": "Text message from your bank's short code",
+    "text": "FreeBank: We declined a card payment of $203.50 today at 2:14pm. If this was you, no action is needed. If not, please call the number on the back of your card.",
+    "answer": "genuine",
+    "explain": "This is how a legitimate alert tends to look: no link to click, no code to share, no panic deadline — and it directs you to the number printed on your own card. Even so, always verify through your official app rather than trusting any message alone.",
+    "tells": ["No link and no request for details", "Points you to the number on your card, not one in the message", "No urgency or threat"],
+    "guide": { "title": "Fake Bank Alert Text Scam", "url": "/scams/fake-bank-alert-text-scam/" }
+  },
+  {
+    "from": "Instagram direct message",
+    "text": "Congratulations! Your account was selected for our $500 giveaway 🎉 To claim your prize, just cover the $9.99 verification fee and confirm your card details.",
+    "answer": "scam",
+    "explain": "Real giveaways never require a fee or card details to claim a prize. Paying to receive money is the defining mark of a prize scam.",
+    "tells": ["A prize you never entered for", "A \"verification fee\" to claim it", "Card details requested in a DM"],
+    "guide": { "title": "Fake Giveaway Scam", "url": "/scams/fake-giveaway-scam/" }
+  },
+  {
+    "from": "WhatsApp message from a \"recruiter\"",
+    "text": "We reviewed your resume and you're hired! Earn $450/day completing simple online tasks from home. Deposit $50 to activate your work account and start today.",
+    "answer": "scam",
+    "explain": "In a real job, the employer pays you — never the reverse. Instant hiring with no interview plus an activation deposit is the classic task-scam formula.",
+    "tells": ["Hired instantly with no interview", "You must deposit money to start \"earning\"", "Unrealistic daily pay for simple tasks"],
+    "guide": { "title": "Fake Job Offer Scam", "url": "/scams/fake-job-offer-scam/" }
+  },
+  {
+    "from": "Email about your streaming subscription",
+    "text": "Your Netflix payment failed. Update your billing information within 24 hours or your account will be permanently suspended: netfIix-billing-update.com",
+    "answer": "scam",
+    "explain": "Look closely at the web address — that's a capital \"I\" pretending to be an \"l\". Lookalike domains plus a 24-hour suspension threat are textbook phishing.",
+    "tells": ["A lookalike domain that isn't the real site", "A 24-hour deadline and suspension threat", "A billing \"fix\" that starts from an email link"],
+    "guide": { "title": "Fake Subscription Renewal Email", "url": "/scams/fake-subscription-renewal-email/" }
+  },
+  {
+    "from": "Text message about a delivery",
+    "text": "DHL: Your parcel 29381 arrived at your local depot. You can track it any time in the official DHL app or on dhl.com using your tracking number.",
+    "answer": "genuine",
+    "explain": "This pattern is closer to genuine: it asks for nothing — no fee, no personal details — and points you to the official app or website you find yourself. When in doubt, open the courier's app directly instead of tapping anything in the message.",
+    "tells": ["No payment or personal details requested", "Directs you to the official app/site, not a special link", "No urgency or threat"],
+    "guide": { "title": "Fake Delivery Text Scam", "url": "/scams/fake-delivery-text-scam/" }
+  },
+  {
+    "from": "Phone call, recorded voice",
+    "text": "This is Amazon security. A charge of $1,199 for an iPhone was placed on your account this morning. Press 1 now to speak to an agent and cancel this order.",
+    "answer": "scam",
+    "explain": "Amazon does not robocall about suspicious orders and ask you to press a key. The \"agent\" will push remote-access software or gift-card payments. Check your account only through the official app.",
+    "tells": ["A robocall about an order you don't recognise", "\"Press 1\" routing to a fake agent", "Fear of a large charge driving fast action"],
+    "guide": { "title": "Fake Amazon Call Scam", "url": "/scams/amazon-call-scam/" }
+  },
+  {
+    "from": "Text from an unknown number",
+    "text": "Hi grandma, my phone broke — this is my new number. I'm in trouble and need $300 urgently. Can you get gift cards? Please don't tell mom, she'll worry.",
+    "answer": "scam",
+    "explain": "A new number, an urgent crisis, gift cards, and a plea for secrecy: every element here is a grandparent-scam staple. Verify by calling the family member's real number.",
+    "tells": ["A \"new number\" claiming to be family", "Payment demanded in gift cards", "Secrecy — \"don't tell mom\""],
+    "guide": { "title": "Grandparent Phone Scam", "url": "/scams/grandparent-phone-scam/" }
+  },
+  {
+    "from": "Email from your energy provider",
+    "text": "Your July statement is ready. Log in to your account on our website — the address printed on your bill — to view it. No payment is due until August 3.",
+    "answer": "genuine",
+    "explain": "This reads like a genuine notice: no embedded \"pay now\" link, no threat of disconnection, and it tells you to use the address printed on your own bill. Compare that with scam versions demanding instant payment by gift card.",
+    "tells": ["No urgent payment demand", "Directs you to the address on your bill, not a link", "A normal due date, not a same-day threat"],
+    "guide": { "title": "Energy Disconnection Threat Scam", "url": "/scams/disconnection-threat-scam/" }
+  }
+]

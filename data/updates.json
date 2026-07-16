@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-07-16",
+    "title": "New: the \"Can you spot the scam?\" quiz",
+    "summary": "Test yourself against ten realistic message patterns and learn the tell that gives each one away.",
+    "url": "/quiz/"
+  },
+  {
+    "date": "2026-07-16",
+    "title": "Scam of the Week launched",
+    "summary": "A rotating weekly spotlight on one high-impact scam, with the full in-depth guide behind it.",
+    "url": "/scam-of-the-week/"
+  },
+  {
+    "date": "2026-07-12",
+    "title": "Report-a-scam hub rebuilt with country-specific contacts",
+    "summary": "Official reporting bodies for the US, UK, Canada, Australia, New Zealand, Ireland and the EU, plus an immediate-action checklist.",
+    "url": "/report-a-scam/"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "Cited fraud statistics added to every guide",
+    "summary": "All 600 guides now include figures sourced from the FTC, FBI IC3, UK Finance and other fraud-prevention authorities.",
+    "url": "/how-we-review-scams/"
+  },
+  {
+    "date": "2026-07-08",
+    "title": "Ten in-depth flagship guides published",
+    "summary": "Step-by-step breakdowns, realistic scenarios, variations and sources for the highest-impact scams, from fake bank alerts to crypto platforms.",
+    "url": "/scams/fake-bank-alert-text-scam/"
+  },
+  {
+    "date": "2026-07-05",
+    "title": "600 guides milestone reached",
+    "summary": "The guide library now covers 600 scams across 21 categories, including AI & deepfake, gaming, healthcare and utility scams.",
+    "url": "/scam-types/"
+  },
+  {
+    "date": "2026-07-01",
+    "title": "Ten new scam categories added",
+    "summary": "New hubs for phone & voice, romance, tech support, travel, healthcare, identity theft, small business, gaming, AI and utility scams.",
+    "url": "/scam-types/"
+  }
+]

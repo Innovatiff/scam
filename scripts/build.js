@@ -19,6 +19,8 @@ const scams = readJSON("data/scams.json");
 const deepDives = readJSONSafe("data/deepdives.json", {});
 const reporting = readJSONSafe("data/reporting.json", null);
 const statsData = readJSONSafe("data/stats.json", null);
+const updates = readJSONSafe("data/updates.json", []);
+const quizData = readJSONSafe("data/quiz.json", []);
 
 const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 const scamBySlug = Object.fromEntries(scams.map((s) => [s.slug, s]));
@@ -89,21 +91,24 @@ function icon(name, cls = "") {
 /* ------------------------------------------------------------- nav config --- */
 const NAV = [
   ["Scam Checker", "/scam-checker/"],
+  ["Quiz", "/quiz/"],
   ["Scam Types", "/scam-types/"],
-  ["Popular Guides", "/#popular-guides"],
-  ["Report Resources", "/report-a-scam/"],
-  ["About", "/about/"]
+  ["Scam of the Week", "/scam-of-the-week/"],
+  ["Report Resources", "/report-a-scam/"]
 ];
 
 const FOOTER_LINKS = {
   Resources: [
     ["Scam Checker", "/scam-checker/"],
+    ["Spot-the-Scam Quiz", "/quiz/"],
+    ["Scam of the Week", "/scam-of-the-week/"],
     ["All Scam Types", "/scam-types/"],
-    ["How We Review Scams", "/how-we-review-scams/"],
-    ["Report a Scam", "/report-a-scam/"]
+    ["Report a Scam", "/report-a-scam/"],
+    ["Updates feed (RSS)", "/feed.xml"]
   ],
   Company: [
     ["About", "/about/"],
+    ["How We Review Scams", "/how-we-review-scams/"],
     ["Contact", "/contact/"]
   ],
   Legal: [
@@ -113,20 +118,58 @@ const FOOTER_LINKS = {
   ]
 };
 
+/* ------------------------------------------------ category accents (brand) --- */
+const ACCENTS = ["#2563EB", "#7C3AED", "#DB2777", "#EA580C", "#D97706", "#059669",
+  "#0D9488", "#0284C7", "#4F46E5", "#DC2626", "#65A30D", "#9333EA"];
+const accentByCat = {};
+categories.forEach((c, i) => {
+  const hex = ACCENTS[i % ACCENTS.length];
+  accentByCat[c.slug] = `--cat-accent:${hex};--cat-accent-soft:${hex}1F`;
+});
+function catStyle(slug) {
+  return accentByCat[slug] ? ` style="${accentByCat[slug]}"` : "";
+}
+
+/* --------------------------------------------------- scam of the week pick --- */
+const SOTW_ROTATION = [
+  "fake-bank-alert-text-scam", "crypto-investment-scam", "fake-delivery-text-scam",
+  "romance-scam-dm", "fake-job-offer-scam", "amazon-call-scam", "remote-access-scam",
+  "paypal-payment-pending-scam", "instagram-verification-scam",
+  "facebook-marketplace-buyer-email-scam", "deepfake-celebrity-scam", "voice-cloning-scam"
+];
+function isoWeek(d) {
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const day = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - day);
+  const y = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return Math.ceil(((t - y) / 86400000 + 1) / 7);
+}
+function sotwPick() {
+  const list = SOTW_ROTATION.map((s) => scamBySlug[s]).filter(Boolean);
+  return { list, idx: list.length ? isoWeek(new Date()) % list.length : 0 };
+}
+
 /* ------------------------------------------------------------- components --- */
 function header() {
   const links = NAV.map(([t, h]) => `<a href="${h}">${esc(t)}</a>`).join("");
+  const themeToggle = `<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    </button>`;
   return `<header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="/" aria-label="${esc(config.siteName)} home">
       <span class="logo-mark">${icon("shield")}</span>
       <span>Scam or <b>Safe</b></span>
     </a>
-    <button class="nav-toggle" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false">${icon("menu")}</button>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       ${links}
       <a class="btn btn-primary header-cta" href="/scam-checker/">Check a Message</a>
     </nav>
+    <div class="header-actions">
+      ${themeToggle}
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false">${icon("menu")}</button>
+    </div>
   </div>
 </header>`;
 }
@@ -178,7 +221,7 @@ function categoryCard(cat) {
   const count = (scamsByCategory[cat.slug] || []).length;
   const countLabel = count ? `${count} guide${count === 1 ? "" : "s"}` : "Guides coming soon";
   return `<a class="card" href="/${cat.slug}/">
-    <div class="card-icon">${icon(cat.icon)}</div>
+    <div class="card-icon"${catStyle(cat.slug)}>${icon(cat.icon)}</div>
     <h3>${esc(cat.name)}</h3>
     <p>${esc(cat.summary)}</p>
     <p class="card-cat" style="margin-top:10px">${esc(countLabel)}</p>
@@ -258,6 +301,7 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <html lang="${esc(config.lang)}">
 <head>
 <meta charset="utf-8">
+<script>(function(){try{var t=localStorage.getItem("sos-theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
@@ -275,6 +319,7 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="${esc(config.siteName)} — Updates" href="/feed.xml">
 <link rel="preload" href="/assets/css/styles.css" as="style">
 <link rel="stylesheet" href="/assets/css/styles.css">
 ${ld}
@@ -326,28 +371,68 @@ function homePage() {
   ];
   const popular = popularGuideSlugs.map((s) => scamBySlug[s]).filter(Boolean);
 
+  const { list: sotwList, idx: sotwIdx } = sotwPick();
+  const sotw = sotwList[sotwIdx];
+  const newest = scams.slice(-6).reverse();
+  const statCitations = 2 * scams.length;
+
   const main = `
 <section class="hero">
   <div class="container">
     <h1>Check if a message, link, email, or offer looks like a scam.</h1>
-    <p class="sub">Paste suspicious text or browse common scam guides before you click, reply, or send money.</p>
+    <p class="sub">Paste suspicious text or browse ${scams.length}+ plain-language scam guides before you click, reply, or send money.</p>
     <form class="checker-box" id="hero-check-form" action="/scam-checker/" method="get">
       <div class="privacy-note">${icon("lock")}<span>Do not paste passwords, banking details, ID numbers, credit card numbers, or any private information. Your text is checked in your browser and is not stored.</span></div>
       <label for="hero-check-input" class="sr-only" style="font-weight:600">Paste a suspicious message</label>
       <textarea id="hero-check-input" name="q" placeholder="Paste the suspicious text message, email, or DM here…"></textarea>
       <div class="checker-actions">
         <button type="submit" class="btn btn-primary btn-lg">Check for Red Flags</button>
-        <a href="/scam-types/" class="btn btn-secondary btn-lg">Browse Scam Guides</a>
+        <a href="/quiz/" class="btn btn-secondary btn-lg">Try the Scam Quiz</a>
       </div>
     </form>
+    <div class="source-strip">${icon("check")}<span>Guidance built on published data from the FTC, FBI IC3, UK Finance and other fraud-prevention authorities — <a href="/how-we-review-scams/">how we review scams</a>.</span></div>
   </div>
 </section>
 
-${trustStrip()}
+<div class="stats-bar"><div class="container"><div class="stats-grid">
+  <div class="stat-tile"><div class="num">${scams.length}+</div><div class="lbl">scam guides</div></div>
+  <div class="stat-tile"><div class="num">${categories.length}</div><div class="lbl">scam categories</div></div>
+  <div class="stat-tile"><div class="num">${statCitations.toLocaleString("en-US")}+</div><div class="lbl">cited statistics</div></div>
+  <div class="stat-tile"><div class="num">100%</div><div class="lbl">free — no sign-up</div></div>
+</div></div></div>
 
 ${adSlot("home-top")}
 
 <section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Fresh this week</h2>
+      <p>What's new on Scam or Safe, and the scam we think deserves your attention right now.</p>
+    </div>
+    <div class="fresh-grid">
+      <div>
+        <ul class="updates-list">
+          ${updates.slice(0, 5).map((u) => `<li><span class="update-date">${esc(u.date)}</span><span class="update-body"><strong><a href="${esc(u.url)}">${esc(u.title)}</a></strong><span>${esc(u.summary)}</span></span></li>`).join("")}
+        </ul>
+        <p style="margin-top:10px"><a href="/feed.xml">Subscribe to updates (RSS)</a></p>
+      </div>
+      <div>
+        ${sotw ? `<div class="sotw-card">
+          <div class="sotw-kicker">${icon("flag")} Scam of the week</div>
+          <h3><a href="/scams/${sotw.slug}/">${esc(sotw.title)}</a></h3>
+          <div class="card-meta">${riskBadge(sotw.riskLevel)}</div>
+          <p>${esc(sotw.summary)}</p>
+          <a class="btn btn-secondary" href="/scam-of-the-week/">Why we picked it →</a>
+        </div>` : ""}
+        <div class="tag-row" style="margin-top:16px">
+          ${newest.map((s) => `<a class="tag" href="/scams/${s.slug}/">${esc(s.title)}</a>`).join("")}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
   <div class="container">
     <div class="section-head">
       <h2>Popular scam categories</h2>
@@ -359,7 +444,7 @@ ${adSlot("home-top")}
   </div>
 </section>
 
-<section class="section section-alt" id="popular-guides">
+<section class="section" id="popular-guides">
   <div class="container">
     <div class="section-head">
       <h2>Popular guides</h2>
@@ -373,6 +458,17 @@ ${adSlot("home-top")}
 </section>
 
 ${adSlot("home-mid")}
+
+<section class="section section-alt">
+  <div class="container narrow">
+    <div class="sotw-card" style="border-left-color:var(--blue)">
+      <div class="sotw-kicker" style="color:var(--blue)">${icon("eye")} Test yourself</div>
+      <h3>Can you spot the scam?</h3>
+      <p>Ten realistic messages — some fraudulent, some genuine. Most people miss at least two. Learn the tell that gives each one away.</p>
+      <a class="btn btn-primary" href="/quiz/">Take the 2-minute quiz</a>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container narrow">
@@ -442,6 +538,14 @@ ${breadcrumbs(trail)}
     </form>
     <div id="checker-result" class="checker-result hidden" aria-live="polite"></div>
 
+    <div class="bookmark-tip">${icon("flag")}<span><strong>Make this your habit:</strong> bookmark this page (<kbd>Ctrl</kbd>+<kbd>D</kbd> / <kbd>⌘</kbd><kbd>D</kbd>) so the checker is one tap away whenever a suspicious message arrives.</span></div>
+
+    <div id="recent-checks" class="box recent-checks hidden">
+      <h3>Your recent checks</h3>
+      <p class="muted" style="font-size:.85rem;margin-bottom:8px">Saved only in this browser — never sent to us. <a href="#" id="clear-checks">Clear history</a></p>
+      <ul id="recent-checks-list" style="padding-left:1.1rem;margin:0"></ul>
+    </div>
+
     <h2>How the scam checker works</h2>
     <p>The checker runs entirely in your web browser. When you paste a message, it scans the text for wording and patterns that appear frequently in scams, then shows you which ones it found, why each is a concern, and a suggested risk level. Nothing you paste is sent to a server, logged, or stored — the analysis happens on your own device and disappears the moment you leave the page. That is why you can use it without an account and without giving up any personal data.</p>
     <p>It is important to understand what the result means. A <strong>High</strong> or <strong>Medium</strong> level tells you that the message contains language commonly used to pressure or deceive people — it is a reason to slow down and verify, not a definitive judgement that the message is fraudulent. A <strong>Low</strong> level means few of those patterns were detected, but that is never a guarantee of safety: a well-written scam can avoid obvious triggers, and a legitimate message can occasionally use urgent language.</p>
@@ -464,6 +568,12 @@ ${breadcrumbs(trail)}
 
     <h2>Limitations you should know</h2>
     <p>This is an automated, pattern-based tool. It can produce <strong>false alarms</strong> (flagging a genuine message that happens to sound urgent) and <strong>missed signals</strong> (a sophisticated scam that reads calmly). It cannot open links, inspect websites, verify senders, or confirm identities, and it does not know your personal circumstances. For anything involving money, accounts, or identity, always verify through official channels and, when in doubt, treat the message as suspicious.</p>
+
+    <h2>Recently added guides</h2>
+    <p class="muted">Scams evolve constantly — these are the newest additions to our library of ${scams.length}+ guides.</p>
+    <div class="card-grid">
+      ${scams.slice(-6).reverse().map(scamCard).join("")}
+    </div>
 
     <h2>Frequently asked questions</h2>
     ${faqAccordion(checkerFaqs)}
@@ -541,7 +651,7 @@ function categoryPage(cat) {
 ${breadcrumbs(trail)}
 <section class="page-intro">
   <div class="container">
-    <div class="card-meta"><div class="card-icon">${icon(cat.icon)}</div></div>
+    <div class="card-meta"><div class="card-icon"${catStyle(cat.slug)}>${icon(cat.icon)}</div></div>
     <h1>${esc(cat.name)}</h1>
     <p class="lead">${esc(cat.intro)}</p>
   </div>
@@ -663,12 +773,31 @@ function guidePage(scam) {
     `${pick(leadIns)} ${scam.quickVerdict.mainRedFlag} ${scam.quickVerdict.whatToDoFirst}`
   ];
 
+  // Contextual internal links with intent-rich anchor text (SEO mesh): two
+  // related guides, the category hub, and the checker tool, phrased per variant.
+  let seeAlso = "";
+  {
+    const sa = related.slice(0, 2).map((r) => `<a href="/scams/${r.slug}/">${esc(r.title)}</a>`);
+    if (sa.length) {
+      const catLink = cat ? `<a href="/${cat.slug}/">${esc(cat.name)} guides</a>` : `<a href="/scam-types/">all scam guides</a>`;
+      const checkerLink = `<a href="/scam-checker/">scam checker</a>`;
+      const pair = sa.length > 1 ? `${sa[0]} or the ${sa[1]}` : sa[0];
+      const pairAnd = sa.length > 1 ? `${sa[0]} and the ${sa[1]}` : sa[0];
+      seeAlso = `<p class="see-also">${pick([
+        `Not sure this matches what you received? Compare it with the ${pair}, browse the ${catLink}, or paste the exact message into our free ${checkerLink}.`,
+        `Scammers rotate tactics constantly — the same operation may also run the ${pairAnd}. See the full ${catLink} hub, or test a suspicious message with the ${checkerLink}.`,
+        `If your message looks slightly different, check the ${pair} — both are close cousins of this pattern. Every related guide lives in the ${catLink}, and the ${checkerLink} can scan the text you received.`,
+        `Related tricks worth knowing: the ${pairAnd}. For the wider picture, browse the ${catLink} or run the message through our ${checkerLink}.`
+      ])}</p>`;
+    }
+  }
+
   // Section blocks — rendered only when they have content. Labels vary per
   // variant so the same section reads differently across pages.
   const blocks = {};
   blocks.intro = { id: "what-it-looks-like",
     label: dd ? "How this scam works" : pick(["What this scam usually looks like", "How this scam works", "Understanding this scam", "What to know first"]),
-    html: introParas.map((p) => `<p>${esc(p)}</p>`).join("\n      ") };
+    html: introParas.map((p) => `<p>${esc(p)}</p>`).join("\n      ") + seeAlso };
 
   if (pageStats) blocks.stats = { id: "by-the-numbers",
     label: dd ? "By the numbers" : pick(["By the numbers", "The scale of it", "What the data shows", "Scam statistics"]),
@@ -747,7 +876,7 @@ ${breadcrumbs(trail)}
   <div class="container with-sidebar">
     <div class="guide-content">
       <header class="guide-header">
-        <div class="meta">${riskBadge(scam.riskLevel)}<span class="card-cat">${esc(cat ? cat.name : "")}</span>${dd ? `<span class="flagship-badge">${icon("check")} In-depth guide</span>${dd.readTime ? `<span class="read-time">${icon("calendar")} ${esc(dd.readTime)}</span>` : ""}` : ""}</div>
+        <div class="meta">${riskBadge(scam.riskLevel)}${cat ? `<a class="cat-chip" href="/${cat.slug}/"${catStyle(cat.slug)}>${esc(cat.shortName)}</a>` : ""}${dd ? `<span class="flagship-badge">${icon("check")} In-depth guide</span>${dd.readTime ? `<span class="read-time">${icon("calendar")} ${esc(dd.readTime)}</span>` : ""}` : ""}</div>
         <h1>${esc(scam.title)}</h1>
         <p class="lead muted">${esc(scam.summary)}</p>
       </header>
@@ -813,13 +942,28 @@ ${breadcrumbs(trail)}
     }
   }
 
+  // Voice-assistant hint for the headline and summary.
+  articleLD.speakable = {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".guide-header h1", ".guide-header .lead"]
+  };
+
+  // HowTo structured data built from the guide's "what to do" steps.
+  const howToLD = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `What to do about the ${scam.title}`,
+    description: scam.quickVerdict.whatToDoFirst,
+    step: scam.whatToDo.map((t, i) => ({ "@type": "HowToStep", position: i + 1, text: t }))
+  };
+
   return layout({
     title: (scam.metaTitle || scam.title) + ` | ${config.siteName}`,
     description: scam.metaDescription,
     canonical: `/scams/${scam.slug}/`,
     ogType: "article",
     main,
-    jsonld: [breadcrumbLD(trail), faqLD(scam.faqs), articleLD]
+    jsonld: [breadcrumbLD(trail), faqLD(scam.faqs), articleLD, howToLD]
   });
 }
 
@@ -1077,6 +1221,103 @@ function legalPages() {
   return pages; // already full HTML strings, in legalSlugs order
 }
 
+/* ---------------------------------------------------------- quiz page ------ */
+function quizPage() {
+  const trail = [{ name: "Home", url: "/" }, { name: "Spot-the-Scam Quiz", url: "/quiz/" }];
+  const dataJson = JSON.stringify(quizData).replace(/</g, "\\u003c");
+  const main = `
+${breadcrumbs(trail)}
+<section class="page-intro">
+  <div class="container narrow">
+    <h1>Can you spot the scam?</h1>
+    <p class="lead">Ten realistic messages — some are fraud patterns, some look genuine. For each one, decide before the answer is revealed. Most people miss at least two.</p>
+  </div>
+</section>
+<section class="prose">
+  <div class="container narrow quiz-shell">
+    <div id="quiz-app">
+      <noscript><div class="notice">The interactive quiz needs JavaScript. You can still learn every pattern it covers in our <a href="/scam-types/">scam guides</a>.</div></noscript>
+    </div>
+    <script type="application/json" id="quiz-data">${dataJson}</script>
+
+    <h2>Why practising works</h2>
+    <p>Scams succeed in the first few seconds, when a message triggers urgency, fear, or excitement before your slower judgement catches up. Practising on realistic examples builds the reflex that matters most: pausing to look for the tell. Research by fraud-prevention bodies consistently shows that people who have seen a scam pattern before are far less likely to fall for it — recognition is the cheapest protection there is.</p>
+    <p>Every question in this quiz is a fictional, anonymised pattern modelled on scams documented by consumer-protection agencies — the same patterns covered in our <a href="/scam-types/">${scams.length}+ guides</a>. The "genuine" examples show what safe communication tends to look like: no links to click, no codes to share, no artificial deadlines, and directions to official apps or the number on your own card.</p>
+    <h2>How scoring works</h2>
+    <p>You get one point per correct call. After each answer we show the tells — the specific details that give the message away — with a link to the full guide for that scam. At the end you can share your score and challenge someone you'd like to keep safe. The quiz runs entirely in your browser; nothing you do here is recorded or sent to us.</p>
+    <div class="box box-info">
+      <h3>Received something suspicious right now?</h3>
+      <p style="margin:0">Don't guess — paste it into the free <a href="/scam-checker/">scam checker</a> to see which red flags it contains, then check the matching guide.</p>
+    </div>
+    ${disclaimerBox()}
+  </div>
+</section>`;
+  return layout({
+    title: `Can You Spot the Scam? Free 10-Question Quiz | ${config.siteName}`,
+    description: "Test yourself against ten realistic scam and genuine message patterns. Learn the tells that give each one away, get your score, and challenge your family.",
+    canonical: "/quiz/",
+    main,
+    jsonld: [breadcrumbLD(trail)],
+    extraScripts: `<script src="/assets/js/quiz.js" defer></script>`
+  });
+}
+
+/* ------------------------------------------------- scam of the week page --- */
+function scamOfTheWeekPage() {
+  const trail = [{ name: "Home", url: "/" }, { name: "Scam of the Week", url: "/scam-of-the-week/" }];
+  const { list, idx } = sotwPick();
+  const cur = list[idx];
+  const rotation = list.map((s) => ({
+    slug: s.slug, title: s.title, url: `/scams/${s.slug}/`,
+    summary: s.summary, risk: s.riskLevel
+  }));
+  const dataJson = JSON.stringify(rotation).replace(/</g, "\\u003c");
+  const main = `
+${breadcrumbs(trail)}
+<section class="page-intro">
+  <div class="container narrow">
+    <h1>Scam of the Week</h1>
+    <p class="lead">One high-impact scam, spotlighted every week. Check back each Monday — or <a href="/feed.xml">subscribe by RSS</a> — to stay a step ahead of the pattern most worth knowing right now.</p>
+  </div>
+</section>
+<section class="prose">
+  <div class="container narrow">
+    ${cur ? `<div class="sotw-card" id="sotw-card">
+      <div class="sotw-kicker">${icon("flag")} This week's pick</div>
+      <h3 id="sotw-title"><a id="sotw-link" href="/scams/${cur.slug}/">${esc(cur.title)}</a></h3>
+      <div class="card-meta"><span id="sotw-risk">${riskBadge(cur.riskLevel)}</span></div>
+      <p id="sotw-summary">${esc(cur.summary)}</p>
+      <a class="btn btn-primary" id="sotw-cta" href="/scams/${cur.slug}/">Read the full guide</a>
+    </div>` : ""}
+    <script type="application/json" id="sotw-data">${dataJson}</script>
+
+    <h2>How the weekly pick works</h2>
+    <p>The spotlight rotates through the scams that cause the most reported harm — the patterns behind the largest losses in FTC, FBI IC3 and UK Finance data: fake bank alerts, investment platforms, romance manipulation, impersonation calls, and remote-access "support". Each featured guide includes cited statistics, a step-by-step breakdown of how the scam unfolds, an illustrative scenario, and exactly what to do if you have already engaged.</p>
+    <p>A weekly focus works because scams are seasonal and social: delivery scams spike around shopping periods, tax scams around filing deadlines, romance scams around holidays. Spending two minutes with one pattern a week builds broader recognition than trying to memorise everything at once.</p>
+
+    <h2>The rotation</h2>
+    <p class="muted">Every guide in the current rotation — read ahead if you don't want to wait.</p>
+    <div class="card-grid">
+      ${list.map(scamCard).join("")}
+    </div>
+
+    <div class="box box-info mt-2">
+      <h3>Make it a habit</h3>
+      <p style="margin:0">Bookmark this page, <a href="/feed.xml">subscribe to the RSS feed</a>, or test yourself with the <a href="/quiz/">spot-the-scam quiz</a>. If something suspicious lands in your inbox today, run it through the <a href="/scam-checker/">scam checker</a>.</p>
+    </div>
+    ${disclaimerBox()}
+  </div>
+</section>`;
+  return layout({
+    title: `Scam of the Week — This Week's Most Important Scam | ${config.siteName}`,
+    description: "A rotating weekly spotlight on one high-impact scam: how it works, the red flags, and what to do. Check back weekly or subscribe by RSS.",
+    canonical: "/scam-of-the-week/",
+    main,
+    jsonld: [breadcrumbLD(trail)],
+    extraScripts: `<script src="/assets/js/sotw.js" defer></script>`
+  });
+}
+
 function notFoundPage() {
   const main = `
 <section class="page-intro"><div class="container narrow center">
@@ -1095,7 +1336,7 @@ function notFoundPage() {
 function sitemapXML() {
   const base = config.url.replace(/\/$/, "");
   const urls = [
-    "/", "/scam-checker/", "/scam-types/",
+    "/", "/scam-checker/", "/scam-types/", "/quiz/", "/scam-of-the-week/",
     ...categories.map((c) => `/${c.slug}/`),
     ...scams.map((s) => `/scams/${s.slug}/`),
     "/about/", "/contact/", "/privacy-policy/", "/terms/", "/disclaimer/",
@@ -1110,6 +1351,29 @@ function sitemapXML() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${body}
 </urlset>`;
+}
+
+function feedXML() {
+  const base = config.url.replace(/\/$/, "");
+  const items = updates.map((u) => `  <item>
+    <title>${esc(u.title)}</title>
+    <link>${base}${esc(u.url)}</link>
+    <guid isPermaLink="false">${base}${esc(u.url)}#${esc(u.date)}</guid>
+    <pubDate>${new Date(u.date + "T12:00:00Z").toUTCString()}</pubDate>
+    <description>${esc(u.summary)}</description>
+  </item>`).join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>${esc(config.siteName)} — Updates</title>
+  <link>${base}/</link>
+  <atom:link href="${base}/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>New scam guides, weekly scam spotlights, and site updates from ${esc(config.siteName)}.</description>
+  <language>${esc(config.lang)}</language>
+${items}
+</channel>
+</rss>
+`;
 }
 
 function robotsTxt() {
@@ -1169,6 +1433,8 @@ function build() {
   writePage("/", homePage());
   writePage("/scam-checker/", scamCheckerPage());
   writePage("/scam-types/", scamTypesIndexPage());
+  writePage("/quiz/", quizPage());
+  writePage("/scam-of-the-week/", scamOfTheWeekPage());
   for (const cat of categories) writePage(`/${cat.slug}/`, categoryPage(cat));
   for (const scam of scams) writePage(`/scams/${scam.slug}/`, guidePage(scam));
 
@@ -1186,9 +1452,10 @@ function build() {
   writeFileRaw("sitemap.xml", sitemapXML());
   writeFileRaw("robots.txt", robotsTxt());
   writeFileRaw("ads.txt", adsTxt());
+  writeFileRaw("feed.xml", feedXML());
   writeFileRaw("favicon.svg", faviconSVG());
 
-  const pageCount = 3 + categories.length + scams.length + legalSlugs.length + 1;
+  const pageCount = 5 + categories.length + scams.length + legalSlugs.length + 1;
   console.log(`✓ Built ${pageCount} pages into /dist`);
   console.log(`  • ${scams.length} scam guides across ${categories.length} categories`);
   console.log(`  • AdSense: ${config.adsense.enabled ? "ENABLED" : "disabled (placeholders reserved)"}`);
