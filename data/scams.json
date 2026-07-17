@@ -2433,6 +2433,10 @@
     ],
     "faqs": [
       {
+        "question": "What is the Google Voice verification code scam?",
+        "answer": "A scammer (often posing as an interested buyer or a match from an app) asks you to read back a Google Voice verification code sent to your phone. That code lets them create a Google Voice number linked to your real number, which they use for further fraud. Never share a verification code with anyone — genuine buyers and contacts never need one."
+      },
+      {
         "question": "Why would a code prove I am real?",
         "answer": "It would not. Verification codes confirm control of an account or number, so a request to share one is a strong sign of a scam, not a genuine check."
       },
@@ -4511,6 +4515,10 @@
       "Do not click links promising to 'double' or 'flip' your cash"
     ],
     "faqs": [
+      {
+        "question": "What are the most common Venmo scams?",
+        "answer": "The most common Venmo scams include fake \"accidental payment\" refund requests, overpayment tricks, prize or giveaway messages, fake support agents asking for codes, and sellers or buyers who push you off the platform. Venmo payments to people you do not know are hard to reverse, so treat any unexpected payment or urgent request with caution."
+      },
       {
         "question": "Someone sent me money by accident and wants it back. Is it a scam?",
         "answer": "This is a common trick. The original payment may have come from a stolen card and can be reversed later, leaving you out of pocket if you sent your own money back. Let Venmo handle genuine errors."
@@ -10181,6 +10189,10 @@
       "Do not share your payment app tag, card, or banking details with the account."
     ],
     "faqs": [
+      {
+        "question": "What does \"flipping money\" mean?",
+        "answer": "In scam terms, \"flipping money\" (also called a money flip or cash flip) is a false promise that if you send a small amount — say $100 — a fraudster will use a \"secret method\" to multiply it and send back much more. There is no real method: the money is simply taken and you receive nothing. Genuine investing does not work by sending cash to a stranger who guarantees to multiply it."
+      },
       {
         "question": "Could a money flip ever be real?",
         "answer": "There is no legitimate way to reliably turn a small payment into a much larger one with no risk. Offers framed this way are commonly used in scams."
@@ -31790,6 +31802,10 @@
       "Do not call back on a number the call provides"
     ],
     "faqs": [
+      {
+        "question": "Is the \"Amazon Prime membership renewal\" call a scam?",
+        "answer": "An unexpected call or recording saying your Amazon Prime membership is auto-renewing at a high price — and offering to \"cancel\" it if you press a key or confirm details — is a common version of this scam. Amazon does not cold-call to cancel Prime. Hang up and check your membership only in the official Amazon app or website."
+      },
       {
         "question": "Does Amazon call about suspicious orders?",
         "answer": "Amazon does not cold-call demanding you press keys, share card details, or grant remote access. Check orders in the official app or website instead."

@@ -382,10 +382,13 @@ function faqLD(faqs) {
 /* ================================================================ PAGES === */
 
 function homePage() {
+  // Surfaced from Search Console: the guides already earning the most search
+  // impressions. Linking them from the homepage (the highest-authority page)
+  // concentrates internal link equity on the pages closest to page 1.
   const popularGuideSlugs = [
-    "canada-post-text-scam", "paypal-payment-pending-scam",
-    "facebook-marketplace-buyer-email-scam", "fake-job-offer-scam",
-    "instagram-verification-scam", "fake-bank-alert-text-scam"
+    "amazon-call-scam", "canada-post-text-scam", "instagram-verification-scam",
+    "money-flip-scam", "fake-zoom-invite-scam", "sharepoint-phishing-scam",
+    "fake-refund-email-scam", "paypal-payment-pending-scam"
   ];
   const popular = popularGuideSlugs.map((s) => scamBySlug[s]).filter(Boolean);
 
