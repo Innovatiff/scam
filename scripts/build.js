@@ -23,6 +23,18 @@ const statsData = readJSONSafe("data/stats.json", null);
 const updates = readJSONSafe("data/updates.json", []);
 const quizData = readJSONSafe("data/quiz.json", []);
 
+/* Author identity (E-E-A-T). The photo is served from /assets/img/; until the
+   real JPG is uploaded there, an <img> onerror swaps to the monogram SVG so a
+   byline is never broken. */
+const AUTHOR = {
+  name: "Daniel Hernandez",
+  role: "Founder & Lead Researcher",
+  photo: "/assets/img/daniel-hernandez.jpg",
+  photoFallback: "/assets/img/daniel-hernandez.svg",
+  url: "/about/",
+  bioShort: "Daniel Hernandez started Scam or Safe after being scammed three times in a single year. He now researches how scams actually work so other people don't have to find out the hard way."
+};
+
 const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 const scamBySlug = Object.fromEntries(scams.map((s) => [s.slug, s]));
 const scamsByCategory = {};
@@ -280,6 +292,17 @@ function adSlot(id) {
     <ins class="adsbygoogle" style="display:block" data-ad-client="${esc(config.adsense.publisherId)}" data-ad-slot="${esc(id)}" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>`;
+}
+
+function authorPhoto(cls, size) {
+  return `<img class="${esc(cls)}" src="${asset(AUTHOR.photo)}" ` +
+    `onerror="this.onerror=null;this.src='${asset(AUTHOR.photoFallback)}'" ` +
+    `alt="${esc(AUTHOR.name)}" width="${size}" height="${size}" loading="lazy" decoding="async">`;
+}
+function byline() {
+  return `<a class="byline" href="${AUTHOR.url}" rel="author">${authorPhoto("byline-avatar", 40)}` +
+    `<span class="byline-text">By <strong>${esc(AUTHOR.name)}</strong>` +
+    `<span class="byline-role">${esc(AUTHOR.role)}</span></span></a>`;
 }
 
 function disclaimerBox() {
@@ -900,6 +923,7 @@ ${breadcrumbs(trail)}
         <div class="meta">${riskBadge(scam.riskLevel)}${cat ? `<a class="cat-chip" href="/${cat.slug}/"${catStyle(cat.slug)}>${esc(cat.shortName)}</a>` : ""}${dd ? `<span class="flagship-badge">${icon("check")} In-depth guide</span>${dd.readTime ? `<span class="read-time">${icon("calendar")} ${esc(dd.readTime)}</span>` : ""}` : ""}</div>
         <h1>${esc(scam.title)}</h1>
         <p class="lead muted">${esc(scam.summary)}</p>
+        ${byline()}
       </header>
 
       <div class="verdict-box">
@@ -916,7 +940,7 @@ ${breadcrumbs(trail)}
 
       ${bodyHtml}
 
-      <p class="last-reviewed">${icon("calendar")} Last reviewed: ${esc(reviewedLabel(dd && dd.updated ? dd.updated : scam.lastReviewed))}${dd && dd.author ? ` &middot; Written and reviewed by the ${esc(dd.author)}` : ""}</p>
+      <p class="last-reviewed">${icon("calendar")} Last reviewed ${esc(reviewedLabel(dd && dd.updated ? dd.updated : scam.lastReviewed))} &middot; Written &amp; reviewed by <a href="/about/" rel="author">${esc(AUTHOR.name)}</a></p>
       ${disclaimerBox()}
     </div>
 
@@ -944,7 +968,12 @@ ${breadcrumbs(trail)}
     about: scam.scamType,
     inLanguage: config.lang,
     isAccessibleForFree: true,
-    author: { "@type": "Organization", name: (dd && dd.author) ? dd.author : config.siteName, url: config.url },
+    author: {
+      "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role,
+      url: config.url.replace(/\/$/, "") + AUTHOR.url,
+      image: config.url.replace(/\/$/, "") + AUTHOR.photo,
+      description: AUTHOR.bioShort
+    },
     publisher: { "@type": "Organization", name: config.siteName, url: config.url },
     dateModified: ymToISO((dd && dd.updated) || scam.lastReviewed),
     mainEntityOfPage: config.url.replace(/\/$/, "") + `/scams/${scam.slug}/`
@@ -989,7 +1018,7 @@ ${breadcrumbs(trail)}
 }
 
 /* ------------------------------------------------------------- legal pages --- */
-function simplePage({ slug, name, title, description, body, wide = false }) {
+function simplePage({ slug, name, title, description, body, wide = false, extraJsonld = [] }) {
   const trail = [{ name: "Home", url: "/" }, { name, url: `/${slug}/` }];
   const cc = wide ? "container" : "container narrow";
   const main = `
@@ -999,7 +1028,7 @@ ${breadcrumbs(trail)}
   return layout({
     title: `${title} | ${config.siteName}`,
     description, canonical: `/${slug}/`, main,
-    jsonld: [breadcrumbLD(trail)]
+    jsonld: [breadcrumbLD(trail), ...extraJsonld]
   });
 }
 
@@ -1068,31 +1097,70 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "about", name: "About Scam or Safe",
-    title: "About Us", description: "Learn about Scam or Safe, a public safety resource that helps people recognise scam patterns and red flags before they click, reply, or send money.",
+    title: "About — Daniel Hernandez, Founder",
+    description: "Daniel Hernandez was scammed three times in one year. Then he started researching how scams actually work and built Scam or Safe so other people don't have to learn the hard way.",
+    extraJsonld: [{
+      "@context": "https://schema.org", "@type": "ProfilePage",
+      mainEntity: {
+        "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role,
+        url: config.url.replace(/\/$/, "") + "/about/",
+        image: config.url.replace(/\/$/, "") + AUTHOR.photo,
+        description: AUTHOR.bioShort,
+        worksFor: { "@type": "Organization", name: config.siteName, url: config.url }
+      }
+    }],
     body: `
-<p class="lead">${esc(config.siteName)} is a free public-safety resource that helps everyday people recognise the patterns and red flags common to online and message-based scams — before they click a link, reply to a stranger, or send money.</p>
-<h2>Why we built this</h2>
-<p>Scams have become more convincing and more constant. They reach us through text messages, emails, marketplaces, job offers, dating apps, phone calls, and social media, and they are designed to trigger a fast, emotional reaction rather than careful thought. Most people do not need a cybersecurity degree to stay safe — they need a calm, clear explanation of what a suspicious message looks like, why it works, and exactly what to do next. That gap is what we set out to fill.</p>
-<p>Our belief is simple: the single most powerful defence against a scam is a moment of informed hesitation. When you can recognise the tell-tale signs — the artificial urgency, the request for a gift-card payment, the link that does not quite match the real website — you are far less likely to become a victim. Every guide on this site is written to give you that moment.</p>
-<h2>Who this is for</h2>
-<p>This site is for anyone who has ever received a message and thought, "Is this real?" That includes people trying to protect themselves, and also those looking out for parents, grandparents, or friends who may be targeted. Our language is deliberately plain and jargon-free so that it is useful whether or not you consider yourself tech-savvy.</p>
-<h2>What we do</h2>
+<div class="author-hero">
+  ${authorPhoto("author-hero-photo", 128)}
+  <div>
+    <p class="author-hero-name">${esc(AUTHOR.name)}</p>
+    <p class="author-hero-role">${esc(AUTHOR.role)}, ${esc(config.siteName)}</p>
+    <p class="author-hero-bio">${esc(AUTHOR.bioShort)}</p>
+  </div>
+</div>
+
+<p class="lead">The third time, I actually laughed — not because it was funny, but because I couldn't believe it had happened to me again.</p>
+
+<p>My name is Daniel Hernandez, and I built Scam or Safe because in the space of about a year, I got scammed three times. I don't think of myself as an easy target. I check my statements. I've told my own parents a hundred times to hang up on "the bank" and call the number on their card. And it still got me — three times, three completely different ways.</p>
+
+<p>The first one was small. A text about a parcel that couldn't be delivered until I paid a redelivery fee — barely more than a dollar. I was between things, I was expecting a package, and I tapped the link and typed my card number in without really looking at the address bar. The fee was never the point. A day later my bank flagged a payment I hadn't made. That little text had just been fishing for the card.</p>
+
+<p>The second one cost me more than money. I was selling an old camera lens online. A buyer paid straight away, and I got an email saying the funds were being "held" until I shipped the item and replied with a tracking number. It looked exactly like the real thing. So I posted the lens. There was no payment, there never had been, and there was no way to get it back. I felt sick about that one for a week.</p>
+
+<p>The third is the one that still makes my stomach drop. My phone rang with a number that matched my bank's, and a calm, professional voice who already knew the last four digits of my card told me there was a suspicious payment and that, to protect my money, I needed to move it to a "safe account." I was partway through setting up that transfer when something made me stop, hang up, and call the real number on the back of my card. It wasn't me being clever. I just got lucky. It was that close.</p>
+
+<h2>Why I actually built this</h2>
+
+<p>Here's the part nobody warns you about: most of being scammed is shame. You don't want to say it out loud. You lie awake replaying it, thinking, <em>how did I not see that?</em> For a while I didn't tell anyone. Then I mentioned it to my family almost as a joke, and it turned out an aunt of mine had lost far more than I had to something similar — and had never told a single person either.</p>
+
+<p>That's when it stopped feeling embarrassing and started making me angry. One night I actually sat down and read: the FTC's fraud reports, the FBI's numbers, the UK's Action Fraud, forum threads full of people describing the exact scripts that had been used on me. And the thing that hit me hardest was that none of it was random, and none of it was really about being stupid. These things are designed. Tested. Written to reach you in the three seconds before your brain catches up — when you're busy, or scared, or hopeful.</p>
+
+<p>What I kept wishing was that there had been one calm, plain place I could have checked <em>before</em> I tapped, before I shipped, before I moved the money. Not a lecture. Not scare tactics. Just: here's what this kind of message looks like, here's the tell, here's what to do next. That place didn't really exist in a way that made sense to me, so I started building it — one guide at a time, at night and on weekends, in the same plain words I'd use explaining it to my mom on the phone.</p>
+
+<h2>What I promise you</h2>
+
+<p>I'm not a cybersecurity expert, and I've never pretended to be one. I'm the guy who got burned and then did the homework so you don't have to. Every guide on this site is written and reviewed by me. I keep the language careful on purpose: I'll tell you when a message has the hallmarks of a scam, but I will never tell you something is "definitely safe," because no honest person can promise that. And I built the free <a href="/scam-checker/">scam checker</a> and the <a href="/quiz/">spot-the-scam quiz</a> so you can practise recognising these patterns before one lands in your inbox for real.</p>
+
+<p>If Scam or Safe gives one person the two-second pause I didn't have the first three times, then every late night was worth it. Thanks for being here. And if a message ever feels off to you — trust that feeling. In my experience it's almost always right.</p>
+
+<p style="margin-top:1.5rem">— ${esc(AUTHOR.name)}</p>
+
+<hr class="divider">
+
+<h2>What Scam or Safe does</h2>
 <ul>
-  <li>Maintain a large, growing library of plain-language guides — currently more than ${scams.length} — covering common scams across ${categories.length} categories, each with red flags and safe next steps.</li>
-  <li>Offer a free, private <a href="/scam-checker/">scam checker</a> that highlights patterns commonly seen in scams, running entirely in your browser.</li>
-  <li>Publish in-depth explainers on the highest-impact scams, with cited statistics from fraud-prevention authorities.</li>
-  <li>Point you toward the right official <a href="/report-a-scam/">reporting resources</a> for your country so you can take action.</li>
+  <li>A growing, plain-language library of more than ${scams.length} scam guides across ${categories.length} categories, each with the red flags and safe next steps.</li>
+  <li>A free, private <a href="/scam-checker/">scam checker</a> that flags common scam patterns in a message, running entirely in your browser.</li>
+  <li>In-depth breakdowns of the highest-impact scams, with statistics cited from fraud-prevention authorities.</li>
+  <li>A weekly <a href="/scam-of-the-week/">scam of the week</a> and the right official <a href="/report-a-scam/">reporting contacts</a> for your country.</li>
 </ul>
-<h2>What makes us different</h2>
-<p>We work hard to be measured rather than alarmist. Many scam-awareness pages rely on fear; we focus on clarity. We describe likelihoods and red flags, not certainties, and we structure every guide the same trustworthy way: what the scam looks like, how to spot it, what to do, and what not to do. Where we cite numbers, we attribute them to their source so you can check them yourself.</p>
-<h2>How we keep content accurate</h2>
-<p>Each guide is researched from widely documented scam patterns, written for clarity, and shown with a "last reviewed" date. We revisit and update guides as scams evolve. You can read our full process on the <a href="/how-we-review-scams/">how we review scams</a> page.</p>
-<h2>What we do not do</h2>
-<p>We do not verify individual messages, companies, or people, and we cannot tell you whether one specific message is genuine. We never claim that something is "definitely a scam" or "guaranteed safe," and we are not affiliated with any government agency, bank, retailer, or police force. Our guidance is educational and is meant to be combined with checks through official channels.</p>
+
+<h2>What it does not do</h2>
+<p>I can't verify individual messages, companies, or people, and I can't tell you whether one specific message is genuine. I never claim something is "definitely a scam" or "guaranteed safe," and I'm not affiliated with any bank, retailer, government agency, or police force. This is educational guidance meant to be combined with checks through official channels. You can read more about my process on the <a href="/how-we-review-scams/">how we review scams</a> page.</p>
+
 <h2>How the site is funded</h2>
-<p>To keep this resource free, we may display advertising. Advertising never influences our guidance, is kept clearly separate from our content, and is never placed inside the scam-checker result area. You can read more in our <a href="/privacy-policy/">privacy policy</a>.</p>
-<h2>Get in touch</h2>
-<p>We welcome suggestions for new guides and corrections to existing ones. Visit our <a href="/contact/">contact page</a> to reach us.</p>
+<p>To keep it free, the site may show advertising. Ads never influence the guidance, are kept clearly separate from the content, and are never placed inside the scam-checker results. More detail is in the <a href="/privacy-policy/">privacy policy</a>. If you spot something inaccurate, please <a href="/contact/">tell me</a> — I read every message and I fix things.</p>
+
 <div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)}</div>`
   }));
 

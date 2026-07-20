@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Daniel Hernandez">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#g)"/>
+  <text x="100" y="100" fill="#fff" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="86" font-weight="700" text-anchor="middle" dominant-baseline="central" letter-spacing="2">DH</text>
+</svg>

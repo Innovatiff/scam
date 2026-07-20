@@ -702,3 +702,36 @@ html[data-theme="dark"] { --header-bg: rgba(13, 21, 38, 0.86); }
 
 /* Scroll lock helper */
 body.quiz-open { overflow: hidden; }
+
+/* ================= Author byline & bio (E-E-A-T) ================= */
+.byline {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 14px;
+  color: var(--gray-text); font-size: .92rem;
+}
+.byline:hover { text-decoration: none; }
+.byline:hover .byline-text strong { color: var(--blue); }
+.byline-avatar {
+  width: 40px; height: 40px; border-radius: 50%; object-fit: cover;
+  border: 1px solid var(--border); background: var(--light-blue); flex: 0 0 auto;
+}
+.byline-text { display: flex; flex-direction: column; line-height: 1.25; }
+.byline-text strong { color: var(--navy); font-weight: 700; }
+.byline-role { font-size: .8rem; color: var(--gray-text); }
+
+.author-hero {
+  display: flex; gap: 20px; align-items: center;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px 22px; box-shadow: var(--shadow-sm);
+  margin: 6px 0 22px;
+}
+.author-hero-photo {
+  width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
+  border: 3px solid var(--white); box-shadow: 0 0 0 1px var(--border), var(--shadow);
+  background: var(--light-blue); flex: 0 0 auto;
+}
+.author-hero-name { font-size: 1.4rem; font-weight: 800; color: var(--navy); margin: 0; letter-spacing: -0.01em; }
+.author-hero-role { font-size: .9rem; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: .04em; margin: 2px 0 8px; }
+.author-hero-bio { font-size: .96rem; color: var(--gray-text); margin: 0; }
+@media (max-width: 560px) {
+  .author-hero { flex-direction: column; text-align: center; align-items: center; gap: 14px; padding: 20px 16px; }
+}
