@@ -1,4 +1,4 @@
-/* Scam or Safe — homepage hero hand-off to the checker page.
+/* Scam or Safe, homepage hero hand-off to the checker page.
    Stores the pasted text only in sessionStorage (cleared after one use). */
 (function () {
   "use strict";

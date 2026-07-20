@@ -1,4 +1,4 @@
-/* Scam or Safe — Scam of the Week client rotation.
+/* Scam or Safe, Scam of the Week client rotation.
    The page is server-rendered with the pick current at build time; this
    script recomputes the ISO week on load so the spotlight stays fresh even
    between deploys. No storage, no network. */

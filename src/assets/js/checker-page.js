@@ -1,4 +1,4 @@
-/* Scam or Safe — checker page UI. Renders red-flag results in the browser only. */
+/* Scam or Safe, checker page UI. Renders red-flag results in the browser only. */
 (function () {
   "use strict";
   var C = window.ScamOrSafeChecker;
@@ -38,7 +38,7 @@
     Medium: { cls: "risk-medium", pct: 55, head: "This message has some scam red flags",
       blurb: "This message shows a few patterns that can appear in scams. It is not proof of a scam, but it is worth pausing and checking carefully." },
     Low: { cls: "risk-low", pct: 18, head: "Few obvious red flags found",
-      blurb: "We did not detect many common scam patterns in this text. This is not a guarantee of safety — always verify unexpected requests through official channels." }
+      blurb: "We did not detect many common scam patterns in this text. This is not a guarantee of safety, always verify unexpected requests through official channels." }
   };
 
   function relatedFor(flags) {
@@ -124,7 +124,7 @@
     checksList.innerHTML = items.map(function (c) {
       var color = c.level === "High" ? "var(--red)" : c.level === "Medium" ? "#B45309" : "var(--green)";
       return '<li><span class="lvl" style="color:' + color + '">' + esc(c.level) + " risk</span>" +
-        ' — “' + esc(c.snippet) + '…” <span class="muted">(' + esc(c.date) + ")</span></li>";
+        ', “' + esc(c.snippet) + '…” <span class="muted">(' + esc(c.date) + ")</span></li>";
     }).join("");
     checksBox.classList.remove("hidden");
   }

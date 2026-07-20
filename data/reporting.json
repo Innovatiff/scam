@@ -13,7 +13,7 @@
       "bodies": [
         { "name": "Federal Trade Commission (FTC)", "handles": "General fraud, scams, and deceptive practices", "how": "reportfraud.ftc.gov", "url": "https://reportfraud.ftc.gov" },
         { "name": "FBI Internet Crime Complaint Center (IC3)", "handles": "Online crime, investment fraud, business email compromise", "how": "ic3.gov", "url": "https://www.ic3.gov" },
-        { "name": "IdentityTheft.gov", "handles": "Identity theft — reporting plus a personal recovery plan", "how": "identitytheft.gov", "url": "https://www.identitytheft.gov" }
+        { "name": "IdentityTheft.gov", "handles": "Identity theft, reporting plus a personal recovery plan", "how": "identitytheft.gov", "url": "https://www.identitytheft.gov" }
       ]
     },
     {
@@ -21,7 +21,7 @@
       "intro": "Report fraud to Action Fraud (or Police Scotland in Scotland), and forward scam messages to the free reporting services.",
       "bodies": [
         { "name": "Action Fraud", "handles": "Fraud and cybercrime in England, Wales and Northern Ireland", "how": "actionfraud.police.uk or 0300 123 2040", "url": "https://www.actionfraud.police.uk" },
-        { "name": "Suspicious Email Reporting Service (NCSC)", "handles": "Phishing emails — forward them for takedown", "how": "report@phishing.gov.uk", "url": "https://www.ncsc.gov.uk/collection/phishing-scams" },
+        { "name": "Suspicious Email Reporting Service (NCSC)", "handles": "Phishing emails, forward them for takedown", "how": "report@phishing.gov.uk", "url": "https://www.ncsc.gov.uk/collection/phishing-scams" },
         { "name": "Forward scam texts and calls", "handles": "Suspicious texts and spam calls via your mobile network", "how": "Forward texts to 7726", "url": "https://www.ncsc.gov.uk" }
       ]
     },
@@ -54,7 +54,7 @@
       "country": "Ireland", "flag": "🇮🇪",
       "intro": "Report to An Garda Síochána and contact your bank immediately for financial fraud.",
       "bodies": [
-        { "name": "An Garda Síochána", "handles": "Fraud and cybercrime — report at your local station", "how": "garda.ie", "url": "https://www.garda.ie" },
+        { "name": "An Garda Síochána", "handles": "Fraud and cybercrime, report at your local station", "how": "garda.ie", "url": "https://www.garda.ie" },
         { "name": "Your bank's fraud line", "handles": "Unauthorised or tricked payments", "how": "Number on the back of your card", "url": "https://www.garda.ie" }
       ]
     },
@@ -76,7 +76,7 @@
     { "name": "App stores", "detail": "Report fraudulent or fleeceware apps to the Apple App Store or Google Play so they can be reviewed and removed." }
   ],
   "afterReport": [
-    { "title": "Watch for follow-up 'recovery' scams", "detail": "Fraudsters target people who have already lost money by posing as recovery agents, lawyers, or investigators who can 'get it back' for a fee. This is a second scam — ignore it." },
+    { "title": "Watch for follow-up 'recovery' scams", "detail": "Fraudsters target people who have already lost money by posing as recovery agents, lawyers, or investigators who can 'get it back' for a fee. This is a second scam, ignore it." },
     { "title": "Monitor your accounts and credit", "detail": "Check statements for unfamiliar activity and consider a credit freeze or fraud alert with the credit bureaus if your identity may be exposed." },
     { "title": "Keep your report reference", "detail": "Save any case or reference number. Your bank or insurer may ask for it, and it links future information to your case." },
     { "title": "Tell people you trust", "detail": "Sharing what happened removes stigma and helps friends and family recognise the same scam. Reporting is never something to be ashamed of." }

@@ -1,7 +1,7 @@
-/* Scam or Safe — static site generator.
+/* Scam or Safe, static site generator.
    Reads JSON data + the templates in this file and emits a fully static
    HTML/CSS/JS site into /dist. Add a scam page by adding an entry to
-   data/scams.json — no manual HTML required. */
+   data/scams.json, no manual HTML required. */
 
 import fs from "node:fs";
 import path from "node:path";
@@ -48,7 +48,7 @@ function readJSONSafe(rel, fallback) {
 }
 
 /* Asset cache-busting: /assets/* is served with a 1-year immutable cache, so
-   every reference carries a content hash — when CSS/JS change, the URL changes
+   every reference carries a content hash, when CSS/JS change, the URL changes
    and browsers fetch the new file instead of a year-old cached one. */
 const ASSET_VER = (() => {
   const files = [];
@@ -267,6 +267,7 @@ function scamCard(scam) {
     </div>
     <h3>${esc(scam.title)}</h3>
     <p>${esc(scam.summary)}</p>
+    <p class="card-byline">${icon("shield")}<span>Created by ${esc(AUTHOR.name)}</span></p>
   </a>`;
 }
 
@@ -282,7 +283,7 @@ function flagList(flags) {
   return `<ul class="flag-list">${flags.map((f) => `<li>${icon("alert")}<span>${esc(f)}</span></li>`).join("")}</ul>`;
 }
 
-// Ad slot — disabled by default. Renders nothing visible until AdSense is enabled
+// Ad slot, disabled by default. Renders nothing visible until AdSense is enabled
 // in site.config.json after approval. Never placed inside result boxes or near CTAs.
 function adSlot(id) {
   const enabled = !!(config.adsense && config.adsense.enabled);
@@ -318,7 +319,7 @@ function hasRealAdsenseId() {
 function adsenseHead() {
   // The loader snippet goes into <head> as soon as a REAL publisher ID is set.
   // This is what AdSense needs to verify/review the site. It does NOT display
-  // ads by itself — ad units stay hidden until adsense.enabled = true (post-approval).
+  // ads by itself, ad units stay hidden until adsense.enabled = true (post-approval).
   if (!hasRealAdsenseId()) {
     return `<!-- AdSense head snippet appears here once a real ca-pub-… publisherId is set in site.config.json (needed for AdSense site verification). -->`;
   }
@@ -360,7 +361,7 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="alternate" type="application/rss+xml" title="${esc(config.siteName)} — Updates" href="/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="${esc(config.siteName)} Updates" href="/feed.xml">
 <link rel="preload" href="${asset("/assets/css/styles.css")}" as="style">
 <link rel="stylesheet" href="${asset("/assets/css/styles.css")}">
 ${ld}
@@ -434,7 +435,7 @@ function homePage() {
         <a href="/quiz/" class="btn btn-secondary btn-lg">Try the Scam Quiz</a>
       </div>
     </form>
-    <div class="source-strip">${icon("check")}<span>Guidance built on published data from the FTC, FBI IC3, UK Finance and other fraud-prevention authorities — <a href="/how-we-review-scams/">how we review scams</a>.</span></div>
+    <div class="source-strip">${icon("check")}<span>Guidance built on published data from the FTC, FBI IC3, UK Finance and other fraud-prevention authorities, <a href="/how-we-review-scams/">how we review scams</a>.</span></div>
   </div>
 </section>
 
@@ -442,7 +443,7 @@ function homePage() {
   <div class="stat-tile"><div class="num">${scams.length}+</div><div class="lbl">scam guides</div></div>
   <div class="stat-tile"><div class="num">${categories.length}</div><div class="lbl">scam categories</div></div>
   <div class="stat-tile"><div class="num">${statCitations.toLocaleString("en-US")}+</div><div class="lbl">cited statistics</div></div>
-  <div class="stat-tile"><div class="num">100%</div><div class="lbl">free — no sign-up</div></div>
+  <div class="stat-tile"><div class="num">100%</div><div class="lbl">free, no sign-up</div></div>
 </div></div></div>
 
 ${adSlot("home-top")}
@@ -508,7 +509,7 @@ ${adSlot("home-mid")}
     <div class="sotw-card" style="border-left-color:var(--blue)">
       <div class="sotw-kicker" style="color:var(--blue)">${icon("eye")} Test yourself</div>
       <h3>Can you spot the scam?</h3>
-      <p>Ten realistic messages — some fraudulent, some genuine. Most people miss at least two. Learn the tell that gives each one away.</p>
+      <p>Ten realistic messages, some fraudulent, some genuine. Most people miss at least two. Learn the tell that gives each one away.</p>
       <a class="btn btn-primary" href="/quiz/">Take the 2-minute quiz</a>
     </div>
   </div>
@@ -552,7 +553,7 @@ ${adSlot("home-mid")}
   ];
 
   return layout({
-    title: `${config.siteName} — Check if a Message or Offer Looks Like a Scam`,
+    title: `${config.siteName}, Check if a Message or Offer Looks Like a Scam`,
     description: config.shortDescription,
     canonical: "/",
     main, jsonld,
@@ -567,7 +568,7 @@ ${breadcrumbs(trail)}
 <section class="page-intro">
   <div class="container narrow">
     <h1>Scam Checker</h1>
-    <p class="lead">Paste a suspicious message to see common scam red flags and what to do next. This tool offers educational guidance only — it cannot confirm whether something is or is not a scam.</p>
+    <p class="lead">Paste a suspicious message to see common scam red flags and what to do next. This tool offers educational guidance only, it cannot confirm whether something is or is not a scam.</p>
   </div>
 </section>
 <section class="prose">
@@ -586,35 +587,35 @@ ${breadcrumbs(trail)}
 
     <div id="recent-checks" class="box recent-checks hidden">
       <h3>Your recent checks</h3>
-      <p class="muted" style="font-size:.85rem;margin-bottom:8px">Saved only in this browser — never sent to us. <a href="#" id="clear-checks">Clear history</a></p>
+      <p class="muted" style="font-size:.85rem;margin-bottom:8px">Saved only in this browser, never sent to us. <a href="#" id="clear-checks">Clear history</a></p>
       <ul id="recent-checks-list" style="padding-left:1.1rem;margin:0"></ul>
     </div>
 
     <h2>How the scam checker works</h2>
-    <p>The checker runs entirely in your web browser. When you paste a message, it scans the text for wording and patterns that appear frequently in scams, then shows you which ones it found, why each is a concern, and a suggested risk level. Nothing you paste is sent to a server, logged, or stored — the analysis happens on your own device and disappears the moment you leave the page. That is why you can use it without an account and without giving up any personal data.</p>
-    <p>It is important to understand what the result means. A <strong>High</strong> or <strong>Medium</strong> level tells you that the message contains language commonly used to pressure or deceive people — it is a reason to slow down and verify, not a definitive judgement that the message is fraudulent. A <strong>Low</strong> level means few of those patterns were detected, but that is never a guarantee of safety: a well-written scam can avoid obvious triggers, and a legitimate message can occasionally use urgent language.</p>
+    <p>The checker runs entirely in your web browser. When you paste a message, it scans the text for wording and patterns that appear frequently in scams, then shows you which ones it found, why each is a concern, and a suggested risk level. Nothing you paste is sent to a server, logged, or stored, the analysis happens on your own device and disappears the moment you leave the page. That is why you can use it without an account and without giving up any personal data.</p>
+    <p>It is important to understand what the result means. A <strong>High</strong> or <strong>Medium</strong> level tells you that the message contains language commonly used to pressure or deceive people, it is a reason to slow down and verify, not a definitive judgement that the message is fraudulent. A <strong>Low</strong> level means few of those patterns were detected, but that is never a guarantee of safety: a well-written scam can avoid obvious triggers, and a legitimate message can occasionally use urgent language.</p>
 
     <h2>What the checker looks for</h2>
     <p>The tool weighs a range of signals that fraud-prevention agencies repeatedly associate with scams. The most important include:</p>
     <ul>
-      <li><strong>Urgency and pressure</strong> — words like "immediately", "act now", or countdowns designed to stop you thinking.</li>
-      <li><strong>Threats and consequences</strong> — claims of arrest, fines, account closure, or legal action to create fear.</li>
-      <li><strong>Account or security alerts</strong> — "your account is locked", "unusual activity", or requests to "verify your identity" via a link.</li>
-      <li><strong>Requests for payment or unusual methods</strong> — fees, fines, gift cards, cryptocurrency, or bank transfers.</li>
-      <li><strong>Requests for passwords or one-time codes</strong> — details that no legitimate organisation should ever ask you to share.</li>
-      <li><strong>Suspicious or shortened links</strong> — addresses that hide their true destination.</li>
-      <li><strong>Prizes, refunds, and money promises</strong> — "you've won", guaranteed returns, or unexpected refunds.</li>
-      <li><strong>Moving off-platform or keeping secrets</strong> — pushing you to another app, or asking you to tell no one.</li>
+      <li><strong>Urgency and pressure</strong>, words like "immediately", "act now", or countdowns designed to stop you thinking.</li>
+      <li><strong>Threats and consequences</strong>, claims of arrest, fines, account closure, or legal action to create fear.</li>
+      <li><strong>Account or security alerts</strong>, "your account is locked", "unusual activity", or requests to "verify your identity" via a link.</li>
+      <li><strong>Requests for payment or unusual methods</strong>, fees, fines, gift cards, cryptocurrency, or bank transfers.</li>
+      <li><strong>Requests for passwords or one-time codes</strong>, details that no legitimate organisation should ever ask you to share.</li>
+      <li><strong>Suspicious or shortened links</strong>, addresses that hide their true destination.</li>
+      <li><strong>Prizes, refunds, and money promises</strong>, "you've won", guaranteed returns, or unexpected refunds.</li>
+      <li><strong>Moving off-platform or keeping secrets</strong>, pushing you to another app, or asking you to tell no one.</li>
     </ul>
 
     <h2>How to read your result</h2>
-    <p>Treat the checker as a second opinion, not the final word. Whatever level it returns, the safest response to any unexpected message is the same: do not click links or open attachments, do not share codes, passwords, or card details, and contact the company or person directly using official details you find yourself — never the contact information in the message. If a message claims to be from your bank, call the number printed on the back of your card.</p>
+    <p>Treat the checker as a second opinion, not the final word. Whatever level it returns, the safest response to any unexpected message is the same: do not click links or open attachments, do not share codes, passwords, or card details, and contact the company or person directly using official details you find yourself, never the contact information in the message. If a message claims to be from your bank, call the number printed on the back of your card.</p>
 
     <h2>Limitations you should know</h2>
     <p>This is an automated, pattern-based tool. It can produce <strong>false alarms</strong> (flagging a genuine message that happens to sound urgent) and <strong>missed signals</strong> (a sophisticated scam that reads calmly). It cannot open links, inspect websites, verify senders, or confirm identities, and it does not know your personal circumstances. For anything involving money, accounts, or identity, always verify through official channels and, when in doubt, treat the message as suspicious.</p>
 
     <h2>Recently added guides</h2>
-    <p class="muted">Scams evolve constantly — these are the newest additions to our library of ${scams.length}+ guides.</p>
+    <p class="muted">Scams evolve constantly, these are the newest additions to our library of ${scams.length}+ guides.</p>
     <div class="card-grid">
       ${scams.slice(-6).reverse().map(scamCard).join("")}
     </div>
@@ -630,8 +631,8 @@ ${breadcrumbs(trail)}
   </div>
 </section>`;
   return layout({
-    title: `Scam Checker — Paste a Message to Spot Red Flags | ${config.siteName}`,
-    description: "Paste a suspicious message into our free scam checker to see common red flags and what to do next. Educational guidance only — nothing is stored.",
+    title: `Scam Checker, Paste a Message to Spot Red Flags | ${config.siteName}`,
+    description: "Paste a suspicious message into our free scam checker to see common red flags and what to do next. Educational guidance only, nothing is stored.",
     canonical: "/scam-checker/",
     main,
     jsonld: [breadcrumbLD(trail), faqLD(checkerFaqs)],
@@ -769,7 +770,7 @@ function variationList(items) {
 }
 function sourcesList(sources) {
   return `<ul class="sources-list">${sources.map((s) => `
-    <li>${s.url ? `<a href="${esc(s.url)}" rel="nofollow noopener" target="_blank">${esc(s.title)}</a>` : esc(s.title)} — <span class="muted">${esc(s.publisher)}</span></li>`).join("")}</ul>`;
+    <li>${s.url ? `<a href="${esc(s.url)}" rel="nofollow noopener" target="_blank">${esc(s.title)}</a>` : esc(s.title)}, <span class="muted">${esc(s.publisher)}</span></li>`).join("")}</ul>`;
 }
 function caseStudyBox(cs) {
   return `<div class="case-study"><div class="case-tag">${icon("eye")} Anonymised, illustrative scenario</div>
@@ -829,14 +830,14 @@ function guidePage(scam) {
       const pairAnd = sa.length > 1 ? `${sa[0]} and the ${sa[1]}` : sa[0];
       seeAlso = `<p class="see-also">${pick([
         `Not sure this matches what you received? Compare it with the ${pair}, browse the ${catLink}, or paste the exact message into our free ${checkerLink}.`,
-        `Scammers rotate tactics constantly — the same operation may also run the ${pairAnd}. See the full ${catLink} hub, or test a suspicious message with the ${checkerLink}.`,
-        `If your message looks slightly different, check the ${pair} — both are close cousins of this pattern. Every related guide lives in the ${catLink}, and the ${checkerLink} can scan the text you received.`,
+        `Scammers rotate tactics constantly, the same operation may also run the ${pairAnd}. See the full ${catLink} hub, or test a suspicious message with the ${checkerLink}.`,
+        `If your message looks slightly different, check the ${pair}, both are close cousins of this pattern. Every related guide lives in the ${catLink}, and the ${checkerLink} can scan the text you received.`,
         `Related tricks worth knowing: the ${pairAnd}. For the wider picture, browse the ${catLink} or run the message through our ${checkerLink}.`
       ])}</p>`;
     }
   }
 
-  // Section blocks — rendered only when they have content. Labels vary per
+  // Section blocks, rendered only when they have content. Labels vary per
   // variant so the same section reads differently across pages.
   const blocks = {};
   blocks.intro = { id: "what-it-looks-like",
@@ -852,7 +853,7 @@ function guidePage(scam) {
 
   blocks.example = { id: "example",
     label: pick(["Example message pattern", "What the message looks like", "A typical example", "How it usually reads"]),
-    html: `<div class="example-msg"><span class="example-tag">Example pattern — not a real report</span><div>${esc(scam.exampleMessage)}</div></div>
+    html: `<div class="example-msg"><span class="example-tag">Example pattern, not a real report</span><div>${esc(scam.exampleMessage)}</div></div>
       <p class="muted" style="font-size:.9rem">This is a fictional, anonymised example used to illustrate the pattern. It is not a verified real message, and any names are used only to show how the scam typically reads.</p>
       <p><strong>${pick(["Why this is a red flag:", "What gives it away:", "The tell here:", "What to notice:"])}</strong> ${esc(scam.quickVerdict.mainRedFlag)}</p>` };
 
@@ -988,7 +989,7 @@ ${breadcrumbs(trail)}
     ].join(" ").split(/\s+/).filter(Boolean).length;
     articleLD.wordCount = words;
     if (dd.sources) {
-      articleLD.citation = dd.sources.map((s) => `${s.title} — ${s.publisher}`);
+      articleLD.citation = dd.sources.map((s) => `${s.title}, ${s.publisher}`);
     }
   }
 
@@ -1039,7 +1040,7 @@ const DISCLAIMER_TEXT = `This website provides educational information to help p
 function reportBody() {
   const meta = {
     slug: "report-a-scam", name: "Report a Scam",
-    title: "Report a Scam — Official Resources by Country",
+    title: "Report a Scam, Official Resources by Country",
     description: "Where and how to report scams and get help. Official fraud, phishing, and cybercrime reporting bodies for the US, UK, Canada, Australia, NZ, Ireland and the EU."
   };
 
@@ -1048,10 +1049,10 @@ function reportBody() {
 <p class="lead muted">If you have encountered a scam, reporting it helps protect others and may help you recover. Use official channels for your country.</p>
 <h2>Where to report</h2>
 <ul>
-  <li><strong>United States:</strong> Federal Trade Commission — reportfraud.ftc.gov</li>
-  <li><strong>United Kingdom:</strong> Action Fraud — actionfraud.police.uk (forward scam texts to 7726)</li>
-  <li><strong>Canada:</strong> Canadian Anti-Fraud Centre — antifraudcentre-centreantifraude.ca</li>
-  <li><strong>Australia:</strong> Scamwatch — scamwatch.gov.au</li>
+  <li><strong>United States:</strong> Federal Trade Commission, reportfraud.ftc.gov</li>
+  <li><strong>United Kingdom:</strong> Action Fraud, actionfraud.police.uk (forward scam texts to 7726)</li>
+  <li><strong>Canada:</strong> Canadian Anti-Fraud Centre, antifraudcentre-centreantifraude.ca</li>
+  <li><strong>Australia:</strong> Scamwatch, scamwatch.gov.au</li>
 </ul>
 <div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)} Reporting destinations may change; verify current contact details through official government websites.</div>` });
   }
@@ -1082,7 +1083,7 @@ function reportBody() {
       <div class="variation-item"><h4>${esc(a.title)}</h4><p>${esc(a.detail)}</p></div>`).join("")}</div>`;
 
   const body = `
-<p class="lead">If you have encountered a scam — whether or not you lost money — reporting it helps investigators disrupt fraud and warns others. This guide covers what to do first, the official body to contact in your country, and how to report to the platform involved.</p>
+<p class="lead">If you have encountered a scam, whether or not you lost money, reporting it helps investigators disrupt fraud and warns others. This guide covers what to do first, the official body to contact in your country, and how to report to the platform involved.</p>
 ${immediate}
 ${regions}
 ${platforms}
@@ -1097,7 +1098,7 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "about", name: "About Scam or Safe",
-    title: "About — Daniel Hernandez, Founder",
+    title: "About, Daniel Hernandez, Founder",
     description: "Daniel Hernandez was scammed three times in one year. Then he started researching how scams actually work and built Scam or Safe so other people don't have to learn the hard way.",
     extraJsonld: [{
       "@context": "https://schema.org", "@type": "ProfilePage",
@@ -1119,11 +1120,11 @@ function legalPages() {
   </div>
 </div>
 
-<p class="lead">The third time, I actually laughed — not because it was funny, but because I couldn't believe it had happened to me again.</p>
+<p class="lead">The third time, I actually laughed, not because it was funny, but because I couldn't believe it had happened to me again.</p>
 
-<p>My name is Daniel Hernandez, and I built Scam or Safe because in the space of about a year, I got scammed three times. I don't think of myself as an easy target. I check my statements. I've told my own parents a hundred times to hang up on "the bank" and call the number on their card. And it still got me — three times, three completely different ways.</p>
+<p>My name is Daniel Hernandez, and I built Scam or Safe because in the space of about a year, I got scammed three times. I don't think of myself as an easy target. I check my statements. I've told my own parents a hundred times to hang up on "the bank" and call the number on their card. And it still got me, three times, three completely different ways.</p>
 
-<p>The first one was small. A text about a parcel that couldn't be delivered until I paid a redelivery fee — barely more than a dollar. I was between things, I was expecting a package, and I tapped the link and typed my card number in without really looking at the address bar. The fee was never the point. A day later my bank flagged a payment I hadn't made. That little text had just been fishing for the card.</p>
+<p>The first one was small. A text about a parcel that couldn't be delivered until I paid a redelivery fee, barely more than a dollar. I was between things, I was expecting a package, and I tapped the link and typed my card number in without really looking at the address bar. The fee was never the point. A day later my bank flagged a payment I hadn't made. That little text had just been fishing for the card.</p>
 
 <p>The second one cost me more than money. I was selling an old camera lens online. A buyer paid straight away, and I got an email saying the funds were being "held" until I shipped the item and replied with a tracking number. It looked exactly like the real thing. So I posted the lens. There was no payment, there never had been, and there was no way to get it back. I felt sick about that one for a week.</p>
 
@@ -1131,19 +1132,19 @@ function legalPages() {
 
 <h2>Why I actually built this</h2>
 
-<p>Here's the part nobody warns you about: most of being scammed is shame. You don't want to say it out loud. You lie awake replaying it, thinking, <em>how did I not see that?</em> For a while I didn't tell anyone. Then I mentioned it to my family almost as a joke, and it turned out an aunt of mine had lost far more than I had to something similar — and had never told a single person either.</p>
+<p>Here's the part nobody warns you about: most of being scammed is shame. You don't want to say it out loud. You lie awake replaying it, thinking, <em>how did I not see that?</em> For a while I didn't tell anyone. Then I mentioned it to my family almost as a joke, and it turned out an aunt of mine had lost far more than I had to something similar, and had never told a single person either.</p>
 
-<p>That's when it stopped feeling embarrassing and started making me angry. One night I actually sat down and read: the FTC's fraud reports, the FBI's numbers, the UK's Action Fraud, forum threads full of people describing the exact scripts that had been used on me. And the thing that hit me hardest was that none of it was random, and none of it was really about being stupid. These things are designed. Tested. Written to reach you in the three seconds before your brain catches up — when you're busy, or scared, or hopeful.</p>
+<p>That's when it stopped feeling embarrassing and started making me angry. One night I actually sat down and read: the FTC's fraud reports, the FBI's numbers, the UK's Action Fraud, forum threads full of people describing the exact scripts that had been used on me. And the thing that hit me hardest was that none of it was random, and none of it was really about being stupid. These things are designed. Tested. Written to reach you in the three seconds before your brain catches up, when you're busy, or scared, or hopeful.</p>
 
-<p>What I kept wishing was that there had been one calm, plain place I could have checked <em>before</em> I tapped, before I shipped, before I moved the money. Not a lecture. Not scare tactics. Just: here's what this kind of message looks like, here's the tell, here's what to do next. That place didn't really exist in a way that made sense to me, so I started building it — one guide at a time, at night and on weekends, in the same plain words I'd use explaining it to my mom on the phone.</p>
+<p>What I kept wishing was that there had been one calm, plain place I could have checked <em>before</em> I tapped, before I shipped, before I moved the money. Not a lecture. Not scare tactics. Just: here's what this kind of message looks like, here's the tell, here's what to do next. That place didn't really exist in a way that made sense to me, so I started building it, one guide at a time, at night and on weekends, in the same plain words I'd use explaining it to my mom on the phone.</p>
 
 <h2>What I promise you</h2>
 
 <p>I'm not a cybersecurity expert, and I've never pretended to be one. I'm the guy who got burned and then did the homework so you don't have to. Every guide on this site is written and reviewed by me. I keep the language careful on purpose: I'll tell you when a message has the hallmarks of a scam, but I will never tell you something is "definitely safe," because no honest person can promise that. And I built the free <a href="/scam-checker/">scam checker</a> and the <a href="/quiz/">spot-the-scam quiz</a> so you can practise recognising these patterns before one lands in your inbox for real.</p>
 
-<p>If Scam or Safe gives one person the two-second pause I didn't have the first three times, then every late night was worth it. Thanks for being here. And if a message ever feels off to you — trust that feeling. In my experience it's almost always right.</p>
+<p>If Scam or Safe gives one person the two-second pause I didn't have the first three times, then every late night was worth it. Thanks for being here. And if a message ever feels off to you, trust that feeling. In my experience it's almost always right.</p>
 
-<p style="margin-top:1.5rem">— ${esc(AUTHOR.name)}</p>
+<p class="signoff" style="margin-top:1.5rem"><strong>${esc(AUTHOR.name)}</strong></p>
 
 <hr class="divider">
 
@@ -1159,7 +1160,7 @@ function legalPages() {
 <p>I can't verify individual messages, companies, or people, and I can't tell you whether one specific message is genuine. I never claim something is "definitely a scam" or "guaranteed safe," and I'm not affiliated with any bank, retailer, government agency, or police force. This is educational guidance meant to be combined with checks through official channels. You can read more about my process on the <a href="/how-we-review-scams/">how we review scams</a> page.</p>
 
 <h2>How the site is funded</h2>
-<p>To keep it free, the site may show advertising. Ads never influence the guidance, are kept clearly separate from the content, and are never placed inside the scam-checker results. More detail is in the <a href="/privacy-policy/">privacy policy</a>. If you spot something inaccurate, please <a href="/contact/">tell me</a> — I read every message and I fix things.</p>
+<p>To keep it free, the site may show advertising. Ads never influence the guidance, are kept clearly separate from the content, and are never placed inside the scam-checker results. More detail is in the <a href="/privacy-policy/">privacy policy</a>. If you spot something inaccurate, please <a href="/contact/">tell me</a>, I read every message and I fix things.</p>
 
 <div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)}</div>`
   }));
@@ -1179,19 +1180,19 @@ function legalPages() {
   <li><strong>General question?</strong> A clear, specific question helps us point you to the right guide or resource.</li>
 </ul>
 <h2>How quickly we respond</h2>
-<p>We aim to review messages regularly, but response times vary and some messages will not receive an individual reply. If your matter is urgent — for example, you may have lost money or shared sensitive details — please do not wait for us. Act immediately using the guidance below.</p>
+<p>We aim to review messages regularly, but response times vary and some messages will not receive an individual reply. If your matter is urgent, for example, you may have lost money or shared sensitive details, please do not wait for us. Act immediately using the guidance below.</p>
 <h2>If you need urgent help</h2>
 <p>We are an educational resource, not an emergency service, a bank, or law enforcement. If you have lost money or your accounts may be at risk:</p>
 <ul>
   <li>Contact your bank or card provider right away using the number on the back of your card.</li>
   <li>Change passwords on any affected accounts and turn on two-factor authentication.</li>
-  <li>Report the scam to the official body for your country — see our <a href="/report-a-scam/">report a scam</a> page for the right contacts.</li>
+  <li>Report the scam to the official body for your country, see our <a href="/report-a-scam/">report a scam</a> page for the right contacts.</li>
 </ul>
 <h2>What we cannot do</h2>
 <ul>
   <li>We cannot provide legal, financial, or cybersecurity advice, or confirm whether a specific message, company, or person is genuine.</li>
   <li>We cannot recover money, investigate individual cases, or contact scammers on your behalf.</li>
-  <li>For your safety, please <strong>do not send us passwords, banking details, ID numbers, or full card numbers</strong> — we never need them.</li>
+  <li>For your safety, please <strong>do not send us passwords, banking details, ID numbers, or full card numbers</strong>, we never need them.</li>
 </ul>
 <div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)}</div>`
   }));
@@ -1241,11 +1242,11 @@ function legalPages() {
   <li>Use the site lawfully and do not attempt to disrupt or misuse it.</li>
 </ul>
 <h2>Acceptable use</h2>
-<p>You agree to use this site lawfully and for its intended purpose — learning about scams and checking suspicious messages for educational insight. You must not attempt to disrupt, overload, scrape at scale, reverse-engineer, or misuse the site or its scam checker, and you must not use it to facilitate any unlawful activity.</p>
+<p>You agree to use this site lawfully and for its intended purpose, learning about scams and checking suspicious messages for educational insight. You must not attempt to disrupt, overload, scrape at scale, reverse-engineer, or misuse the site or its scam checker, and you must not use it to facilitate any unlawful activity.</p>
 <h2>Intellectual property</h2>
 <p>The written guides, design, and original content on this site are the property of ${esc(config.siteName)} unless otherwise stated. You are welcome to read and share links to our pages, but you may not republish substantial portions of our content as your own without permission. Statistics and quotations attributed to third parties remain the property of their respective owners.</p>
 <h2>Limitation of liability</h2>
-<p>To the maximum extent permitted by law, ${esc(config.siteName)} and its contributors are not liable for any loss or damage — direct, indirect, or consequential — arising from your use of, or reliance on, the information provided here. You use the site and act on its guidance at your own discretion.</p>
+<p>To the maximum extent permitted by law, ${esc(config.siteName)} and its contributors are not liable for any loss or damage, direct, indirect, or consequential, arising from your use of, or reliance on, the information provided here. You use the site and act on its guidance at your own discretion.</p>
 <h2>Third-party links and advertising</h2>
 <p>We may link to external resources, and we may display advertising to support the site. We are not responsible for the content, accuracy, or practices of third-party websites or advertisers. Following an external link or interacting with an advertisement is at your own risk, and those sites have their own terms and privacy policies.</p>
 <h2>Severability</h2>
@@ -1270,7 +1271,7 @@ function legalPages() {
 <h2>Examples are illustrative</h2>
 <p>Example messages on this site are fictional and anonymised. They are written to illustrate typical patterns and are not verified reports of real messages. Any names, amounts, or companies in an example are used only to show how a scam typically reads.</p>
 <h2>The scam checker is a guide, not a verdict</h2>
-<p>Our <a href="/scam-checker/">scam checker</a> looks for language patterns commonly seen in scams. It runs in your browser and can produce both false alarms and missed signals. A "Low risk" result is never a guarantee of safety, and a "High risk" result is not proof of fraud — both are prompts to verify carefully.</p>
+<p>Our <a href="/scam-checker/">scam checker</a> looks for language patterns commonly seen in scams. It runs in your browser and can produce both false alarms and missed signals. A "Low risk" result is never a guarantee of safety, and a "High risk" result is not proof of fraud, both are prompts to verify carefully.</p>
 <h2>Statistics and third-party information</h2>
 <p>Figures we cite come from third-party sources such as fraud-prevention agencies and are believed accurate at the time of writing, but we cannot guarantee that external data or linked resources are current or error-free. Always confirm important details with the original source.</p>
 <h2>Not professional advice, and no relationship created</h2>
@@ -1287,11 +1288,11 @@ function legalPages() {
     body: `
 <p class="lead">We aim to be a calm, accurate, and genuinely useful public-safety resource. Trust matters when the subject is fraud, so this page explains exactly how our guides are researched, written, reviewed, and kept current.</p>
 <h2>Our sources and research</h2>
-<p>Every guide is grounded in scam patterns that are widely documented by reputable, publicly accountable organisations — including consumer-protection and fraud-reporting agencies such as the US Federal Trade Commission, the FBI's Internet Crime Complaint Center, the UK's Action Fraud and National Cyber Security Centre, UK Finance, and Australia's Scamwatch, as well as advisories from banks, couriers, and major platforms. We focus on how each scam typically works and the specific signals that give it away. We do not invent scams or exaggerate rare ones.</p>
+<p>Every guide is grounded in scam patterns that are widely documented by reputable, publicly accountable organisations, including consumer-protection and fraud-reporting agencies such as the US Federal Trade Commission, the FBI's Internet Crime Complaint Center, the UK's Action Fraud and National Cyber Security Centre, UK Finance, and Australia's Scamwatch, as well as advisories from banks, couriers, and major platforms. We focus on how each scam typically works and the specific signals that give it away. We do not invent scams or exaggerate rare ones.</p>
 <h2>How our statistics are used</h2>
-<p>Where we cite numbers — such as reported losses or the most common scam types — we attribute them to their source and, on our in-depth guides, link to it directly so you can verify the figure yourself. We prefer official, published data over second-hand claims. When a precise figure is uncertain, we describe it in careful, honest terms rather than inventing specifics.</p>
+<p>Where we cite numbers, such as reported losses or the most common scam types, we attribute them to their source and, on our in-depth guides, link to it directly so you can verify the figure yourself. We prefer official, published data over second-hand claims. When a precise figure is uncertain, we describe it in careful, honest terms rather than inventing specifics.</p>
 <h2>Careful, non-sensational language</h2>
-<p>We describe red flags and likelihoods, not certainties. We deliberately avoid claims like "definitely a scam", "guaranteed safe", "officially verified", or "police approved". Our goal is to help you pause and verify — not to frighten you into a decision. Fear is exactly the tool scammers use, and we refuse to copy it.</p>
+<p>We describe red flags and likelihoods, not certainties. We deliberately avoid claims like "definitely a scam", "guaranteed safe", "officially verified", or "police approved". Our goal is to help you pause and verify, not to frighten you into a decision. Fear is exactly the tool scammers use, and we refuse to copy it.</p>
 <h2>A consistent, structured format</h2>
 <p>Each guide is organised so you can find what you need fast: what the scam looks like, the red flags to watch for, what to do, what to avoid, and answers to common questions. Our most-searched topics receive expanded, in-depth treatment with step-by-step breakdowns, realistic (anonymised) scenarios, and cited statistics.</p>
 <h2>Anonymised, illustrative examples</h2>
@@ -1303,7 +1304,7 @@ function legalPages() {
 <h2>Independence and funding</h2>
 <p>We are not affiliated with any government agency, bank, retailer, or police force. To keep the site free we may show advertising, but advertising never influences our guidance and is kept clearly separate from our content. See our <a href="/privacy-policy/">privacy policy</a> for details.</p>
 <h2>Corrections</h2>
-<p>Accuracy is a process, not a one-time event. If you spot something inaccurate or out of date, please <a href="/contact/">contact us</a> — we genuinely value corrections and act on them.</p>
+<p>Accuracy is a process, not a one-time event. If you spot something inaccurate or out of date, please <a href="/contact/">contact us</a>, we genuinely value corrections and act on them.</p>
 <div class="disclaimer-box"><strong>Disclaimer:</strong> ${esc(DISCLAIMER_TEXT)}</div>`
   }));
 
@@ -1319,7 +1320,7 @@ ${breadcrumbs(trail)}
 <section class="page-intro">
   <div class="container narrow">
     <h1>Can you spot the scam?</h1>
-    <p class="lead">Ten realistic messages — some are fraud patterns, some look genuine. For each one, decide before the answer is revealed. Most people miss at least two.</p>
+    <p class="lead">Ten realistic messages, some are fraud patterns, some look genuine. For each one, decide before the answer is revealed. Most people miss at least two.</p>
   </div>
 </section>
 <section class="prose">
@@ -1346,13 +1347,13 @@ ${breadcrumbs(trail)}
     <script type="application/json" id="quiz-data">${dataJson}</script>
 
     <h2>Why practising works</h2>
-    <p>Scams succeed in the first few seconds, when a message triggers urgency, fear, or excitement before your slower judgement catches up. Practising on realistic examples builds the reflex that matters most: pausing to look for the tell. Research by fraud-prevention bodies consistently shows that people who have seen a scam pattern before are far less likely to fall for it — recognition is the cheapest protection there is.</p>
-    <p>Every question in this quiz is a fictional, anonymised pattern modelled on scams documented by consumer-protection agencies — the same patterns covered in our <a href="/scam-types/">${scams.length}+ guides</a>. The "genuine" examples show what safe communication tends to look like: no links to click, no codes to share, no artificial deadlines, and directions to official apps or the number on your own card.</p>
+    <p>Scams succeed in the first few seconds, when a message triggers urgency, fear, or excitement before your slower judgement catches up. Practising on realistic examples builds the reflex that matters most: pausing to look for the tell. Research by fraud-prevention bodies consistently shows that people who have seen a scam pattern before are far less likely to fall for it, recognition is the cheapest protection there is.</p>
+    <p>Every question in this quiz is a fictional, anonymised pattern modelled on scams documented by consumer-protection agencies, the same patterns covered in our <a href="/scam-types/">${scams.length}+ guides</a>. The "genuine" examples show what safe communication tends to look like: no links to click, no codes to share, no artificial deadlines, and directions to official apps or the number on your own card.</p>
     <h2>How scoring works</h2>
-    <p>You get one point per correct call. After each answer we show the tells — the specific details that give the message away — with a link to the full guide for that scam. At the end you can share your score and challenge someone you'd like to keep safe. The quiz runs entirely in your browser; nothing you do here is recorded or sent to us.</p>
+    <p>You get one point per correct call. After each answer we show the tells, the specific details that give the message away, with a link to the full guide for that scam. At the end you can share your score and challenge someone you'd like to keep safe. The quiz runs entirely in your browser; nothing you do here is recorded or sent to us.</p>
     <div class="box box-info">
       <h3>Received something suspicious right now?</h3>
-      <p style="margin:0">Don't guess — paste it into the free <a href="/scam-checker/">scam checker</a> to see which red flags it contains, then check the matching guide.</p>
+      <p style="margin:0">Don't guess, paste it into the free <a href="/scam-checker/">scam checker</a> to see which red flags it contains, then check the matching guide.</p>
     </div>
     ${disclaimerBox()}
   </div>
@@ -1382,7 +1383,7 @@ ${breadcrumbs(trail)}
 <section class="page-intro">
   <div class="container narrow">
     <h1>Scam of the Week</h1>
-    <p class="lead">One high-impact scam, spotlighted every week. Check back each Monday — or <a href="/feed.xml">subscribe by RSS</a> — to stay a step ahead of the pattern most worth knowing right now.</p>
+    <p class="lead">One high-impact scam, spotlighted every week. Check back each Monday, or <a href="/feed.xml">subscribe by RSS</a>, to stay a step ahead of the pattern most worth knowing right now.</p>
   </div>
 </section>
 <section class="prose">
@@ -1397,11 +1398,11 @@ ${breadcrumbs(trail)}
     <script type="application/json" id="sotw-data">${dataJson}</script>
 
     <h2>How the weekly pick works</h2>
-    <p>The spotlight rotates through the scams that cause the most reported harm — the patterns behind the largest losses in FTC, FBI IC3 and UK Finance data: fake bank alerts, investment platforms, romance manipulation, impersonation calls, and remote-access "support". Each featured guide includes cited statistics, a step-by-step breakdown of how the scam unfolds, an illustrative scenario, and exactly what to do if you have already engaged.</p>
+    <p>The spotlight rotates through the scams that cause the most reported harm, the patterns behind the largest losses in FTC, FBI IC3 and UK Finance data: fake bank alerts, investment platforms, romance manipulation, impersonation calls, and remote-access "support". Each featured guide includes cited statistics, a step-by-step breakdown of how the scam unfolds, an illustrative scenario, and exactly what to do if you have already engaged.</p>
     <p>A weekly focus works because scams are seasonal and social: delivery scams spike around shopping periods, tax scams around filing deadlines, romance scams around holidays. Spending two minutes with one pattern a week builds broader recognition than trying to memorise everything at once.</p>
 
     <h2>The rotation</h2>
-    <p class="muted">Every guide in the current rotation — read ahead if you don't want to wait.</p>
+    <p class="muted">Every guide in the current rotation, read ahead if you don't want to wait.</p>
     <div class="card-grid">
       ${list.map(scamCard).join("")}
     </div>
@@ -1414,7 +1415,7 @@ ${breadcrumbs(trail)}
   </div>
 </section>`;
   return layout({
-    title: `Scam of the Week — This Week's Most Important Scam | ${config.siteName}`,
+    title: `Scam of the Week, This Week's Most Important Scam | ${config.siteName}`,
     description: "A rotating weekly spotlight on one high-impact scam: how it works, the red flags, and what to do. Check back weekly or subscribe by RSS.",
     canonical: "/scam-of-the-week/",
     main,
@@ -1470,7 +1471,7 @@ function feedXML() {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>${esc(config.siteName)} — Updates</title>
+  <title>${esc(config.siteName)} Updates</title>
   <link>${base}/</link>
   <atom:link href="${base}/feed.xml" rel="self" type="application/rss+xml"/>
   <description>New scam guides, weekly scam spotlights, and site updates from ${esc(config.siteName)}.</description>
@@ -1491,7 +1492,7 @@ Sitemap: ${base}/sitemap.xml
 }
 
 function adsTxt() {
-  // ads.txt — authorised digital sellers. Publisher ID comes from site.config.json.
+  // ads.txt, authorised digital sellers. Publisher ID comes from site.config.json.
   const pub = (config.adsense && config.adsense.publisherId) || "ca-pub-0000000000000000";
   const id = pub.replace(/^ca-/, "");
   return `google.com, ${id}, DIRECT, f08c47fec0942fa0

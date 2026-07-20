@@ -4,9 +4,9 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "A text arrives saying a parcel could not be delivered and asks you to pay a small redelivery or customs fee, or to \"confirm\" your address through a link. It looks routine, it lands at a moment when you probably are expecting something, and the amount is trivial — often under a dollar or a pound. That combination is exactly why fake delivery texts, a form of \"smishing\" (SMS phishing), have become one of the most widespread scams in the world.",
+      "A text arrives saying a parcel could not be delivered and asks you to pay a small redelivery or customs fee, or to \"confirm\" your address through a link. It looks routine, it lands at a moment when you probably are expecting something, and the amount is trivial, often under a dollar or a pound. That combination is exactly why fake delivery texts, a form of \"smishing\" (SMS phishing), have become one of the most widespread scams in the world.",
       "The goal is rarely the tiny fee itself. The link leads to a convincing copy of a courier's website that harvests your card number, address, and often a one-time passcode your bank sends moments later. With those details, criminals can attempt far larger charges, add your card to a mobile wallet, or sell the data on. Some versions skip payment entirely and instead push you to \"install the tracking app,\" which is malware.",
-      "Because these messages are sent in enormous volumes to random numbers, they do not need to be accurate to work. If even a small fraction of recipients happen to be awaiting a delivery that day, the scam pays for itself. Understanding the mechanics — and building one simple habit of never paying or logging in through a texted link — defeats almost every variant."
+      "Because these messages are sent in enormous volumes to random numbers, they do not need to be accurate to work. If even a small fraction of recipients happen to be awaiting a delivery that day, the scam pays for itself. Understanding the mechanics, and building one simple habit of never paying or logging in through a texted link, defeats almost every variant."
     ],
     "stats": [
       { "figure": "$330M", "label": "reported lost to text-message scams in the US in 2022, more than double the year before", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
@@ -14,7 +14,7 @@
     ],
     "howItWorks": [
       { "title": "Mass send to random numbers", "detail": "Criminals blast the same template to huge lists of phone numbers, sometimes spoofing a courier's name so it threads with real notifications." },
-      { "title": "A believable problem", "detail": "The message invents a small obstacle — an unpaid fee, a wrong address, a held parcel — that feels quick and cheap to resolve." },
+      { "title": "A believable problem", "detail": "The message invents a small obstacle, an unpaid fee, a wrong address, a held parcel, that feels quick and cheap to resolve." },
       { "title": "The link to a cloned site", "detail": "You are sent to a lookalike page copying the courier's branding, colours, and logo, hosted on a slightly-off web address." },
       { "title": "Card and personal details captured", "detail": "You enter your address and card \"to pay the fee.\" Everything you type is sent straight to the scammer." },
       { "title": "The one-time code trap", "detail": "Your bank texts a genuine verification code for a much larger transaction the criminal is attempting; the fake site asks you to enter it, authorising the fraud." }
@@ -23,7 +23,7 @@
       "title": "An illustrative example",
       "body": [
         "Priya was expecting a birthday gift she had ordered, so when a text said her parcel was \"held pending a £1.45 shipping fee,\" it fit what she already believed. She tapped the link, reached a page that looked exactly like the courier she uses, and entered her card details to pay the small amount.",
-        "A minute later her banking app buzzed with a verification code, which the page asked her to type in \"to confirm delivery.\" She paused — a redelivery fee should not need a bank security code. She closed the page, did not enter the code, and phoned her bank using the number on her card. They confirmed someone had just tried to add her card to a digital wallet. Because she never shared the code, the attempt failed. This example is fictional and illustrative, but the sequence is typical."
+        "A minute later her banking app buzzed with a verification code, which the page asked her to type in \"to confirm delivery.\" She paused, a redelivery fee should not need a bank security code. She closed the page, did not enter the code, and phoned her bank using the number on her card. They confirmed someone had just tried to add her card to a digital wallet. Because she never shared the code, the attempt failed. This example is fictional and illustrative, but the sequence is typical."
       ]
     },
     "variations": [
@@ -36,7 +36,7 @@
       "Do not tap links in delivery texts. Open the courier's official app or type their known website address yourself.",
       "Track parcels using the tracking number from the retailer's own order confirmation, not from the text.",
       "Remember that genuine couriers do not ask for card details or bank security codes by text link for a small fee.",
-      "Check the sender and any web address carefully — scam links use lookalike domains with extra words or odd endings.",
+      "Check the sender and any web address carefully, scam links use lookalike domains with extra words or odd endings.",
       "If you are unsure a fee is real, contact the retailer you actually ordered from through their official channels."
     ],
     "sources": [
@@ -51,8 +51,8 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "\"We've blocked a payment of $750 to a new payee. If this wasn't you, reply NO or call us immediately.\" A text like this is engineered to trigger an instant, fearful reaction — the exact opposite of the calm scrutiny that would expose it. Fake bank alerts are among the most damaging scams precisely because they weaponise your trust in your own bank and your fear of losing money.",
-      "These messages often arrive in the same conversation thread as your bank's real alerts, because criminals can spoof the sender name. The reply or the phone number, however, connects you to the scammer, not the bank. From there the script escalates: a \"fraud advisor\" confirms your fears, then persuades you that the only way to protect your money is to move it to a \"safe account\" they control — which is itself the fraud.",
+      "\"We've blocked a payment of $750 to a new payee. If this wasn't you, reply NO or call us immediately.\" A text like this is engineered to trigger an instant, fearful reaction, the exact opposite of the calm scrutiny that would expose it. Fake bank alerts are among the most damaging scams precisely because they weaponise your trust in your own bank and your fear of losing money.",
+      "These messages often arrive in the same conversation thread as your bank's real alerts, because criminals can spoof the sender name. The reply or the phone number, however, connects you to the scammer, not the bank. From there the script escalates: a \"fraud advisor\" confirms your fears, then persuades you that the only way to protect your money is to move it to a \"safe account\" they control, which is itself the fraud.",
       "The defining feature to remember is simple and absolute: a genuine bank will never ask you to move money to a \"safe\" or \"holding\" account, never ask for your full password or a one-time code, and never pressure you to act within minutes. Any message or caller who does these things is not your bank, no matter how convincing the caller ID looks."
     ],
     "stats": [
@@ -70,21 +70,21 @@
       "title": "An illustrative example",
       "body": [
         "Marcus received a text that appeared in the same thread as his bank's genuine messages, warning of a £900 payment to an unknown payee. He called the number in the text. A calm \"fraud advisor\" confirmed the payment, thanked him for acting fast, and explained that his account was compromised and his balance needed moving to a secure account they had set up in his name.",
-        "It was the phrase \"safe account\" that stopped him. He remembered reading that banks never ask this. He hung up, called the number printed on the back of his debit card, and learned there was no suspicious payment at all — the alert was fake. Had he transferred the money, it would have gone directly to the criminal. This scenario is fictional but reflects a very common pattern."
+        "It was the phrase \"safe account\" that stopped him. He remembered reading that banks never ask this. He hung up, called the number printed on the back of his debit card, and learned there was no suspicious payment at all, the alert was fake. Had he transferred the money, it would have gone directly to the criminal. This scenario is fictional but reflects a very common pattern."
       ]
     },
     "variations": [
       { "name": "New-payee or new-device alert", "detail": "The hook is a claim that a new recipient or device was added to your account, prompting you to \"cancel\" it via their link or number." },
-      { "name": "Refund or overpayment", "detail": "You are told the bank owes you a refund and needs your details or a code to process it — a route to draining, not funding, your account." },
-      { "name": "Card-cancellation courier", "detail": "A caller says your card is compromised and sends a \"courier\" to collect it — never hand your card or PIN to anyone." },
+      { "name": "Refund or overpayment", "detail": "You are told the bank owes you a refund and needs your details or a code to process it, a route to draining, not funding, your account." },
+      { "name": "Card-cancellation courier", "detail": "A caller says your card is compromised and sends a \"courier\" to collect it, never hand your card or PIN to anyone." },
       { "name": "One-time-code harvesting", "detail": "The scammer triggers a real login or payment and asks you to read back the code your bank just sent, authorising their access." }
     ],
     "verify": [
-      "Never move money to a \"safe\", \"holding\", or \"new\" account — no genuine bank will ever ask this.",
+      "Never move money to a \"safe\", \"holding\", or \"new\" account, no genuine bank will ever ask this.",
       "Do not call numbers or tap links from the alert. Call the number on the back of your card or in your banking app.",
       "Never share your full password, PIN, or any one-time verification code with a caller, however official they sound.",
       "Hang up and wait a few minutes before calling back, in case the scammer stays on the line to fake a dial tone.",
-      "If you have already moved money, contact your bank immediately — fast reporting improves the chance of recovery."
+      "If you have already moved money, contact your bank immediately, fast reporting improves the chance of recovery."
     ],
     "sources": [
       { "title": "Bank impersonation and text scams", "publisher": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
@@ -98,9 +98,9 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "When you are selling something online, an email saying \"the buyer has paid — funds are pending and will be released once you ship and send the tracking number\" feels like good news. That is the trap. The PayPal payment-pending scam fakes the one thing a seller most wants to see: confirmation of payment. In reality no money has moved, and the emails are forgeries built to make you ship goods for free.",
+      "When you are selling something online, an email saying \"the buyer has paid, funds are pending and will be released once you ship and send the tracking number\" feels like good news. That is the trap. The PayPal payment-pending scam fakes the one thing a seller most wants to see: confirmation of payment. In reality no money has moved, and the emails are forgeries built to make you ship goods for free.",
       "The scam targets the gap between a real payment and a convincing fake one. Genuine payment platforms do not hold your money hostage until you upload a tracking number to an email link, and they do not release funds because you emailed proof of postage. The \"pending\" story exists only to manufacture a reason for you to act before you check your actual account balance.",
-      "It is a specific case of a much larger problem — imposter scams, where criminals pose as a trusted brand or institution. The defence is the same across all of them: ignore what the email claims and log in to the real service independently to see whether the money is genuinely there."
+      "It is a specific case of a much larger problem, imposter scams, where criminals pose as a trusted brand or institution. The defence is the same across all of them: ignore what the email claims and log in to the real service independently to see whether the money is genuinely there."
     ],
     "stats": [
       { "figure": "$2.7B", "label": "reported lost to imposter scams in the US in 2023, one of the most common fraud categories", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
@@ -129,7 +129,7 @@
     "verify": [
       "Never ship based on an email. Log in to the payment platform directly and confirm the money is actually in your balance.",
       "Understand that genuine platforms do not release funds because you emailed a tracking number to a link.",
-      "Be wary of buyers who overpay and ask for a partial refund — this is almost always a scam.",
+      "Be wary of buyers who overpay and ask for a partial refund, this is almost always a scam.",
       "Keep transactions on the marketplace's official system to retain buyer and seller protections.",
       "Check the sender's real email address, not just the display name, and treat mismatches as a warning."
     ],
@@ -145,9 +145,9 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "A recruiter messages out of the blue with a role that sounds almost too good: work from home, flexible hours, strong pay, and you are \"hired\" after a short chat on a messaging app — no real interview. Fake job offers exploit hope and momentum. By the time money is mentioned, you are emotionally invested in the opportunity and less likely to question it.",
-      "The tell is the direction money flows. In a real job, the employer pays you. In a job scam, you end up paying them — for \"training,\" \"equipment,\" a \"starter kit,\" or background checks — or you are drawn into \"task\" work that requires you to deposit your own money to unlock commissions that never materialise. Another common goal is your identity: bank details and copies of your ID handed over as \"onboarding paperwork.\"",
-      "Job scams have grown quickly as more hiring moves online and onto chat apps. The good news is that a handful of firm rules — never pay to work, never share banking or ID details before a verified offer, and always confirm the employer independently — neutralise nearly every version."
+      "A recruiter messages out of the blue with a role that sounds almost too good: work from home, flexible hours, strong pay, and you are \"hired\" after a short chat on a messaging app, no real interview. Fake job offers exploit hope and momentum. By the time money is mentioned, you are emotionally invested in the opportunity and less likely to question it.",
+      "The tell is the direction money flows. In a real job, the employer pays you. In a job scam, you end up paying them, for \"training,\" \"equipment,\" a \"starter kit,\" or background checks, or you are drawn into \"task\" work that requires you to deposit your own money to unlock commissions that never materialise. Another common goal is your identity: bank details and copies of your ID handed over as \"onboarding paperwork.\"",
+      "Job scams have grown quickly as more hiring moves online and onto chat apps. The good news is that a handful of firm rules, never pay to work, never share banking or ID details before a verified offer, and always confirm the employer independently, neutralise nearly every version."
     ],
     "stats": [
       { "figure": "$10.3B", "label": "total reported fraud losses in the US in 2023, with business and job-opportunity scams among the fast-growing categories", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
@@ -163,7 +163,7 @@
     "caseStudy": {
       "title": "An illustrative example",
       "body": [
-        "Sofia was job-hunting when a recruiter messaged praising her CV and offering a remote data role. After a brief WhatsApp chat she was \"hired\" and told the first week involved simple tasks that paid commission — but she needed to deposit a small amount to unlock the higher-paying batches. Her first tiny withdrawal worked, which built her confidence to deposit more.",
+        "Sofia was job-hunting when a recruiter messaged praising her CV and offering a remote data role. After a brief WhatsApp chat she was \"hired\" and told the first week involved simple tasks that paid commission, but she needed to deposit a small amount to unlock the higher-paying batches. Her first tiny withdrawal worked, which built her confidence to deposit more.",
         "When a larger withdrawal was blocked pending an even bigger deposit, she recognised the pattern: a real job never asks you to pay in to get paid. She stopped depositing, kept records of the chat, and reported it. The small early payout had been bait. This example is fictional but mirrors how modern task scams operate."
       ]
     },
@@ -176,7 +176,7 @@
     "verify": [
       "Never pay to get a job, and never deposit your own money to \"unlock\" earnings or tasks.",
       "Do not share bank details, ID copies, or personal data before a verified, written offer from a confirmed employer.",
-      "Look up the company independently and contact it through its official website — beware lookalike domains.",
+      "Look up the company independently and contact it through its official website, beware lookalike domains.",
       "Be cautious of hiring that skips a real interview or rushes you onto a chat app.",
       "Treat a job that involves receiving and forwarding money or parcels as a serious warning sign."
     ],
@@ -192,9 +192,9 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "Romance scams are among the most financially and emotionally devastating frauds because they attack through connection rather than fear. A warm, attentive stranger appears — on a dating app, in a social media DM, even via a \"wrong number\" text — and over days or weeks builds what feels like a genuine bond. Only later, once trust is deep, does money enter the conversation.",
+      "Romance scams are among the most financially and emotionally devastating frauds because they attack through connection rather than fear. A warm, attentive stranger appears, on a dating app, in a social media DM, even via a \"wrong number\" text, and over days or weeks builds what feels like a genuine bond. Only later, once trust is deep, does money enter the conversation.",
       "The manipulation is deliberate and patterned. The person is endlessly available, mirrors your interests, and escalates affection quickly (\"love bombing\"), yet always has a reason they cannot meet or video-call. Then a crisis arrives: a medical emergency, a stuck inheritance, a business deal, a customs fee on a gift they \"sent\" you. Each request is framed as temporary and repayable, and each one is designed to extract a little more.",
-      "Because victims are emotionally invested, romance scams often unfold over months and can involve large sums. Recognising the structure — fast intimacy, no in-person contact, and eventual requests for money or crypto — is what allows people to step back before the losses mount."
+      "Because victims are emotionally invested, romance scams often unfold over months and can involve large sums. Recognising the structure, fast intimacy, no in-person contact, and eventual requests for money or crypto, is what allows people to step back before the losses mount."
     ],
     "stats": [
       { "figure": "$1B+", "label": "reported lost to romance scams in the US in a single recent year, among the costliest fraud types by total losses", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
@@ -204,13 +204,13 @@
       { "title": "First contact", "detail": "An attractive stranger reaches out on a dating app, social platform, or by a \"wrong number\" text, and is quick to connect." },
       { "title": "Fast intimacy", "detail": "Affection escalates rapidly with constant messaging and talk of a future together, building trust and dependence." },
       { "title": "Always a reason not to meet", "detail": "They avoid video calls and in-person meetings, citing work abroad, the military, an oil rig, or medical missions." },
-      { "title": "A crisis appears", "detail": "An emergency requiring money arises — medical bills, travel, customs fees, or an investment \"opportunity\" they want to share." },
+      { "title": "A crisis appears", "detail": "An emergency requiring money arises, medical bills, travel, customs fees, or an investment \"opportunity\" they want to share." },
       { "title": "Escalating requests", "detail": "Once you pay once, new emergencies follow, often shifting to gift cards or cryptocurrency, which are hard to trace or recover." }
     ],
     "caseStudy": {
       "title": "An illustrative example",
       "body": [
-        "Ken matched with someone charming who messaged constantly and spoke of meeting soon, though a contract overseas kept getting in the way. After weeks of daily conversation, they mentioned a customs fee needed to release equipment so they could finally fly home — could Ken help, just this once, to be repaid immediately?",
+        "Ken matched with someone charming who messaged constantly and spoke of meeting soon, though a contract overseas kept getting in the way. After weeks of daily conversation, they mentioned a customs fee needed to release equipment so they could finally fly home, could Ken help, just this once, to be repaid immediately?",
         "Ken noticed the pattern: intense affection, no video call, and now a request for money via gift cards. He suggested a quick video chat and the excuses multiplied. He stopped sending anything, reported the profile, and confided in a friend. Painful as it was, recognising the structure early prevented larger losses. This is a fictional illustration of a real and common pattern."
       ]
     },
@@ -225,7 +225,7 @@
       "Never send money, gift cards, or cryptocurrency to someone you have not met in person, however genuine it feels.",
       "Do a reverse image search of their photos, which are often stolen from real people's profiles.",
       "Be wary of fast, intense affection combined with any reason they cannot meet.",
-      "Talk to a trusted friend or family member — an outside perspective often spots what emotion hides."
+      "Talk to a trusted friend or family member, an outside perspective often spots what emotion hides."
     ],
     "sources": [
       { "title": "Romance scams", "publisher": "FTC Consumer Advice", "url": "https://consumer.ftc.gov/articles/what-you-need-know-about-romance-scams" },
@@ -239,20 +239,20 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "Crypto investment scams promise what no legitimate investment can: high returns with little or no risk. They arrive through social media ads, messaging apps, \"finance\" influencers, or a friendly stranger who slowly introduces you to a platform that appears to be making them rich. The interface looks professional, the early numbers go up, and small test withdrawals succeed — all carefully staged to earn your trust before the real ask.",
+      "Crypto investment scams promise what no legitimate investment can: high returns with little or no risk. They arrive through social media ads, messaging apps, \"finance\" influencers, or a friendly stranger who slowly introduces you to a platform that appears to be making them rich. The interface looks professional, the early numbers go up, and small test withdrawals succeed, all carefully staged to earn your trust before the real ask.",
       "The mechanics are consistent. You are guided to a platform (often a convincing fake) where your \"portfolio\" shows steady gains. You are encouraged to invest more, sometimes with a \"mentor\" or \"account manager\" coaching you. When you try to withdraw a significant amount, obstacles appear: taxes, fees, or verification deposits that must be paid first. These never end, because the gains were never real and the money is already gone.",
-      "Investment fraud, much of it crypto-related, now tops the list of fraud losses in many countries. The core defence is to distrust guaranteed returns, keep control of your own wallet, and refuse to pay fees to \"release\" your own money — a demand that legitimate platforms never make."
+      "Investment fraud, much of it crypto-related, now tops the list of fraud losses in many countries. The core defence is to distrust guaranteed returns, keep control of your own wallet, and refuse to pay fees to \"release\" your own money, a demand that legitimate platforms never make."
     ],
     "stats": [
-      { "figure": "$4.6B", "label": "reported lost to investment scams in the US in 2023 — the top fraud category by total losses", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
+      { "figure": "$4.6B", "label": "reported lost to investment scams in the US in 2023, the top fraud category by total losses", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
       { "figure": "$1B+", "label": "in cryptocurrency reported lost to scams between 2021 and mid-2022", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" }
     ],
     "howItWorks": [
       { "title": "The introduction", "detail": "You meet the \"opportunity\" via an ad, a DM, a group chat, or a new online friend who mentions their impressive returns." },
-      { "title": "A polished platform", "detail": "You are directed to a slick trading site or app — frequently a fake — that displays your balance climbing." },
+      { "title": "A polished platform", "detail": "You are directed to a slick trading site or app, frequently a fake, that displays your balance climbing." },
       { "title": "Coaching and small wins", "detail": "A \"manager\" guides your trades, and a small withdrawal is allowed early to prove the platform \"works.\"" },
       { "title": "Pressure to add more", "detail": "You are urged to invest larger sums to maximise gains, sometimes borrowing or moving retirement funds." },
-      { "title": "The withdrawal wall", "detail": "Cashing out triggers demands for taxes, fees, or deposits before release — an endless loop that never pays out." }
+      { "title": "The withdrawal wall", "detail": "Cashing out triggers demands for taxes, fees, or deposits before release, an endless loop that never pays out." }
     ],
     "caseStudy": {
       "title": "An illustrative example",
@@ -265,10 +265,10 @@
       { "name": "\"Pig butchering\" relationship build-up", "detail": "A romance or friendship develops first, then the scammer introduces the investment once trust is established." },
       { "name": "Recovery scam", "detail": "After a loss, fraudsters posing as recovery agents or lawyers promise to get your money back for an upfront fee." },
       { "name": "Fake celebrity or AI endorsement", "detail": "Deepfake videos or fake endorsements make a scheme look credible and mainstream." },
-      { "name": "Giveaway or doubling scam", "detail": "\"Send crypto to this address and receive double back\" — the sent funds simply disappear." }
+      { "name": "Giveaway or doubling scam", "detail": "\"Send crypto to this address and receive double back\", the sent funds simply disappear." }
     ],
     "verify": [
-      "Treat any promise of guaranteed or unusually high returns as a scam — real investments carry risk.",
+      "Treat any promise of guaranteed or unusually high returns as a scam, real investments carry risk.",
       "Never pay taxes or fees to \"unlock\" a withdrawal; legitimate platforms deduct from your balance, not via upfront payments.",
       "Keep your funds in your own wallet or a well-known, regulated exchange you researched independently.",
       "Be sceptical of mentors, account managers, or online friends steering you to a specific platform.",
@@ -286,7 +286,7 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "Your phone rings — or a recorded voice tells you — that there is a problem with your Amazon account: a suspicious order, an expiring membership, or an unauthorised charge. Press 1 or call back, and you reach a \"representative\" ready to help. This is one of the most common imposter scams in the world, and it works because Amazon is a brand almost everyone uses and trusts.",
+      "Your phone rings, or a recorded voice tells you, that there is a problem with your Amazon account: a suspicious order, an expiring membership, or an unauthorised charge. Press 1 or call back, and you reach a \"representative\" ready to help. This is one of the most common imposter scams in the world, and it works because Amazon is a brand almost everyone uses and trusts.",
       "The call is a doorway, not the destination. The \"representative\" aims to get you to install remote-access software so they can \"secure your account,\" read out a refund confirmation code, or move money to \"reverse\" a fake charge. Once they control your screen or your trust, they can drain accounts, take out the very charges they warned you about, or harvest enough detail for later fraud.",
       "The single most protective habit is to never use the number or prompt from the call. Amazon does not cold-call about account problems and ask you to install software or move money. Hang up, and check your account only through the official app or website you open yourself."
     ],
@@ -305,7 +305,7 @@
       "title": "An illustrative example",
       "body": [
         "Eleanor got an automated call saying a $1,200 order was being processed on her Amazon account and to press 1 to dispute it. Alarmed, she did. A polite agent offered to help and asked her to install an app so he could \"secure the account\" and cancel the order.",
-        "When he asked for remote access to her device, she hesitated — that did not match how any real company had ever helped her. She hung up and checked the Amazon app herself: no such order existed. The call was entirely fake. She never installed the software, and her accounts stayed safe. This scenario is fictional but typical of Amazon impersonation calls."
+        "When he asked for remote access to her device, she hesitated, that did not match how any real company had ever helped her. She hung up and checked the Amazon app herself: no such order existed. The call was entirely fake. She never installed the software, and her accounts stayed safe. This scenario is fictional but typical of Amazon impersonation calls."
       ]
     },
     "variations": [
@@ -333,7 +333,7 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "You list an item on Facebook Marketplace and a keen buyer appears almost instantly, offering the full asking price. They cannot collect in person but will \"send a courier,\" and they pay via an email that confirms the money is on its way — you just need to cover the courier or verify your account first. For sellers, this is one of the most common marketplace traps, and it turns your eagerness to sell against you.",
+      "You list an item on Facebook Marketplace and a keen buyer appears almost instantly, offering the full asking price. They cannot collect in person but will \"send a courier,\" and they pay via an email that confirms the money is on its way, you just need to cover the courier or verify your account first. For sellers, this is one of the most common marketplace traps, and it turns your eagerness to sell against you.",
       "The emails are forgeries. No payment has been made; the messages imitate a payment service or the marketplace to create false confidence. The real objective is either to make you send the item without payment, to extract a \"courier\" or \"verification\" fee, or to phish your banking details on a fake payment page. Some versions push you toward instant-transfer apps whose payments cannot be reversed.",
       "The reliable defence is to keep everything on the platform, confirm funds in your own account before releasing goods, and treat any request to pay a fee in order to \"receive\" a payment as a scam. Legitimate buyers do not ask sellers to pay to get paid."
     ],
@@ -351,20 +351,20 @@
     "caseStudy": {
       "title": "An illustrative example",
       "body": [
-        "Tomas sold a bike on Marketplace to a buyer who paid \"instantly\" and arranged a courier. An email that looked like a payment service said the funds were held and would be released once Tomas paid a small courier insurance fee — which the buyer promised to include in the total.",
+        "Tomas sold a bike on Marketplace to a buyer who paid \"instantly\" and arranged a courier. An email that looked like a payment service said the funds were held and would be released once Tomas paid a small courier insurance fee, which the buyer promised to include in the total.",
         "Tomas checked his actual bank and payment accounts: nothing had arrived, and there was no such thing as a fee to receive money. The email was fake, engineered to make him pay a scammer before the fictitious payment \"cleared.\" He declined, relisted the bike, and reported the buyer. This is a fictional but representative example."
       ]
     },
     "variations": [
       { "name": "Overpayment refund", "detail": "The \"buyer\" claims to have sent too much and asks you to refund the difference before the fake payment unravels." },
-      { "name": "Verification-code phish", "detail": "A \"buyer\" asks for a code sent to your phone \"to confirm you're real\" — actually hijacking an account in your name." },
+      { "name": "Verification-code phish", "detail": "A \"buyer\" asks for a code sent to your phone \"to confirm you're real\", actually hijacking an account in your name." },
       { "name": "Off-platform move", "detail": "They push to WhatsApp or email and to an irreversible instant-transfer app, away from marketplace protections." },
       { "name": "Fake buyer-protection page", "detail": "A link leads to a spoofed payment page that harvests your card or bank login." }
     ],
     "verify": [
       "Keep communication and payment on the marketplace; be wary of buyers who push to email or chat apps.",
       "Confirm money has actually arrived in your own account before shipping or handing over an item.",
-      "Never pay a fee to \"release\" or \"receive\" a payment — that is not how getting paid works.",
+      "Never pay a fee to \"release\" or \"receive\" a payment, that is not how getting paid works.",
       "Do not share verification codes with buyers; a genuine buyer never needs a code sent to your phone.",
       "Prefer in-person, cash-safe handovers in public places for local sales where possible."
     ],
@@ -380,9 +380,9 @@
     "updated": "2026-06",
     "author": "Scam or Safe editorial team",
     "intro": [
-      "A message or email says your Instagram account qualifies for the blue verified badge — or, in the darker version, that your account has violated a policy and will be deleted unless you \"verify\" immediately. Either way you are steered to a link that looks like Instagram and asked to log in or confirm details. This is a targeted phishing scam aimed at one of the most valuable things you own online: control of your account.",
-      "Verification and \"copyright/community-guideline\" warnings are effective bait because they mix aspiration and fear. The link leads to a convincing fake login page; the moment you enter your username, password, and any two-factor code, the attacker takes over. From there they can lock you out, message your followers to spread the scam, or demand a ransom to return the account — especially painful for creators and businesses.",
-      "The safest habit is to ignore links in these messages entirely. Real account status, verification eligibility, and policy notices appear inside the official app, under your account settings — never as a one-off link asking you to log in from an email or DM."
+      "A message or email says your Instagram account qualifies for the blue verified badge, or, in the darker version, that your account has violated a policy and will be deleted unless you \"verify\" immediately. Either way you are steered to a link that looks like Instagram and asked to log in or confirm details. This is a targeted phishing scam aimed at one of the most valuable things you own online: control of your account.",
+      "Verification and \"copyright/community-guideline\" warnings are effective bait because they mix aspiration and fear. The link leads to a convincing fake login page; the moment you enter your username, password, and any two-factor code, the attacker takes over. From there they can lock you out, message your followers to spread the scam, or demand a ransom to return the account, especially painful for creators and businesses.",
+      "The safest habit is to ignore links in these messages entirely. Real account status, verification eligibility, and policy notices appear inside the official app, under your account settings, never as a one-off link asking you to log in from an email or DM."
     ],
     "stats": [
       { "figure": "$1.4B", "label": "reported lost to fraud that began on social media in the US in 2023", "source": "US Federal Trade Commission", "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight" },
@@ -405,14 +405,14 @@
     "variations": [
       { "name": "Copyright / community-guideline strike", "detail": "A fake violation notice with a deadline pressures you to \"appeal\" via a phishing link." },
       { "name": "Paid verification offer", "detail": "A \"service\" promises to get you verified for a fee, taking your money and often your login too." },
-      { "name": "Compromised-friend message", "detail": "A hacked friend's account asks you to \"vote\" for them or receive a code — hijacking your account next." },
+      { "name": "Compromised-friend message", "detail": "A hacked friend's account asks you to \"vote\" for them or receive a code, hijacking your account next." },
       { "name": "Brand-collaboration bait", "detail": "A fake sponsorship offer leads to a malicious link or a request for login \"to check your insights.\"" }
     ],
     "verify": [
       "Never log in through a link in a DM or email; open the official app and check settings yourself.",
       "Turn on two-factor authentication, and never share a login code with anyone, including \"friends.\"",
       "Check verification eligibility and any policy notices only inside the official app's account settings.",
-      "Be sceptical of urgent deadlines and threats of deletion — these exist to rush you.",
+      "Be sceptical of urgent deadlines and threats of deletion, these exist to rush you.",
       "Use a unique password for your social accounts so one breach cannot unlock the rest."
     ],
     "sources": [
@@ -446,7 +446,7 @@
       "title": "An illustrative example",
       "body": [
         "George saw a full-screen pop-up warning that his computer was infected and to call the number shown \"before his data was lost.\" He called; a helpful technician asked him to install a program so he could remove the virus. Once connected, the technician said George was owed a refund and would process it, then claimed to have sent too much and asked George to buy gift cards to repay the difference.",
-        "The gift-card request broke the spell — no real company asks to be repaid that way. George disconnected, shut down the computer, and had it checked by a trusted local shop. He had installed the software but sent no money. He changed his passwords from a different device. This is a fictional example of a classic remote-access scam."
+        "The gift-card request broke the spell, no real company asks to be repaid that way. George disconnected, shut down the computer, and had it checked by a trusted local shop. He had installed the software but sent no money. He changed his passwords from a different device. This is a fictional example of a classic remote-access scam."
       ]
     },
     "variations": [
@@ -459,7 +459,7 @@
       "Never install remote-access software or grant control to someone who contacted you unexpectedly.",
       "Ignore pop-ups and calls claiming your device is infected; genuine companies do not work this way.",
       "If you need help, contact a technician or company you sought out independently, not a number from a warning.",
-      "Never pay for \"support\" with gift cards, and never repay a \"mistaken refund\" — it is a manipulation.",
+      "Never pay for \"support\" with gift cards, and never repay a \"mistaken refund\", it is a manipulation.",
       "If you granted access, disconnect, run a security scan, and change passwords from a different, trusted device."
     ],
     "sources": [

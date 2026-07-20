@@ -1,4 +1,4 @@
-/* Scam or Safe — shared UI behaviour: mobile nav, theme toggle, reading
+/* Scam or Safe, shared UI behaviour: mobile nav, theme toggle, reading
    progress. The theme preference is the only thing stored (localStorage,
    this browser only). No tracking. */
 (function () {

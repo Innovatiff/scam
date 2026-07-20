@@ -1,4 +1,4 @@
-/* Scam or Safe — design system
+/* Scam or Safe design system
    Public-safety, trustworthy, fast. Mobile-first. */
 
 :root {
@@ -735,3 +735,13 @@ body.quiz-open { overflow: hidden; }
 @media (max-width: 560px) {
   .author-hero { flex-direction: column; text-align: center; align-items: center; gap: 14px; padding: 20px 16px; }
 }
+
+/* ---------- Card author byline (on every scam card) ---------- */
+.card { display: flex; flex-direction: column; }
+.card .card-byline {
+  display: flex; align-items: center; gap: 6px;
+  margin: 14px 0 0; margin-top: auto; padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: .78rem; font-weight: 600; color: var(--gray-text);
+}
+.card .card-byline svg { width: 14px; height: 14px; color: var(--blue); flex: 0 0 auto; margin: 0; }

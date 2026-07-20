@@ -1,4 +1,4 @@
-/* Scam or Safe — "Can you spot the scam?" quiz (modal edition).
+/* Scam or Safe, "Can you spot the scam?" quiz (modal edition).
    Runs entirely in the browser. Nothing is recorded or sent anywhere. */
 (function () {
   "use strict";
@@ -78,7 +78,7 @@
         '<button class="quiz-btn scam" data-answer="scam">🚩 This is a scam</button>' +
         '<button class="quiz-btn genuine" data-answer="genuine">✅ Looks genuine</button>' +
       "</div>" +
-      '<p class="muted" style="font-size:.82rem;margin-top:12px;text-align:center">All examples are fictional patterns written for practice — no real messages or people.</p>'
+      '<p class="muted" style="font-size:.82rem;margin-top:12px;text-align:center">All examples are fictional patterns written for practice, no real messages or people.</p>'
     );
     stage.querySelectorAll(".quiz-btn").forEach(function (btn) {
       btn.addEventListener("click", function () { answer(btn.getAttribute("data-answer")); });
@@ -96,7 +96,7 @@
       '<div class="quiz-progress">Question ' + (idx + 1) + " of " + QUESTIONS.length +
         " · Score " + score + "</div>" +
       '<div class="quiz-feedback ' + (correct ? "correct" : "wrong") + '">' +
-        "<h3>" + (correct ? "✔ Correct" : "✘ Not quite") + " — this is " + verdictLabel + "</h3>" +
+        "<h3>" + (correct ? "✔ Correct" : "✘ Not quite") + ", this is " + verdictLabel + "</h3>" +
         "<p>" + esc(q.explain) + "</p>" +
         (tells ? "<strong>The tells:</strong><ul class=\"quiz-tells\">" + tells + "</ul>" : "") +
         (q.guide ? '<p style="margin:10px 0 0">Full guide: <a href="' + esc(q.guide.url) + '">' + esc(q.guide.title) + "</a></p>" : "") +
@@ -117,10 +117,10 @@
 
   function tierMessage() {
     var pct = score / QUESTIONS.length;
-    if (pct === 1) return "Perfect score. You have a sharp eye for the tells — consider sharing this quiz with someone who might not.";
+    if (pct === 1) return "Perfect score. You have a sharp eye for the tells, consider sharing this quiz with someone who might not.";
     if (pct >= 0.8) return "Strong result. You spot most patterns; review the ones you missed and you'll be very hard to fool.";
-    if (pct >= 0.6) return "A solid start — but a few convincing patterns got past you. The guides linked along the way are worth two minutes each.";
-    return "These messages are designed to fool people, and today a few fooled you. That's exactly why practising matters — browse the guides and try again.";
+    if (pct >= 0.6) return "A solid start, but a few convincing patterns got past you. The guides linked along the way are worth two minutes each.";
+    return "These messages are designed to fool people, and today a few fooled you. That's exactly why practising matters, browse the guides and try again.";
   }
 
   function renderScore() {
@@ -138,7 +138,7 @@
           '<button class="quiz-btn" id="quiz-retry">Try again</button>' +
           '<button class="quiz-btn" id="quiz-done">Done</button>' +
         "</div>" +
-        '<p class="muted" id="quiz-copied" style="font-size:.85rem;margin:10px 0 0;visibility:hidden">Copied — paste it anywhere.</p>' +
+        '<p class="muted" id="quiz-copied" style="font-size:.85rem;margin:10px 0 0;visibility:hidden">Copied, paste it anywhere.</p>' +
       "</div>"
     );
     document.getElementById("quiz-retry").addEventListener("click", function () {

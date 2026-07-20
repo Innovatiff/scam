@@ -1,4 +1,4 @@
-/* Scam or Safe — client-side red-flag checker
+/* Scam or Safe, client-side red-flag checker
    Runs entirely in the browser. Pasted text is never sent to a server or stored
    beyond a single in-memory analysis (and an optional sessionStorage hand-off
    between the homepage and the checker page, which is cleared after use). */

@@ -2434,7 +2434,7 @@
     "faqs": [
       {
         "question": "What is the Google Voice verification code scam?",
-        "answer": "A scammer (often posing as an interested buyer or a match from an app) asks you to read back a Google Voice verification code sent to your phone. That code lets them create a Google Voice number linked to your real number, which they use for further fraud. Never share a verification code with anyone — genuine buyers and contacts never need one."
+        "answer": "A scammer (often posing as an interested buyer or a match from an app) asks you to read back a Google Voice verification code sent to your phone. That code lets them create a Google Voice number linked to your real number, which they use for further fraud. Never share a verification code with anyone, genuine buyers and contacts never need one."
       },
       {
         "question": "Why would a code prove I am real?",
@@ -4808,7 +4808,7 @@
       "mainRedFlag": "A text that appears to come from your own number, usually with a reward or account link.",
       "whatToDoFirst": "Do not tap the link. Your own number messaging you is a sign the sender has been spoofed."
     },
-    "exampleMessage": "Example pattern: 'Free Msg: Thank you for being a loyal customer. A reward is waiting on your account. Claim it now: [suspicious link]' — sent from what looks like your own phone number.",
+    "exampleMessage": "Example pattern: 'Free Msg: Thank you for being a loyal customer. A reward is waiting on your account. Claim it now: [suspicious link]', sent from what looks like your own phone number.",
     "redFlags": [
       "A text that appears to come from your own phone number",
       "A reward, gift, or 'thank you' offer that seems too good to be true",
@@ -10191,7 +10191,7 @@
     "faqs": [
       {
         "question": "What does \"flipping money\" mean?",
-        "answer": "In scam terms, \"flipping money\" (also called a money flip or cash flip) is a false promise that if you send a small amount — say $100 — a fraudster will use a \"secret method\" to multiply it and send back much more. There is no real method: the money is simply taken and you receive nothing. Genuine investing does not work by sending cash to a stranger who guarantees to multiply it."
+        "answer": "In scam terms, \"flipping money\" (also called a money flip or cash flip) is a false promise that if you send a small amount, say $100, a fraudster will use a \"secret method\" to multiply it and send back much more. There is no real method: the money is simply taken and you receive nothing. Genuine investing does not work by sending cash to a stranger who guarantees to multiply it."
       },
       {
         "question": "Could a money flip ever be real?",
@@ -11301,7 +11301,7 @@
       "mainRedFlag": "A reply in a familiar thread that suddenly adds an unexpected link or attachment.",
       "whatToDoFirst": "Do not open the link or attachment. Verify with the sender through a separate, known channel before acting."
     },
-    "exampleMessage": "Example pattern: 'Re: Project update — Thanks for the notes. Please see the revised document attached and let me know your thoughts: [unfamiliar link]'",
+    "exampleMessage": "Example pattern: 'Re: Project update, Thanks for the notes. Please see the revised document attached and let me know your thoughts: [unfamiliar link]'",
     "redFlags": [
       "An unexpected link or attachment appearing in a thread that was previously normal",
       "A reply that feels slightly off in tone, timing or wording compared with the real contact",
@@ -16215,7 +16215,7 @@
       "mainRedFlag": "Unexpected calendar events appear with links to claim prizes, fix accounts, or view files.",
       "whatToDoFirst": "Do not tap the links. Delete the events and turn off auto-adding invites."
     },
-    "exampleMessage": "Example pattern: A calendar event you never created appears, titled 'You have (1) pending payment — click to review', with a reminder linking to a phishing page.",
+    "exampleMessage": "Example pattern: A calendar event you never created appears, titled 'You have (1) pending payment, click to review', with a reminder linking to a phishing page.",
     "redFlags": [
       "Calendar events you did not create",
       "Event titles about prizes, payments, or security alerts",
@@ -31804,7 +31804,7 @@
     "faqs": [
       {
         "question": "Is the \"Amazon Prime membership renewal\" call a scam?",
-        "answer": "An unexpected call or recording saying your Amazon Prime membership is auto-renewing at a high price — and offering to \"cancel\" it if you press a key or confirm details — is a common version of this scam. Amazon does not cold-call to cancel Prime. Hang up and check your membership only in the official Amazon app or website."
+        "answer": "An unexpected call or recording saying your Amazon Prime membership is auto-renewing at a high price, and offering to \"cancel\" it if you press a key or confirm details, is a common version of this scam. Amazon does not cold-call to cancel Prime. Hang up and check your membership only in the official Amazon app or website."
       },
       {
         "question": "Does Amazon call about suspicious orders?",
