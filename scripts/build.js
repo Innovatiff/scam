@@ -305,7 +305,7 @@ function authorPhoto(cls, size) {
 }
 function byline() {
   return `<a class="byline" href="${AUTHOR.url}" rel="author">` +
-    `<span class="byline-mark">${icon("shield")}</span>` +
+    `<span class="byline-mark">${brandMark("by")}</span>` +
     `<span class="byline-text">By the <strong>${esc(TEAM_NAME)}</strong>` +
     `<span class="byline-role">Researched &amp; reviewed for accuracy</span></span></a>`;
 }
