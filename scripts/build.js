@@ -28,12 +28,15 @@ const quizData = readJSONSafe("data/quiz.json", []);
    byline is never broken. */
 const AUTHOR = {
   name: "Daniel Hernandez",
-  role: "Founder & Lead Researcher",
+  role: "Founder",
   photo: "/assets/img/daniel-hernandez.jpg",
   photoFallback: "/assets/img/daniel-hernandez.svg",
   url: "/about/",
-  bioShort: "Daniel Hernandez started Scam or Safe after being scammed three times in a single year. He now researches how scams actually work so other people don't have to find out the hard way."
+  bioShort: "Daniel Hernandez founded and launched Scam or Safe after being scammed three times in a single year. He now leads a small editorial team that researches how scams work so other people don't have to find out the hard way."
 };
+// Guides and cards are attributed to the editorial team (more credible for a
+// large, continuously-updated library); the founder story lives on /about/.
+const TEAM_NAME = "Scam or Safe Editorial Team";
 
 const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 const scamBySlug = Object.fromEntries(scams.map((s) => [s.slug, s]));
@@ -267,7 +270,7 @@ function scamCard(scam) {
     </div>
     <h3>${esc(scam.title)}</h3>
     <p>${esc(scam.summary)}</p>
-    <p class="card-byline">${icon("shield")}<span>Created by ${esc(AUTHOR.name)}</span></p>
+    <p class="card-byline">${icon("shield")}<span>Created by ${esc(TEAM_NAME)}</span></p>
   </a>`;
 }
 
@@ -301,9 +304,10 @@ function authorPhoto(cls, size) {
     `alt="${esc(AUTHOR.name)}" width="${size}" height="${size}" loading="lazy" decoding="async">`;
 }
 function byline() {
-  return `<a class="byline" href="${AUTHOR.url}" rel="author">${authorPhoto("byline-avatar", 40)}` +
-    `<span class="byline-text">By <strong>${esc(AUTHOR.name)}</strong>` +
-    `<span class="byline-role">${esc(AUTHOR.role)}</span></span></a>`;
+  return `<a class="byline" href="${AUTHOR.url}" rel="author">` +
+    `<span class="byline-mark">${icon("shield")}</span>` +
+    `<span class="byline-text">By the <strong>${esc(TEAM_NAME)}</strong>` +
+    `<span class="byline-role">Researched &amp; reviewed for accuracy</span></span></a>`;
 }
 
 function disclaimerBox() {
@@ -941,7 +945,7 @@ ${breadcrumbs(trail)}
 
       ${bodyHtml}
 
-      <p class="last-reviewed">${icon("calendar")} Last reviewed ${esc(reviewedLabel(dd && dd.updated ? dd.updated : scam.lastReviewed))} &middot; Written &amp; reviewed by <a href="/about/" rel="author">${esc(AUTHOR.name)}</a></p>
+      <p class="last-reviewed">${icon("calendar")} Last reviewed ${esc(reviewedLabel(dd && dd.updated ? dd.updated : scam.lastReviewed))} &middot; Written &amp; reviewed by the <a href="/about/" rel="author">${esc(TEAM_NAME)}</a></p>
       ${disclaimerBox()}
     </div>
 
@@ -970,10 +974,8 @@ ${breadcrumbs(trail)}
     inLanguage: config.lang,
     isAccessibleForFree: true,
     author: {
-      "@type": "Person", name: AUTHOR.name, jobTitle: AUTHOR.role,
-      url: config.url.replace(/\/$/, "") + AUTHOR.url,
-      image: config.url.replace(/\/$/, "") + AUTHOR.photo,
-      description: AUTHOR.bioShort
+      "@type": "Organization", name: TEAM_NAME,
+      url: config.url.replace(/\/$/, "") + "/about/"
     },
     publisher: { "@type": "Organization", name: config.siteName, url: config.url },
     dateModified: ymToISO((dd && dd.updated) || scam.lastReviewed),
@@ -1098,8 +1100,8 @@ function legalPages() {
 
   pages.push(simplePage({
     slug: "about", name: "About Scam or Safe",
-    title: "About, Daniel Hernandez, Founder",
-    description: "Daniel Hernandez was scammed three times in one year. Then he started researching how scams actually work and built Scam or Safe so other people don't have to learn the hard way.",
+    title: "About Scam or Safe and Founder Daniel Hernandez",
+    description: "Daniel Hernandez was scammed three times in one year. Then he founded Scam or Safe, now written by its editorial team, so other people don't have to learn the hard way.",
     extraJsonld: [{
       "@context": "https://schema.org", "@type": "ProfilePage",
       mainEntity: {
@@ -1140,7 +1142,7 @@ function legalPages() {
 
 <h2>What I promise you</h2>
 
-<p>I'm not a cybersecurity expert, and I've never pretended to be one. I'm the guy who got burned and then did the homework so you don't have to. Every guide on this site is written and reviewed by me. I keep the language careful on purpose: I'll tell you when a message has the hallmarks of a scam, but I will never tell you something is "definitely safe," because no honest person can promise that. And I built the free <a href="/scam-checker/">scam checker</a> and the <a href="/quiz/">spot-the-scam quiz</a> so you can practise recognising these patterns before one lands in your inbox for real.</p>
+<p>I'm not a cybersecurity expert, and I've never pretended to be one. I'm the guy who got burned and then did the homework. I started Scam or Safe on my own, one guide at a time, and today a small editorial team helps me research, write, and review the guides, so we can cover far more ground, far more carefully, than I ever could alone. We keep the language careful on purpose: we'll tell you when a message has the hallmarks of a scam, but we'll never tell you something is "definitely safe," because no honest person can promise that. And I built the free <a href="/scam-checker/">scam checker</a> and the <a href="/quiz/">spot-the-scam quiz</a> so you can practise recognising these patterns before one lands in your inbox for real.</p>
 
 <p>If Scam or Safe gives one person the two-second pause I didn't have the first three times, then every late night was worth it. Thanks for being here. And if a message ever feels off to you, trust that feeling. In my experience it's almost always right.</p>
 
