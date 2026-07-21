@@ -192,8 +192,8 @@ function header() {
   return `<header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="/" aria-label="${esc(config.siteName)} home">
-      <span class="logo-mark">${icon("shield")}</span>
-      <span>Scam or <b>Safe</b></span>
+      <span class="logo-mark">${brandMark("h")}</span>
+      <span class="logo-word">Scam <span class="or">or</span> <b>Safe</b></span>
     </a>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       ${links}
@@ -215,7 +215,7 @@ function footer() {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="logo"><span class="logo-mark">${icon("shield")}</span><span>Scam or <b style="color:#60A5FA">Safe</b></span></span>
+        <span class="logo"><span class="logo-mark">${brandMark("f")}</span><span class="logo-word">Scam <span class="or" style="color:#94A3B8">or</span> <b style="color:#60A5FA">Safe</b></span></span>
         <p>A public safety resource to help you recognise scam patterns and red flags before you click, reply, or send money.</p>
       </div>
       ${cols}
@@ -365,6 +365,7 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(description)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="mask-icon" href="/mask-icon.svg" color="#2563EB">
 <link rel="alternate" type="application/rss+xml" title="${esc(config.siteName)} Updates" href="/feed.xml">
 <link rel="preload" href="${asset("/assets/css/styles.css")}" as="style">
 <link rel="stylesheet" href="${asset("/assets/css/styles.css")}">
@@ -1501,8 +1502,36 @@ function adsTxt() {
 `;
 }
 
+// Shared shield-check geometry so the logo and favicon are the exact same mark.
+const SHIELD_PATH = "M12 2.1 20.4 5.2 C20.4 11.8 17.2 17.3 12 21.6 C6.8 17.3 3.6 11.8 3.6 5.2 Z";
+const CHECK_PATH = "M8.1 12.1 10.8 14.8 15.9 9.1";
+
+// Inline brand mark for the header/footer logo (gradient fill, unique grad id).
+function brandMark(uid) {
+  const g = "bm-" + uid;
+  return `<svg class="brand-mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">` +
+    `<defs><linearGradient id="${g}" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">` +
+    `<stop stop-color="#3B82F6"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient></defs>` +
+    `<path d="${SHIELD_PATH}" fill="url(#${g})"/>` +
+    `<path d="M12 2.1 20.4 5.2" stroke="#fff" stroke-opacity=".28" stroke-width="1" stroke-linecap="round"/>` +
+    `<path d="${CHECK_PATH}" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>` +
+    `</svg>`;
+}
+
 function faviconSVG() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="#2563EB"/><path d="M12 21s7-3.5 7-8.7V5.5L12 3 5 5.5v6.8C5 17.5 12 21 12 21z" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.2l2 2 4-4.2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  // Fills more of the viewport + a bolder tick so it stays legible at 16px.
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">` +
+    `<defs><linearGradient id="fg" x1="12" y1="1" x2="12" y2="23" gradientUnits="userSpaceOnUse">` +
+    `<stop stop-color="#3B82F6"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient></defs>` +
+    `<path d="M12 1.1 21.9 4.7 C21.9 12 18.1 18.1 12 22.9 C5.9 18.1 2.1 12 2.1 4.7 Z" fill="url(#fg)"/>` +
+    `<path d="M7.5 12.1 10.8 15.4 16.7 8.7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>` +
+    `</svg>`;
+}
+
+function maskIconSVG() {
+  // Monochrome silhouette for Safari pinned tabs.
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">` +
+    `<path d="M12 1.1 21.9 4.7 C21.9 12 18.1 18.1 12 22.9 C5.9 18.1 2.1 12 2.1 4.7 Z" fill="#000"/></svg>`;
 }
 
 /* ----------------------------------------------------------------- write --- */
@@ -1562,6 +1591,7 @@ function build() {
   writeFileRaw("ads.txt", adsTxt());
   writeFileRaw("feed.xml", feedXML());
   writeFileRaw("favicon.svg", faviconSVG());
+  writeFileRaw("mask-icon.svg", maskIconSVG());
 
   const pageCount = 5 + categories.length + scams.length + legalSlugs.length + 1;
   console.log(`✓ Built ${pageCount} pages into /dist`);
