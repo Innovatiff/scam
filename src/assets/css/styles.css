@@ -270,8 +270,7 @@ p { margin: 0 0 1rem; }
 .hidden { display: none; }
 
 /* ---------- Ad slots (disabled placeholders) ---------- */
-.ad-slot { margin: 20px 0; min-height: 0; }
-.ad-slot[data-ad-enabled="false"] { display: none; }
+.ad-zone { margin: 24px 0; }
 .ad-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: #94A3B8; text-align: center; margin-bottom: 4px; }
 
 /* ---------- Page intro / prose ---------- */

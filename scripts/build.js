@@ -286,16 +286,14 @@ function flagList(flags) {
   return `<ul class="flag-list">${flags.map((f) => `<li>${icon("alert")}<span>${esc(f)}</span></li>`).join("")}</ul>`;
 }
 
-// Ad slot, disabled by default. Renders nothing visible until AdSense is enabled
-// in site.config.json after approval. Never placed inside result boxes or near CTAs.
-function adSlot(id) {
-  const enabled = !!(config.adsense && config.adsense.enabled);
-  if (!enabled) return `<!-- ad slot "${id}" reserved; disabled until AdSense approval -->`;
-  return `<div class="ad-slot" data-ad-enabled="true" data-ad-slot="${esc(id)}">
-    <div class="ad-label">Advertisement</div>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="${esc(config.adsense.publisherId)}" data-ad-slot="${esc(id)}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>`;
+/* Adsterra ad units (config-driven via site.config.json > adsterra). Each format
+   can be toggled independently. Placed away from result boxes and CTAs. */
+function adsterraNativeBanner() {
+  const nb = config.adsterra && config.adsterra.nativeBanner;
+  if (!(nb && nb.enabled && nb.src && nb.container)) return "";
+  return `<div class="ad-zone"><div class="ad-label">Advertisement</div>` +
+    `<script async data-cfasync="false" src="${esc(nb.src)}"></script>` +
+    `<div id="${esc(nb.container)}"></div></div>`;
 }
 
 function authorPhoto(cls, size) {
@@ -315,19 +313,15 @@ function disclaimerBox() {
 }
 
 /* ---------------------------------------------------------------- layout --- */
-function hasRealAdsenseId() {
-  return !!(config.adsense && config.adsense.publisherId &&
-    /^ca-pub-\d{16}$/.test(config.adsense.publisherId) &&
-    !config.adsense.publisherId.includes("0000000000000000"));
+// Adsterra popunder script (goes right before </head>, one per page).
+function adsterraHead() {
+  const p = config.adsterra && config.adsterra.popunder;
+  return (p && p.enabled && p.src) ? `<script src="${esc(p.src)}"></script>` : "";
 }
-function adsenseHead() {
-  // The loader snippet goes into <head> as soon as a REAL publisher ID is set.
-  // This is what AdSense needs to verify/review the site. It does NOT display
-  // ads by itself, ad units stay hidden until adsense.enabled = true (post-approval).
-  if (!hasRealAdsenseId()) {
-    return `<!-- AdSense head snippet appears here once a real ca-pub-… publisherId is set in site.config.json (needed for AdSense site verification). -->`;
-  }
-  return `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(config.adsense.publisherId)}" crossorigin="anonymous"></script>`;
+// Adsterra Social Bar script (goes right before </body>).
+function adsterraBodyEnd() {
+  const s = config.adsterra && config.adsterra.socialBar;
+  return (s && s.enabled && s.src) ? `<script src="${esc(s.src)}"></script>` : "";
 }
 
 function analyticsScript() {
@@ -370,7 +364,7 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <link rel="preload" href="${asset("/assets/css/styles.css")}" as="style">
 <link rel="stylesheet" href="${asset("/assets/css/styles.css")}">
 ${ld}
-${adsenseHead()}
+${adsterraHead()}
 </head>
 <body class="${esc(bodyClass)}">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -382,6 +376,7 @@ ${footer()}
 <script src="${asset("/assets/js/main.js")}" defer></script>
 ${extraScripts}
 ${analyticsScript()}
+${adsterraBodyEnd()}
 </body>
 </html>`;
 }
@@ -451,7 +446,6 @@ function homePage() {
   <div class="stat-tile"><div class="num">100%</div><div class="lbl">free, no sign-up</div></div>
 </div></div></div>
 
-${adSlot("home-top")}
 
 <section class="section">
   <div class="container">
@@ -507,7 +501,7 @@ ${adSlot("home-top")}
   </div>
 </section>
 
-${adSlot("home-mid")}
+${adsterraNativeBanner()}
 
 <section class="section section-alt">
   <div class="container narrow">
@@ -712,7 +706,7 @@ ${breadcrumbs(trail)}
       <h2>Common red flags</h2>
       ${flagList(cat.redFlags)}
 
-      ${adSlot(`cat-${cat.slug}-mid`)}
+      ${adsterraNativeBanner()}
 
       <h2>${esc(cat.shortName)} scam guides</h2>
       ${list.length
@@ -739,7 +733,6 @@ ${breadcrumbs(trail)}
           ${categories.map((c) => `<li><a href="/${c.slug}/">${esc(c.shortName)}</a></li>`).join("")}
         </ul>
       </div>
-      ${adSlot(`cat-${cat.slug}-side`)}
     </aside>
   </div>
 </section>`;
@@ -894,7 +887,7 @@ function guidePage(scam) {
 
   blocks.faq = { id: "faq",
     label: pick(["Frequently asked questions", "Common questions", "Questions people ask", "Your questions answered"]),
-    html: `${faqAccordion(scam.faqs)}\n\n      ${adSlot(`guide-${scam.slug}-faq`)}` };
+    html: `${faqAccordion(scam.faqs)}` };
 
   if (dd && dd.sources) blocks.sources = { id: "sources",
     label: "Sources & further reading",
@@ -917,7 +910,7 @@ function guidePage(scam) {
   // Render ordered blocks; inject the mid ad slot after the third section.
   const bodyHtml = order.map((k, i) => {
     const sec = `<h2 id="${blocks[k].id}">${esc(blocks[k].label)}</h2>\n      ${blocks[k].html}`;
-    return (i === 2) ? `${sec}\n\n      ${adSlot(`guide-${scam.slug}-mid`)}` : sec;
+    return (i === 2) ? `${sec}\n\n      ${adsterraNativeBanner()}` : sec;
   }).join("\n\n      ");
 
   const main = `
@@ -942,8 +935,6 @@ ${breadcrumbs(trail)}
         </div>
       </div>
 
-      ${adSlot(`guide-${scam.slug}-top`)}
-
       ${bodyHtml}
 
       <p class="last-reviewed">${icon("calendar")} Last reviewed ${esc(reviewedLabel(dd && dd.updated ? dd.updated : scam.lastReviewed))} &middot; Written &amp; reviewed by the <a href="/about/" rel="author">${esc(TEAM_NAME)}</a></p>
@@ -960,7 +951,6 @@ ${breadcrumbs(trail)}
       ${cat ? `<div class="box"><h3>More ${esc(cat.shortName.toLowerCase())} scams</h3>
         <ul style="padding-left:1.1rem;margin:0">${(scamsByCategory[cat.slug] || []).filter((s) => s.slug !== scam.slug).slice(0, 6).map((s) => `<li><a href="/scams/${s.slug}/">${esc(s.title)}</a></li>`).join("")}</ul>
         <p style="margin:.6rem 0 0"><a href="/${cat.slug}/">All ${esc(cat.shortName.toLowerCase())} scams →</a></p></div>` : ""}
-      ${adSlot(`guide-${scam.slug}-side`)}
     </aside>
   </div>
 </article>`;
@@ -1219,7 +1209,7 @@ function legalPages() {
 <h2>Analytics</h2>
 <p>We may use privacy-respecting analytics to understand which pages are useful, in aggregate. This helps us improve our guides. Analytics data does not include the content of messages you check.</p>
 <h2>Advertising</h2>
-<p>We may display advertising to support the site. If we use Google AdSense, third-party vendors including Google may use cookies to serve ads based on your prior visits, in line with their policies. Advertising is never placed inside the scam checker result area, and we do not allow ads that imitate warnings, buttons, or navigation. You can review Google's advertising practices in your account settings and ad preferences.</p>
+<p>We display advertising from a third-party advertising network to keep this site free to use. That network and its partners may use cookies, device identifiers, or similar technologies to serve and measure ads. Advertising is kept separate from our guidance, is never placed inside the scam-checker result area, and we do not allow ads that imitate system warnings, buttons, or site navigation. You can control cookies through your browser settings, and you can opt out of interest-based advertising through industry tools such as the Digital Advertising Alliance and Your Online Choices.</p>
 <h2>Cookies</h2>
 <p>Essential functionality does not require advertising cookies. Where advertising or analytics cookies are used, they follow the relevant providers' policies.</p>
 <h2>Changes</h2>
@@ -1495,11 +1485,10 @@ Sitemap: ${base}/sitemap.xml
 }
 
 function adsTxt() {
-  // ads.txt, authorised digital sellers. Publisher ID comes from site.config.json.
-  const pub = (config.adsense && config.adsense.publisherId) || "ca-pub-0000000000000000";
-  const id = pub.replace(/^ca-/, "");
-  return `google.com, ${id}, DIRECT, f08c47fec0942fa0
-`;
+  // ads.txt, authorised digital sellers. Paste Adsterra's ads.txt lines into
+  // site.config.json > adsterra.adsTxt (array of strings). Empty = no file.
+  const lines = (config.adsterra && Array.isArray(config.adsterra.adsTxt)) ? config.adsterra.adsTxt : [];
+  return lines.length ? lines.join("\n") + "\n" : "";
 }
 
 // Shared shield-check geometry so the logo and favicon are the exact same mark.
@@ -1588,15 +1577,18 @@ function build() {
   // root files
   writeFileRaw("sitemap.xml", sitemapXML());
   writeFileRaw("robots.txt", robotsTxt());
-  writeFileRaw("ads.txt", adsTxt());
+  const adstxt = adsTxt();
+  if (adstxt.trim()) writeFileRaw("ads.txt", adstxt);
   writeFileRaw("feed.xml", feedXML());
   writeFileRaw("favicon.svg", faviconSVG());
   writeFileRaw("mask-icon.svg", maskIconSVG());
 
+  const a = config.adsterra || {};
+  const on = ["popunder", "socialBar", "nativeBanner"].filter((k) => a[k] && a[k].enabled);
   const pageCount = 5 + categories.length + scams.length + legalSlugs.length + 1;
   console.log(`✓ Built ${pageCount} pages into /dist`);
   console.log(`  • ${scams.length} scam guides across ${categories.length} categories`);
-  console.log(`  • AdSense: ${config.adsense.enabled ? "ENABLED" : "disabled (placeholders reserved)"}`);
+  console.log(`  • Adsterra: ${on.length ? on.join(", ") : "none enabled"}${adstxt.trim() ? " (ads.txt written)" : " (no ads.txt)"}`);
 }
 
 build();
