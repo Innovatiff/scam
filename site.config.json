@@ -8,23 +8,6 @@
   "contactEmail": "hello@scamorsafe.org",
   "googleSiteVerification": "",
   "twitter": "",
-  "adsterra": {
-    "popunder": {
-      "enabled": true,
-      "src": "https://predestineheadypleasure.com/93/a0/7a/93a07adfda83b85a98576cb07d3e443e.js"
-    },
-    "socialBar": {
-      "enabled": true,
-      "src": "https://predestineheadypleasure.com/5c/ee/ee/5ceeee3379d7ce2f88d836ed76d535f9.js"
-    },
-    "nativeBanner": {
-      "enabled": true,
-      "src": "https://predestineheadypleasure.com/2a179db4d8136873776a678a82d8425e/invoke.js",
-      "container": "container-2a179db4d8136873776a678a82d8425e"
-    },
-    "smartlink": "https://predestineheadypleasure.com/sjzjtdmk?key=4e19b6045ae2ebb5e465e87ca83a3475",
-    "adsTxt": []
-  },
   "analytics": {
     "firebaseEnabled": true,
     "firebaseConfig": {

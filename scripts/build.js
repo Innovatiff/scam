@@ -286,16 +286,6 @@ function flagList(flags) {
   return `<ul class="flag-list">${flags.map((f) => `<li>${icon("alert")}<span>${esc(f)}</span></li>`).join("")}</ul>`;
 }
 
-/* Adsterra ad units (config-driven via site.config.json > adsterra). Each format
-   can be toggled independently. Placed away from result boxes and CTAs. */
-function adsterraNativeBanner() {
-  const nb = config.adsterra && config.adsterra.nativeBanner;
-  if (!(nb && nb.enabled && nb.src && nb.container)) return "";
-  return `<div class="ad-zone"><div class="ad-label">Advertisement</div>` +
-    `<script async data-cfasync="false" src="${esc(nb.src)}"></script>` +
-    `<div id="${esc(nb.container)}"></div></div>`;
-}
-
 function authorPhoto(cls, size) {
   return `<img class="${esc(cls)}" src="${asset(AUTHOR.photo)}" ` +
     `onerror="this.onerror=null;this.src='${asset(AUTHOR.photoFallback)}'" ` +
@@ -313,16 +303,6 @@ function disclaimerBox() {
 }
 
 /* ---------------------------------------------------------------- layout --- */
-// Adsterra popunder script (goes right before </head>, one per page).
-function adsterraHead() {
-  const p = config.adsterra && config.adsterra.popunder;
-  return (p && p.enabled && p.src) ? `<script src="${esc(p.src)}"></script>` : "";
-}
-// Adsterra Social Bar script (goes right before </body>).
-function adsterraBodyEnd() {
-  const s = config.adsterra && config.adsterra.socialBar;
-  return (s && s.enabled && s.src) ? `<script src="${esc(s.src)}"></script>` : "";
-}
 
 function analyticsScript() {
   if (!(config.analytics && config.analytics.firebaseEnabled)) return "";
@@ -364,7 +344,6 @@ function layout({ title, description, canonical, bodyClass = "", main, jsonld = 
 <link rel="preload" href="${asset("/assets/css/styles.css")}" as="style">
 <link rel="stylesheet" href="${asset("/assets/css/styles.css")}">
 ${ld}
-${adsterraHead()}
 </head>
 <body class="${esc(bodyClass)}">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -376,7 +355,6 @@ ${footer()}
 <script src="${asset("/assets/js/main.js")}" defer></script>
 ${extraScripts}
 ${analyticsScript()}
-${adsterraBodyEnd()}
 </body>
 </html>`;
 }
@@ -501,7 +479,6 @@ function homePage() {
   </div>
 </section>
 
-${adsterraNativeBanner()}
 
 <section class="section section-alt">
   <div class="container narrow">
@@ -706,7 +683,6 @@ ${breadcrumbs(trail)}
       <h2>Common red flags</h2>
       ${flagList(cat.redFlags)}
 
-      ${adsterraNativeBanner()}
 
       <h2>${esc(cat.shortName)} scam guides</h2>
       ${list.length
@@ -910,7 +886,7 @@ function guidePage(scam) {
   // Render ordered blocks; inject the mid ad slot after the third section.
   const bodyHtml = order.map((k, i) => {
     const sec = `<h2 id="${blocks[k].id}">${esc(blocks[k].label)}</h2>\n      ${blocks[k].html}`;
-    return (i === 2) ? `${sec}\n\n      ${adsterraNativeBanner()}` : sec;
+    return sec;
   }).join("\n\n      ");
 
   const main = `
@@ -1209,7 +1185,7 @@ function legalPages() {
 <h2>Analytics</h2>
 <p>We may use privacy-respecting analytics to understand which pages are useful, in aggregate. This helps us improve our guides. Analytics data does not include the content of messages you check.</p>
 <h2>Advertising</h2>
-<p>We display advertising from a third-party advertising network to keep this site free to use. That network and its partners may use cookies, device identifiers, or similar technologies to serve and measure ads. Advertising is kept separate from our guidance, is never placed inside the scam-checker result area, and we do not allow ads that imitate system warnings, buttons, or site navigation. You can control cookies through your browser settings, and you can opt out of interest-based advertising through industry tools such as the Digital Advertising Alliance and Your Online Choices.</p>
+<p>We do not currently display third-party advertising on this site. If we introduce advertising in the future, we will update this policy; any advertising partner we use may set cookies or use similar technologies to serve and measure ads, and we would keep advertising separate from our guidance and never place it inside the scam-checker result area. You can control cookies through your browser settings at any time.</p>
 <h2>Cookies</h2>
 <p>Essential functionality does not require advertising cookies. Where advertising or analytics cookies are used, they follow the relevant providers' policies.</p>
 <h2>Changes</h2>
@@ -1484,13 +1460,6 @@ Sitemap: ${base}/sitemap.xml
 `;
 }
 
-function adsTxt() {
-  // ads.txt, authorised digital sellers. Paste Adsterra's ads.txt lines into
-  // site.config.json > adsterra.adsTxt (array of strings). Empty = no file.
-  const lines = (config.adsterra && Array.isArray(config.adsterra.adsTxt)) ? config.adsterra.adsTxt : [];
-  return lines.length ? lines.join("\n") + "\n" : "";
-}
-
 // Shared shield-check geometry so the logo and favicon are the exact same mark.
 const SHIELD_PATH = "M12 2.1 20.4 5.2 C20.4 11.8 17.2 17.3 12 21.6 C6.8 17.3 3.6 11.8 3.6 5.2 Z";
 const CHECK_PATH = "M8.1 12.1 10.8 14.8 15.9 9.1";
@@ -1577,18 +1546,14 @@ function build() {
   // root files
   writeFileRaw("sitemap.xml", sitemapXML());
   writeFileRaw("robots.txt", robotsTxt());
-  const adstxt = adsTxt();
-  if (adstxt.trim()) writeFileRaw("ads.txt", adstxt);
   writeFileRaw("feed.xml", feedXML());
   writeFileRaw("favicon.svg", faviconSVG());
   writeFileRaw("mask-icon.svg", maskIconSVG());
 
-  const a = config.adsterra || {};
-  const on = ["popunder", "socialBar", "nativeBanner"].filter((k) => a[k] && a[k].enabled);
   const pageCount = 5 + categories.length + scams.length + legalSlugs.length + 1;
   console.log(`✓ Built ${pageCount} pages into /dist`);
   console.log(`  • ${scams.length} scam guides across ${categories.length} categories`);
-  console.log(`  • Adsterra: ${on.length ? on.join(", ") : "none enabled"}${adstxt.trim() ? " (ads.txt written)" : " (no ads.txt)"}`);
+  console.log(`  • Ads: none (no ad network configured)`);
 }
 
 build();
