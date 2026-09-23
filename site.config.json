@@ -8,6 +8,9 @@
   "contactEmail": "hello@scamorsafe.org",
   "googleSiteVerification": "",
   "twitter": "",
+  "adsense": {
+    "publisherId": "ca-pub-7759354256906782"
+  },
   "analytics": {
     "firebaseEnabled": true,
     "firebaseConfig": {

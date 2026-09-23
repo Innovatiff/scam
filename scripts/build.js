@@ -1460,6 +1460,15 @@ Sitemap: ${base}/sitemap.xml
 `;
 }
 
+// ads.txt, the authorised digital sellers file AdSense checks at the site root.
+// The publisher ID lives in site.config.json; "ca-" is stripped because ads.txt
+// wants the bare "pub-..." form.
+function adsTxt() {
+  const id = config.adsense.publisherId.replace(/^ca-/, "");
+  return `google.com, ${id}, DIRECT, f08c47fec0942fa0
+`;
+}
+
 // Shared shield-check geometry so the logo and favicon are the exact same mark.
 const SHIELD_PATH = "M12 2.1 20.4 5.2 C20.4 11.8 17.2 17.3 12 21.6 C6.8 17.3 3.6 11.8 3.6 5.2 Z";
 const CHECK_PATH = "M8.1 12.1 10.8 14.8 15.9 9.1";
@@ -1546,6 +1555,7 @@ function build() {
   // root files
   writeFileRaw("sitemap.xml", sitemapXML());
   writeFileRaw("robots.txt", robotsTxt());
+  if (config.adsense && config.adsense.publisherId) writeFileRaw("ads.txt", adsTxt());
   writeFileRaw("feed.xml", feedXML());
   writeFileRaw("favicon.svg", faviconSVG());
   writeFileRaw("mask-icon.svg", maskIconSVG());
@@ -1553,7 +1563,9 @@ function build() {
   const pageCount = 5 + categories.length + scams.length + legalSlugs.length + 1;
   console.log(`✓ Built ${pageCount} pages into /dist`);
   console.log(`  • ${scams.length} scam guides across ${categories.length} categories`);
-  console.log(`  • Ads: none (no ad network configured)`);
+  console.log(config.adsense && config.adsense.publisherId
+    ? `  • ads.txt: ${config.adsense.publisherId} (no ad units placed yet)`
+    : `  • Ads: none (no ad network configured)`);
 }
 
 build();
