@@ -1170,7 +1170,7 @@ function legalPages() {
     slug: "privacy-policy", name: "Privacy Policy",
     title: "Privacy Policy", description: "How Scam or Safe handles your privacy. We do not store the messages you check, and we follow a privacy-first approach.",
     body: `
-<p class="muted">Last updated: ${reviewedLabel("2026-06")}</p>
+<p class="muted">Last updated: ${reviewedLabel("2026-11")}</p>
 <p>Your privacy matters to us. This policy explains what information is and is not collected when you use ${esc(config.siteName)}.</p>
 <h2>Messages you check</h2>
 <p>The scam checker runs entirely in your web browser. The text you paste is analysed on your own device and is <strong>not sent to our servers and not stored by us</strong>. If you move from the homepage to the checker page, your text may be held briefly in your browser's temporary session storage to carry it across, and it is cleared immediately after.</p>
@@ -1185,7 +1185,7 @@ function legalPages() {
 <h2>Analytics</h2>
 <p>We may use privacy-respecting analytics to understand which pages are useful, in aggregate. This helps us improve our guides. Analytics data does not include the content of messages you check.</p>
 <h2>Advertising</h2>
-<p>We do not currently display third-party advertising on this site. If we introduce advertising in the future, we will update this policy; any advertising partner we use may set cookies or use similar technologies to serve and measure ads, and we would keep advertising separate from our guidance and never place it inside the scam-checker result area. You can control cookies through your browser settings at any time.</p>
+<p>To keep the site free we may display advertising through Google AdSense. Google, as a third-party vendor, uses cookies to serve ads based on your prior visits to this site and to other websites. Google's use of advertising cookies lets it and its partners show you ads based on your visit here and elsewhere on the internet. You can opt out of personalised advertising at <a href="https://www.google.com/settings/ads" rel="noopener">Google Ads Settings</a>, or opt out of a range of third-party vendors' cookies at <a href="https://www.aboutads.info/choices/" rel="noopener">aboutads.info</a>. Advertising never influences our guidance, is kept clearly separate from our content, and is never placed inside the scam-checker result area. You can also control cookies through your browser settings at any time.</p>
 <h2>Cookies</h2>
 <p>Essential functionality does not require advertising cookies. Where advertising or analytics cookies are used, they follow the relevant providers' policies.</p>
 <h2>Changes</h2>
