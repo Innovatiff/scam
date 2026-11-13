@@ -1,7 +1,7 @@
 {
   "fake-delivery-text-scam": {
-    "readTime": "8 min read",
-    "updated": "2026-06",
+    "readTime": "12 min read",
+    "updated": "2026-11",
     "author": "Scam or Safe editorial team",
     "intro": [
       "A text arrives saying a parcel could not be delivered and asks you to pay a small redelivery or customs fee, or to \"confirm\" your address through a link. It looks routine, it lands at a moment when you probably are expecting something, and the amount is trivial, often under a dollar or a pound. That combination is exactly why fake delivery texts, a form of \"smishing\" (SMS phishing), have become one of the most widespread scams in the world.",
@@ -31,6 +31,33 @@
       { "name": "\"Address could not be verified\"", "detail": "Instead of money, the first ask is your full address and details, building a profile for later fraud or a follow-up call." },
       { "name": "Fake tracking app", "detail": "A link invites you to install an app to track or reschedule the parcel; the download is malware that can read your messages and banking apps." },
       { "name": "Follow-up phone call", "detail": "Some gangs call afterwards posing as your bank's fraud team, using the details you entered to sound convincing and extract more." }
+    ],
+    "carriers": [
+      { "name": "USPS", "region": "United States", "detail": "USPS will not text you unless you asked for tracking updates, and even then the message has no link and never asks for money. A \"redelivery fee\" by text is always fake; USPS does not charge one.", "url": "https://www.usps.com", "site": "usps.com", "report": "forward the text to spam@uspis.gov" },
+      { "name": "UPS", "region": "United States and worldwide", "detail": "Real UPS My Choice alerts come from UPS's own registered numbers and send you to the app, not to a payment page. UPS does not collect delivery fees through text links.", "url": "https://www.ups.com", "site": "ups.com", "report": "fraud@ups.com" },
+      { "name": "FedEx", "region": "United States and worldwide", "detail": "FedEx does not ask for payment or personal details by unsolicited text or email. If duties are genuinely owed, you see it in your FedEx account or on an official invoice, never through a link in a message.", "url": "https://www.fedex.com", "site": "fedex.com", "report": "abuse@fedex.com" },
+      { "name": "DHL", "region": "Worldwide", "detail": "Genuine DHL duty payments go through DHL's own delivery-management service or an official invoice. DHL warns that it does not request payment through links in text messages.", "url": "https://www.dhl.com", "site": "dhl.com", "report": "phishing@dhl.com" },
+      { "name": "Royal Mail", "region": "United Kingdom", "detail": "If a fee is genuinely due, Royal Mail leaves a grey \"Fee to pay\" card through your door or shows it in the Royal Mail app. It never texts you a link to pay.", "url": "https://www.royalmail.com", "site": "royalmail.com", "report": "reportascam@royalmail.com, or forward the text to 7726" },
+      { "name": "Evri", "region": "United Kingdom", "detail": "Evri does not charge to redeliver and does not ask for payment or card details by text. Track with the parcel number from the retailer, not from the message.", "url": "https://www.evri.com", "site": "evri.com", "report": "phishing@evri.com, or forward the text to 7726" },
+      { "name": "DPD", "region": "United Kingdom and Europe", "detail": "DPD lets you manage deliveries inside its app and does not ask for a redelivery fee by text. If the app shows the same notification, it is real; a text link on its own is not.", "url": "https://www.dpd.co.uk", "site": "dpd.co.uk", "report": "forward the text to 7726" },
+      { "name": "Yodel", "region": "United Kingdom", "detail": "Yodel does not charge redelivery fees and does not ask for payment by text link. Use Yodel's tracking page with the number from your retailer.", "url": "https://www.yodel.co.uk", "site": "yodel.co.uk", "report": "forward the text to 7726" },
+      { "name": "An Post", "region": "Ireland", "detail": "Genuine customs charges from An Post come with a customs reference you can check on its website, and An Post will not ask for your card details by text.", "url": "https://www.anpost.com", "site": "anpost.com" },
+      { "name": "Australia Post", "region": "Australia", "detail": "Australia Post says it will never call, text or email asking for payment or personal information to release a parcel. Check the AusPost app instead.", "url": "https://auspost.com.au", "site": "auspost.com.au", "report": "scams@auspost.com.au" },
+      { "name": "NZ Post", "region": "New Zealand", "detail": "NZ Post does not ask for fees by text link. Any real customs charge shows against your tracking number on its website.", "url": "https://www.nzpost.co.nz", "site": "nzpost.co.nz", "report": "forward the text to 7726" },
+      { "name": "Purolator", "region": "Canada", "detail": "Purolator does not collect fees through text message links. Confirm any shipment on its website with the tracking number from your order.", "url": "https://www.purolator.com", "site": "purolator.com", "report": "forward the text to 7726" },
+      { "name": "PostNL", "region": "Netherlands", "detail": "PostNL only charges import costs through its official notification and website. A text link asking for a payment is not from PostNL.", "url": "https://www.postnl.nl", "site": "postnl.nl" },
+      { "name": "PostNord", "region": "Sweden, Denmark, Norway, Finland", "detail": "Check any PostNord charge inside the PostNord app rather than a text. The app shows genuine customs fees; a link in a message does not.", "url": "https://www.postnord.com", "site": "postnord.com" },
+      { "name": "Correos", "region": "Spain", "detail": "Correos handles customs payments on its own website or app, never through a payment page reached from a text.", "url": "https://www.correos.es", "site": "correos.es" },
+      { "name": "Poste Italiane", "region": "Italy", "detail": "Poste Italiane does not ask for card or account details by SMS link. Verify on its website or in the official app.", "url": "https://www.poste.it", "site": "poste.it" },
+      { "name": "Chronopost", "region": "France", "detail": "Chronopost does not request payment by text link. Verify on its website and forward suspicious texts to 33700, France's spam SMS service.", "url": "https://www.chronopost.fr", "site": "chronopost.fr", "report": "forward the text to 33700" },
+      { "name": "Colissimo (La Poste)", "region": "France", "detail": "La Poste never asks for payment through an SMS link; customs on Colissimo parcels are handled through the official site.", "url": "https://www.laposte.fr", "site": "laposte.fr", "report": "forward the text to 33700" },
+      { "name": "GLS", "region": "Europe", "detail": "GLS does not request fees through text message links. Track on its website with your parcel number.", "url": "https://gls-group.com", "site": "gls-group.com" },
+      { "name": "Japan Post", "region": "Japan", "detail": "Japan Post does not charge redelivery or customs fees through a texted link. Check on its website with your tracking number.", "url": "https://www.post.japanpost.jp", "site": "post.japanpost.jp" },
+      { "name": "China Post and EMS", "region": "China", "detail": "China Post and EMS do not ask for payment through text links. Verify tracking on the official EMS site.", "url": "https://www.ems.com.cn", "site": "ems.com.cn" },
+      { "name": "SF Express", "region": "China and Asia", "detail": "SF Express does not collect fees through text links. Use its app or website with your waybill number.", "url": "https://www.sf-express.com", "site": "sf-express.com" },
+      { "name": "SingPost", "region": "Singapore", "detail": "SingPost does not ask for payment or card details by text link. Check on its website and report scam messages through Singapore's ScamShield app.", "url": "https://www.singpost.com", "site": "singpost.com", "report": "ScamShield app" },
+      { "name": "Aramex", "region": "Middle East and worldwide", "detail": "Aramex does not charge fees through text message links. Confirm on its website with the shipment number from your order.", "url": "https://www.aramex.com", "site": "aramex.com" },
+      { "name": "India Post", "region": "India", "detail": "India Post does not charge redelivery fees by text link. Check on its website and report fraud at cybercrime.gov.in or the 1930 helpline.", "url": "https://www.indiapost.gov.in", "site": "indiapost.gov.in", "report": "cybercrime.gov.in or call 1930" }
     ],
     "verify": [
       "Do not tap links in delivery texts. Open the courier's official app or type their known website address yourself.",

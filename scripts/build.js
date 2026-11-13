@@ -18,6 +18,8 @@ const config = readJSON("site.config.json");
 const categories = readJSON("data/categories.json");
 const scams = readJSON("data/scams.json");
 const deepDives = readJSONSafe("data/deepdives.json", {});
+// Legacy guide URLs that were merged into a deeper flagship (old path -> new path).
+const redirects = readJSONSafe("data/redirects.json", {});
 const reporting = readJSONSafe("data/reporting.json", null);
 const statsData = readJSONSafe("data/stats.json", null);
 const updates = readJSONSafe("data/updates.json", []);
@@ -742,6 +744,13 @@ function variationList(items) {
   return `<div class="variation-list">${items.map((v) => `
     <div class="variation-item"><h4>${esc(v.name)}</h4><p>${esc(v.detail)}</p></div>`).join("")}</div>`;
 }
+// Carrier-by-carrier section for the delivery flagship: what the real company
+// does, where to check, and where to report, so one page covers every brand.
+function carrierList(items) {
+  return `<p>Every carrier below has been impersonated with the same text. The wording barely changes; only the logo does. Here is what each real company actually does, and the one place to check before you believe a message.</p>
+  <div class="variation-list carrier-list">${items.map((c) => `
+    <div class="variation-item"><h4>${esc(c.name)} <span class="muted">· ${esc(c.region)}</span></h4><p>${esc(c.detail)}</p><p class="muted">Check at <a href="${esc(c.url)}" rel="nofollow noopener" target="_blank">${esc(c.site)}</a>${c.report ? `. Report: ${esc(c.report)}` : ""}</p></div>`).join("")}</div>`;
+}
 function sourcesList(sources) {
   return `<ul class="sources-list">${sources.map((s) => `
     <li>${s.url ? `<a href="${esc(s.url)}" rel="nofollow noopener" target="_blank">${esc(s.title)}</a>` : esc(s.title)}, <span class="muted">${esc(s.publisher)}</span></li>`).join("")}</ul>`;
@@ -841,6 +850,9 @@ function guidePage(scam) {
   if (dd && dd.variations) blocks.variations = { id: "variations",
     label: "Variations to watch for", html: variationList(dd.variations) };
 
+  if (dd && dd.carriers) blocks.carriers = { id: "carriers",
+    label: "Carrier by carrier: what the real company does", html: carrierList(dd.carriers) };
+
   blocks.whattodo = { id: "what-to-do",
     label: pick(["What to do", "How to protect yourself", "Your safest response", "Staying safe"]),
     html: `<div class="box box-do"><ul>${scam.whatToDo.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` };
@@ -872,10 +884,10 @@ function guidePage(scam) {
 
   // Four readable orderings. Missing (non-flagship) blocks are simply skipped.
   const ORDERINGS = [
-    ["intro","stats","steps","example","casestudy","redflags","variations","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
-    ["intro","redflags","example","stats","steps","casestudy","variations","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
-    ["intro","example","casestudy","stats","steps","redflags","variations","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
-    ["intro","stats","redflags","whattodo","verify","example","steps","casestudy","variations","ifclicked","whatnottodo","similar","faq","sources"]
+    ["intro","stats","steps","example","casestudy","redflags","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","redflags","example","stats","steps","casestudy","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","example","casestudy","stats","steps","redflags","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","stats","redflags","whattodo","verify","example","steps","casestudy","variations","carriers","ifclicked","whatnottodo","similar","faq","sources"]
   ];
   const order = ORDERINGS[variant].filter((k) => blocks[k]);
 
@@ -1315,11 +1327,29 @@ ${breadcrumbs(trail)}
     </div>
     <script type="application/json" id="quiz-data">${dataJson}</script>
 
+    <h2>The tells this quiz trains you to see</h2>
+    <p>Most scam messages share a small set of giveaways. Once you can name them, you start noticing them in the first second instead of the last. These are the ones the ten questions are built around.</p>
+    <ol class="steps-list">
+      <li><span class="step-title">A deadline measured in hours</span><span class="step-detail">"Your account will be closed today." Real organisations give you days and a way to check. A clock is pressure, and pressure is the point.</span></li>
+      <li><span class="step-title">A link you are told to tap</span><span class="step-detail">Genuine alerts tell you to open the app or website you already use. A message that only works if you tap its link is routing you somewhere it controls.</span></li>
+      <li><span class="step-title">A request for a code</span><span class="step-detail">One-time passcodes exist to prove it is you. Nobody legitimate, not your bank, not a courier, not a buyer, ever needs you to read one out.</span></li>
+      <li><span class="step-title">A small fee to unlock something bigger</span><span class="step-detail">A $1.20 redelivery charge, a $3 "verification" payment. The amount is tiny on purpose; the card details are what they are after.</span></li>
+      <li><span class="step-title">A sender name that does not match the number or address</span><span class="step-detail">The display name says "Amazon" or "HMRC"; the actual address or number is random. Always look past the label.</span></li>
+      <li><span class="step-title">Payment by a method you cannot reverse</span><span class="step-detail">Gift cards, crypto, wire transfer, a "payment app" you have never heard of. The moment a stranger steers you to one of these, the deal is the scam.</span></li>
+      <li><span class="step-title">Secrecy</span><span class="step-detail">"Do not tell your bank, they are in on it." "Keep this between us." Real processes never need you to hide them from the people who could check.</span></li>
+      <li><span class="step-title">An offer that only you qualify for</span><span class="step-detail">A job with no interview, a prize you did not enter, a buyer paying above asking. Unusually good is a warning, not a win.</span></li>
+      <li><span class="step-title">Too much knowledge, too fast</span><span class="step-detail">They know your name, your old employer, your last four digits. That data is bought from breaches; it proves nothing about who is messaging you.</span></li>
+      <li><span class="step-title">A change in the rules partway through</span><span class="step-detail">New fees, new "taxes", a new account to pay into. Legitimate transactions do not move the goalposts after you have committed.</span></li>
+    </ol>
+
     <h2>Why practising works</h2>
     <p>Scams succeed in the first few seconds, when a message triggers urgency, fear, or excitement before your slower judgement catches up. Practising on realistic examples builds the reflex that matters most: pausing to look for the tell. Research by fraud-prevention bodies consistently shows that people who have seen a scam pattern before are far less likely to fall for it, recognition is the cheapest protection there is.</p>
     <p>Every question in this quiz is a fictional, anonymised pattern modelled on scams documented by consumer-protection agencies, the same patterns covered in our <a href="/scam-types/">${scams.length}+ guides</a>. The "genuine" examples show what safe communication tends to look like: no links to click, no codes to share, no artificial deadlines, and directions to official apps or the number on your own card.</p>
     <h2>How scoring works</h2>
     <p>You get one point per correct call. After each answer we show the tells, the specific details that give the message away, with a link to the full guide for that scam. At the end you can share your score and challenge someone you'd like to keep safe. The quiz runs entirely in your browser; nothing you do here is recorded or sent to us.</p>
+    <h2>What to do after the quiz</h2>
+    <p>Missed a few? That is normal, and it is the useful part. Open the guide linked under each answer you got wrong and read the "what to do" section, because the mistake you made here is the one you are most likely to make for real. Then try the quiz again in a week. Recognition fades without a refresher.</p>
+    <p>Scored well? Send the link to the person in your life most likely to be targeted. Scammers deliberately pick people who are busy, grieving, new to a country, or new to the internet. Two minutes of practice is the cheapest protection you can give someone, and the share button at the end makes it easy.</p>
     <div class="box box-info">
       <h3>Received something suspicious right now?</h3>
       <p style="margin:0">Don't guess, paste it into the free <a href="/scam-checker/">scam checker</a> to see which red flags it contains, then check the matching guide.</p>
@@ -1469,6 +1499,13 @@ function adsTxt() {
 `;
 }
 
+// Netlify _redirects. Each merged guide URL 301s to its flagship, listed with
+// and without the trailing slash so both spellings resolve.
+function redirectsFile() {
+  return Object.entries(redirects).map(([from, to]) =>
+    `${from} ${to} 301\n${from.replace(/\/$/, "")} ${to} 301`).join("\n") + "\n";
+}
+
 // Shared shield-check geometry so the logo and favicon are the exact same mark.
 const SHIELD_PATH = "M12 2.1 20.4 5.2 C20.4 11.8 17.2 17.3 12 21.6 C6.8 17.3 3.6 11.8 3.6 5.2 Z";
 const CHECK_PATH = "M8.1 12.1 10.8 14.8 15.9 9.1";
@@ -1559,6 +1596,7 @@ function build() {
   writeFileRaw("feed.xml", feedXML());
   writeFileRaw("favicon.svg", faviconSVG());
   writeFileRaw("mask-icon.svg", maskIconSVG());
+  if (Object.keys(redirects).length) writeFileRaw("_redirects", redirectsFile());
 
   const pageCount = 5 + categories.length + scams.length + legalSlugs.length + 1;
   console.log(`✓ Built ${pageCount} pages into /dist`);
@@ -1566,6 +1604,7 @@ function build() {
   console.log(config.adsense && config.adsense.publisherId
     ? `  • ads.txt: ${config.adsense.publisherId} (no ad units placed yet)`
     : `  • Ads: none (no ad network configured)`);
+  if (Object.keys(redirects).length) console.log(`  • Redirects: ${Object.keys(redirects).length} merged guide URLs -> flagships`);
 }
 
 build();

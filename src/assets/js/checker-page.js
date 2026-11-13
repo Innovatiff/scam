@@ -20,7 +20,7 @@
     "no-interview-job": [["Fake job offer scam", "/scams/fake-job-offer-scam/"], ["WhatsApp job scam", "/scams/whatsapp-job-scam/"]],
     "off-platform": [["Facebook Marketplace buyer email scam", "/scams/facebook-marketplace-buyer-email-scam/"], ["Marketplace scams", "/marketplace-scams/"]],
     "money-promise": [["Fake giveaway scam", "/scams/fake-giveaway-scam/"], ["Crypto investment scam", "/scams/crypto-investment-scam/"]],
-    "fake-confirmation": [["Fake invoice email scam", "/scams/fake-invoice-email-scam/"], ["Fake subscription renewal email", "/scams/fake-subscription-renewal-email/"]],
+    "fake-confirmation": [["Fake subscription renewal email", "/scams/fake-subscription-renewal-email/"], ["PayPal payment pending scam", "/scams/paypal-payment-pending-scam/"]],
     "threat": [["Government, tax & legal scams", "/government-tax-scams/"]],
     "password": [["Email scams (phishing)", "/email-scams/"]],
     "shortened-url": [["Text message scams", "/text-message-scams/"]]
