@@ -4488,5 +4488,797 @@
         "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
       }
     ]
+  },
+  "fake-toll-road-text-scam": {
+    "readTime": "8 min read",
+    "updated": "2026-11",
+    "author": "Scam or Safe editorial team",
+    "intro": [
+      "The text says you have an unpaid toll of a few dollars and that a late fee many times larger will be added unless you pay by tonight. It names a toll brand used in your region, or just says 'toll services', and it ends with a link. Almost everyone who drives has passed under a gantry at some point and cannot recall every trip, so the claim is hard to rule out from memory. The amount is too small to argue over, and the threat of a penalty or a hold on your vehicle registration makes paying feel like the quick, sensible option.",
+      "The toll does not exist and the page behind the link is a copy of an operator's payment screen. It asks for your name, address, card number, expiry date and security code. Many versions then show a second box asking for the code your bank has just texted you, described as payment verification. That code is the real prize. It lets the criminal add your card to a mobile wallet on their own phone, after which they can tap to pay in shops without ever holding the card. The few dollars you thought you were paying were never the point.",
+      "One rule covers every version: never pay a toll through a link that arrived in a text. If you think you might owe something, open the operator's app or type its web address yourself, sign in, and look at your account or search your number plate. An unpaid trip made without a tag is billed by post to the address the vehicle is registered at, with the date and location printed on it. If nothing shows on the official site, there is nothing to pay today, and the text can be reported and deleted."
+    ],
+    "howItWorks": [
+      {
+        "title": "Bulk texts matched to area codes",
+        "detail": "Messages go out in bulk, often with the toll brand chosen to fit the phone number's area code. The sender is typically an overseas number or a long email address, not a short code."
+      },
+      {
+        "title": "Reply 'Y' to unlock",
+        "detail": "iPhones and some Android phones disable links from senders outside your contacts, so the text tells you to reply 'Y' and reopen it. Replying makes the link tappable and confirms your number is live."
+      },
+      {
+        "title": "A cloned payment page",
+        "detail": "The link opens a page with a copied logo and colours. Its address strings the operator's name together with extra words and an unusual ending. Any plate number you enter is accepted."
+      },
+      {
+        "title": "Card details, then a code",
+        "detail": "A form collects your name, billing address, card number, expiry and security code. A second screen then asks for the one-time code your bank has just sent, calling it payment confirmation."
+      },
+      {
+        "title": "Your card joins their wallet",
+        "detail": "The code actually approved adding your card to a phone wallet on the criminal's handset. Tap-to-pay purchases follow in shops, sometimes within hours, while the fake page shows 'payment successful'."
+      }
+    ],
+    "caseStudy": {
+      "title": "An illustrative example",
+      "body": [
+        "Renee, a supply teacher, crosses a tolled bridge twice a week to reach one of her schools. On a Sunday evening a text arrived: 'Toll services final notice. Unpaid balance $6.99. Pay before midnight to avoid a $35 late charge.' She had used the bridge on Thursday and her tag had been beeping oddly, so it seemed likely. She replied 'Y' as instructed, tapped the link, and reached a page with the bridge operator's logo. She typed her name, address and debit card details, and a new box asked for the code her bank was sending.",
+        "The bank's text is what stopped her. It read: 'Your code to add this card to a digital wallet is 481 206. Never share it.' She had not asked to add her card to anything. Renee closed the page without entering the code, rang the number on the back of her card, and had the card cancelled and reissued. Then she opened the bridge operator's own app, where no unpaid trips were listed. She forwarded the text to 7726 and blocked the sender. Renee is an invented character, but each step here follows the usual pattern."
+      ]
+    },
+    "variations": [
+      {
+        "name": "Parking penalty notice text",
+        "detail": "The same template is rebranded as a city or council parking fine. It quotes a small penalty that 'doubles in 24 hours' and links to a card form built from the identical kit."
+      },
+      {
+        "name": "Motor vehicle department threat",
+        "detail": "A text claiming to be from the state licensing agency cites an official-sounding code section and warns that your registration and driving licence will be suspended unless an outstanding toll or ticket is paid today."
+      },
+      {
+        "name": "Rental car toll claim",
+        "detail": "The text says a hire car in your name passed a toll point, and by chance reaches some people just back from a trip. Rental firms do pass tolls on, but through the card or address on the rental agreement."
+      },
+      {
+        "name": "Failed auto top-up alert",
+        "detail": "Aimed at tag holders, this one says your prepaid toll account could not be topped up and your tag will be deactivated. The link asks you to 're-enter' a payment card."
+      }
+    ],
+    "realVsFake": [
+      {
+        "real": "A toll operator bills a trip made without a tag by posting an invoice to the vehicle's registered address, quoting the plate, date and toll point.",
+        "fake": "The text reaches a phone number and names no plate, date or road, because the sender has no idea what you drive."
+      },
+      {
+        "real": "Account alerts by text go only to customers who opened a toll account and switched on text notifications themselves.",
+        "fake": "The message arrives on phones of people with no toll account at all, from an overseas number or an email address."
+      },
+      {
+        "real": "Payment happens on the operator's own site or app, where an invoice number or your login brings up the specific trips being charged.",
+        "fake": "A single page shows a balance with no trip details and moves straight to a form for your full card details."
+      },
+      {
+        "real": "Late charges build through further written notices over weeks, each carrying a reference number you can quote on the phone.",
+        "fake": "One text sets a deadline of tonight and threatens a large fee, a suspended licence or debt collectors by morning."
+      }
+    ],
+    "verify": [
+      "Open the toll operator's app, or type its address from a paper statement, sign in and check for unpaid trips. Do this instead of touching the link.",
+      "Look at the sender. A number beginning with a foreign country code, or an email address in the sender field, is not a regional toll authority.",
+      "Read the text for your number plate, the road and the date of travel. A genuine notice can state all three, and a mass text states none.",
+      "Do not reply 'Y' or 'STOP'. Forward the message to 7726, the spam-reporting short code many mobile networks use, then tap 'Report Junk' or block the number.",
+      "If you entered card details, ring the number on the back of the card now and ask whether it has been added to any new phone or digital wallet."
+    ],
+    "sources": [
+      {
+        "title": "How to Recognize and Report Spam Text Messages",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+      },
+      {
+        "title": "Internet Crime Complaint Center",
+        "publisher": "FBI",
+        "url": "https://www.ic3.gov"
+      },
+      {
+        "title": "How To Recognize and Avoid Phishing Scams",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      }
+    ]
+  },
+  "fake-zoom-invite-scam": {
+    "readTime": "8 min read",
+    "updated": "2026-11",
+    "author": "Scam or Safe editorial team",
+    "intro": [
+      "An email in Zoom's blue and white says a meeting has started without you, or that you missed one and a recording is waiting. There is a meeting topic that sounds like work, a time a few minutes ago, and a large 'Join Meeting' or 'View Recording' button. At a desk where invitations arrive all day, nobody stops to question each one. The thought that colleagues or a client are sitting in a call waiting for you is uncomfortable, and clicking the button looks like the fastest way to end that discomfort.",
+      "The button does not open a meeting. It opens a web page that plays a short 'launching' animation, reports that the session timed out, and asks you to sign in again with your Microsoft 365 or Google account. The email address is already filled in. Whatever you type is passed straight to the real sign-in service by the criminal's software, including the six-digit code from your authenticator, so they end up logged in as you. With a work mailbox they can read invoices, set a rule that hides replies, and send payment requests or the same invite to everyone you deal with.",
+      "The rule that beats it: never type your email password into a page that an invitation link opened. A real meeting you were invited to is normally already in your calendar under an organiser you know, so open it from there, or type the meeting ID into the Zoom app yourself. If a page reached from an email asks for your Microsoft or Google password, close it. The meeting was never real, and the only thing waiting on the other side of that sign-in box is someone who wants your mailbox."
+    ],
+    "howItWorks": [
+      {
+        "title": "An invite timed for office hours",
+        "detail": "The email lands mid-morning on a weekday, styled like a Zoom notification. The topic is something hard to ignore, such as a payroll review, a contract discussion or a session with HR."
+      },
+      {
+        "title": "A button with a hidden destination",
+        "detail": "The join button routes through a link shortener, a redirect or a genuine file-sharing service before reaching the fake page, so mail filters and a quick hover reveal nothing alarming."
+      },
+      {
+        "title": "The staged loading screen",
+        "detail": "A page imitates Zoom's launch screen, sometimes with blurred participant tiles behind it. After a few seconds it announces a connection error or expired session and offers a 'rejoin' button."
+      },
+      {
+        "title": "A sign-in box that relays",
+        "detail": "A copy of the Microsoft or Google login appears with your address filled in. Your password and authenticator code are forwarded to the real service within seconds, opening a session for the criminal."
+      },
+      {
+        "title": "The mailbox is put to work",
+        "detail": "Once inside, they add a forwarding or auto-delete rule, search for invoices and payment threads, and send the same invitation to your contacts from your real address, where it will be trusted."
+      }
+    ],
+    "caseStudy": {
+      "title": "An illustrative example",
+      "body": [
+        "Ingrid handles accounts payable for a small architecture practice. At 9.52 on a Monday an email arrived headed 'Zoom: supplier payment review has started, 3 participants waiting'. The sender's display name read 'Zoom Meetings'. She clicked 'Join', watched a launching screen spin, and then saw a notice that her session had expired. A Microsoft sign-in box followed, with her work address already typed in. Assuming she had simply been logged out over the weekend, she entered her password.",
+        "Her phone buzzed with an approval request from her authenticator app, and the request showed a sign-in from a city she had never visited. That was the moment it fell apart. She pressed 'Deny', closed the tab, and opened her calendar directly. No such meeting existed. She changed her password from the company portal and rang IT on the internal extension. They signed her out of every session and checked the mailbox for new forwarding rules. Ingrid and her firm are made up for this guide, though the sequence is typical."
+      ]
+    },
+    "variations": [
+      {
+        "name": "Teams or Google Meet lookalike",
+        "detail": "This version is dressed as a Microsoft Teams message, a missed chat or a Google Meet invitation. The branding changes, but the link ends at the same imitation sign-in page."
+      },
+      {
+        "name": "Fake Zoom update download",
+        "detail": "The page says your Zoom client is out of date and offers an installer. The file is a remote-access tool or password stealer, giving the criminal control of the computer rather than one password."
+      },
+      {
+        "name": "Invite from a hijacked colleague",
+        "detail": "Sent from the genuine mailbox of a supplier or co-worker who was caught earlier, it passes every sender check and may even arrive as a reply inside an existing email thread."
+      },
+      {
+        "name": "Calendar entry with a link",
+        "detail": "An invitation file adds the event straight to your calendar, so the reminder pops up from your own calendar app. The join link sits in the description and leads to the phishing page."
+      }
+    ],
+    "realVsFake": [
+      {
+        "real": "A genuine Zoom join link sits on Zoom's own domain, zoom.us on most invitations, and carries a numeric meeting ID.",
+        "fake": "The button points to an unrelated address, a link shortener or a file-sharing page that mentions Zoom only in its wording."
+      },
+      {
+        "real": "Joining opens the Zoom app or its browser client, which typically asks for a display name or the meeting passcode.",
+        "fake": "A web page demands your Microsoft 365 or Google password, followed by the six-digit code from your authenticator app."
+      },
+      {
+        "real": "A colleague's invitation shows in your calendar with an organiser you recognise, a list of attendees and a topic that fits your work.",
+        "fake": "The organiser is a name you cannot place, no other attendees are listed, and the subject is vague enough to fit any office."
+      },
+      {
+        "real": "Zoom updates itself from inside the installed app, through 'Check for Updates' in the profile menu.",
+        "fake": "You are told your Zoom is outdated and must download a file before the page will let you join."
+      }
+    ],
+    "verify": [
+      "Open your calendar app directly and look at today. A meeting you were really invited to appears there with a named organiser and other attendees.",
+      "Hover over the join button, or press and hold it on a phone, and read the address. If the part before the first single slash is not Zoom's own domain, stop.",
+      "Copy the meeting ID from the email and type it into the Join box of the Zoom app. An invented meeting will simply fail to open.",
+      "Message the named organiser on your work chat, or ring their extension, and ask whether they scheduled anything with you today.",
+      "If you typed your password, change it now from your account's own security page, sign out of all sessions, and ask IT to check for new inbox rules."
+    ],
+    "sources": [
+      {
+        "title": "How To Recognize and Avoid Phishing Scams",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+      },
+      {
+        "title": "Phishing: spot and report scam emails, texts, websites and calls",
+        "publisher": "UK National Cyber Security Centre",
+        "url": "https://www.ncsc.gov.uk/collection/phishing-scams"
+      },
+      {
+        "title": "Phishing scams: how to spot and report them",
+        "publisher": "UK National Cyber Security Centre",
+        "url": "https://www.ncsc.gov.uk/guidance/suspicious-email-actions"
+      }
+    ]
+  },
+  "fake-online-store-scam": {
+    "readTime": "8 min read",
+    "updated": "2026-11",
+    "author": "Scam or Safe editorial team",
+    "intro": [
+      "An advert in your feed shows a brand you know at a price you have never seen: boots, a coat or a power tool for a fraction of the usual cost, with a closing-down or warehouse-clearance story to explain it. The site behind the advert looks finished. It has the brand's own product photos, size charts, star ratings and a padlock in the address bar. Those photos are real because they were copied from the genuine catalogue, and the padlock only means the connection is encrypted. It says nothing about who owns the shop.",
+      "The people running it want a card payment for goods they do not hold. Some send nothing. Others post a cheap token item, such as a pair of socks, so that the tracking number shows a delivery and a 'not received' claim becomes harder to make. Meanwhile, customer service emails ask for patience week after week, which uses up the time you have to dispute the charge. A few sites go further and reuse the card details for later charges, or tell you the card failed and ask for a bank transfer instead.",
+      "The rule: before paying a shop you first met through an advert, find evidence of it somewhere other than its own website. Two minutes is enough to look for a company name, a real address, an age for the web address and reviews on independent sites. If the shop exists nowhere except its advert and its checkout, do not buy. And whatever you decide, pay by credit card or a payment service that covers purchases, never by transfer, so a dispute remains possible."
+    ],
+    "howItWorks": [
+      {
+        "title": "A shop built in an afternoon",
+        "detail": "The operators register a new web address, load a ready-made shop template and fill it with photos, descriptions and size guides copied from a real brand's catalogue, often for dozens of sites at once."
+      },
+      {
+        "title": "Adverts bring the shoppers",
+        "detail": "Paid social media adverts are shown to people who follow the brand or have searched for it. Comments are switched off or filtered, so warnings from earlier buyers never appear beneath the advert."
+      },
+      {
+        "title": "A basket that hurries you",
+        "detail": "The checkout page runs a countdown clock, labels items 'only 2 left' and flashes notices that someone in a nearby town has just bought. All three are generated by a script."
+      },
+      {
+        "title": "Charged under a different name",
+        "detail": "Your card is billed by a merchant name unrelated to the shop, sometimes in a foreign currency. An order confirmation follows, and later a tracking number that is slow to show movement."
+      },
+      {
+        "title": "Stalling past the dispute window",
+        "detail": "When you chase the order, replies blame customs or a courier backlog and offer a small partial refund to keep the goods 'on their way'. Each week of waiting brings your card's dispute deadline closer."
+      }
+    ],
+    "caseStudy": {
+      "title": "An illustrative example",
+      "body": [
+        "Dev, a first-year apprentice electrician, needed safety boots and saw an advert offering a well-known brand at £39 instead of the usual £160. The site called itself the brand's 'official outlet' and had the right photos and logo. He ordered two pairs. That evening his banking app showed the payment going to a company name he did not recognise, with a currency conversion fee added. An email supplied a tracking number. Three weeks later a small padded envelope arrived containing one pair of thin socks.",
+        "What settled it for Dev was a search. He pasted a sentence from the shop's 'About us' page into a search engine and found the identical text on a dozen stores with different names. He photographed the envelope, its label and the socks, saved the advert and the order emails, and contacted his card issuer that day to dispute the charge as goods not as described. He also asked for a replacement card, since the details were now with an unknown merchant. Dev's story is fictional, written to show how these orders usually unfold."
+      ]
+    },
+    "variations": [
+      {
+        "name": "Clone of a real retailer",
+        "detail": "An entire genuine shop is copied to an address one letter out, or with 'outlet' or 'sale' added. Adverts use the real logo, and the only visible difference is in the address bar."
+      },
+      {
+        "name": "Invented closing-down boutique",
+        "detail": "A farewell letter from a family business that never existed, with a photo of the 'owners', explains the huge discounts. The stock is cheap mass-produced clothing shipped from overseas, or nothing."
+      },
+      {
+        "name": "Token parcel delivery",
+        "detail": "A worthless item is posted so the tracking record shows 'delivered'. When you complain, the shop offers a tiny refund or tells you to return it overseas at your own cost."
+      },
+      {
+        "name": "Card declined, pay by transfer",
+        "detail": "The checkout rejects your card on purpose, then suggests a bank transfer, payment app or cryptocurrency, sometimes with an extra discount. Paying that way removes the card dispute route entirely."
+      }
+    ],
+    "realVsFake": [
+      {
+        "real": "A genuine retailer publishes a company name, a registered address and a phone number or staffed email you can check against business records.",
+        "fake": "Contact is a web form or a free webmail address, and any street address given belongs to a house or an unrelated firm."
+      },
+      {
+        "real": "Real sale prices sit close to what other retailers charge, with deeper cuts limited to old stock or selected lines.",
+        "fake": "Every product on the site, new releases included, carries the same enormous markdown, and the 'final day' banner never changes."
+      },
+      {
+        "real": "The charge on your statement carries the shop's trading name, and returns go to a named address in the country it sells from.",
+        "fake": "The payment shows an unfamiliar company, perhaps in another currency, and the returns page is copied text with no address at all."
+      },
+      {
+        "real": "An established shop has reviews on independent sites spread across months or years, including ordinary grumbles about sizing or slow post.",
+        "fake": "Praise appears only on the shop's own pages, undated or all posted within a few days, with customer photos taken from elsewhere."
+      }
+    ],
+    "verify": [
+      "Search the shop's exact web address in quotation marks with the word 'reviews', and read only results from sites the shop does not control.",
+      "Put the address into a free domain lookup (search 'WHOIS') and note the registration date. A shop claiming decades of trading on a site weeks old is lying.",
+      "Scroll to the footer and open the returns and contact pages. Look for a company name and street address, then check that address on a map.",
+      "Run a reverse image search on one product photo or the 'owners' picture. The same image on unrelated shops tells you it was copied.",
+      "Go to the checkout and read the payment options before typing anything. If the card option fails and a bank transfer is suggested, close the tab."
+    ],
+    "sources": [
+      {
+        "title": "BBB Scam Tracker",
+        "publisher": "Better Business Bureau",
+        "url": "https://www.bbb.org/scamtracker"
+      },
+      {
+        "title": "Report international scams",
+        "publisher": "econsumer.gov",
+        "url": "https://www.econsumer.gov"
+      },
+      {
+        "title": "What To Do if You Were Scammed",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed"
+      }
+    ]
+  },
+  "vacation-club-scam": {
+    "readTime": "8 min read",
+    "updated": "2026-11",
+    "author": "Scam or Safe editorial team",
+    "intro": [
+      "It begins with a win. A scratchcard handed to you on a seafront, a phone call or a glossy postcard says you have won a week's accommodation or a pair of flights, and all you need to do is attend a ninety-minute presentation, as a couple, with a credit card and photo ID. You are on holiday or thinking about the next one, so the mood is already right. The cost appears to be an hour and a half of your time, and the venue is a smart office or hotel function room with coffee and friendly staff.",
+      "What the sellers want is a signature and a card payment before you leave the room. The membership costs thousands up front, plus a yearly fee, and buys access to a booking website or phone line that is supposed to offer holidays at trade prices. Members then find that the weeks they want are never available, or that the 'member rate' matches what any public travel site charges. The prize itself needs booking fees, taxes and travel on a handful of dates. Some of these companies close and reopen under a new name once complaints build up.",
+      "The defence is a single habit: never buy a holiday membership on the same day you first hear its price. A fair offer survives being taken home, read slowly and checked against the company's record. If the price exists only while you are sitting in that chair, or the contract is not allowed to leave the building, stand up and go, even if it means leaving the gift behind. A seller with a real product has no reason to stop you reading the terms at home."
+    ],
+    "howItWorks": [
+      {
+        "title": "A prize you must collect",
+        "detail": "The scratchcard, call or postcard says the holiday can only be claimed in person. Couples must attend together and bring a credit card, which guarantees both decision-makers and a payment method are present."
+      },
+      {
+        "title": "The presentation overruns",
+        "detail": "Ninety minutes becomes three or four hours. A friendly rep asks where you dream of going and what you spend on holidays each year, and writes your answers on a pad."
+      },
+      {
+        "title": "Your own figures used against you",
+        "detail": "The rep multiplies your yearly spending across twenty or thirty years to reach a frightening total, then presents the membership fee as a small slice of money you would spend anyway."
+      },
+      {
+        "title": "The manager's last offer",
+        "detail": "When you hesitate, a senior colleague arrives with a 'cancelled membership' or trial package at a fraction of the first price. It is valid only until you stand up from the table."
+      },
+      {
+        "title": "Signed and charged on the spot",
+        "detail": "A stack of forms is initialled quickly and a deposit goes on your card. One page may state that you were not pressured. Login details for the booking system arrive days later."
+      }
+    ],
+    "caseStudy": {
+      "title": "An illustrative example",
+      "body": [
+        "Beatriz, a dental receptionist, was on a week's break with her husband when a young man outside a supermarket near the beach handed them two scratchcards. One showed a 'top prize' of a free week's holiday. A taxi took them to an office above a row of shops. The presentation began at eleven. By two o'clock they were on their third salesperson, and the price of a 'lifetime' membership had fallen from £14,000 to £3,900 for a trial version, provided they paid a deposit before leaving.",
+        "Beatriz asked to take the contract back to the hotel and return in the morning. The manager said the offer would be void the moment the paperwork left the building. That refusal told her what she needed to know. While he fetched more coffee she searched the company's address on her phone and found two earlier club names registered there, both with pages of complaints. They left without signing and without the prize voucher, which listed a booking fee and four possible dates anyway. This account is an illustration with invented people, but the tactics are standard."
+      ]
+    },
+    "variations": [
+      {
+        "name": "Resort scratchcard touts",
+        "detail": "Street reps in holiday resorts hand out cards on which one of every pair 'wins'. A free taxi then takes you to a showroom some distance from your hotel, making it awkward to leave."
+      },
+      {
+        "name": "Hotel function-room travel club",
+        "detail": "A postcard or call invites you to a local hotel for free flights or a cruise. The product is a password to a 'wholesale' travel portal whose prices match ordinary booking sites."
+      },
+      {
+        "name": "Timeshare exit through a club",
+        "detail": "Owners tired of timeshare fees are told the club will take the timeshare off their hands if they join. They pay for membership and later discover the old contract was never ended."
+      },
+      {
+        "name": "Cashback certificate promise",
+        "detail": "Buyers are handed a certificate said to refund the whole purchase price after several years. The claim rules are so narrow, and the issuing company so short-lived, that payment rarely follows."
+      }
+    ],
+    "realVsFake": [
+      {
+        "real": "A reputable travel company puts its price and terms in writing for you to take away, and the offer still stands next week.",
+        "fake": "The price is good only while you remain in the room, and unsigned paperwork is not allowed out of the building."
+      },
+      {
+        "real": "Real prizes are handed over without a sales meeting, a partner in attendance or a credit card in your pocket.",
+        "fake": "The 'free holiday' appears after hours of selling as a voucher needing fees, taxes and travel on a few fixed dates."
+      },
+      {
+        "real": "With an honest membership scheme you can see live availability and real prices for your dates before committing any money.",
+        "fake": "You see a slideshow of sample deals, receive a login only after paying, and then find your dates are always taken."
+      },
+      {
+        "real": "Legitimate sellers state the full cost up front, including every yearly charge, and show you the cancellation terms.",
+        "fake": "Annual fees and 'administration' charges surface only in forms you are hurried through, and the cancellation clause is hard to find."
+      }
+    ],
+    "verify": [
+      "Before going in, search the company's exact name with 'complaints' on your phone, then search its street address, because these outfits change names often.",
+      "Ask to take the unsigned contract away overnight. If the answer is no, or the price expires when you leave, you have your verdict.",
+      "While the rep talks, open an ordinary travel site on your phone and price the same resort for the same week. Compare it with the quoted 'member rate'.",
+      "Read the small print on the prize voucher for booking fees, taxes, deposits and permitted dates before you give up a day for it.",
+      "If you have already signed, find the cancellation clause tonight, send your notice in writing exactly as it specifies, and keep proof of sending."
+    ],
+    "sources": [
+      {
+        "title": "Fake Prize, Sweepstakes, and Lottery Scams",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams"
+      },
+      {
+        "title": "Check if something might be a scam",
+        "publisher": "Citizens Advice",
+        "url": "https://www.citizensadvice.org.uk/consumer/scams/check-if-something-might-be-a-scam/"
+      },
+      {
+        "title": "BBB Scam Tracker",
+        "publisher": "Better Business Bureau",
+        "url": "https://www.bbb.org/scamtracker"
+      }
+    ]
+  },
+  "voice-cloning-scam": {
+    "readTime": "8 min read",
+    "updated": "2026-11",
+    "author": "Scam or Safe editorial team",
+    "intro": [
+      "The phone rings and a voice you would know anywhere is crying. 'Mum, it's me. I've been in a crash. Please help.' There may be traffic noise or shouting behind it, and after a sentence or two a stranger takes the phone. Recognising a child's or parent's voice is instant and does not feel like a judgement you could get wrong, so fear arrives before any doubt. What you heard was built by software from a few seconds of that person speaking, taken from a public video, a voice note or a voicemail greeting.",
+      "The cloned voice is only the opener. A second person, posing as a police officer, lawyer, doctor or kidnapper, does the real talking, since a short generated clip cannot answer your questions. This caller names a sum for bail, damages or treatment and a way to pay that cannot be undone: a bank transfer, gift card numbers read down the line, cash fed into a cryptocurrency machine, or an envelope handed to a courier at your door. Throughout, you are kept on the line and told that contacting anyone else will make matters worse for your relative.",
+      "The rule is that a familiar voice on the phone no longer proves who is speaking. End the call, open your own contacts and ring the person on the number you saved. If they do not answer, ring someone who would know where they are. A real emergency will still be there three minutes later, and a fake one collapses the moment your relative picks up. Families who agree a private safe word in advance have a second check that no recording can pass."
+    ],
+    "howItWorks": [
+      {
+        "title": "Collecting a voice sample",
+        "detail": "A few seconds of clear speech is enough. It comes from a public video, a posted voice note or a voicemail greeting, and cloning software can then speak any sentence typed into it."
+      },
+      {
+        "title": "Working out the family",
+        "detail": "Public profiles and people-search listings reveal who the speaker's parents and grandparents are, and the names used at home, so the script can open with 'Nan' or 'Dad'."
+      },
+      {
+        "title": "A short burst of distress",
+        "detail": "The call opens with one or two sobbing lines in the cloned voice, laid over road or crowd noise that hides any flaws. Then the voice is cut off mid-sentence."
+      },
+      {
+        "title": "The calm official steps in",
+        "detail": "Someone introducing themselves as an officer, solicitor or doctor explains the charge, damages or bill, gives a badge or case number, and insists the line must stay open."
+      },
+      {
+        "title": "Money by a one-way route",
+        "detail": "You are steered to a transfer, gift cards, a cryptocurrency machine or cash for a courier, and coached to tell bank staff the withdrawal is for building work or a car."
+      }
+    ],
+    "caseStudy": {
+      "title": "An illustrative example",
+      "body": [
+        "Lorraine, a retired midwife, answered a call from an unknown mobile number on a Tuesday afternoon. Her granddaughter's voice, in tears, said: 'Gran, I've crashed the car and someone's hurt. Please don't tell Mum.' A man then introduced himself as a police sergeant. He said the girl was in custody and could be released that day on a surety of £4,800 in cash, which a court courier would collect within the hour. If the bank asked, Lorraine was to say the money was for a new kitchen.",
+        "Being told to lie to her own bank was what jarred. Lorraine asked to speak to her granddaughter again and to hear the name of the family dog. The sergeant said the girl was too upset to talk. Lorraine hung up, found her granddaughter in her contacts and rang. She answered in a whisper from a university library. Lorraine then phoned her daughter, reported the call to the police, and that evening the family agreed a safe word. Lorraine and her family are fictional, but calls like this follow the same script."
+      ]
+    },
+    "variations": [
+      {
+        "name": "Fake kidnap ransom call",
+        "detail": "A child's cloned scream is followed by a man demanding ransom and forbidding you to hang up. Nobody has been taken, and the child is usually at school or work, unaware."
+      },
+      {
+        "name": "The boss's voice at work",
+        "detail": "Someone in finance receives a call or voice message in a director's voice ordering an urgent, confidential payment to a new supplier account, with a promise that paperwork will follow."
+      },
+      {
+        "name": "Voice note from a stolen account",
+        "detail": "A short cloned voice message arrives through a friend's hijacked messaging account, asking for a quick loan to a new payee. Hearing the voice removes the doubt a typed request would raise."
+      },
+      {
+        "name": "Arrested grandchild with courier",
+        "detail": "A 'lawyer' says a grandchild has been arrested and a court gag order forbids telling the family. A driver is sent to the house to collect cash in a sealed envelope."
+      }
+    ],
+    "realVsFake": [
+      {
+        "real": "A relative in real trouble can answer a personal question and has no objection to you ringing them straight back.",
+        "fake": "The familiar voice says a line or two, then a stranger takes over and explains why your relative cannot speak again."
+      },
+      {
+        "real": "Police and courts do not phone families to collect bail by gift card, cryptocurrency deposit or cash handed to a driver.",
+        "fake": "The 'officer' quotes an exact sum, a deadline inside the hour and a payment method that cannot be recalled."
+      },
+      {
+        "real": "Someone genuinely helping your relative is content for you to phone other family members and take time to check.",
+        "fake": "You are ordered to keep the call secret, stay on the line and give the bank a false reason for the withdrawal."
+      },
+      {
+        "real": "When you ring your relative's saved number yourself, the call goes to their own phone, wherever they really are.",
+        "fake": "The incoming number is unknown, withheld or forged to look like theirs, so the screen tells you nothing about who is calling."
+      }
+    ],
+    "verify": [
+      "Hang up, open your contacts and ring the person on the number you saved. Do not press redial on the call that just came in.",
+      "No answer from them: phone their partner, flatmate, another parent or their workplace and ask where they are right now.",
+      "Ask for the family safe word, or a detail that has never been posted online, such as what you ate together last Sunday.",
+      "Check a shared location app or the family group chat for where the person was a few minutes ago, before you believe they are in a cell or a hospital.",
+      "If a courier is on the way or money has gone, call your bank's fraud line using the number on your card, then call the police."
+    ],
+    "sources": [
+      {
+        "title": "Scammers Use Fake Emergencies To Steal Your Money",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+      },
+      {
+        "title": "Phone Scams",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/phone-scams"
+      },
+      {
+        "title": "Internet Crime Complaint Center",
+        "publisher": "FBI",
+        "url": "https://www.ic3.gov"
+      }
+    ]
+  },
+  "virus-popup-scam": {
+    "readTime": "8 min read",
+    "updated": "2026-11",
+    "author": "Scam or Safe editorial team",
+    "intro": [
+      "You are reading a recipe or looking up a train time when the screen turns red or blue and a siren starts. A box carrying a Microsoft, Apple or antivirus logo lists 'threats detected', says the computer has been locked for your protection and prints a support number in large type. A recorded voice warns you not to switch off. The page has pushed the browser into full-screen mode, so the address bar and tabs vanish and it looks as if the operating system itself is speaking. The pointer seems stuck, and the close button does nothing.",
+      "All of it is one web page. A web page cannot scan your files, lock your machine or read your passwords, and the 'scan results' are a picture. The purpose is to make you dial the number. The person who answers asks you to install a remote-control program so they can 'take a look', scrolls through ordinary system logs as proof of infection, and then quotes a few hundred pounds for a clean-up and a multi-year protection plan. Payment is taken by card, gift cards or transfer, and some callers ask you to open online banking while they are still connected.",
+      "One fact defeats it: genuine security warnings from Windows or macOS never include a telephone number to call. Any alert that tells you to ring someone is an advertisement placed by a criminal. Do not call. Force the browser to close, and if it refuses, hold the power button until the machine switches off. The threat that your files will be destroyed if you restart is invented. When the computer comes back on, your documents are exactly where you left them."
+    ],
+    "howItWorks": [
+      {
+        "title": "A redirect from a normal site",
+        "detail": "A poisoned advert, a mistyped web address or a compromised page silently forwards your browser to the scare page. You did nothing unusual, which is why it feels like a genuine system event."
+      },
+      {
+        "title": "The browser goes full-screen",
+        "detail": "Script on the page hides the address bar and tabs, loops an alarm or robotic voice, and reopens dialogue boxes as fast as you dismiss them, so closing seems impossible."
+      },
+      {
+        "title": "A logo beside a phone number",
+        "detail": "An animated 'scan' ticks through folders and announces named infections under borrowed Microsoft or Apple branding. Beside it sits a 'toll-free support' number and a warning that restarting will erase your data."
+      },
+      {
+        "title": "Remote control granted by phone",
+        "detail": "The 'technician' talks you through downloading a remote-access tool and reading out its connection code. He then opens system logs or a command window and describes routine entries as hacker activity."
+      },
+      {
+        "title": "A repair bill, then your bank",
+        "detail": "A fee is quoted for removal plus years of 'protection', payable by card or gift cards. Some then ask you to log in to your bank to 'check for stolen funds' while they watch."
+      }
+    ],
+    "caseStudy": {
+      "title": "An illustrative example",
+      "body": [
+        "Anton, a self-employed plumber, was doing his invoices on a Sunday evening when he mistyped a supplier's web address. The screen went blue, a voice announced that his computer was blocked, and a number appeared under a Windows logo. He rang it. A polite man calling himself Daniel had him download a small program and read out a nine-digit code. The pointer began moving by itself. Daniel opened a black window full of scrolling text, said it showed intruders, and quoted £349 for three years of protection.",
+        "Anton was reaching for his card when Daniel added that, to be safe, he should log in to his bank so they could check for stolen money together. No repair needs that, and Anton knew it. He switched the laptop off at the power button, hung up, and used his mobile to ring the bank on the number printed on his card. The next day he removed the remote program, ran a full scan with the security software already installed, and changed his passwords from his phone. Anton is a fictional example of a very ordinary evening going wrong."
+      ]
+    },
+    "variations": [
+      {
+        "name": "Browser notification alerts",
+        "detail": "A site you once allowed to send notifications now pushes fake antivirus warnings into the corner of your screen, claiming a subscription has expired or infections were found, each linking to a payment page."
+      },
+      {
+        "name": "Download-a-cleaner page",
+        "detail": "No phone number this time. The page offers a free 'repair tool', which installs a junk program that invents hundreds of faults and demands payment to fix them, or delivers real malware."
+      },
+      {
+        "name": "Phone and tablet version",
+        "detail": "On a mobile browser the page makes the handset vibrate and claims the battery or SIM card is being damaged by viruses, then pushes you to install an app or start a paid subscription."
+      },
+      {
+        "name": "The refund call months later",
+        "detail": "Earlier victims are phoned and told the support firm is closing and owes them money. The caller reconnects, fakes an overpayment on the banking screen and asks for the difference back."
+      }
+    ],
+    "realVsFake": [
+      {
+        "real": "A genuine Windows or macOS security warning comes from the system itself and never prints a telephone number.",
+        "fake": "The warning lives inside a browser tab and shows a 'support' number in the biggest text on the screen."
+      },
+      {
+        "real": "Installed antivirus software deals with a threat quietly and leaves a small notice you can open from its own window.",
+        "fake": "Speakers blare, the screen flashes, a countdown runs and the page claims the whole computer has been locked."
+      },
+      {
+        "real": "Official Microsoft and Apple support is something you start yourself through their own websites or built-in help apps.",
+        "fake": "The 'technician' reached through the pop-up wants payment in gift card codes or by bank transfer, with a discount for paying today."
+      },
+      {
+        "real": "A repair technician you chose yourself has no need for you to sign in to online banking during the job.",
+        "fake": "You are asked to open your bank account 'to check for hackers' while the caller still controls your screen."
+      }
+    ],
+    "verify": [
+      "Press Alt and F4, or open Task Manager with Ctrl, Shift and Escape and end the browser. On a Mac, press Command, Option and Escape. If nothing responds, hold the power button.",
+      "When you reopen the browser, refuse the offer to restore your previous tabs, otherwise the same scare page loads straight back in.",
+      "Open the security program already on the machine, such as Windows Security from the Start menu, and run a scan from there for peace of mind.",
+      "In your browser settings, find the list of sites allowed to send notifications and remove every entry you do not recognise.",
+      "If you already let someone connect, turn off the Wi-Fi, shut the computer down, and ring your bank using the number on your card."
+    ],
+    "sources": [
+      {
+        "title": "How To Spot, Avoid, and Report Tech Support Scams",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+      },
+      {
+        "title": "Refund and Recovery Scams",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/refund-and-recovery-scams"
+      },
+      {
+        "title": "Internet Crime Complaint Center",
+        "publisher": "FBI",
+        "url": "https://www.ic3.gov"
+      }
+    ]
+  },
+  "money-flip-scam": {
+    "readTime": "8 min read",
+    "updated": "2026-11",
+    "author": "Scam or Safe editorial team",
+    "intro": [
+      "A story or direct message shows a payment app balance in the thousands, a fan of banknotes, and a caption: 'Turned $200 into $2,000 for five people today, two slots left.' Often it sits on the account of someone you went to school with. The stake is small enough to feel like a harmless gamble, the screenshots look like the real app, and the comments are full of people saying it worked. For anyone short before payday, a tenfold return in half an hour is hard to scroll past.",
+      "There is no method. The first payment is simply kept, and then the second stage begins. You receive a screenshot showing your 'flipped' total as pending, along with a request for a release fee, then a tax, then an account upgrade, each described as the last step. Some flippers skip the fee and ask for your payment app login or your debit card and PIN so they can 'deposit directly', which lets them empty the account or run stolen money through it. Others want a video of you saying it worked, to post from your profile.",
+      "The rule is blunt. Money sent to a stranger through a payment app is a gift to that stranger, and no insider, glitch or software changes that. Person-to-person payments arrive instantly and cannot be cancelled by the sender once they complete. Anyone who needs your money first in order to give you more has nothing to give. If the offer appears on a friend's account, treat that as a sign the account has been taken over, and contact the friend by phone before doing anything else."
+    ],
+    "howItWorks": [
+      {
+        "title": "A profile stocked with 'proof'",
+        "detail": "The account posts edited balance screenshots, photos of cash and thank-you messages from supposed clients. Many of these profiles were stolen from real people, so they show years of ordinary history."
+      },
+      {
+        "title": "The pitch and the price list",
+        "detail": "In direct messages you hear about a contact inside a bank, or a glitch in a payment app, and get a menu of options such as send 50 for 500 or 100 for 1,000."
+      },
+      {
+        "title": "You pay a mismatched tag",
+        "detail": "The payment tag carries a different name from the profile, explained as an agent or cousin. Your money arrives in seconds and, from that point, only the recipient can send it back."
+      },
+      {
+        "title": "A fee stands before the payout",
+        "detail": "A screenshot shows your multiplied total waiting. To release it you must pay a clearance fee, then a tax, then an upgrade charge. Each one is promised to be the last."
+      },
+      {
+        "title": "Blocked, or used as bait",
+        "detail": "Once you stop paying, the account blocks you. Before that, some ask for your social media login or a testimonial video 'for verification', then use your profile to pitch your own friends."
+      }
+    ],
+    "caseStudy": {
+      "title": "An illustrative example",
+      "body": [
+        "Mateus picks orders in a warehouse and was a week from payday when he saw a story on an old schoolmate's account: 'Sent $150, got $1,500 back in an hour, she's legit.' He messaged the account it tagged. The reply was friendly and quick, with a price list and three screenshots of payouts. He sent $100 through his payment app to a tag under a man's name, which the flipper said belonged to her agent. Ten minutes later a screenshot arrived showing $1,000 pending, with a request for a $75 clearance fee.",
+        "The fee made no sense to him. If she held his $1,000, she could take $75 out of it. Instead of paying, Mateus texted his schoolmate on her ordinary number. She replied that she had been locked out of her account for three days after entering a code someone asked her for. He stopped there. He screenshotted the chat and the payment, reported the payment as a scam inside the app, told his bank, and reported both accounts to the platform. Mateus is not a real person; his case is an illustration of the usual sequence."
+      ]
+    },
+    "variations": [
+      {
+        "name": "Endorsement from a hijacked friend",
+        "detail": "The offer appears on the profile of someone you know, taken over through an earlier phishing link or code request. A selfie-style post praises the flipper and tags the scam account."
+      },
+      {
+        "name": "Hand over your login",
+        "detail": "No payment is requested. The flipper wants your banking login or debit card and PIN, pays in bad cheques or stolen funds, withdraws the cash and leaves you answering to the bank."
+      },
+      {
+        "name": "Gift card or crypto flip",
+        "detail": "The promise is unchanged, but the stake is paid as gift card codes photographed and sent by message, or as cryptocurrency to a wallet address. Both are even harder to trace than an app payment."
+      },
+      {
+        "name": "The 'blessing' giveaway",
+        "detail": "An account claims to be giving money away to followers and asks only for a small sum to verify your payment tag or cover a transfer cost. The gift never arrives."
+      }
+    ],
+    "realVsFake": [
+      {
+        "real": "A payment app moves money from one person to another. It has no feature, hidden or otherwise, that multiplies a balance.",
+        "fake": "The flipper says a secret glitch or a friend on the inside can turn your payment into ten times as much within the hour."
+      },
+      {
+        "real": "A regulated investment firm is registered with a financial authority, gives written risk warnings and does not guarantee returns.",
+        "fake": "The return is guaranteed, the method cannot be explained, and the only paperwork is a cropped screenshot."
+      },
+      {
+        "real": "Someone who really holds money for you can subtract any fee from it before sending the remainder.",
+        "fake": "A separate release, tax or upgrade payment is demanded before your 'winnings' are allowed to move."
+      },
+      {
+        "real": "Genuine payment app support works inside the app and does not ask for your PIN or sign-in code over social media.",
+        "fake": "You are asked for your login, the code texted to your phone or your card PIN so the account can be 'loaded'."
+      }
+    ],
+    "verify": [
+      "Look through the profile's older posts. Ordinary family photos that switch abruptly to cash stacks and payout screenshots usually mean the account was stolen from its owner.",
+      "If the post is on a friend's account, phone or text them on their usual number and ask whether they still control it.",
+      "Compare the name on the payment tag with the name on the profile. A mismatch explained as 'my agent' is the standard excuse.",
+      "Save one of the payout screenshots and run a reverse image search. The same picture often turns up on several unrelated flipping accounts.",
+      "If you have paid, open the payment in the app and report it as a scam, then ring your bank about the linked card. Send nothing further."
+    ],
+    "sources": [
+      {
+        "title": "Mobile Payment Apps: How To Avoid a Scam When You Use One",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+      },
+      {
+        "title": "What To Do if You Were Scammed",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed"
+      },
+      {
+        "title": "ReportFraud.ftc.gov",
+        "publisher": "US Federal Trade Commission",
+        "url": "https://reportfraud.ftc.gov"
+      }
+    ]
+  },
+  "concert-ticket-scam": {
+    "readTime": "8 min read",
+    "updated": "2026-11",
+    "author": "Scam or Safe editorial team",
+    "intro": [
+      "You post in a fan group that you are looking for two tickets, and within minutes someone replies: they have a pair, they can no longer go, and they only want face value. The profile has years of photos and perhaps a mutual friend. They send a screenshot of the tickets inside an app, with a section and row that match the venue's seating plan. The show is sold out and official resale is empty or far more expensive, so an ordinary person with an ordinary reason for selling feels like luck.",
+      "The seller has no tickets. What they want is a payment that cannot be disputed: a bank transfer, or a payment app's 'friends and family' option, which is meant for people you know and carries no purchase cover. After you pay, a 'name change fee' or 'transfer fee' may be requested before the tickets can be released. Then the account blocks you, or you receive the same screenshot or PDF that has been sold to several other buyers. Many of the profiles used are real accounts that were taken over, which is why they look so settled.",
+      "For most big events, a ticket is yours only when it sits in your own account with the official ticketing company. A screenshot, a PDF or a forwarded confirmation email is a picture of a ticket, and pictures can be sold any number of times. So the rule is to buy resale through the ticketing company's own resale or transfer system, or to pay by a method that covers purchases, and never to send a direct transfer to someone you met in a comment thread. A seller who turns down every protected option has nothing to transfer."
+    ],
+    "howItWorks": [
+      {
+        "title": "Watching for 'looking for tickets'",
+        "detail": "Scammers monitor event pages, fan groups and hashtags for people asking for tickets, then reply within minutes from accounts with a long history, many of them hijacked from their owners."
+      },
+      {
+        "title": "An everyday reason to sell",
+        "detail": "A changed shift, a sick child or a break-up explains the sale. The price is set at face value or slightly under, which reads as a fellow fan being fair rather than a tout."
+      },
+      {
+        "title": "Screenshots offered as proof",
+        "detail": "You are sent an image or screen recording of tickets in an app, or an order email with the name blurred. These are lifted from genuine listings and reused on buyer after buyer."
+      },
+      {
+        "title": "Payment steered away from cover",
+        "detail": "The seller asks for a bank transfer or the 'friends and family' setting, saying fees are unfair or that a previous buyer cheated them, so the money must arrive before the tickets move."
+      },
+      {
+        "title": "One more fee, then silence",
+        "detail": "After the first payment comes a demand for a name-change or transfer charge. Pay or refuse, the ending is the same: you are blocked, or a worthless image lands in your inbox."
+      }
+    ],
+    "caseStudy": {
+      "title": "An illustrative example",
+      "body": [
+        "Nomvula, a hairdresser, wanted two tickets to a sold-out arena show for her daughter's sixteenth birthday. She asked on the event's discussion page, and a woman called Hannah messaged within five minutes. Hannah's profile showed family photos going back years. She offered two seats at $95 each, sent a screenshot showing the block and row, and asked for payment by bank transfer because 'the app holds money for days'. Nomvula sent $95 as a deposit. Hannah then asked for a further $40 'name change fee' before she could release anything.",
+        "The extra fee sent Nomvula back to the profile. Above the family photos, the most recent week of posts were all ticket offers, for shows in four different cities, and under one a relative had commented 'Is this really you?' She paid nothing more. She rang her bank at once to report the transfer, reported the profile to the platform, and kept screenshots of the chat and the payment. A week later she bought two seats through the venue's official resale page. Nomvula and Hannah are invented for this example; the pattern is not."
+      ]
+    },
+    "variations": [
+      {
+        "name": "Posts from a hijacked friend",
+        "detail": "Tickets are advertised on the timeline of someone you know, so friends pay on trust. The real owner has been locked out and may not learn of it for days."
+      },
+      {
+        "name": "Fake ticket transfer email",
+        "detail": "An email dressed as a transfer notice from a ticketing company invites you to 'accept your tickets'. The button opens a page that asks for your ticketing account login or card details."
+      },
+      {
+        "name": "Lookalike box office website",
+        "detail": "A sponsored search result imitates the venue or the official seller. It charges well above face value at a real-looking checkout and delivers invalid tickets or nothing at all."
+      },
+      {
+        "name": "One PDF, many buyers",
+        "detail": "A print-at-home ticket with a fixed barcode is sold to several people. Each copy looks perfect, but the gate scanner accepts the first one presented and rejects the rest."
+      }
+    ],
+    "realVsFake": [
+      {
+        "real": "An official transfer places the ticket in your own account with the ticketing company, where you can open it yourself.",
+        "fake": "You are sent a screenshot, a screen recording or a PDF and assured that it is all you need at the door."
+      },
+      {
+        "real": "Authorised resale platforms take payment through their own checkout and give the buyer a route to a refund if tickets are invalid.",
+        "fake": "The seller insists on a direct bank transfer or a 'friends and family' payment, which carries no purchase protection."
+      },
+      {
+        "real": "Many venues now issue mobile tickets whose barcode refreshes every few seconds inside the official app.",
+        "fake": "The 'ticket' is a still image with a frozen barcode that may already have been sold to several other people."
+      },
+      {
+        "real": "A genuine private seller will usually agree to list on official resale, use a protected payment or hand over in person.",
+        "fake": "Each safe option meets a fresh excuse, followed by a warning that three other buyers are waiting to pay tonight."
+      }
+    ],
+    "verify": [
+      "Find the event in the official ticketing app or on the venue's own site, and see whether it offers face-value resale or names its authorised resale partners.",
+      "Ask the seller to list the tickets on official resale, or to send them through the ticketing app's transfer feature to your email. Note how they react.",
+      "Read the seller's recent posts. A run of ticket offers for different cities, or comments switched off, means the profile is being used as a shopfront.",
+      "Before sending, look at the payment screen. If the app labels it a personal or 'friends and family' payment, purchase cover is off, so cancel.",
+      "Search the group, and then a search engine, for the seller's name or payment tag with the word 'tickets'. Repeat offenders are often named by earlier buyers."
+    ],
+    "sources": [
+      {
+        "title": "Mobile Payment Apps: How To Avoid a Scam When You Use One",
+        "publisher": "FTC Consumer Advice",
+        "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+      },
+      {
+        "title": "BBB Scam Tracker",
+        "publisher": "Better Business Bureau",
+        "url": "https://www.bbb.org/scamtracker"
+      },
+      {
+        "title": "Canadian Anti-Fraud Centre",
+        "publisher": "Government of Canada",
+        "url": "https://antifraudcentre-centreantifraude.ca"
+      }
+    ]
   }
 }
