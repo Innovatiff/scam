@@ -747,3 +747,34 @@ body.quiz-open { overflow: hidden; }
   font-size: .78rem; font-weight: 600; color: var(--gray-text);
 }
 .card .card-byline svg { width: 14px; height: 14px; color: var(--blue); flex: 0 0 auto; margin: 0; }
+
+/* Real-versus-fake comparison table (guides) */
+.rvf {
+  width: 100%; border-collapse: separate; border-spacing: 0; margin: 16px 0;
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden; font-size: .95rem;
+}
+.rvf th { text-align: left; padding: 10px 16px; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+.rvf th:first-child { color: var(--green); background: rgba(22, 163, 74, .08); }
+.rvf th:last-child { color: var(--red); background: rgba(220, 38, 38, .08); }
+.rvf td { padding: 12px 16px; border-top: 1px solid var(--border); vertical-align: top; width: 50%; color: var(--navy); }
+.rvf td + td, .rvf th + th { border-left: 1px solid var(--border); }
+html[data-theme="dark"] .rvf th:first-child, html[data-theme="dark"] .rvf td:first-child::before { color: #4ADE80; }
+html[data-theme="dark"] .rvf th:last-child, html[data-theme="dark"] .rvf td:last-child::before { color: #F87171; }
+@media (max-width: 700px) {
+  .rvf thead { display: none; }
+  .rvf, .rvf tbody, .rvf tr, .rvf td { display: block; width: 100%; }
+  .rvf tr + tr { border-top: 2px solid var(--border); }
+  .rvf td { border-top: 0; padding: 10px 14px; }
+  .rvf td + td { border-left: 0; border-top: 1px dashed var(--border); }
+  .rvf td::before {
+    content: attr(data-label); display: block; margin-bottom: 3px;
+    font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  }
+  .rvf td:first-child::before { color: var(--green); }
+  .rvf td:last-child::before { color: var(--red); }
+}
+.card-depth {
+  margin-left: auto; font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--blue); background: var(--light-blue); border-radius: 999px; padding: 2px 9px;
+}

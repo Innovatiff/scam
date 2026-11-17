@@ -20,6 +20,9 @@ const scams = readJSON("data/scams.json");
 const deepDives = readJSONSafe("data/deepdives.json", {});
 // Legacy guide URLs that were merged into a deeper flagship (old path -> new path).
 const redirects = readJSONSafe("data/redirects.json", {});
+// Hand-written additions for guides without a full deep dive: how the scam
+// unfolds, why it works, and a real-versus-fake comparison (keyed by slug).
+const enrichment = readJSONSafe("data/enrichment.json", {});
 const reporting = readJSONSafe("data/reporting.json", null);
 const statsData = readJSONSafe("data/stats.json", null);
 const updates = readJSONSafe("data/updates.json", []);
@@ -44,6 +47,10 @@ const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 const scamBySlug = Object.fromEntries(scams.map((s) => [s.slug, s]));
 const scamsByCategory = {};
 for (const s of scams) (scamsByCategory[s.category] ||= []).push(s);
+// In-depth guides lead each category, so the strongest pages are listed first.
+for (const list of Object.values(scamsByCategory)) {
+  list.sort((a, b) => (deepDives[b.slug] ? 1 : 0) - (deepDives[a.slug] ? 1 : 0));
+}
 
 function readJSON(rel) {
   return JSON.parse(fs.readFileSync(path.join(ROOT, rel), "utf8"));
@@ -268,7 +275,8 @@ function scamCard(scam) {
   return `<a class="card" href="/scams/${scam.slug}/">
     <div class="card-meta">
       ${riskBadge(scam.riskLevel)}
-      <span class="card-cat">${esc(cat ? cat.shortName : "")}</span>
+      <span class="card-cat">${esc(cat ? cat.shortName : "")}</span>${deepDives[scam.slug] ? `
+      <span class="card-depth">In-depth</span>` : ""}
     </div>
     <h3>${esc(scam.title)}</h3>
     <p>${esc(scam.summary)}</p>
@@ -669,6 +677,7 @@ function categoryPage(cat) {
   ];
   const list = scamsByCategory[cat.slug] || [];
   const related = (cat.related || []).map((slug) => categoryBySlug[slug]).filter(Boolean);
+  const allFaqs = [...cat.faqs, ...(cat.extraFaqs || [])];
 
   const main = `
 ${breadcrumbs(trail)}
@@ -682,6 +691,11 @@ ${breadcrumbs(trail)}
 <section class="prose">
   <div class="container with-sidebar">
     <div>
+      ${cat.howTheyWork ? `<h2>How these scams work</h2>
+      ${cat.howTheyWork.map((p) => `<p>${esc(p)}</p>`).join("\n      ")}
+      ${cat.whoIsTargeted ? `<h3>Who gets targeted, and when</h3>
+      <p>${esc(cat.whoIsTargeted)}</p>` : ""}
+` : ""}
       <h2>Common red flags</h2>
       ${flagList(cat.redFlags)}
 
@@ -691,8 +705,12 @@ ${breadcrumbs(trail)}
         ? `<div class="card-grid">${list.map(scamCard).join("")}</div>`
         : `<p class="muted"><em>Detailed guides for this category are coming soon. In the meantime, use the <a href="/scam-checker/">scam checker</a> to review a suspicious message.</em></p>`}
 
+      ${cat.firstSteps ? `<h2>If you already engaged: the first hour</h2>
+      ${stepsList(cat.firstSteps)}
+      <p>For the official reporting body in your country, see our <a href="/report-a-scam/">report a scam</a> page.</p>
+` : ""}
       <h2>Frequently asked questions</h2>
-      ${faqAccordion(cat.faqs)}
+      ${faqAccordion(allFaqs)}
 
       ${related.length ? `<h2>Related scam categories</h2>
       <div class="card-grid">${related.map(categoryCard).join("")}</div>` : ""}
@@ -720,7 +738,7 @@ ${breadcrumbs(trail)}
     description: cat.metaDescription,
     canonical: `/${cat.slug}/`,
     main,
-    jsonld: [breadcrumbLD(trail), faqLD(cat.faqs)]
+    jsonld: [breadcrumbLD(trail), faqLD(allFaqs)]
   });
 }
 
@@ -746,6 +764,12 @@ function variationList(items) {
 }
 // Carrier-by-carrier section for the delivery flagship: what the real company
 // does, where to check, and where to report, so one page covers every brand.
+// Side-by-side comparison of what the genuine organisation does and what the
+// scam does instead. A real table, so it still reads correctly without CSS.
+function realVsFakeTable(rows) {
+  return `<table class="rvf"><thead><tr><th scope="col">The genuine version</th><th scope="col">The scam</th></tr></thead><tbody>${rows.map((r) => `
+    <tr><td data-label="Genuine">${esc(r.real)}</td><td data-label="Scam">${esc(r.fake)}</td></tr>`).join("")}</tbody></table>`;
+}
 function carrierList(items) {
   return `<p>Every carrier below has been impersonated with the same text. The wording barely changes; only the logo does. Here is what each real company actually does, and the one place to check before you believe a message.</p>
   <div class="variation-list carrier-list">${items.map((c) => `
@@ -763,6 +787,7 @@ function caseStudyBox(cs) {
 function guidePage(scam) {
   const cat = categoryBySlug[scam.category];
   const dd = deepDives[scam.slug] || null;
+  const en = dd ? null : (enrichment[scam.slug] || null);
   const trail = [
     { name: "Home", url: "/" },
     { name: "Scam Types", url: "/scam-types/" },
@@ -795,11 +820,15 @@ function guidePage(scam) {
     "If you take one thing from this guide, make it this:",
     "The core pattern to watch for is clear:"
   ];
-  const introParas = (dd && dd.intro) ? dd.intro : [
-    scam.summary,
-    ...(pageContext ? [pageContext] : []),
-    `${pick(leadIns)} ${scam.quickVerdict.mainRedFlag} ${scam.quickVerdict.whatToDoFirst}`
-  ];
+  // Enriched guides lead with their own summary and a hand-written "why it
+  // works", instead of the shared category paragraph and a repeat of the verdict.
+  const introParas = (dd && dd.intro) ? dd.intro
+    : (en && en.whyItWorks) ? [scam.summary, en.whyItWorks]
+    : [
+      scam.summary,
+      ...(pageContext ? [pageContext] : []),
+      `${pick(leadIns)} ${scam.quickVerdict.mainRedFlag} ${scam.quickVerdict.whatToDoFirst}`
+    ];
 
   // Contextual internal links with intent-rich anchor text (SEO mesh): two
   // related guides, the category hub, and the checker tool, phrased per variant.
@@ -833,6 +862,14 @@ function guidePage(scam) {
 
   if (dd && dd.howItWorks) blocks.steps = { id: "step-by-step",
     label: "Step by step: how the scam unfolds", html: stepsList(dd.howItWorks) };
+  else if (en && en.steps) blocks.steps = { id: "step-by-step",
+    label: pick(["How it unfolds, step by step", "The scam, stage by stage", "What happens, in order", "How it plays out"]),
+    html: stepsList(en.steps) };
+
+  const rvfRows = (dd && dd.realVsFake) || (en && en.realVsFake);
+  if (rvfRows) blocks.rvf = { id: "real-vs-fake",
+    label: dd ? "Real or fake: how to tell the difference" : pick(["Real or fake: how to tell", "Genuine versus scam", "What the real one does", "Spot the difference"]),
+    html: realVsFakeTable(rvfRows) };
 
   blocks.example = { id: "example",
     label: pick(["Example message pattern", "What the message looks like", "A typical example", "How it usually reads"]),
@@ -884,10 +921,10 @@ function guidePage(scam) {
 
   // Four readable orderings. Missing (non-flagship) blocks are simply skipped.
   const ORDERINGS = [
-    ["intro","stats","steps","example","casestudy","redflags","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
-    ["intro","redflags","example","stats","steps","casestudy","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
-    ["intro","example","casestudy","stats","steps","redflags","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
-    ["intro","stats","redflags","whattodo","verify","example","steps","casestudy","variations","carriers","ifclicked","whatnottodo","similar","faq","sources"]
+    ["intro","stats","steps","example","casestudy","redflags","rvf","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","redflags","example","stats","steps","rvf","casestudy","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","example","casestudy","stats","steps","redflags","rvf","variations","carriers","whattodo","verify","ifclicked","whatnottodo","similar","faq","sources"],
+    ["intro","stats","redflags","rvf","whattodo","verify","example","steps","casestudy","variations","carriers","ifclicked","whatnottodo","similar","faq","sources"]
   ];
   const order = ORDERINGS[variant].filter((k) => blocks[k]);
 
