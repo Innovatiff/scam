@@ -34,6 +34,39 @@
       "delivery-scams",
       "bank-payment-scams",
       "government-tax-scams"
+    ],
+    "howTheyWork": [
+      "The text itself is rarely the theft. Its job is to move you somewhere the sender controls: a web page built for a phone screen, a number staffed by a caller, or a longer chat on a messaging app. Sending costs almost nothing, so one wording goes out to whole blocks of numbers at once, many of them simply guessed in sequence. What comes back is a card number typed into a form, a banking login, a six-digit code read off your screen, or plain confirmation that your number is live and answered.",
+      "The clumsy ones name a bank you have never used. The convincing ones land in the same thread as genuine messages, because the sender label has been set to the short name your bank or courier uses and the phone groups them together. They ask for a trivial amount, a 1.45 redelivery fee, since the card number is worth more than the fee. After you submit the form, the page forwards you to the real company's site, so nothing feels wrong. Others carry no link at all, only a friendly 'Is this still Anna's number?' that opens a conversation lasting weeks."
+    ],
+    "whoIsTargeted": "Anyone with a mobile number, because lists are bought, leaked or generated in sequence. Timing does the aiming. Toll and parking texts reach commuters, parcel texts swell before gift-giving seasons, and refund texts arrive around tax deadlines. 'Hi Mum, I dropped my phone' catches parents of students and teenagers. People reading on a small screen in a queue or on a train are least able to inspect a link.",
+    "firstSteps": [
+      {
+        "title": "Screenshot the thread before deleting",
+        "detail": "Capture the sender number, the wording and the link. Your bank and your mobile network will both ask what the message said and when it arrived."
+      },
+      {
+        "title": "Block the card you typed in",
+        "detail": "If card details went into the linked page, phone the number on the back of the card, ask for a replacement, and query any pending transactions."
+      },
+      {
+        "title": "Change the password from the real app",
+        "detail": "Open the genuine app or type the address yourself, never the link. Change that password everywhere you reuse it and sign out other sessions if offered."
+      },
+      {
+        "title": "Forward the text to 7726",
+        "detail": "Mobile networks in the UK, the US and Canada accept scam texts forwarded to 7726 free of charge. Then block the number on your handset."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "Why does a scam text show up in the same thread as my bank's real messages?",
+        "answer": "Phones group messages by the sender label, not by who really sent them. A criminal can set that label to the same short name your bank uses, so the fake drops into the genuine thread beneath real balance alerts. The thread proves nothing. Judge each message by what it asks you to do, and check through the bank's own app."
+      },
+      {
+        "question": "I tapped the link but did not enter anything. Am I at risk?",
+        "answer": "The risk is usually low. Loading the page tells the sender your number is active, which can bring more texts. Close the tab and do not install anything it offered. If you accepted a download or a profile, remove it and run the phone's built-in security check. Typing nothing means no card or password was captured."
+      }
     ]
   },
   {
@@ -71,6 +104,39 @@
       "bank-payment-scams",
       "online-shopping-scams",
       "social-media-scams"
+    ],
+    "howTheyWork": [
+      "Email gives a criminal room that a text does not: a logo, a signature block, a subject line that reads like routine admin, an attachment. Three things come out the other end. A password, typed into a copy of a sign-in page. A payment, made against an invoice or a 'renewal' you never ordered. Or a foothold on the computer, through a document that asks you to 'enable content'. Mailbox passwords are valued above the others, because whoever holds the inbox can reset almost every other account you own.",
+      "Weak attempts come from a free webmail address and greet nobody in particular. Stronger ones are sent through real services: a genuine invoice raised inside a payment platform, or a real file-sharing notice with a poisoned document behind it, so the sender address passes every check. Hardest to spot is a reply inside an existing conversation, sent from a supplier's or colleague's hijacked mailbox, quoting earlier messages, with only the bank details changed. Some contain no link, just a phone number to 'cancel the charge', which moves the fraud onto a call."
+    ],
+    "whoIsTargeted": "Any address in a leaked list receives the bulk versions, but role sharpens the aim. People who pay invoices, run payroll or manage a shared inbox see tailored attempts. Timing follows the calendar of paperwork: fake tax documents in filing season, fake renewal notices as subscriptions roll over, fake solicitor emails when a house deposit is due. New starters get bogus HR and IT messages in their first weeks.",
+    "firstSteps": [
+      {
+        "title": "Reset the mailbox password first",
+        "detail": "If you signed in on the linked page, change your email password from a trusted device before anything else, because that inbox can reset your other accounts."
+      },
+      {
+        "title": "Look for forwarding rules",
+        "detail": "Open mail settings and search for filters or forwarding addresses you did not create. Intruders add them so copies keep flowing after the password changes."
+      },
+      {
+        "title": "Isolate a computer that opened attachments",
+        "detail": "If you ran a file or enabled macros, take the machine off the network, run a full security scan, and change passwords from a different device."
+      },
+      {
+        "title": "Use the report phishing button",
+        "detail": "Report the message through your mail provider, then tell colleagues or family that anything sent from your address in the past hour may not be yours."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "The email came from the company's genuine address. Can it still be fake?",
+        "answer": "It can. Some scams travel through the real service: a criminal opens an account with a payment or document platform and uses its own invoicing or sharing tool to email you. The address is authentic and the request is not. Others come from a real person's mailbox that has been broken into. Check the claim inside your own account, never through the message."
+      },
+      {
+        "question": "Why does the scam email give a phone number instead of a link?",
+        "answer": "Spam filters are good at catching bad links and poor at judging a phone number. The email shows a charge you do not recognise and a line to ring to dispute it. Whoever answers asks to connect to your computer to 'process the refund'. Never ring a number printed on an invoice you did not expect. Look the company up separately."
+      }
     ]
   },
   {
@@ -108,6 +174,39 @@
       "online-shopping-scams",
       "bank-payment-scams",
       "social-media-scams"
+    ],
+    "howTheyWork": [
+      "Every marketplace deal has a gap between one side paying and the other handing over, and the fraud lives in that gap. A fake buyer wants your item, or a fee from you, before real funds clear. A fake seller wants payment before you hold the goods. Contact begins normally, as an enquiry on your listing or an advert in your feed. Money leaves by whatever cannot be pulled back: a transfer marked 'friends and family', a deposit to hold the item, a courier fee, or the item itself posted to someone who later disputes delivery.",
+      "Careless attempts offer more than the asking price without a single question about the item. Better ones behave like real traders. They haggle a little, ask about scratches, agree a time, then introduce one small complication: the cousin who will collect, the courier who needs an insurance fee first, a link to 'receive payment' that opens a card form. Sellers of goods that do not exist often work from an old account they have taken over, with years of history and local friends, and photographs lifted from a sold listing in another town."
+    ],
+    "whoIsTargeted": "Sellers listing for the first time, who do not yet know what the platform's own payment messages look like. Buyers chasing something scarce: sold-out tickets, a console before a gift season, a particular breed of puppy, a used car priced to go quickly. People clearing a house after a move or a bereavement, with many listings live at once and little time to question each enquiry.",
+    "firstSteps": [
+      {
+        "title": "Look for the money yourself",
+        "detail": "Open your bank or payment app directly and check the balance. An email or screenshot saying funds are 'pending' until you pay a fee is not a payment."
+      },
+      {
+        "title": "Halt the shipment or handover",
+        "detail": "If the parcel is with a carrier, ring them and ask for an intercept or return. If a collection is booked, cancel it until cleared funds show."
+      },
+      {
+        "title": "Dispute what you paid",
+        "detail": "Tell your bank or the payment app that you paid for goods which were never supplied, and ask which dispute route applies to the method you used."
+      },
+      {
+        "title": "Report the listing and the user",
+        "detail": "Use the platform's report option on both, attaching screenshots of the chat, so the account can be reviewed before it reaches the next buyer or seller."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "Is meeting in person and paying cash always safe?",
+        "answer": "It removes most payment tricks and brings a few of its own. Meet somewhere public in daylight and take someone with you. For expensive items, count notes slowly and check them, since counterfeit cash is passed in hurried handovers. Test electronics before money changes hands, and confirm a phone is not locked to a previous owner's account or reported lost."
+      },
+      {
+        "question": "A buyer wants to send a courier with the payment. How does that trick work?",
+        "answer": "The buyer says a courier will collect the item and hand over the money, then sends a link to 'book' it. The page asks for your card to cover insurance or to 'receive' the funds, and those details are used to take money from you. Courier firms do not deliver cash to sellers, and nobody needs your card number to pay you."
+      }
     ]
   },
   {
@@ -145,6 +244,39 @@
       "social-media-scams",
       "bank-payment-scams",
       "email-scams"
+    ],
+    "howTheyWork": [
+      "A fake job is a way of making an odd request sound like procedure. Three things get collected. Fees, dressed up as training, a uniform, a background check, or equipment you will be 'reimbursed' for. Identity documents, gathered through an onboarding form that wants a passport scan, bank details and a tax number before any contract exists. And the use of your bank account, to receive stolen money and pass it on. Contact arrives as a message on a jobs site, a chat app, or a reply to a CV you posted publicly.",
+      "The lazy offers promise a week's wage for an hour of liking videos. Careful ones copy a real company's vacancy, borrow the name of a genuine recruiter from a professional networking profile, and hold an interview with sensible questions. An offer letter follows on headed paper. Then a cheque arrives to buy a laptop from a 'preferred vendor', with the surplus to be sent on, and it bounces days later. Task scams run differently: small real payouts for the first few tasks, then a frozen balance that you must top up with your own money to unlock."
+    ],
+    "whoIsTargeted": "People who need income soon and have said so in public: recent graduates, staff made redundant, parents wanting hours around school, students in the summer break, and workers seeking sponsored roles abroad. Posting a CV on an open job board or adding an 'open to work' banner invites contact. After a large employer announces layoffs, fake recruiters work through its former staff.",
+    "firstSteps": [
+      {
+        "title": "Stop uploading documents",
+        "detail": "Send nothing further to the 'onboarding' portal. Write a list of what they already hold: passport or licence scan, bank details, tax number, home address."
+      },
+      {
+        "title": "Leave incoming money untouched",
+        "detail": "If a cheque or transfer from the 'employer' has reached your account, do not forward any of it. Ring your bank, explain, and follow their instructions."
+      },
+      {
+        "title": "Ask the real employer",
+        "detail": "Find the company's careers page yourself and ask whether the vacancy and the recruiter exist. HR teams often already know their name is being used."
+      },
+      {
+        "title": "Flag the advert, keep the letter",
+        "detail": "Report the listing or recruiter profile on the job board or chat app. Save the letter, contract and messages in case your bank or the police ask."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "They paid me for the first few tasks. Does that mean it is real?",
+        "answer": "Small early payouts are the cost of running the con. Once you trust the dashboard, a 'combination task' or negative balance appears and you are told to deposit your own money to continue, with a bigger commission promised. Each deposit unlocks a larger demand. An employer pays you for work. It never asks you to fund your own account first."
+      },
+      {
+        "question": "I sent a passport scan to a fake recruiter. What can they do with it?",
+        "answer": "A scan combined with your address and date of birth can be used to attempt account openings, to pass identity checks on other platforms, or to make a later scam against you more believable. Tell the passport office if it has a route for reporting misuse, watch your credit file for applications you did not make, and treat new 'refund' contacts with suspicion."
+      }
     ]
   },
   {
@@ -182,6 +314,39 @@
       "email-scams",
       "text-message-scams",
       "crypto-investment-scams"
+    ],
+    "howTheyWork": [
+      "These scams end with you pressing the button. The criminal seldom breaks into the account. You are talked into sending a transfer, approving a prompt in your app, or reading out a code, so the bank's systems see a normal customer instruction. First contact is an alert: a text about a purchase at a retailer you never visited, a call from the 'fraud team', a request for money disguised as an incoming payment. The funds go by instant transfer to an account opened in someone else's name and are split onward within minutes.",
+      "Poor versions get basic facts wrong and name a bank you do not use. Good ones open with facts about you. The caller already has your name, address and the last digits of your card, often from a fake form you half remember filling in last week. They invite you to compare the number they are calling from with the one on your card, knowing it can be spoofed. They stay calm, warn you about fraud themselves, and explain that the warning screens in your banking app are part of the 'investigation' and should be tapped through."
+    ],
+    "whoIsTargeted": "Customers who recently entered card details on a fake parcel or toll page get a call days later from a 'fraud team' holding those details. House buyers are hit at completion, when a large transfer is expected and an email with 'updated' account details fits the moment. New users of instant payment apps and anyone selling something online meet the fake-payment and accidental-transfer versions.",
+    "firstSteps": [
+      {
+        "title": "Hang up and redial the bank",
+        "detail": "End the call, then use another phone or wait a few minutes before dialling the number printed on your card. Ask whether the fraud team contacted you."
+      },
+      {
+        "title": "Say 'I have been scammed'",
+        "detail": "If money has left, say so plainly and give the time, amount and receiving account. Banks can sometimes reach the receiving bank while funds remain."
+      },
+      {
+        "title": "Freeze cards and remove new payees",
+        "detail": "Freeze the card in your app, change the online banking password, and delete any payee or registered device that you do not recognise."
+      },
+      {
+        "title": "Note what the caller knew",
+        "detail": "Write down the number displayed, the name given and each detail they quoted about you. It helps the bank's investigators and hints at where your data leaked."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "The caller knew my name, address and card digits. How is that possible?",
+        "answer": "Usually the details came from you at an earlier stage. A fake delivery or fine page collected your card and contact information, and the phone call is the second act. Other data comes from breached retailer databases. Knowing facts about you shows that someone holds your data. It says nothing about who employs them."
+      },
+      {
+        "question": "Someone sent me money by mistake and wants it back. What should I do?",
+        "answer": "Do not return it yourself. The original payment may have come from a stolen card or hacked account and can later be reversed, leaving you short by whatever you sent on. Tell the sender to raise it with their own bank, and tell your bank or the payment app so the reversal is handled through official channels."
+      }
     ]
   },
   {
@@ -219,6 +384,39 @@
       "text-message-scams",
       "online-shopping-scams",
       "email-scams"
+    ],
+    "howTheyWork": [
+      "A fake delivery notice exists to collect a full card record for the price of a tiny fee. The page asks for name, address, phone number, date of birth and card, all on one form, 'to rebook'. The fee might be 1.99. Nobody wants the 1.99. Days later the card is tested with small purchases or loaded into a mobile wallet, or the whole record is handed to a caller who rings as your bank. First contact is a text or email naming a courier, sometimes a printed card through the letterbox with a QR code.",
+      "Sloppy ones name a courier that does not operate where you live. Convincing ones show a tracking number, a progress bar and a countdown to 'return to sender'. They copy a postal service's colours down to the footer, then pass you through a 'verification' step where you enter the code your bank has just texted, which approves a far larger payment or a wallet enrolment. The message never says who sent the parcel or what is in it, because the criminal has no idea. Genuine notices tend to carry the retailer's name or the tracking number from your order."
+    ],
+    "whoIsTargeted": "People who order online often, which is nearly everyone in the weeks before gift-giving holidays and during big sales. Anyone waiting on goods from abroad half expects a customs charge and pays a fake one without surprise. Small businesses receiving stock daily, students expecting parcels from home, and people who have just moved and are unsure which address a sender used.",
+    "firstSteps": [
+      {
+        "title": "Track the parcel from your order email",
+        "detail": "Find the tracking number in the retailer's confirmation and enter it on the courier's own site or app. If nothing is being held, the notice was fake."
+      },
+      {
+        "title": "Cancel the card on the form",
+        "detail": "Freeze it in your banking app and ask the issuer for a replacement. Mention that the same form also took your address and date of birth."
+      },
+      {
+        "title": "Refuse wallet and payment codes",
+        "detail": "If a code arrives to add your card to a phone wallet or approve a purchase, share it with nobody and tell the bank that it came."
+      },
+      {
+        "title": "Expect a fake bank call",
+        "detail": "For the next few weeks, treat any caller from your bank's 'fraud team' as suspect. Put the phone down and ring the number on your card."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "I only paid a fee of a pound or two. Is that all I have lost?",
+        "answer": "Probably not. The small charge was an excuse to collect your full card details and personal information. Larger charges may follow, or the card may be added to a phone wallet somewhere else. Have the card cancelled and reissued even if only the small amount has gone, and read the next two statements line by line."
+      },
+      {
+        "question": "A missed-delivery card came through my door. Could that be fake too?",
+        "answer": "It can be. Fake cards copy a courier's layout and give a phone number charged at a premium rate, or a QR code leading to a payment page. Do not ring or scan. Use the tracking number from your order, or ask at the local depot or post office whether anything is waiting for your address."
+      }
     ]
   },
   {
@@ -256,6 +454,39 @@
       "marketplace-scams",
       "bank-payment-scams",
       "online-shopping-scams"
+    ],
+    "howTheyWork": [
+      "What is being sold is access to a home the advertiser has no right to let. Either the property belongs to someone else entirely, or the 'landlord' has brief access through a holiday booking and shows it to several hopeful tenants in one weekend. First contact is your own enquiry on a listings site, answered fast and moved to email. Money leaves as a holding deposit, a month's rent in advance, or a fee for a credit check. The application form collects a passport copy, payslips and bank statements, which are sold on separately.",
+      "A weak advert gives itself away with a story about working overseas and keys to be posted after payment. The polished version includes a viewing. Someone meets you at the door, has a key or a code, and walks you round. A tenancy agreement arrives as a tidy PDF carrying an agent's logo, and you get a receipt. Missing are the two things a renter seldom checks: proof that this person owns the property or acts for the owner, and, where the law requires one, a deposit lodged with a protection scheme instead of a private account."
+    ],
+    "whoIsTargeted": "People renting from a distance: students arriving for a new term, workers relocating for a job, service families posted to a new base, and anyone moving to a city where decent flats go within hours. Late summer, before term begins, is the busiest stretch. Holidaymakers booking a villa or cottage meet the same trick, with an 'owner' offering a discount for paying outside the booking site.",
+    "firstSteps": [
+      {
+        "title": "Report the transfer as fraud",
+        "detail": "Ring your bank straight away with the receiving account details. The earlier it contacts the receiving bank, the more likely some of the deposit is still there."
+      },
+      {
+        "title": "Check who owns the address",
+        "detail": "Search the official land or property register for your area, or ask the building's managing agent, and compare the owner's name with the person you paid."
+      },
+      {
+        "title": "Protect the paperwork you supplied",
+        "detail": "If a passport copy, payslips or bank statements went with the application, tell your bank and ask the credit agencies about a fraud alert."
+      },
+      {
+        "title": "Get the advert taken down",
+        "detail": "Send the listing link, the messages and your payment receipt to the listings platform, and keep copies of everything for a police report."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "I viewed the flat in person and it was still a scam. How?",
+        "answer": "A viewing only proves the person had a way in. Scammers book a flat as a short holiday let, or obtain a key safe code, then show people round as the 'landlord' and take several deposits for the same rooms. Ask for proof of ownership or of the agent's authority, and check it independently before paying anything."
+      },
+      {
+        "question": "The landlord asked me to prove my funds by sending money to a relative. Why?",
+        "answer": "It is an old trick. You send the deposit to a friend or relative through a money transfer service, 'so it stays under your control', then email a photo of the receipt as proof. The details on that receipt let the scammer collect the cash using forged identification. No landlord needs to watch money move. A bank statement shows funds."
+      }
     ]
   },
   {
@@ -293,6 +524,39 @@
       "job-scams",
       "email-scams",
       "marketplace-scams"
+    ],
+    "howTheyWork": [
+      "On social platforms the account is the prize as often as the money. A profile with years of history, friends who trust it and perhaps a business page or advertising account attached is a tool for the next hundred frauds. Contact comes as a DM, a tag in a comment, a friend request from a copy of someone you know, or a sponsored post. A stolen login is used at once. The email and phone number on the account are swapped, and your contacts start receiving requests for a 'quick favour' or tips about an investment.",
+      "Easy ones to spot come from blank profiles with a string of digits in the handle. Convincing ones come from a person you know, because their account was taken an hour ago. The message sounds like them, mentions a shared group, and asks for something small: vote for me in this contest, receive a code for me, look at this video of you. Fake 'support' accounts reply beneath your public complaint to a brand within minutes, wearing its logo and a near-identical handle, and draw you into DMs before the real team has read the post."
+    ],
+    "whoIsTargeted": "People with something attached to a profile: small businesses that depend on a page, creators with a following, admins of local groups. Anyone who complains publicly about an airline, bank or retailer attracts fake support replies. Those who announce a bereavement, a fundraiser or a lost pet receive tailored approaches. Teenagers are singled out for sextortion through new 'friend' accounts that ask for photos.",
+    "firstSteps": [
+      {
+        "title": "Try your login straight away",
+        "detail": "If it still works, change the password, then confirm the email address and phone number on the account are yours and remove any that are not."
+      },
+      {
+        "title": "End every other session",
+        "detail": "In security settings, log out all devices and revoke connected apps you did not add. A hijacked session can outlive a password change until you end it."
+      },
+      {
+        "title": "Start official account recovery",
+        "detail": "If you are locked out, use the 'hacked' or 'need more help' route in the platform's own app. Ignore offers in comments to recover it for a fee."
+      },
+      {
+        "title": "Warn your contacts another way",
+        "detail": "Ask a friend to post, or message people directly, that requests for codes, votes or money from your profile today did not come from you."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "Someone offers to recover my hacked account for a fee. Should I pay?",
+        "answer": "No. People who reply to posts about hacked accounts with offers of 'recovery' are running a second scam on the same victims. They take a fee, ask for more, or request your email login and take that as well. Only the platform can restore an account, through the recovery process in its app or help centre, which costs nothing."
+      },
+      {
+        "question": "Why would a scammer copy my profile instead of hacking it?",
+        "answer": "Cloning needs no password. They save your public photos, create a profile in your name, and send requests to your friends list, which is often visible to anyone. Once friends accept, the clone asks them for money or sends a link. Make your friends list private, report the copy as impersonation, and ask friends to report it too."
+      }
     ]
   },
   {
@@ -330,6 +594,39 @@
       "email-scams",
       "marketplace-scams",
       "delivery-scams"
+    ],
+    "howTheyWork": [
+      "A fake shop is cheap to build. It needs a storefront template, product photos taken from a real brand, a payment form, and a few days of adverts on social feeds. Orders come in, and the site sends nothing, or posts a token item so a tracking number exists, or keeps the card details for later use. Some are subscription traps, where a 'free trial, just pay postage' checkout hides a monthly charge in pale grey text. Payment is by card when the site wants to look normal and by bank transfer when it wants no comeback.",
+      "A crude shop cuts prices to a fraction and writes in oddly translated English. The capable ones clone a real retailer's whole site at a web address one letter out, or revive the name of a closed high-street chain for a 'closing down sale'. They display trust badges, a returns policy copied word for word, and reviews hosted on their own pages. A tracking number arrives showing a parcel delivered to your town, later used to contest your refund claim. The tells are absences: no company registration, no returns address, no phone line that anyone answers."
+    ],
+    "whoIsTargeted": "Shoppers hunting one specific item that is sold out everywhere or priced out of reach, in the run-up to gift seasons and sale weekends. Parents after the toy of the year. People scrolling late at night who buy from an advert without leaving the app. Anyone looking for a cheaper route to medication, software licences, flights or event tickets.",
+    "firstSteps": [
+      {
+        "title": "Capture the site before it vanishes",
+        "detail": "Screenshot the web address, product page, order confirmation and emails now. Your card provider will want evidence of what was promised and the shop may disappear."
+      },
+      {
+        "title": "Raise a card dispute today",
+        "detail": "Tell the provider that the goods were not supplied or the trader is fraudulent, and ask how to start a chargeback or claim. Time limits apply."
+      },
+      {
+        "title": "Block repeat charges from the merchant",
+        "detail": "Check whether the checkout signed you up to a subscription. Ask the bank to stop future payments to that merchant, since trial offers often bill again."
+      },
+      {
+        "title": "Retire the password you gave the shop",
+        "detail": "If you made an account there with a password used elsewhere, change it on those other sites before the shop's owners try it on them."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "Tracking says delivered but nothing arrived. What is going on?",
+        "answer": "Fake shops sometimes post a worthless item, or obtain a tracking number for a different parcel delivered in your postcode area. The 'delivered' status is then shown to your card provider as proof. Say exactly that in your dispute, ask the courier for the delivery address and weight recorded against the number, and include their reply."
+      },
+      {
+        "question": "I received a cheap item nothing like the photos. Is that fraud or bad service?",
+        "answer": "When the advert showed a branded product and a trinket turned up, the goods were misdescribed, and card providers generally accept 'not as described' as grounds for a dispute. The seller will often offer a partial refund if you keep the item, or insist you post it abroad at your own cost. Keep the item and packaging as evidence."
+      }
     ]
   },
   {
@@ -367,6 +664,39 @@
       "bank-payment-scams",
       "social-media-scams",
       "job-scams"
+    ],
+    "howTheyWork": [
+      "The platform is a stage set. You see a trading screen with charts, a balance and a withdraw button, yet deposits never reach a market. They go straight to wallets the operators control, and the figures on screen are typed in by them. Contact comes from an advert with a famous face, a 'signals' group on a messaging app full of planted members posting wins, or someone met weeks ago on a dating app. Your money goes from bank to a genuine exchange, becomes crypto, and is sent to an address given in chat. That final transfer cannot be reversed.",
+      "Blunt versions promise to double your coins by Friday. Patient ones never hurry you. They suggest a small first deposit, display gains, and let you take a little out so the system looks sound. An 'account manager' phones weekly and talks soberly about risk. The site shows a licence number borrowed from a real firm with a similar name. The trap shuts only when you request a large withdrawal: a tax, an anti-money-laundering deposit, an upgrade fee, each payable from fresh funds and never deductible from the balance you supposedly hold."
+    ],
+    "whoIsTargeted": "People holding a lump sum and a reason to grow it: a redundancy payment, an inheritance, a pension pot newly within reach, proceeds of a house sale. Savers tired of low interest. Newcomers to crypto during price surges, when headlines suggest everyone else is getting rich. Lonely people befriended over weeks by a new online contact. Earlier victims, approached again by 'recovery agents'.",
+    "firstSteps": [
+      {
+        "title": "Refuse the release fee",
+        "detail": "Whatever tax, fee or 'unlock' payment is demanded, do not send it. A firm holding your money has no need of new money before returning it."
+      },
+      {
+        "title": "Copy wallet addresses and transaction hashes",
+        "detail": "From your exchange history, record every address you sent to and each transaction ID. They are the only lasting trace of where the coins went."
+      },
+      {
+        "title": "Alert your bank and exchange",
+        "detail": "Report the transfers to the bank you funded from, and give the genuine exchange the destination addresses so it can flag them and review linked accounts."
+      },
+      {
+        "title": "Remove apps they had you install",
+        "detail": "Uninstall any screen-sharing or 'trading' app added at their request, change your passwords, and move remaining crypto to a fresh wallet with a new seed phrase."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "I withdrew a small amount early on. Does that prove the platform is genuine?",
+        "answer": "It proves the operators will spend a little to gain a lot. Letting you take out a small sum is a standard step, timed just before they suggest a bigger deposit. The real test is whether you can withdraw most of your balance to your own bank without paying anything first. Scam platforms fail that test every time."
+      },
+      {
+        "question": "A firm says it can trace and recover my stolen crypto. Should I use it?",
+        "answer": "Be very wary. People who have lost money are contacted again, often by the same group, by 'recovery specialists' who claim to have located the funds and need an upfront fee to release them. A confirmed blockchain transfer cannot be undone by a private firm. Report the loss to the police or your national fraud reporting service, which charge nothing."
+      }
     ]
   },
   {
@@ -404,6 +734,39 @@
       "bank-payment-scams",
       "text-message-scams",
       "email-scams"
+    ],
+    "howTheyWork": [
+      "Authority does the work here. A tax office, a court or a police force can fine you or detain you, so a message in their name gets obeyed before it gets checked. Two shapes dominate. One is the threat: a debt, a warrant, a visa problem, to be settled today. The other is the reward: a rebate, a grant, a benefit top-up, which needs your bank details and identity number to 'process'. Contact comes by recorded call, text or email, or through a copy of an official website sitting above the real one in search adverts.",
+      "Crude calls threaten arrest within the hour. Careful versions arrive in the right month, quote a plausible reference number, and copy the layout of a genuine notice. The caller gives a badge number, offers to transfer you to a 'supervisor', and may know part of your identity number from an earlier leak. Copycat application sites are hardest to recognise, because the passport form or travel permit does eventually arrive. You have simply paid several times the official fee and handed your documents to a stranger along the way."
+    ],
+    "whoIsTargeted": "Taxpayers near filing deadlines and during refund season. The self-employed, who deal with the tax office directly. Recent immigrants and international students, who fear for their status and may not know how local agencies write to people. Pensioners and those on state health cover. Drivers renewing a licence, and founders whose newly registered company has just appeared on a public register.",
+    "firstSteps": [
+      {
+        "title": "End the call unpaid",
+        "detail": "Put the phone down. No genuine agency drops its claim because you hung up, and any real debt will show in your own online tax account."
+      },
+      {
+        "title": "Report the identity number you gave",
+        "detail": "If you disclosed a tax, social security or national insurance number, contact the issuing agency through its official fraud route and ask what protection it offers."
+      },
+      {
+        "title": "Ring the gift card company",
+        "detail": "If you bought cards and read out the codes, call the card brand at once with the receipt and card numbers, in case unspent value remains."
+      },
+      {
+        "title": "Sign in to the official portal",
+        "detail": "Type the address of your tax or benefits account yourself. Check that the contact details and bank account on file have not been altered."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "I paid a website far more than expected to renew my passport. Was I scammed?",
+        "answer": "You probably used a copycat service. These sites advertise above the official one, look governmental, and charge heavily for forwarding a form you could have submitted directly. Some deliver and some do not. Ask the official passport office whether an application exists in your name, and ask your card provider about a dispute if the site misled you."
+      },
+      {
+        "question": "Does a real tax office ever phone people?",
+        "answer": "Some do, in limited circumstances, and usually after writing to you about the same matter. What a genuine officer will not do is demand payment during the call by gift card, crypto or transfer to a personal account, or tell you to keep the call secret. If a call surprises you, say you will ring back, and use the number from the agency's official site."
+      }
     ]
   },
   {
@@ -441,6 +804,39 @@
       "bank-payment-scams",
       "government-tax-scams",
       "tech-support-scams"
+    ],
+    "howTheyWork": [
+      "A live call takes away your time to think, and that is what the caller is after. With a text you can pause, reread, ask someone. On the phone a confident voice fills each silence, answers every doubt as it forms, and stays with you while you walk to the computer or the shop. Calls are placed by autodiallers working through number ranges, and pressing a key or saying hello routes you to a person. What leaves is a card number read aloud, a code, a transfer made while they wait, or control of your screen.",
+      "A robotic voice announcing a prize from a draw you never entered fools few people. A calm human does better, with call-centre noise behind them, a staff ID, and a reference number they ask you to write down. They may send a text mid-call that lands in your bank's message thread as 'proof'. On some landlines they stay connected after you hang up and play a dial tone, so the call you then make to check goes straight back to them. Cloned voices of relatives add a few seconds of crying before a 'lawyer' takes over."
+    ],
+    "whoIsTargeted": "Households with a landline, which tend to be older and tend to answer. People at home in working hours because they are retired, unwell or caring for someone. Grandparents, for the late-evening 'I am in trouble, please do not tell Mum' call. Anyone who recently filled in an online quote form for insurance or a loan, since those details are resold as calling lists.",
+    "firstSteps": [
+      {
+        "title": "Put the phone down mid-sentence",
+        "detail": "You owe no reason and no polite ending. If they ring straight back, let it ring out. A genuine organisation will be content for you to call them."
+      },
+      {
+        "title": "Call back on a different line",
+        "detail": "Use a mobile if the call came to a landline, or wait ten minutes. Dial a number you found yourself and ask whether they tried to reach you."
+      },
+      {
+        "title": "Undo whatever you handed over",
+        "detail": "A card number read aloud means cancelling the card. A shared code means telling the company that issued it. Remote access means switching the computer off."
+      },
+      {
+        "title": "Switch on call screening",
+        "detail": "Ask your phone provider about call blocking, or enable the handset's option to silence unknown callers, so repeat attempts over the coming days reach voicemail."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "Is it risky just to answer a call from a number I do not know?",
+        "answer": "Answering costs nothing in itself, though it marks your number as live and tends to attract more calls. The danger lies in what follows: staying on the line, confirming personal details, pressing keys to 'speak to an agent'. If the number is unfamiliar, let voicemail take it. Real callers leave a message you can verify in your own time."
+      },
+      {
+        "question": "An overseas number rang once and stopped. Should I call it back?",
+        "answer": "Leave it. Single-ring calls from unfamiliar international codes are meant to make you return the call to a premium-rate line, where hold music or a recorded message keeps you connected while charges build. If you have already rung back, check your bill and tell your mobile network. Anyone who needs you will try again or leave a message."
+      }
     ]
   },
   {
@@ -478,6 +874,39 @@
       "social-media-scams",
       "crypto-investment-scams",
       "bank-payment-scams"
+    ],
+    "howTheyWork": [
+      "This is the slowest fraud there is. Weeks or months of daily messages come before any request, and by then the victim is defending the relationship to worried friends. The profile uses photographs taken from a real person, often a soldier, a doctor, an engineer or a widowed parent, with a job that explains being abroad. Conversation moves quickly from the dating app to a private messenger. The first ask is small and practical: a phone top-up, or a customs fee on a gift they say they posted to you. Larger ones follow a crisis.",
+      "Poor attempts declare love on day two in pasted paragraphs. Skilled ones remember your dog's name, your shift pattern, the anniversary of your husband's death. They send flowers. They mention money only when you raise it, and at first refuse help. Short video calls now happen, using face-swapping software, which weakens the old advice to insist on video. Requests come framed as loans with paperwork. Or they ask nothing for themselves and 'teach' you to invest on a site an uncle uses, so the affection and the theft seem unconnected."
+    ],
+    "whoIsTargeted": "People newly alone after a divorce, a death, a move to a new town or retirement. Profiles that mention being widowed draw approaches within days. Members of faith-based and over-fifties dating sites are worked heavily, as are users of language-exchange and hobby apps that have nothing to do with dating. Contact intensifies around winter holidays, birthdays and anniversaries, when being alone weighs most.",
+    "firstSteps": [
+      {
+        "title": "Pause every payment, whatever the crisis",
+        "detail": "Expect an emergency the moment you hesitate: a hospital bill, a seized passport, a threat to end things. Send nothing while you check, however unkind that feels."
+      },
+      {
+        "title": "Reverse-search their photographs",
+        "detail": "Upload the profile pictures to an image search. The same face under a different name, or on a page warning about stolen photos, answers the question."
+      },
+      {
+        "title": "Show the messages to one person",
+        "detail": "Let a friend or relative read the conversation today. Secrecy keeps this going, and an outside reader usually sees the pattern within minutes."
+      },
+      {
+        "title": "List past transfers for your bank",
+        "detail": "Write down each payment with date and recipient, including gift cards and crypto. Ask the bank to investigate and to watch your account for unusual requests."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "We have had video calls. Can it still be a scam?",
+        "answer": "Yes. Live face-swapping tools let a scammer appear as the person in the photographs, and some groups pay models to take brief calls. Notice whether calls are always short or cut off 'because of the signal'. A video call shows you a face. It does not show a name, a location, or a reason this person needs your money."
+      },
+      {
+        "question": "My parent is sending money to someone online and will not listen. What can I do?",
+        "answer": "Insisting the person is fake tends to deepen loyalty. Ask questions instead: have they met, what became of the last payment, would the partner join a video call with you present. Speak to the bank's fraud team, who can sometimes add safeguards with the customer's consent. Stay in touch, so there is somebody to turn to when doubt arrives."
+      }
     ]
   },
   {
@@ -515,6 +944,39 @@
       "email-scams",
       "phone-call-scams",
       "bank-payment-scams"
+    ],
+    "howTheyWork": [
+      "The aim is a remote session on your computer, with you watching and believing it is help. The way in is a full-screen browser page that refuses to close, flashing a virus warning with a siren and a phone number. Or a paid advert above the search results when you look up a printer maker's helpline. Or a cold call about 'errors your computer is sending us'. Once connected through an ordinary remote-desktop tool, the 'technician' opens harmless system logs, calls them infections, and sells a clean-up or a multi-year protection plan by card.",
+      "Clumsy operators just take the card payment. Polished ones run the refund trick. They log in to your online banking 'to return an overcharge', blank the screen, shift money between your own accounts so one balance jumps, and claim they refunded too much by mistake. You are asked to send back the difference by transfer, gift cards or cash in a parcel, and told the agent will be sacked otherwise. Nothing on screen is forged. The remote software is genuine and the log entries are real, which is why the whole thing feels technical and true."
+    ],
+    "whoIsTargeted": "People comfortable enough with a computer to use it daily and not confident enough to diagnose it. Retired users feature heavily. Anyone searching for a support number in a hurry, such as when a printer fails before a deadline or a streaming stick will not activate. Mistyped web addresses and free film or download sites are where the locked-screen warnings usually appear.",
+    "firstSteps": [
+      {
+        "title": "Cut the internet connection",
+        "detail": "Unplug the network cable or turn off wifi, then power the computer down. That ends the remote session even when the screen is locked or blank."
+      },
+      {
+        "title": "Phone the bank from another device",
+        "detail": "Say a stranger had remote access while you were logged in to online banking. Ask for recent movements between your accounts to be checked and payments held."
+      },
+      {
+        "title": "Remove the remote-access program",
+        "detail": "Restart offline and uninstall whatever was installed during the call. If you cannot tell which program it was, ask a local repair shop to check the machine."
+      },
+      {
+        "title": "Change passwords the browser had saved",
+        "detail": "Assume everything stored in the browser was visible. From a clean device, change email and banking passwords first, then shopping and social accounts."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "A warning page has frozen my browser and will not close. What do I do?",
+        "answer": "It is only a web page. Do not ring the number. On a computer, close the browser with Task Manager on Windows or Force Quit on a Mac, then reopen it and decline to restore the previous tabs. On a phone, close the tab or clear the browser's data. Nothing was installed unless you agreed to a download."
+      },
+      {
+        "question": "The technician says they refunded too much and wants it returned. Is that possible?",
+        "answer": "No refund was sent. While your screen was hidden they moved money from your savings to your current account, or edited the page so the balance looked higher. Whatever you 'return' is your own money leaving. Hang up, disconnect the computer, and phone your bank from a different device to hear your true balances."
+      }
     ]
   },
   {
@@ -552,6 +1014,39 @@
       "online-shopping-scams",
       "rental-scams",
       "government-tax-scams"
+    ],
+    "howTheyWork": [
+      "Travel is bought months ahead and unseen, which gives a fraudster a long head start. You pay in spring for a villa in August, and nothing can be tested until you stand at the gate with luggage. The fake may be a listing, an 'agent' on social media, a cloned airline help desk or a visa site. Payment is steered to bank transfer with a discount for avoiding 'card fees'. You receive a booking reference, sometimes a genuine one that was reserved and never paid for, so it appears on the airline's site for a day and then lapses.",
+      "Obvious fakes offer a week in the sun at a price no operator could match. Credible ones sit only slightly under the market and blame a late cancellation. They send an itinerary with correct flight numbers and a contract to sign. Fake help desks are the sharpest form. You search for an airline's phone number after a cancelled flight, ring the advert at the top of the results, and a polite agent 'rebooks' you for a fee taken by card over the phone. The trip was real. The person who answered was not."
+    ],
+    "whoIsTargeted": "Families booking school-holiday trips, when prices are highest and a bargain is most tempting. Pilgrims and festival-goers travelling on fixed dates with limited supply. Passengers stranded by strikes, storms or airline failures, who complain publicly and search frantically for a phone number. First-time visitors to a country that requires an electronic travel permit, who do not know what the official fee should be.",
+    "firstSteps": [
+      {
+        "title": "Verify the booking at source",
+        "detail": "Enter your reference on the airline's or hotel's own site, or phone the property directly, and ask whether a paid reservation exists in your name."
+      },
+      {
+        "title": "Contact whoever moved the money",
+        "detail": "Tell your card provider the travel was not supplied or the agent was fake. For a bank transfer, ask the bank to attempt an urgent recall."
+      },
+      {
+        "title": "Deal with passport details you uploaded",
+        "detail": "If a fake visa site has your passport scan, inform your passport office, then reapply through the destination government's official channel so the trip can go ahead."
+      },
+      {
+        "title": "Check cover before rebooking",
+        "detail": "Before buying replacement flights or rooms in a rush, ask your travel insurer what it covers, and whether the trade body the agent named has a claims process."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "My flight was cancelled and an account replied offering to rebook me. Is it the airline?",
+        "answer": "Check the handle character by character. Fake support accounts watch for complaints naming an airline and reply within minutes, asking you to DM a booking reference and phone number. A 'reservations desk' then calls and charges a rebooking fee. Airlines rebook through their app, their website, the airport desk or the number on your ticket confirmation."
+      },
+      {
+        "question": "I arrived and the accommodation does not exist. What should I do first?",
+        "answer": "Find a safe place to sleep before anything else. Then gather evidence: photographs of the address, the listing, the messages and your payment record. Contact your card provider or bank that day, and the booking platform if you paid through one, since some help rehouse guests. Report it to local police if your insurer requires a crime reference."
+      }
     ]
   },
   {
@@ -589,6 +1084,39 @@
       "government-tax-scams",
       "online-shopping-scams",
       "identity-theft-scams"
+    ],
+    "howTheyWork": [
+      "Health fraud sells hope or sells cover, and occasionally sells nothing while collecting your details. The hope side is a product: pills, patches, drops or gadgets advertised with before-and-after photographs and a doctor in a white coat who may be an actor or a generated face. The cover side is a phone call offering a cheap plan, a back brace, a genetic test or an alarm pendant 'already paid for', which requires your insurance or health service number to 'confirm eligibility'. That number is then used to bill for equipment and tests you never receive.",
+      "Crude adverts promise to melt fat overnight. Better operations borrow legitimacy. They run pages styled like a health magazine article, drop a real university's name, and show a pharmacy seal that links nowhere. Rogue pharmacies ask a few questions on a web form and call it a consultation, then ship tablets of unknown content in plausible blister packs. Callers already hold your name, age and condition from a lead form you once completed for a quote, and say your own doctor referred you."
+    ],
+    "whoIsTargeted": "People managing long-term conditions such as diabetes, arthritis or chronic pain, and those facing a frightening diagnosis who search for alternatives at night. Anyone priced out of a prescription. Older adults during insurance enrolment periods, when calls about switching plans are expected. People too embarrassed to see a doctor about weight, hair loss or sexual health, who would sooner order privately.",
+    "firstSteps": [
+      {
+        "title": "Stop using the product",
+        "detail": "If tablets or drops arrived from an unverified seller, take no more. Keep the packaging and ask a pharmacist or doctor about anything you have already swallowed."
+      },
+      {
+        "title": "Shut off the repeat billing",
+        "detail": "'Free sample' health offers usually enrol you in repeat deliveries. Ask your card provider to block future payments to the merchant and dispute those already taken."
+      },
+      {
+        "title": "Read your next benefits statement",
+        "detail": "If you gave a policy or health service number, look for equipment, tests or appointments you never had, and report each one to the insurer or programme."
+      },
+      {
+        "title": "Tell your own clinician",
+        "detail": "Let your GP or specialist know what you were sold and which details you shared, so false entries do not end up shaping your medical record."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "I gave my insurance number for a 'free' medical device. What happens now?",
+        "answer": "The caller's company may bill your insurer or health programme for braces, test kits or equipment in your name. That can use up an allowance you need later and leave false conditions on file. Phone the fraud line of your insurer or programme, ask for recent claims to be reviewed, and refuse parcels you did not order, noting the sender."
+      },
+      {
+        "question": "Is medicine bought from an unverified website dangerous to take?",
+        "answer": "Sometimes, yes. Tablets from unregistered sellers have turned up with the wrong dose, a different drug, or no active ingredient, and nobody has checked them against your other medicines. If you have taken some and feel unwell, seek medical help and bring the packaging. Otherwise stop, and ask a pharmacist how to get a safe supply."
+      }
     ]
   },
   {
@@ -626,6 +1154,39 @@
       "bank-payment-scams",
       "social-media-scams",
       "email-scams"
+    ],
+    "howTheyWork": [
+      "An identity is assembled piece by piece, seldom grabbed in one go. A name and date of birth from one breach, an address from a public register, a mother's maiden name from a social media quiz, a password from an old forum leak. The pieces are traded and combined until there is enough to answer a call centre's security questions or pass an online credit application. Often nobody contacts you at all. When they do, it is a 'verification' form, a fake breach notice asking you to confirm details, or a call to your mobile network pretending to be you.",
+      "Clumsy fraud surfaces fast, as when a card you never ordered arrives at your own address. Careful fraud hides. The thief redirects your post, switches statements to paperless, and adds an email address of their own so alerts go elsewhere. They open one small account and run it well for months to build a record before borrowing heavily. A child's identity is prized for the same reason, since nobody looks at a ten-year-old's credit file. The first sign may be a debt collector's letter, or a mortgage application turned down."
+    ],
+    "whoIsTargeted": "People whose details sat in a breached database, which by now means most adults. Risk climbs when paperwork is in motion: after a house move, while post still goes to the old flat; after a death, when the accounts of the deceased lie unwatched; after a lost wallet or stolen phone. Children, and students sharing a communal letterbox, are found out last.",
+    "firstSteps": [
+      {
+        "title": "Lock your email and mobile account",
+        "detail": "Change the email password, turn on app-based two-step sign-in, and ask your mobile network whether it can add a PIN required before any SIM change."
+      },
+      {
+        "title": "Order your credit reports",
+        "detail": "Request your file from each credit reference agency and mark every account, search and address you do not recognise. Each needs disputing with the lender named."
+      },
+      {
+        "title": "Set a freeze or protective marker",
+        "detail": "Where a credit freeze exists, place one with every agency. Elsewhere, ask about a protective registration so that lenders carry out extra checks on applications."
+      },
+      {
+        "title": "Keep a dated log",
+        "detail": "Record each call with the date, organisation, person and reference number. Clearing this up takes weeks, and lenders and police ask for the same facts repeatedly."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "Does a credit freeze stop my existing cards and accounts from working?",
+        "answer": "It does not. A freeze prevents new lenders from pulling your file, which blocks most fresh applications in your name. Cards, loans and accounts you already hold carry on as before. When you want credit yourself, you lift the freeze for a while using a PIN or login, then restore it. Availability and method differ between countries."
+      },
+      {
+        "question": "Why would anyone steal a child's identity?",
+        "answer": "A child has a clean record and nobody watching it. An identity number paired with a false date of birth can open accounts that run unnoticed for years, until the child applies for a first card or a student loan. Warning signs include letters from lenders addressed to the child, or a credit file existing at all for someone that young."
+      }
     ]
   },
   {
@@ -663,6 +1224,39 @@
       "email-scams",
       "bank-payment-scams",
       "government-tax-scams"
+    ],
+    "howTheyWork": [
+      "Companies pay strangers every day on the strength of a document, and that habit is the opening. An invoice arrives, it resembles hundreds of others, somebody keys it in. Business fraud inserts itself into that flow. An email from a supplier's address, or one a single character off, gives new bank details for future payments. A message from the managing director asks finance for an urgent, confidential transfer. A member of staff appears to email HR with a new salary account. Each payment is approved by a real employee following something close to normal procedure.",
+      "Low-effort attempts are bulk mailings: an official-looking demand to renew a trademark or a directory entry, counting on a junior paying it unread. Targeted ones begin with reading. The criminal sits inside a compromised mailbox for weeks, learning who approves payments, when the director travels and how invoices are worded, then acts when a large one falls due. The change-of-details letter carries the right logo, the right contact's signature and a reason, such as an audit. A follow-up call 'from the supplier' confirms it, on a number supplied in the fraudulent email."
+    ],
+    "whoIsTargeted": "Accounts payable clerks, payroll administrators, executive assistants and office managers: whoever can move money or amend a record. Newly registered companies, whose details sit on public registers and attract fake compliance bills within weeks. Firms midway through a property deal, an acquisition or a large supply contract. Financial year end, holiday cover and the director's week abroad are favoured moments.",
+    "firstSteps": [
+      {
+        "title": "Ring the bank's business fraud line",
+        "detail": "Give the payment reference, amount and beneficiary details and request an immediate recall. Speed counts for more here than a complete account of what happened."
+      },
+      {
+        "title": "Speak to the real supplier or director",
+        "detail": "Use the number in your existing records, never the one in the email. Work out whether their mailbox or yours is the compromised one."
+      },
+      {
+        "title": "Secure the affected mailbox",
+        "detail": "Have IT reset the password, end active sessions and search for inbox rules that hide or forward messages containing words such as 'invoice' or 'payment'."
+      },
+      {
+        "title": "Suspend changes to payee records",
+        "detail": "Hold all bank-detail amendments and new payees until every recent change has been confirmed by phone with a contact you already know."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "The request came from our director's real email address. How is that possible?",
+        "answer": "Either the director's mailbox has been broken into, usually through a phished password, or the display name is right and the underlying address is not. Mobile mail apps often show only the name. Open the full address and look at the reply-to field, which is frequently set to an outside account. Confirm any payment request by phone or in person."
+      },
+      {
+        "question": "An employee emailed asking to change their salary bank account. How should we check?",
+        "answer": "Treat it like a supplier change and never act on the email alone. Speak to the employee face to face, or call the number already on file, and have them make the change themselves in the payroll system where one exists. These requests tend to arrive a few days before the pay run, leaving little room to query them."
+      }
     ]
   },
   {
@@ -700,6 +1294,39 @@
       "social-media-scams",
       "online-shopping-scams",
       "identity-theft-scams"
+    ],
+    "howTheyWork": [
+      "Game accounts hold things with resale value: rare skins, ranked progress, currency bought with real money, a library of purchased titles. Thieves want the login, and they get it with a link. A message in the platform's chat or on a voice server says a friend has gifted you a subscription, asks you to vote for their team, or claims you have been reported. The page behind it copies the platform's sign-in window, including a prompt for the code from your authenticator. Within minutes the inventory is traded to a holding account and sold for cash on an outside site.",
+      "Generator sites promising unlimited currency for completing offers fool mainly younger players. Sharper tricks are aimed at experienced traders. A middleman 'trusted by the community' holds both items during a swap and disappears. A buyer pays by a method that can be reversed once the item has moved. Someone with a staff-style avatar and name says your account is flagged and asks you to transfer items to a 'verification' account. Malware arrives as a cheat, a mod, or 'a game I am developing, can you test it', and steals the browser's saved sessions."
+    ],
+    "whoIsTargeted": "Children and teenagers, who own accounts of real value, have little experience of fraud, and sometimes play with a parent's card saved on the console. Players of games with tradeable items and busy outside marketplaces. Streamers, whose usernames are public and whose viewers can be reached with fake giveaways. Attempts jump at season launches, big updates and school holidays.",
+    "firstSteps": [
+      {
+        "title": "Reset password and authenticator",
+        "detail": "Change the account password, re-register your authenticator, and revoke any API key or trade link, because thieves use those to redirect future trades."
+      },
+      {
+        "title": "Deauthorise every other device",
+        "detail": "Use the platform's option to sign out everywhere. A stolen session token goes on working after a password change until all devices are logged out."
+      },
+      {
+        "title": "Open a ticket with official support",
+        "detail": "Give the account name, the original email, purchase receipts and the time things changed. Proof of the first purchase is what support staff most often request."
+      },
+      {
+        "title": "Inspect the saved payment card",
+        "detail": "Look through purchase history for currency or gifts you did not buy, remove the card from the account, and tell the card provider about unfamiliar charges."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "Can a stolen skin or item be put back in my account?",
+        "answer": "Policies differ between publishers. Many will not restore items that left through a completed trade, because duplicating them affects other players, though some roll an account back after a proven takeover. Report quickly to official support with evidence and ask what applies. Be wary of anyone on a forum who claims to retrieve items for a fee."
+      },
+      {
+        "question": "My child spent money in a game after talking to a stranger. What now?",
+        "answer": "Stay calm with them, because children who fear punishment hide the next incident. Save the chat, report the other player inside the game, and find out which card or gift balance was used. Ask the platform and your card provider about the charges. Then switch on purchase approval and spending limits in the console's or app store's family settings."
+      }
     ]
   },
   {
@@ -737,6 +1364,39 @@
       "phone-call-scams",
       "social-media-scams",
       "crypto-investment-scams"
+    ],
+    "howTheyWork": [
+      "Generated media changes one thing about fraud: the proof. A voice on the phone, a face on a video call, a clip of a public figure speaking, all used to count as evidence that someone was who they claimed to be. A short sample of speech from a public video is enough to build a voice that will read any script. Face-swap software runs live on an ordinary laptop. The frauds underneath are old ones, the emergency call from a child, the boss ordering a transfer, the famous investor recommending a platform, with the doubt removed by something you saw or heard.",
+      "Weak fakes are caught by eye and ear: lips drifting off the words, a flat stare, a voice with no breath in it. Strong ones avoid scrutiny by design. The cloned voice speaks for ten seconds, sobbing, then hands over to a 'police officer' or 'kidnapper' who is a live person. The deepfake director appears in a group video meeting beside other fabricated colleagues, on a poor connection, camera on briefly. Celebrity clips are cut short, subtitled, and run as adverts for a day before removal. The quality only has to survive a few seconds of shock."
+    ],
+    "whoIsTargeted": "Parents and grandparents of anyone with video or voice clips online, which now covers most teenagers. Finance staff at companies whose executives give interviews and conference talks. Followers of well-known investors, presenters and doctors, whose faces are borrowed for adverts. People seeking company from chatbot 'partners', who are gradually steered towards paid upgrades, gifts or a recommended investment.",
+    "firstSteps": [
+      {
+        "title": "Ring the real person yourself",
+        "detail": "Hang up and call your relative or colleague on the number you already hold. If there is no answer, try someone who is physically with them."
+      },
+      {
+        "title": "Ask something no script contains",
+        "detail": "If the call continues, ask for a detail that has never been online: a childhood nickname, what you ate together last Sunday. A cloned voice cannot improvise memory."
+      },
+      {
+        "title": "Recall any payment already sent",
+        "detail": "If a transfer was made on the strength of the call or video, phone your bank immediately and explain that you were deceived by an impersonation."
+      },
+      {
+        "title": "Preserve the recording or advert",
+        "detail": "Save the voicemail, the meeting link or the advert's address. Platforms and investigators need the original, and fake adverts are frequently deleted within hours."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "Should my family agree a safe word for emergency calls?",
+        "answer": "It is one of the few defences that does not rely on spotting flaws. Choose a word or phrase that has never appeared online, agree it face to face, and use it only when someone asks for money or says they are in danger. Tell children and grandparents alike. A caller who cannot give it gets a call back on the usual number."
+      },
+      {
+        "question": "Should I stop posting videos of myself to avoid voice cloning?",
+        "answer": "You can reduce what is public, though for most people some audio already exists and cannot be recalled. Private profiles limit who can copy your voice and who can map your family connections, which the script depends on. The stronger protection sits at the receiving end: relatives who know that a familiar voice asking for money still needs checking."
+      }
     ]
   },
   {
@@ -774,6 +1434,39 @@
       "bank-payment-scams",
       "government-tax-scams",
       "online-shopping-scams"
+    ],
+    "howTheyWork": [
+      "Utilities are the one bill nobody can ignore, since losing power, heat or water is an immediate problem. The fraud takes two routes. By phone or text, a 'disconnection team' says your account is in arrears and a crew is booked for this afternoon unless you pay now, by card or with a prepaid voucher. At the door, someone in a hi-vis jacket and lanyard needs to read the meter, test water pressure after 'works in the street', or assess you for a grant, and either takes a deposit or keeps you talking while a partner searches the house.",
+      "A crude caller cannot say which company supplies you. A prepared one names your supplier, your tariff and roughly what you owe, picked up from a comparison-site form or an earlier doorstep 'survey'. Refund emails match a real billing cycle and use the supplier's template. Grant offers convince because real schemes exist: governments do fund insulation and boiler replacement, so a salesperson citing a genuine scheme name and asking for a 'survey fee' sounds routine. Doorstep sellers of cut-price prepayment credit complete the set, offering top-ups the supplier never receives payment for."
+    ],
+    "whoIsTargeted": "Households on prepayment meters, and small shops and cafes that cannot trade without power. Tenants who have just moved in and are unsure which company supplies the address. Older homeowners, approached at the door about grants and meter replacements. Calls and texts rise in winter, after price announcements, and following storms or street works, when a visit from an engineer seems expected.",
+    "firstSteps": [
+      {
+        "title": "Ask the supplier what is recorded",
+        "detail": "Log in to your account or ring the number on a paper bill. Ask whether any arrears, disconnection notice, refund or engineer visit is recorded for your address."
+      },
+      {
+        "title": "Chase the card or voucher payment",
+        "detail": "If you paid by card, call the issuer. If you read out a prepaid voucher code, contact the voucher company at once with the receipt in hand."
+      },
+      {
+        "title": "Check rooms after a doorstep visit",
+        "detail": "If someone came inside, look through bedrooms and drawers for missing cash, jewellery and bank cards, and call the police non-emergency line whatever you find."
+      },
+      {
+        "title": "Cancel what you signed at the door",
+        "detail": "If you agreed to switch supplier or ordered insulation or a boiler, write to cancel immediately. Many countries give a cooling-off period for doorstep sales."
+      }
+    ],
+    "extraFaqs": [
+      {
+        "question": "I bought cheap meter top-up credit from someone at the door. Will it work?",
+        "answer": "It may register as credit for a while, but credit sold outside official outlets has not been paid for with your supplier. When the supplier notices the gap, it can bill you for the energy used, so you pay twice. Buy credit only through the supplier's app or website or at a registered shop terminal, and tell the supplier about any doorstep top-up."
+      },
+      {
+        "question": "Can an energy company switch my supply without my agreement?",
+        "answer": "A switch without consent should not happen, yet it does, through a doorstep seller or caller who records a 'yes' to a vague question or forges a signature. The usual sign is a welcome letter from a company you never chose, or a final bill from your own supplier. Contact both, say you gave no consent, and ask to be returned to your original tariff."
+      }
     ]
   }
 ]

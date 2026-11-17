@@ -856,8 +856,12 @@ function guidePage(scam) {
     label: dd ? "How this scam works" : pick(["What this scam usually looks like", "How this scam works", "Understanding this scam", "What to know first"]),
     html: introParas.map((p) => `<p>${esc(p)}</p>`).join("\n      ") + seeAlso };
 
+  // Only flagship pages with their own figures get a bare "By the numbers".
+  // Category-level figures are labelled with the category they describe.
+  const ownStats = !!(dd && dd.stats);
   if (pageStats) blocks.stats = { id: "by-the-numbers",
-    label: dd ? "By the numbers" : pick(["By the numbers", "The scale of it", "What the data shows", "Scam statistics"]),
+    label: ownStats || !cat ? "By the numbers"
+      : pick([`${cat.name} in numbers`, `${cat.name}: the scale of it`, `${cat.name}: what the data shows`, `${cat.name} by the numbers`]),
     html: statGrid(pageStats) };
 
   if (dd && dd.howItWorks) blocks.steps = { id: "step-by-step",
