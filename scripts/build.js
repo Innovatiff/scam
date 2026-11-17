@@ -407,13 +407,12 @@ function homePage() {
   const { list: sotwList, idx: sotwIdx } = sotwPick();
   const sotw = sotwList[sotwIdx];
   const newest = scams.slice(-6).reverse();
-  const statCitations = 2 * scams.length;
 
   const main = `
 <section class="hero">
   <div class="container">
     <h1>Check if a message, link, email, or offer looks like a scam.</h1>
-    <p class="sub">Paste suspicious text or browse ${scams.length}+ plain-language scam guides before you click, reply, or send money.</p>
+    <p class="sub">Paste suspicious text or browse ${scams.length} plain-language scam guides before you click, reply, or send money.</p>
     <form class="checker-box" id="hero-check-form" action="/scam-checker/" method="get">
       <div class="privacy-note">${icon("lock")}<span>Do not paste passwords, banking details, ID numbers, credit card numbers, or any private information. Your text is checked in your browser and is not stored.</span></div>
       <label for="hero-check-input" class="sr-only" style="font-weight:600">Paste a suspicious message</label>
@@ -428,9 +427,9 @@ function homePage() {
 </section>
 
 <div class="stats-bar"><div class="container"><div class="stats-grid">
-  <div class="stat-tile"><div class="num">${scams.length}+</div><div class="lbl">scam guides</div></div>
+  <div class="stat-tile"><div class="num">${scams.length}</div><div class="lbl">scam guides</div></div>
+  <div class="stat-tile"><div class="num">${Object.keys(deepDives).length}</div><div class="lbl">in-depth guides</div></div>
   <div class="stat-tile"><div class="num">${categories.length}</div><div class="lbl">scam categories</div></div>
-  <div class="stat-tile"><div class="num">${statCitations.toLocaleString("en-US")}+</div><div class="lbl">cited statistics</div></div>
   <div class="stat-tile"><div class="num">100%</div><div class="lbl">free, no sign-up</div></div>
 </div></div></div>
 
@@ -601,7 +600,7 @@ ${breadcrumbs(trail)}
     <p>This is an automated, pattern-based tool. It can produce <strong>false alarms</strong> (flagging a genuine message that happens to sound urgent) and <strong>missed signals</strong> (a sophisticated scam that reads calmly). It cannot open links, inspect websites, verify senders, or confirm identities, and it does not know your personal circumstances. For anything involving money, accounts, or identity, always verify through official channels and, when in doubt, treat the message as suspicious.</p>
 
     <h2>Recently added guides</h2>
-    <p class="muted">Scams evolve constantly, these are the newest additions to our library of ${scams.length}+ guides.</p>
+    <p class="muted">Scams evolve constantly, these are the newest additions to our library of ${scams.length} guides.</p>
     <div class="card-grid">
       ${scams.slice(-6).reverse().map(scamCard).join("")}
     </div>
@@ -1316,7 +1315,7 @@ function legalPages() {
 <h2>Careful, non-sensational language</h2>
 <p>We describe red flags and likelihoods, not certainties. We deliberately avoid claims like "definitely a scam", "guaranteed safe", "officially verified", or "police approved". Our goal is to help you pause and verify, not to frighten you into a decision. Fear is exactly the tool scammers use, and we refuse to copy it.</p>
 <h2>A consistent, structured format</h2>
-<p>Each guide is organised so you can find what you need fast: what the scam looks like, the red flags to watch for, what to do, what to avoid, and answers to common questions. Our most-searched topics receive expanded, in-depth treatment with step-by-step breakdowns, realistic (anonymised) scenarios, and cited statistics.</p>
+<p>Each guide is organised so you can find what you need fast: what the scam looks like, how it unfolds step by step, how the genuine version differs from the fake, the red flags to watch for, what to do, what to avoid, and answers to common questions. Our most-searched topics receive expanded, in-depth treatment with a longer analysis, realistic (anonymised) scenarios, known variations, and links to official sources.</p>
 <h2>Anonymised, illustrative examples</h2>
 <p>Example messages and scenarios are fictional and clearly labelled as illustrations of a pattern. We never publish real personal data, and we never present an example as a verified report of a specific real message or victim.</p>
 <h2>Safe, responsible guidance</h2>
@@ -1385,7 +1384,7 @@ ${breadcrumbs(trail)}
 
     <h2>Why practising works</h2>
     <p>Scams succeed in the first few seconds, when a message triggers urgency, fear, or excitement before your slower judgement catches up. Practising on realistic examples builds the reflex that matters most: pausing to look for the tell. Research by fraud-prevention bodies consistently shows that people who have seen a scam pattern before are far less likely to fall for it, recognition is the cheapest protection there is.</p>
-    <p>Every question in this quiz is a fictional, anonymised pattern modelled on scams documented by consumer-protection agencies, the same patterns covered in our <a href="/scam-types/">${scams.length}+ guides</a>. The "genuine" examples show what safe communication tends to look like: no links to click, no codes to share, no artificial deadlines, and directions to official apps or the number on your own card.</p>
+    <p>Every question in this quiz is a fictional, anonymised pattern modelled on scams documented by consumer-protection agencies, the same patterns covered in our <a href="/scam-types/">${scams.length} guides</a>. The "genuine" examples show what safe communication tends to look like: no links to click, no codes to share, no artificial deadlines, and directions to official apps or the number on your own card.</p>
     <h2>How scoring works</h2>
     <p>You get one point per correct call. After each answer we show the tells, the specific details that give the message away, with a link to the full guide for that scam. At the end you can share your score and challenge someone you'd like to keep safe. The quiz runs entirely in your browser; nothing you do here is recorded or sent to us.</p>
     <h2>What to do after the quiz</h2>
